@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cast in Skin — Sak Yant Photography Workshop, Bangkok</title>
+  <title>Cast in Skin — Traditional Sak Yant Tattoos, Bangkok</title>
+  <meta name="description" content="A guide to traditional Sak Yant tattoos in Bangkok. Direct access to practitioners, private and personal.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&family=Noto+Serif+Thai:wght@400;500&display=swap" rel="stylesheet">
@@ -18,406 +19,306 @@
       --line: rgba(196,154,60,0.2);
       --line-strong: rgba(196,154,60,0.45);
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--ink);
-      color: var(--paper);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 17px;
-      line-height: 1.75;
-      overflow-x: hidden;
-    }
-
-    body::after {
-      content: '';
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 9998;
-      opacity: 0.28;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
-    }
-
+    body { background: var(--ink); color: var(--paper); font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.75; overflow-x: hidden; }
+    body::after { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 9998; opacity: 0.28; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E"); }
     .wrap { max-width: 860px; margin: 0 auto; padding: 0 2rem; }
-
-    header {
-      border-bottom: 1px solid var(--line);
-      padding: 1.6rem 0;
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-    }
-
-    .wordmark {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.1rem;
-      letter-spacing: 0.04em;
-      color: var(--gold);
-      font-weight: 400;
-    }
+    header { border-bottom: 1px solid var(--line); padding: 1.6rem 0; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem; }
+    .wordmark { font-family: 'Playfair Display', Georgia, serif; font-size: 1.1rem; letter-spacing: 0.04em; color: var(--gold); font-weight: 400; text-decoration: none; }
     .wordmark span { font-style: italic; }
-
-    .header-tag {
-      font-size: 0.7rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--ash);
-    }
-
-    .hero {
-      padding: 7rem 0 5.5rem;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .eyebrow {
-      font-size: 0.7rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 2rem;
-    }
-
-    h1 {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(2.2rem, 5vw, 3.6rem);
-      font-weight: 400;
-      line-height: 1.2;
-      margin-bottom: 2rem;
-      max-width: 700px;
-    }
+    .header-tag { font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ash); }
+    .hero { padding: 7rem 0 5.5rem; border-bottom: 1px solid var(--line); }
+    .eyebrow { font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 2rem; }
+    h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 400; line-height: 1.2; margin-bottom: 2rem; max-width: 700px; }
     h1 em { font-style: italic; color: var(--gold); }
-
-    .hero-lead {
-      font-size: 1.05rem;
-      color: rgba(242,235,224,0.75);
-      max-width: 580px;
-      line-height: 1.7;
-    }
-
-    section {
-      padding: 5rem 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .section-tag {
-      font-size: 0.68rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold-dim);
-      margin-bottom: 2.5rem;
-    }
-
-    h2 {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      font-weight: 400;
-      line-height: 1.3;
-      margin-bottom: 1.8rem;
-    }
+    .hero-lead { font-size: 1.05rem; color: rgba(242,235,224,0.75); max-width: 580px; line-height: 1.7; }
+    .full-photo { width: 100%; margin: 0; padding: 0; line-height: 0; }
+    .full-photo img { width: 100%; display: block; object-fit: cover; }
+    .photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--ink); }
+    .photo-pair img { width: 100%; display: block; object-fit: cover; height: 420px; }
+    @media (max-width: 640px) { .photo-pair { grid-template-columns: 1fr; } .photo-pair img { height: 300px; } }
+    section { padding: 5rem 0; border-bottom: 1px solid var(--line); }
+    .section-tag { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 2.5rem; }
+    h2 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 400; line-height: 1.3; margin-bottom: 1.8rem; }
     h2 em { font-style: italic; color: var(--gold); }
-
-    p {
-      margin-bottom: 1.3rem;
-      color: rgba(242,235,224,0.83);
-    }
+    p { margin-bottom: 1.3rem; color: rgba(242,235,224,0.83); }
     p:last-child { margin-bottom: 0; }
+    .two-col p { margin-bottom: 1.3rem; }
+    .two-col p:last-child { margin-bottom: 0; }
     strong { color: var(--paper); font-weight: 500; }
-
-    .rule {
-      width: 36px;
-      height: 1px;
-      background: var(--gold-dim);
-      margin: 1.8rem 0;
-    }
-
-    .pull-quote {
-      border-left: 2px solid var(--gold-dim);
-      padding: 0.2rem 0 0.2rem 1.5rem;
-      margin: 2rem 0;
-    }
-
-    .pull-quote p {
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-size: 1.05rem;
-      color: rgba(242,235,224,0.7);
-      line-height: 1.65;
-    }
-
-    .details-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1px;
-      background: var(--line);
-      border: 1px solid var(--line);
-      border-radius: 2px;
-      overflow: hidden;
-      margin-top: 2rem;
-    }
-    @media (max-width: 580px) {
-      .details-row { grid-template-columns: 1fr; }
-    }
-
-    .detail-cell {
-      background: var(--deep);
-      padding: 1.8rem;
-    }
-
-    .detail-label {
-      font-size: 0.68rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--ash);
-      margin-bottom: 0.9rem;
-    }
-
-    .detail-cell p {
-      font-size: 0.92rem;
-      line-height: 1.6;
-    }
-
-    .expect-list {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 1px;
-      background: var(--line);
-      border: 1px solid var(--line);
-      border-radius: 2px;
-      overflow: hidden;
-      margin-top: 2rem;
-    }
-
-    .expect-item {
-      background: var(--deep);
-      padding: 1.4rem 1.8rem;
-      display: grid;
-      grid-template-columns: 1.4rem 1fr;
-      gap: 1rem;
-      align-items: start;
-    }
-
-    .expect-num {
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-size: 0.9rem;
-      color: var(--gold-dim);
-      padding-top: 0.05rem;
-    }
-
-    .expect-text {
-      font-size: 0.93rem;
-      color: rgba(242,235,224,0.83);
-      line-height: 1.6;
-      margin: 0;
-    }
-
-    .divider {
-      padding: 3rem 0 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .divider-label {
-      font-size: 0.68rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--ash);
-      text-align: center;
-      margin-bottom: 0;
-    }
-
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    @media (max-width: 640px) { .two-col { grid-template-columns: 1fr; gap: 2.5rem; } }
+    .two-col > div { display: flex; flex-direction: column; gap: 0; }
+    .two-col p { margin-bottom: 1.3rem; }
+    .two-col p:last-child { margin-bottom: 0; }
+    .pull-quote { border-left: 2px solid var(--gold-dim); padding: 0.2rem 0 0.2rem 1.5rem; margin: 2rem 0; }
+    .pull-quote p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.05rem; color: rgba(242,235,224,0.7); line-height: 1.65; }
+    .needle-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 2px; overflow: hidden; margin-top: 1rem; }
+    @media (max-width: 580px) { .needle-pair { grid-template-columns: 1fr; } }
+    .needle-cell { background: var(--deep); padding: 1.8rem; }
+    .needle-thai { font-family: 'Noto Serif Thai', serif; font-size: 1.1rem; color: var(--gold); display: block; margin-bottom: 0.3rem; }
+    .needle-roman { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ash); display: block; margin-bottom: 0.9rem; }
+    .needle-desc { font-size: 0.88rem; color: rgba(242,235,224,0.75); line-height: 1.55; margin: 0; }
+    .design-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 2px; overflow: hidden; margin-top: 2rem; }
+    @media (max-width: 580px) { .design-grid { grid-template-columns: 1fr; } }
+    .design-cell { background: var(--deep); padding: 1.8rem; }
+    .design-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: var(--paper); margin-bottom: 0.3rem; }
+    .design-thai { font-family: 'Noto Serif Thai', serif; font-size: 0.85rem; color: var(--gold); display: block; margin-bottom: 0.7rem; }
+    .design-desc { font-size: 0.88rem; color: rgba(242,235,224,0.72); line-height: 1.55; margin: 0; }
     .video-block { margin: 2.5rem 0; }
-
-    .video-label {
-      font-size: 0.68rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--ash);
-      margin-bottom: 0.6rem;
-    }
-
-    .video-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      font-weight: 400;
-      color: var(--paper);
-      margin-bottom: 0.5rem;
-    }
+    .video-label { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ash); margin-bottom: 0.6rem; }
+    .video-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: var(--paper); margin-bottom: 0.5rem; }
     .video-title em { font-style: italic; color: var(--gold); }
-
-    .video-desc {
-      font-size: 0.85rem;
-      color: var(--ash);
-      margin-bottom: 1rem;
-      line-height: 1.5;
-    }
-
-    .video-frame {
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%;
-      background: var(--deep);
-      border: 1px solid var(--line);
-    }
-
-    .video-frame iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
+    .video-desc { font-size: 0.85rem; color: var(--ash); margin-bottom: 1rem; line-height: 1.5; }
+    .video-frame { position: relative; width: 100%; padding-bottom: 56.25%; background: var(--deep); border: 1px solid var(--line); }
+    .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+    .contact-inner { max-width: 560px; }
+    .contact-options { display: flex; flex-direction: column; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 2px; overflow: hidden; margin-top: 2rem; }
+    .contact-row { background: var(--deep); padding: 1.2rem 1.8rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; text-decoration: none; transition: background 0.15s; }
+    .contact-row:hover { background: #221e1a; }
+    .contact-platform { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ash); }
+    .contact-handle { font-size: 0.92rem; color: rgba(242,235,224,0.83); }
     footer { padding: 3rem 0; }
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    footer p {
-      font-size: 0.75rem;
-      letter-spacing: 0.08em;
-      color: var(--ash);
-      margin: 0;
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(16px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .hero .eyebrow    { animation: fadeUp 0.6s ease both 0.05s; }
-    .hero h1          { animation: fadeUp 0.7s ease both 0.15s; }
-    .hero .hero-lead  { animation: fadeUp 0.7s ease both 0.3s; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    footer p { font-size: 0.75rem; letter-spacing: 0.08em; color: var(--ash); margin: 0; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    .hero .eyebrow { animation: fadeUp 0.6s ease both 0.05s; }
+    .hero h1 { animation: fadeUp 0.7s ease both 0.15s; }
+    .hero .hero-lead { animation: fadeUp 0.7s ease both 0.3s; }
   </style>
 </head>
 <body>
 
 <header>
   <div class="wrap header-inner">
-    <div class="wordmark">Cast in <span>Skin</span></div>
-    <div class="header-tag">Sak Yant Photography Workshop &mdash; Bangkok</div>
+    <a href="/" class="wordmark">Cast in <span>Skin</span></a>
+    <div class="header-tag">Bangkok, Thailand</div>
   </div>
 </header>
 
-<!-- HERO -->
 <div class="hero">
   <div class="wrap">
-    <div class="eyebrow">Bangkok, Thailand</div>
-    <h1>A photography workshop inside a living <em>sacred tattoo</em> tradition</h1>
-    <p class="hero-lead">Walk around Thailand long enough and you start noticing the tattoos. The old man selling dried fish at the market. The guy in front of you at the 7-Eleven with the points of a geometric tattoo showing above the back of his t-shirt. Once you know what you're looking at, you see it everywhere. This workshop puts you inside the ceremony where it's still being made.</p>
-    <p style="margin-top:1.8rem; font-size:1rem; line-height:1.8; color:rgba(242,235,224,0.75); max-width:620px;">These are magic spells cast into your skin. The designs are meant to protect you, bring money, bring luck, make you attractive to other people, charming in speech, well-regarded by those around you. Some are meant to make you feared. Some are meant to make you loved. The people applying them have spent years learning the script, the geometry, and the chants that activate each one. And the tattoos themselves, in the hands of a skilled Ajarn, can be genuinely beautiful.</p>
+    <div class="eyebrow">Sak Yant &mdash; Bangkok</div>
+    <h1>Traditional Sak Yant tattoos.<br><em>What they are and where to get them.</em></h1>
+    <p class="hero-lead">Walk around Thailand long enough and you start noticing the tattoos. The old man selling dried fish at the market. The guy in front of you at the 7-Eleven with the points of a geometric design showing above the back of his t-shirt. Once you know what you are looking at, you see it everywhere.</p>
+    <p style="margin-top:2.5rem; font-family:'Playfair Display', Georgia, serif; font-size:clamp(1.3rem, 3vw, 1.8rem); font-weight:400; font-style:italic; color:var(--gold); line-height:1.4; max-width:620px;">These are magic spells cast into skin.</p>
+    <p style="margin-top:1.4rem; font-size:1rem; line-height:1.8; color:rgba(242,235,224,0.75); max-width:620px;">The designs are meant to protect you, bring money, bring luck, make you attractive to other people, charming in speech, well-regarded by those around you. Some are meant to make you feared. Some are meant to make you loved. The people applying them have spent years learning the script, the geometry, and the chants that activate each one.</p>
   </div>
 </div>
 
-<!-- NECK PHOTO -->
-<div style="width:100%; margin:0; padding:0; line-height:0;">
-  <img src="20260524_0093.jpg" alt="Sak Yant tattoo on neck" style="width:100%; display:block; max-height:600px; object-fit:cover; object-position:center 70%;">
+<div class="full-photo">
+  <img src="20260517_0215.jpg" alt="Full back Sak Yant tattoos" style="max-height:700px; object-position:center top;">
 </div>
 
-<!-- WHAT YOU'RE COMING TO PHOTOGRAPH -->
 <section>
   <div class="wrap">
-    <div class="section-tag">The workshop</div>
-    <h2>What you are <em>coming to photograph</em></h2>
-    <p>A working Sak Yant ceremony with an Ajarn (tattoo master) who does not have a large public presence. The ceremony runs as it would without photographers present. Nothing is staged. You are documenting something that is happening regardless of whether you are there.</p>
-
-    <div class="details-row">
-      <div class="detail-cell">
-        <div class="detail-label">Pricing</div>
-        <p>To be determined.</p>
-      </div>
-      <div class="detail-cell">
-        <div class="detail-label">Group size</div>
-        <p>Small groups only. The space is small.</p>
-      </div>
-      <div class="detail-cell">
-        <div class="detail-label">What to bring</div>
-        <p>Your camera. Covered shoulders and knees. Water.</p>
-      </div>
-      <div class="detail-cell">
-        <div class="detail-label">Contact</div>
-        <p>Reach out via Instagram or Line. Describe what you shoot and what draws you to this.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FULL BACK PHOTO -->
-<div style="width:100%; margin:0; padding:0; line-height:0;">
-  <img src="20260517_0216.jpg" alt="Full back Sak Yant tattoos in the workspace" style="width:100%; display:block; max-height:700px; object-fit:cover; object-position:center top;">
-</div>
-
-<!-- BELOW THE FOLD DIVIDER -->
-<section>
-  <div class="wrap">
-    <div class="section-tag">The tradition</div>
+    <div class="section-tag">The history</div>
     <h2>Where this <em>comes from</em></h2>
-
-    <p>The exact origins of Sak Yant are not fully agreed upon. Historians generally place the practice around the third century, when yantra geometry, used in Hindu and tantric practice across South Asia, arrived in what is now Cambodia, Thailand, and Myanmar. The tradition draws from Hindu geometry, Buddhist Pali scripture, and older animist practice. The tattooing of these designs onto the body, rather than wearing or displaying them, is specific to mainland Southeast Asia.</p>
-
+    <p>The exact origins of Sak Yant are not fully agreed upon. Historians generally place the practice around the third century, when yantra geometry arrived in what is now Cambodia, Thailand, and Myanmar from Hindu and tantric practice across South Asia. The tradition draws from Hindu geometry, Buddhist Pali scripture, and older animist practice. The tattooing of these designs onto the body, rather than wearing or displaying them, is specific to mainland Southeast Asia.</p>
     <p style="font-size:0.82rem; color:var(--ash); line-height:1.6;">A note on pronunciation: Thai people say it closer to "suk-yun." The t at the end of Yant is silent. It appears in the romanization because it exists in the Thai spelling.</p>
+    <p>The tradition moved into the Ayutthaya Kingdom and merged with Theravada Buddhism, animist practice, and a warrior culture that used these inscriptions as functional protection. By the time of King Naresuan in the late 1500s, soldiers went into battle wearing shirts covered in yantra designs. The tattoos were not decorative. They were tools.</p>
+    <p>For most of the tradition's history in Thailand, the people who had them reflected that. Warriors, fighters, Muay Thai boxers, gang members, people in dangerous occupations. Sak Yant carried a social stigma inside Thailand that most outsiders do not know about. Middle-class Thai people largely avoided them.</p>
+    <p>What changed that was a specific master and a specific moment. Ajarn Noo Kanpai, one of the most respected practitioners of the modern era, deliberately created new designs intended to broaden the tradition's appeal. On April 23, 2003, he tattooed Angelina Jolie, and the image went around the world. Thai people who would not previously have considered these tattoos began getting them. The tradition opened up in both directions.</p>
+    <p>The designs that became globally recognizable through that moment are the ones you will find everywhere now. At least one of the most common, the Ha Taew, was created by Ajarn Noo himself. The designs that predate that market are less visible, held by a smaller number of practitioners who continue working from older lineages.</p>
+  </div>
+</section>
 
-    <p>For most of its history in Thailand, Sak Yant still carried a social stigma. It was associated with criminals, fighters, and people in dangerous occupations. Conservative Thai society largely avoided it.</p>
+<div class="photo-pair">
+  <img src="20260517_0047.jpg" alt="The workspace" style="object-position:center center;">
+  <img src="20260517_0012.jpg" alt="The Ajarn at work" style="object-position:center center;">
+</div>
 
-    <p>That began to change in 2003 when Ajarn Noo Kanpai tattooed Angelina Jolie. The global attention that followed introduced the tradition to a western audience and, just as importantly, began removing the stigma inside Thailand itself. In the years since, tattoo culture has expanded globally to a degree that would have been difficult to predict at the time. The market that grew from all of this produced a generation of practitioners oriented toward that audience. The Ajarn at the center of this photography workshop works from that older lineage. His designs predate that market.</p>
-
-    <div class="pull-quote">
-      <p>The designs this Ajarn works with are older than the ones most people come to Thailand looking for.</p>
+<section>
+  <div class="wrap">
+    <div class="section-tag">What it actually is</div>
+    <h2>Sak Yant <em>and Buddhism</em></h2>
+    <div class="two-col">
+      <div>
+        <p>Sak Yant sits inside Thai occult tradition, ไสยศาสตร์ (sai-ya-sat). That does not mean it is separate from Buddhism. All of the Ajarns are Buddhist. Most of the people who get these tattoos are Buddhist. The chanting is drawn from Buddhist scripture. There are Buddhist elements in many of the designs. But the purpose of the tattoos, to bring the wearer protection, money, power, love, luck in travel, charm in speech, goes beyond what Buddhism alone teaches. Buddhism teaches letting go of those things. The tattoos exist specifically to get them. Thai people live with both of these things at the same time without contradiction. It is worth understanding that when you arrive.</p>
+      </div>
+      <div>
+        <p>Each yantra is a specific inscription with a specific purpose. The Ajarn who applies it is a practitioner, not an artist in the contemporary sense. The design is not chosen for aesthetic reasons. The kata, the sacred chant performed during and after the tattooing, is what activates it.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- NEEDLE PHOTO -->
-<div style="width:100%; margin:0; padding:0; line-height:0;">
-  <img src="20260524_0157.jpg" alt="Sak Yant needle close up" style="width:100%; display:block; max-height:600px; object-fit:cover; object-position:center bottom;">
+<div class="full-photo">
+  <img src="20260517_0003.jpg" alt="Needle entering skin" style="max-height:580px; object-position:center center;">
 </div>
 
-<!-- WHAT TO EXPECT -->
 <section>
   <div class="wrap">
-    <div class="section-tag">On the day</div>
-    <h2>What to <em>expect</em></h2>
+    <div class="section-tag">The script</div>
+    <h2>What the writing <em>actually is</em></h2>
+    <p>The script inside every Sak Yant design is not Thai. It is Khom, descended from the writing system of the old Khmer Empire, used today exclusively in sacred and occult practice across Cambodia and Thailand. A regular tattoo artist cannot read it. A practitioner who does not know the script cannot render it correctly, and an incorrectly rendered yantra is not an activated one.</p>
+    <p>The designs themselves are yantra, a pan-South and Southeast Asian system for containing sacred syllables within geometric forms. The geometry is not decorative. The placement of each element within the composition is determined by the system, not by the practitioner's aesthetic preferences.</p>
+    <div class="pull-quote">
+      <p>The script is the tattoo. The geometry contains it. The chant activates it. These are three distinct things and all three are required.</p>
+    </div>
+  </div>
+</section>
 
-    <ul class="expect-list">
-      <div class="expect-item">
-        <span class="expect-num">1.</span>
-        <p class="expect-text">Van pickup from a central Bangkok meeting point. Early start. The day is long and the space has no air conditioning. Seating is on the floor. This needs to be understood before you commit.</p>
+<div class="full-photo">
+  <img src="20260517_0014.jpg" alt="Hand needle close detail" style="max-height:520px; object-position:center center;">
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-tag">The tools</div>
+    <h2>How it is <em>applied</em></h2>
+    <div class="two-col">
+      <div>
+        <p>Sak Yant is applied by hand using a metal rod with a needle tip. There is no electric equipment. The Ajarn controls the depth and spacing of each mark manually, working from memory through designs that may contain hundreds of individual characters of sacred script.</p>
+        <p>The offering plate is prepared before the session and presented to the Ajarn. The blessing is performed after the tattooing is complete. The Ajarn chants the kata associated with the design to activate it.</p>
       </div>
-      <div class="expect-item">
-        <span class="expect-num">2.</span>
-        <p class="expect-text">A briefing before the session covers how to behave in the space, what to wear, and what to expect from the ceremony. Consent for photography has been established with the Ajarn and communicated to the people being tattooed.</p>
+      <div>
+        <p>There are two needle types in common use. The distinction is worth knowing.</p>
+        <div class="needle-pair">
+          <div class="needle-cell">
+            <span class="needle-thai">เข็มผ่าปาก</span>
+            <span class="needle-roman">Khem pha pak</span>
+            <p class="needle-desc">Split-mouth needle. The older type. A single needle with a split tip on a hand rod. Traditional form, increasingly rare among practicing Ajarns today.</p>
+          </div>
+          <div class="needle-cell">
+            <span class="needle-thai">เข็มแพ</span>
+            <span class="needle-roman">Khem phae</span>
+            <p class="needle-desc">Flat cluster needle. Multiple needles bound together. Still hand-applied, but a more recent configuration. More commonly encountered across the mainstream market.</p>
+          </div>
+        </div>
       </div>
-      <div class="expect-item">
-        <span class="expect-num">3.</span>
-        <p class="expect-text">You photograph freely during the tattooing session. No posed shots, no directed moments. You work the room the way you would on a documentary assignment.</p>
+    </div>
+  </div>
+</section>
+
+<div class="photo-pair">
+  <img src="20260517_0245.jpg" alt="The workspace wide" style="object-position:center top;">
+  <img src="20260517_0032.jpg" alt="Khom script being tattooed" style="object-position:center center;">
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-tag">Common designs</div>
+    <h2>What people <em>come for</em></h2>
+    <p>Every Ajarn has designs they are known for and designs they decline to give. The consultation determines what is appropriate for you. These are some of the most commonly requested forms.</p>
+    <div class="design-grid">
+      <div class="design-cell">
+        <div class="design-name">Hah Taew</div>
+        <span class="design-thai">ห้าแถว</span>
+        <p class="design-desc">Five rows. Each carries a distinct function: protection, elevated fortune, defense against malevolent forces, luck in commerce, and personal magnetism. The most common first tattoo.</p>
       </div>
-      <div class="expect-item">
-        <span class="expect-num">4.</span>
-        <p class="expect-text">The blessing ceremony takes place after the tattooing. It is a distinct photographic event from the tattooing itself.</p>
+      <div class="design-cell">
+        <div class="design-name">Gao Yord</div>
+        <span class="design-thai">เก้ายอด</span>
+        <p class="design-desc">Nine peaks. Usually placed at the base of the skull or across the upper back. Represents the nine qualities of the Buddha. One of the most structurally complex yantra forms.</p>
       </div>
-      <div class="expect-item">
-        <span class="expect-num">5.</span>
-        <p class="expect-text">No social media video. Still photography only. The exact location and the Ajarn's identity are not for public posting. The Bang Bon area of Bangkok is as specific as it needs to be.</p>
+      <div class="design-cell">
+        <div class="design-name">Paet Tit</div>
+        <span class="design-thai">แปดทิศ</span>
+        <p class="design-desc">Eight directions. Protection across all eight compass points. Associated with safe travel and protection from danger encountered away from home.</p>
       </div>
-    </ul>
+      <div class="design-cell">
+        <div class="design-name">Suea</div>
+        <span class="design-thai">เสือ</span>
+        <p class="design-desc">Tiger. Authority, strength, and the command of others. Worn by soldiers, fighters, and those in leadership. Among the most powerful and most requested figurative forms.</p>
+      </div>
+      <div class="design-cell">
+        <div class="design-name">Sarika Lin Tong</div>
+        <span class="design-thai">สาลิกาลิ้นทอง</span>
+        <p class="design-desc">Golden-tongued myna bird. Persuasive speech and charm in negotiation. Used by traders, speakers, and those for whom personal influence matters.</p>
+      </div>
+      <div class="design-cell">
+        <div class="design-name">Pok Sap</div>
+        <span class="design-thai">ปกทรัพย์</span>
+        <p class="design-desc">Wealth protection. Continuous flow of money and good fortune in business. Among the most requested designs by people entering new ventures or seeking financial stability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="full-photo">
+  <img src="20260517_0048.jpg" alt="Client and Ajarn in the workspace" style="max-height:560px; object-position:center center;">
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-tag">Before you come</div>
+    <h2>What the Ajarn <em>expects of you</em></h2>
+    <div class="two-col">
+      <div>
+        <p><strong>The Ajarn selects.</strong> In traditional practice, the Ajarn determines or confirms the appropriate design based on a consultation with you. You can express what you want. You should also be prepared to receive what you need. A good Ajarn will tell you the difference.</p>
+        <p><strong>Rules come with the tattoo.</strong> Every yantra has prohibitions attached to it. Certain foods, certain behaviors, certain situations. The Ajarn will explain them. Following them is understood to be part of the arrangement.</p>
+      </div>
+      <div>
+        <p><strong>Placement matters.</strong> The body has a hierarchy. More sacred designs go higher. Nothing goes below the waist. This is not aesthetics. It is part of the structure of the tradition.</p>
+        <p><strong>This is a working space.</strong> You will be in a samnak where people come for reasons that have nothing to do with your visit. The protocol matters. Showing up without preparation wastes the Ajarn's time and disrespects the people who are there for their own purposes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-tag">Two videos worth watching</div>
+    <h2>Go deeper <em>before you decide anything</em></h2>
+    <p>These two videos cover the tradition more thoroughly than any summary. Watching them first means any conversation we have can go further faster.</p>
+
+    <div class="video-block">
+      <div class="video-label">Watch first</div>
+      <p class="video-title">The tradition: <em>origins, practice, and what it means</em></p>
+      <p class="video-desc">A comprehensive overview covering the history, the role of the Ajarn, the ceremony, and what the tattoos are actually for.</p>
+      <div class="video-frame">
+        <iframe src="https://www.youtube.com/embed/-yGAibcn34k" allowfullscreen loading="lazy" title="Sak Yant overview"></iframe>
+      </div>
+      <p style="font-size:0.75rem; color:var(--ash); margin-top:0.6rem;">Video by Stories in History. Used with appreciation.</p>
+    </div>
+
+    <div class="video-block">
+      <div class="video-label">Watch second</div>
+      <p class="video-title">The script: <em>what the writing in every yantra actually is</em></p>
+      <p class="video-desc">The letters inscribed in every Sak Yant design are not Thai. They are Khom, an older script with Khmer origins used for sacred writing. Once you can see them, you see them everywhere.</p>
+      <div class="video-frame">
+        <iframe src="https://www.youtube.com/embed/1TE3Dqw84qw" allowfullscreen loading="lazy" title="Khom script in Sak Yant"></iframe>
+      </div>
+      <p style="font-size:0.75rem; color:var(--ash); margin-top:0.6rem;">Video by Stuart Jay Raj. Used with appreciation.</p>
+    </div>
+  </div>
+</section>
+
+<div class="full-photo">
+  <img src="20260517_0023.jpg" alt="Ajarn drawing design" style="max-height:560px; object-position:center center;">
+</div>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="section-tag">Get in touch</div>
+    <div class="contact-inner">
+      <h2>Start with <em>a message.</em></h2>
+      <p>I got into this the same way most of you did, by going down a rabbit hole and trying to figure out what was real. I am Thai, based in Bangkok, and I have been deep enough in this world long enough to know people and places that do not come up in searches. I speak English natively, so nothing gets lost. Send a message, tell me where you are in the process, and we will figure out if I can actually help.</p>
+      <div class="contact-options">
+        <a href="https://line.me/ti/p/~shallowdepth" class="contact-row">
+          <span class="contact-platform">Line</span>
+          <span class="contact-handle">@shallowdepth</span>
+        </a>
+        <a href="mailto:tong@castinskin.com" class="contact-row">
+          <span class="contact-platform">Email</span>
+          <span class="contact-handle">tong@castinskin.com</span>
+        </a>
+        <a href="https://www.instagram.com/shallowdepth" class="contact-row">
+          <span class="contact-platform">Instagram</span>
+          <span class="contact-handle">@shallowdepth</span>
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap footer-inner">
-    <p>Cast in Skin &mdash; Sak Yant Photography Workshop &mdash; Bangkok, Thailand</p>
-    <p>castinskin.com</p>
+    <p>Cast in Skin &mdash; Traditional Sak Yant &mdash; Bangkok, Thailand</p>
+    <a href="photography.html" style="font-size:0.7rem; color:var(--ash); text-decoration:none; letter-spacing:0.08em;">Photography Workshop</a>
   </div>
 </footer>
 
