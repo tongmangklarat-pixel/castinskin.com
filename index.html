@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cast in Skin — Traditional Sak Yant Tattoos, Bangkok</title>
-  <meta name="description" content="A guide to traditional Sak Yant tattoos in Bangkok. Direct access to practitioners, private and personal.">
+  <meta name="description" content="Direct access to private traditional Sak Yant practitioners in Bangkok. Arranged by a local guide.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&family=Noto+Serif+Thai:wght@400;500&display=swap" rel="stylesheet">
@@ -34,8 +34,6 @@
     h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 400; line-height: 1.2; margin-bottom: 2rem; max-width: 700px; }
     h1 em { font-style: italic; color: var(--gold); }
     .hero-lead { font-size: 1.05rem; color: rgba(242,235,224,0.75); max-width: 580px; line-height: 1.7; }
-    .full-photo { width: 100%; margin: 0; padding: 0; line-height: 0; }
-    .full-photo img { width: 100%; height: auto; display: block; }
     section { padding: 5rem 0; border-bottom: 1px solid var(--line); }
     section:last-of-type { border-bottom: none; }
     .section-tag { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 2.5rem; }
@@ -43,8 +41,6 @@
     h2 em { font-style: italic; color: var(--gold); }
     p { margin-bottom: 1.3rem; color: rgba(242,235,224,0.83); }
     p:last-child { margin-bottom: 0; }
-    .two-col p { margin-bottom: 1.3rem; }
-    .two-col p:last-child { margin-bottom: 0; }
     strong { color: var(--paper); font-weight: 500; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
     @media (max-width: 640px) { .two-col { grid-template-columns: 1fr; gap: 2.5rem; } }
@@ -53,18 +49,10 @@
     .two-col p:last-child { margin-bottom: 0; }
     .pull-quote { border-left: 2px solid var(--gold-dim); padding: 0.2rem 0 0.2rem 1.5rem; margin: 2rem 0; }
     .pull-quote p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.05rem; color: rgba(242,235,224,0.7); line-height: 1.65; }
-    .needle-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 2px; overflow: hidden; margin-top: 1rem; }
-    @media (max-width: 580px) { .needle-pair { grid-template-columns: 1fr; } }
-    .needle-cell { background: var(--deep); padding: 1.8rem; }
-    .needle-thai { font-family: 'Noto Serif Thai', serif; font-size: 1.1rem; color: var(--gold); display: block; margin-bottom: 0.3rem; }
-    .needle-roman { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ash); display: block; margin-bottom: 0.9rem; }
-    .needle-desc { font-size: 0.88rem; color: rgba(242,235,224,0.75); line-height: 1.55; margin: 0; }
-    .design-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 2px; overflow: hidden; margin-top: 2rem; }
-    @media (max-width: 580px) { .design-grid { grid-template-columns: 1fr; } }
-    .design-cell { background: var(--deep); padding: 1.8rem; }
-    .design-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: var(--paper); margin-bottom: 0.3rem; }
-    .design-thai { font-family: 'Noto Serif Thai', serif; font-size: 0.85rem; color: var(--gold); display: block; margin-bottom: 0.7rem; }
-    .design-desc { font-size: 0.88rem; color: rgba(242,235,224,0.72); line-height: 1.55; margin: 0; }
+    .steps { display: flex; flex-direction: column; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 2px; overflow: hidden; margin-top: 2rem; }
+    .step { background: var(--deep); padding: 1.4rem 1.8rem; display: flex; gap: 1.4rem; align-items: baseline; }
+    .step-num { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--gold-dim); flex-shrink: 0; width: 1.4rem; }
+    .step-text { font-size: 0.95rem; color: rgba(242,235,224,0.83); line-height: 1.6; }
     .video-block { margin: 2.5rem 0; }
     .video-label { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ash); margin-bottom: 0.6rem; }
     .video-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: var(--paper); margin-bottom: 0.5rem; }
@@ -76,6 +64,8 @@
     .contact-options { display: flex; flex-direction: column; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 2px; overflow: hidden; margin-top: 2rem; }
     .contact-row { background: var(--deep); padding: 1.2rem 1.8rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; text-decoration: none; transition: background 0.15s; }
     .contact-row:hover { background: #221e1a; }
+    .contact-left { display: flex; align-items: center; gap: 0.75rem; }
+    .contact-icon { width: 18px; height: 18px; flex-shrink: 0; opacity: 0.55; }
     .contact-platform { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ash); }
     .contact-handle { font-size: 0.92rem; color: rgba(242,235,224,0.83); }
     footer { padding: 3rem 0; }
@@ -92,43 +82,56 @@
 <header>
   <div class="wrap header-inner">
     <a href="/" class="wordmark">Cast in <span>Skin</span></a>
-    <div class="header-tag">Bangkok, Thailand</div>
+    <div class="header-tag">Bangkok</div>
   </div>
 </header>
 
-<div style="background:var(--deep); border-bottom:1px solid var(--line); padding:0.7rem 0;">
-  <div class="wrap">
-    <p style="font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--ash); margin:0;">This site is a work in progress. All content and contact information are functional.</p>
-  </div>
-</div>
-
 <div class="hero">
   <div class="wrap">
-    <div class="eyebrow">Sak Yant &mdash; Bangkok</div>
-    <h1>Traditional Sak Yant tattoos.<br><em>What they are and where to get them.</em></h1>
-    <p class="hero-lead">Walk around Thailand long enough and you start noticing the tattoos. The old man selling dried fish at the market. The guy in front of you at the 7-Eleven with the points of a geometric design showing above the back of his t-shirt. Once you know what you are looking at, you see it everywhere.</p>
+    <div class="eyebrow">Bangkok</div>
+    <h1>Traditional Sak Yant tattoos.<br><em>Direct access to private practitioners in Bangkok.</em></h1>
+    <p class="hero-lead">Sak Yant tattoos are traditional blessings inscribed into the skin by master practitioners called Ajarns. They are designed to bring specific things into your life: protection, money, luck, personal magnetism, success in business.</p>
     <p style="margin-top:2.5rem; font-family:'Playfair Display', Georgia, serif; font-size:clamp(1.3rem, 3vw, 1.8rem); font-weight:400; font-style:italic; color:var(--gold); line-height:1.4; max-width:620px;">These are magic spells cast into skin.</p>
-    <p style="margin-top:1.4rem; font-size:1rem; line-height:1.8; color:rgba(242,235,224,0.75); max-width:620px;">The designs are meant to protect you, bring money, bring luck, make you attractive to other people, charming in speech, well-regarded by those around you. Some are meant to make you feared. Some are meant to make you loved. The people applying them have spent years learning the script, the geometry, and the chants that activate each one.</p>
+    <p style="margin-top:1.4rem; font-size:1rem; line-height:1.8; color:rgba(242,235,224,0.75); max-width:620px;">Most visitors to Bangkok who want one end up at commercial shops that cater to tourists. The private practitioners I work with are a different thing entirely. If you want the real version, I am the person who gets you there.</p>
   </div>
 </div>
 
 <section id="contact">
   <div class="wrap">
-    <div class="section-tag">Get in touch</div>
+    <div class="section-tag">Arrange a Sak Yant</div>
     <div class="contact-inner">
-      <h2>Start with <em>a message.</em></h2>
-      <p>I got into this the same way most of you did, by going down a rabbit hole and trying to figure out what was real. I am Thai, based in Bangkok, and I have been deep enough in this world long enough to know people and places that do not come up in searches. I speak English natively, so nothing gets lost. Send a message, tell me where you are in the process, and we will figure out if I can actually help.</p>
+      <h2>Request access to <em>a practitioner.</em></h2>
+      <p>I am a Bangkok local with years of firsthand experience inside the Sak Yant tradition. I am not a practitioner and I do not give tattoos. I act as the bridge to private Ajarns who do not accept tourists or appear in online searches. I am a native English speaker. Contacting me directly is how you secure an appointment. Tell me what you are looking for and when you will be in Bangkok. I will let you know what is possible and arrange the appointment.</p>
       <div class="contact-options">
         <a href="https://line.me/ti/p/~shallowdepth" class="contact-row">
-          <span class="contact-platform">Line</span>
+          <span class="contact-left">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.02 2 11c0 3.07 1.68 5.78 4.25 7.47L5.5 22l3.75-1.97C10.3 20.66 11.14 21 12 21c5.52 0 10-4.02 10-9S17.52 2 12 2z" fill="currentColor"/>
+              <path d="M7.5 10h1v3h-1zM11.5 10h1v1.5L14 10h1.2l-1.7 1.8L15.3 13H14l-1.5-1.5V13h-1z" fill="var(--ink)"/>
+            </svg>
+            <span class="contact-platform">Line</span>
+          </span>
           <span class="contact-handle">@shallowdepth</span>
         </a>
         <a href="mailto:tong@castinskin.com" class="contact-row">
-          <span class="contact-platform">Email</span>
+          <span class="contact-left">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M2 7l10 7 10-7" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            <span class="contact-platform">Email</span>
+          </span>
           <span class="contact-handle">tong@castinskin.com</span>
         </a>
         <a href="https://www.instagram.com/shallowdepth" class="contact-row">
-          <span class="contact-platform">Instagram</span>
+          <span class="contact-left">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+            </svg>
+            <span class="contact-platform">Instagram</span>
+          </span>
           <span class="contact-handle">@shallowdepth</span>
         </a>
       </div>
@@ -138,155 +141,69 @@
 
 <section>
   <div class="wrap">
-    <div class="section-tag">The history</div>
-    <h2>Where this <em>comes from</em></h2>
-    <p>The exact origins of Sak Yant are not fully agreed upon. Historians generally place the practice around the third century, when yantra geometry arrived in what is now Cambodia, Thailand, and Myanmar from Hindu and tantric practice across South Asia. The tradition draws from Hindu geometry, Buddhist Pali scripture, and older animist practice. The tattooing of these designs onto the body, rather than wearing or displaying them, is specific to mainland Southeast Asia.</p>
-    <p style="font-size:0.82rem; color:var(--ash); line-height:1.6;">A note on pronunciation: Thai people say it closer to "suk-yun." The t at the end of Yant is silent. It appears in the romanization because it exists in the Thai spelling.</p>
-    <p>The tradition moved into the Ayutthaya Kingdom and merged with Theravada Buddhism, animist practice, and a warrior culture that used these inscriptions as functional protection. By the time of King Naresuan in the late 1500s, soldiers went into battle wearing shirts covered in yantra designs. The tattoos were not decorative. They were tools.</p>
-    <p>For most of the tradition's history in Thailand, the people who had them reflected that. Warriors, fighters, Muay Thai boxers, gang members, people in dangerous occupations. Sak Yant carried a social stigma inside Thailand that most outsiders do not know about. Middle-class Thai people largely avoided them.</p>
-    <p>What changed that was a specific master and a specific moment. Ajarn Noo Kanpai, one of the most respected practitioners of the modern era, deliberately created new designs intended to broaden the tradition's appeal. On April 23, 2003, he tattooed Angelina Jolie, and the image went around the world. Thai people who would not previously have considered these tattoos began getting them. The tradition opened up in both directions.</p>
-    <p>The designs that became globally recognizable through that moment are the ones you will find everywhere now. At least one of the most common, the Ha Taew, was created by Ajarn Noo himself. The designs that predate that market are less visible, held by a smaller number of practitioners who continue working from older lineages.</p>
+    <div class="section-tag">How it works</div>
+    <h2>What happens after you message</h2>
+    <div class="steps">
+      <div class="step"><span class="step-num">1</span><span class="step-text">Send a message on Line, email, or Instagram. Tell me what you are looking for and when you will be in Bangkok.</span></div>
+      <div class="step"><span class="step-num">2</span><span class="step-text">I recommend the right practitioner based on what you want and arrange the appointment.</span></div>
+      <div class="step"><span class="step-num">3</span><span class="step-text">I accompany you to the session, handle communication with the Ajarn, and make sure you know what to expect before you arrive.</span></div>
+      <div class="step"><span class="step-num">4</span><span class="step-text">You receive the tattoo from a traditional practitioner working outside the commercial market.</span></div>
+    </div>
   </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-tag">History</div>
+    <h2>Where Sak Yant comes from</h2>
+    <p>Sak Yant is a traditional Southeast Asian practice that blends sacred geometry, ancient script, and protective blessings. For centuries these tattoos were worn by soldiers, fighters, and people in dangerous occupations as functional tools, not decoration. The tradition is still active and still practiced the same way.</p>
+    <p>The private practitioners I work with come from older lineages. Their work predates the commercial market that opened up after high-profile Westerners began seeking Sak Yant in the early 2000s. What they do is categorically different from what you will find in tourist-facing shops.</p>
+  </div>
+</section>
 
 <div style="width:100%;margin:0;padding:0;line-height:0;"><img src="20260517_0165.jpg" style="width:100%;height:auto;display:block;"></div>
 
 <section>
   <div class="wrap">
-    <div class="section-tag">What it actually is</div>
-    <h2>Sak Yant <em>and Buddhism</em></h2>
-    <div class="two-col">
-      <div>
-        <p>Sak Yant sits inside Thai occult tradition, ไสยศาสตร์ (sai-ya-sat). That does not mean it is separate from Buddhism. All of the Ajarns are Buddhist. Most of the people who get these tattoos are Buddhist. The chanting is drawn from Buddhist scripture. There are Buddhist elements in many of the designs. But the purpose of the tattoos, to bring the wearer protection, money, power, love, luck in travel, charm in speech, goes beyond what Buddhism alone teaches. Buddhism teaches letting go of those things. The tattoos exist specifically to get them. Thai people live with both of these things at the same time without contradiction. It is worth understanding that when you arrive.</p>
-      </div>
-      <div>
-        <p>Each yantra is a specific inscription with a specific purpose. The Ajarn who applies it is a practitioner, not an artist in the contemporary sense. The design is not chosen for aesthetic reasons. The kata, the sacred chant performed during and after the tattooing, is what activates it.</p>
-      </div>
-    </div>
-  </div>
-
-<div style="width:100%;margin:0;padding:0;line-height:0;"><img src="20260517_0303.jpg" style="width:100%;height:auto;display:block;"></div>
-
-<section>
-  <div class="wrap">
     <div class="section-tag">The script</div>
-    <h2>What the writing <em>actually is</em></h2>
-    <p>The script inside every Sak Yant design is not Thai. It is Khom, descended from the writing system of the old Khmer Empire, used today exclusively in sacred and occult practice across Cambodia and Thailand. A regular tattoo artist cannot read it. A practitioner who does not know the script cannot render it correctly, and an incorrectly rendered yantra is not an activated one.</p>
-    <p>The designs themselves are yantra, a pan-South and Southeast Asian system for containing sacred syllables within geometric forms. The geometry is not decorative. The placement of each element within the composition is determined by the system, not by the practitioner's aesthetic preferences.</p>
+    <h2>What makes a traditional Sak Yant different</h2>
+    <p>The text inside every Sak Yant is written in Khom, a sacred script used exclusively for traditional blessings across Thailand and Cambodia. A standard tattoo shop cannot read it or render it correctly. An incorrectly rendered yantra is not an activated one.</p>
+    <p>The practitioners I work with have spent years mastering the script, the geometry, and the chants that complete each design. That combination is what separates a traditional Sak Yant from a decorative copy.</p>
     <div class="pull-quote">
       <p>The script is the tattoo. The geometry contains it. The chant activates it. These are three distinct things and all three are required.</p>
     </div>
   </div>
+</section>
 
 <div style="width:100%;margin:0;padding:0;line-height:0;"><img src="20260517_0258.jpg" style="width:100%;height:auto;display:block;"></div>
 
 <section>
   <div class="wrap">
-    <div class="section-tag">The tools</div>
-    <h2>How it is <em>applied</em></h2>
-    <div class="two-col">
-      <div>
-        <p>Sak Yant is applied by hand using a metal rod with a needle tip. There is no electric equipment. The Ajarn controls the depth and spacing of each mark manually, working from memory through designs that may contain hundreds of individual characters of sacred script.</p>
-        <p>The offering plate is prepared before the session and presented to the Ajarn. The blessing is performed after the tattooing is complete. The Ajarn chants the kata associated with the design to activate it.</p>
-      </div>
-      <div>
-        <p>There are two needle types in common use. The distinction is worth knowing.</p>
-        <div class="needle-pair">
-          <div class="needle-cell">
-            <span class="needle-thai">เข็มผ่าปาก</span>
-            <span class="needle-roman">Khem pha pak</span>
-            <p class="needle-desc">Split-mouth needle. The older type. A single needle with a split tip on a hand rod. Traditional form, increasingly rare among practicing Ajarns today.</p>
-          </div>
-          <div class="needle-cell">
-            <span class="needle-thai">เข็มแพ</span>
-            <span class="needle-roman">Khem phae</span>
-            <p class="needle-desc">Flat cluster needle. Multiple needles bound together. Still hand-applied, but a more recent configuration. More commonly encountered across the mainstream market.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="section-tag">A common concern</div>
+    <h2>On cultural appropriation</h2>
+    <p>The concern comes up often: is it appropriate for a Western visitor to receive a Sak Yant tattoo? It deserves a direct answer.</p>
+    <p>Sak Yant is not a tribal or indigenous tattoo tradition. It is a literate, textually grounded practice rooted in Hindu-Buddhist tantric scholarship, drawing from Pali and Sanskrit sources. Its origins are pan-South and Southeast Asian. It has Khmer roots and has been practiced across Thailand, Cambodia, Laos, and Myanmar for centuries. The argument that it belongs exclusively to one people does not hold up to the tradition's actual history.</p>
+    <p>The pushback Western visitors encounter almost never comes from Thai practitioners. It comes from outside the tradition entirely, from people with no stake in it who have appointed themselves its guardians. The Ajarns I work with run businesses. Access to their work is how they sustain their practice and pass the tradition forward. When someone declines to participate out of guilt, the person absorbing the cost is Thai. The discomfort stays with the visitor. The lost income stays with the Ajarn.</p>
+    <p>You do not need to be Buddhist to receive a Sak Yant. You need to show up with basic respect for where you are and what is happening. That is the whole thing.</p>
   </div>
-
-<div style="width:100%;margin:0;padding:0;line-height:0;"><img src="20260524_0157.jpg" style="width:100%;height:auto;display:block;"></div>
+</section>
 
 <section>
   <div class="wrap">
-    <div class="section-tag">Common designs</div>
-    <h2>What people <em>come for</em></h2>
-    <p>Every Ajarn has designs they are known for and designs they decline to give. The consultation determines what is appropriate for you. These are some of the most commonly requested forms.</p>
-    <div class="design-grid">
-      <div class="design-cell">
-        <div class="design-name">Hah Taew</div>
-        <span class="design-thai">ห้าแถว</span>
-        <p class="design-desc">Five rows. Each carries a distinct function: protection, elevated fortune, defense against malevolent forces, luck in commerce, and personal magnetism. The most common first tattoo.</p>
-      </div>
-      <div class="design-cell">
-        <div class="design-name">Gao Yord</div>
-        <span class="design-thai">เก้ายอด</span>
-        <p class="design-desc">Nine peaks. Usually placed at the base of the skull or across the upper back. Represents the nine qualities of the Buddha. One of the most structurally complex yantra forms.</p>
-      </div>
-      <div class="design-cell">
-        <div class="design-name">Paet Tit</div>
-        <span class="design-thai">แปดทิศ</span>
-        <p class="design-desc">Eight directions. Protection across all eight compass points. Associated with safe travel and protection from danger encountered away from home.</p>
-      </div>
-      <div class="design-cell">
-        <div class="design-name">Suea</div>
-        <span class="design-thai">เสือ</span>
-        <p class="design-desc">Tiger. Authority, strength, and the command of others. Worn by soldiers, fighters, and those in leadership. Among the most powerful and most requested figurative forms.</p>
-      </div>
-      <div class="design-cell">
-        <div class="design-name">Sarika Lin Tong</div>
-        <span class="design-thai">สาลิกาลิ้นทอง</span>
-        <p class="design-desc">Golden-tongued myna bird. Persuasive speech and charm in negotiation. Used by traders, speakers, and those for whom personal influence matters.</p>
-      </div>
-      <div class="design-cell">
-        <div class="design-name">Pok Sap</div>
-        <span class="design-thai">ปกทรัพย์</span>
-        <p class="design-desc">Wealth protection. Continuous flow of money and good fortune in business. Among the most requested designs by people entering new ventures or seeking financial stability.</p>
-      </div>
-    </div>
-  </div>
-
-<div style="width:100%;margin:0;padding:0;line-height:0;"><img src="20260524_0168.jpg" style="width:100%;height:auto;display:block;"></div>
-
-<section>
-  <div class="wrap">
-    <div class="section-tag">Before you come</div>
-    <h2>What the Ajarn <em>expects of you</em></h2>
-    <div class="two-col">
-      <div>
-        <p><strong>The Ajarn selects.</strong> In traditional practice, the Ajarn determines or confirms the appropriate design based on a consultation with you. You can express what you want. You should also be prepared to receive what you need. A good Ajarn will tell you the difference.</p>
-        <p><strong>Rules come with the tattoo.</strong> Every yantra has prohibitions attached to it. Certain foods, certain behaviors, certain situations. The Ajarn will explain them. Following them is understood to be part of the arrangement.</p>
-      </div>
-      <div>
-        <p><strong>Placement matters.</strong> The body has a hierarchy. More sacred designs go higher. Nothing goes below the waist. This is not aesthetics. It is part of the structure of the tradition.</p>
-        <p><strong>This is a working space.</strong> You will be in a samnak where people come for reasons that have nothing to do with your visit. The protocol matters. Showing up without preparation wastes the Ajarn's time and disrespects the people who are there for their own purposes.</p>
-      </div>
-    </div>
-  </div>
-
-<div style="width:100%;margin:0;padding:0;line-height:0;"><img src="20260517_0034.jpg" style="width:100%;height:auto;display:block;"></div>
-
-<section>
-  <div class="wrap">
-    <div class="section-tag">Two videos worth watching</div>
-    <h2>Go deeper <em>before you decide anything</em></h2>
-    <p>These two videos cover the tradition more thoroughly than any summary. Watching them first means any conversation we have can go further faster.</p>
-
+    <div class="section-tag">Further context</div>
+    <h2>If you want to go deeper before booking</h2>
+    <p>These two videos are worth watching if you want a fuller picture of the tradition and the script before you arrive.</p>
     <div class="video-block">
-      <div class="video-label">Watch first</div>
-      <p class="video-title">The tradition: <em>origins, practice, and what it means</em></p>
-      <p class="video-desc">A comprehensive overview covering the history, the role of the Ajarn, the ceremony, and what the tattoos are actually for.</p>
+      <div class="video-label">The tradition</div>
+      <p class="video-title">Origins, practice, and what the tattoos are actually for</p>
       <div class="video-frame">
         <iframe src="https://www.youtube.com/embed/-yGAibcn34k" allowfullscreen loading="lazy" title="Sak Yant overview"></iframe>
       </div>
       <p style="font-size:0.75rem; color:var(--ash); margin-top:0.6rem;">Video by Stories in History. Used with appreciation.</p>
     </div>
-
     <div class="video-block">
-      <div class="video-label">Watch second</div>
-      <p class="video-title">The script: <em>what the writing in every yantra actually is</em></p>
-      <p class="video-desc">The letters inscribed in every Sak Yant design are not Thai. They are Khom, an older script with Khmer origins used for sacred writing. Once you can see them, you see them everywhere.</p>
+      <div class="video-label">The script</div>
+      <p class="video-title">What the writing inside every Sak Yant actually is</p>
       <div class="video-frame">
         <iframe src="https://www.youtube.com/embed/1TE3Dqw84qw" allowfullscreen loading="lazy" title="Khom script in Sak Yant"></iframe>
       </div>
@@ -297,9 +214,52 @@
 
 <div style="width:100%;margin:0;padding:0;line-height:0;"><img src="20260524_0001.jpg" style="width:100%;height:auto;display:block;"></div>
 
+<section id="contact-bottom">
+  <div class="wrap">
+    <div class="section-tag">Get in touch</div>
+    <div class="contact-inner">
+      <h2>Ready to <em>arrange a session?</em></h2>
+      <p>Message me on any of the platforms below. Tell me when you will be in Bangkok and what you are looking for. I will take it from there.</p>
+      <div class="contact-options">
+        <a href="https://line.me/ti/p/~shallowdepth" class="contact-row">
+          <span class="contact-left">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.02 2 11c0 3.07 1.68 5.78 4.25 7.47L5.5 22l3.75-1.97C10.3 20.66 11.14 21 12 21c5.52 0 10-4.02 10-9S17.52 2 12 2z" fill="currentColor"/>
+              <path d="M7.5 10h1v3h-1zM11.5 10h1v1.5L14 10h1.2l-1.7 1.8L15.3 13H14l-1.5-1.5V13h-1z" fill="var(--ink)"/>
+            </svg>
+            <span class="contact-platform">Line</span>
+          </span>
+          <span class="contact-handle">@shallowdepth</span>
+        </a>
+        <a href="mailto:tong@castinskin.com" class="contact-row">
+          <span class="contact-left">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M2 7l10 7 10-7" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            <span class="contact-platform">Email</span>
+          </span>
+          <span class="contact-handle">tong@castinskin.com</span>
+        </a>
+        <a href="https://www.instagram.com/shallowdepth" class="contact-row">
+          <span class="contact-left">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+            </svg>
+            <span class="contact-platform">Instagram</span>
+          </span>
+          <span class="contact-handle">@shallowdepth</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap footer-inner">
-    <p>Cast in Skin &mdash; Traditional Sak Yant &mdash; Bangkok, Thailand</p>
+    <p>Cast in Skin, Bangkok</p>
     <a href="photography.html" style="font-size:0.7rem; color:var(--ash); text-decoration:none; letter-spacing:0.08em;">Photography Workshop</a>
   </div>
 </footer>
