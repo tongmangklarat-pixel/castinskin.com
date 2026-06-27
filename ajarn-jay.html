@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajarn Jay: Traditional Sak Yant Master, Saraburi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #141210;
+      --deep: #1c1814;
+      --paper: #f2ebe0;
+      --gold: #c49a3c;
+      --gold-dim: #8a6a22;
+      --ash: #7a7068;
+      --line: rgba(196,154,60,0.2);
+      --line-strong: rgba(196,154,60,0.45);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--ink); color: var(--paper); font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.75; overflow-x: hidden; }
+    body::after { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 9998; opacity: 0.28; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E"); }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 0 2rem; }
+    header { border-bottom: 1px solid var(--line); padding: 1.6rem 0; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem; }
+    .wordmark { font-family: 'Playfair Display', Georgia, serif; font-size: 1.1rem; letter-spacing: 0.04em; color: var(--gold); font-weight: 400; text-decoration: none; }
+    .wordmark span { font-style: italic; }
+    .header-tag { font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ash); }
+    .hero { padding: 7rem 0 5.5rem; border-bottom: 1px solid var(--line); }
+    .eyebrow { font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 2rem; }
+    h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 400; line-height: 1.2; margin-bottom: 2rem; max-width: 700px; }
+    h1 em { font-style: italic; color: var(--gold); }
+    .hero-lead { font-size: 1.05rem; color: rgba(242,235,224,0.75); max-width: 580px; line-height: 1.7; }
+    section { padding: 5rem 0; border-bottom: 1px solid var(--line); }
+    section:last-of-type { border-bottom: none; }
+    .section-tag { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 2.5rem; }
+    h2 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 400; line-height: 1.3; margin-bottom: 1.8rem; }
+    h2 em { font-style: italic; color: var(--gold); }
+    p { margin-bottom: 1.3rem; color: rgba(242,235,224,0.83); max-width: 620px; }
+    p:last-child { margin-bottom: 0; }
+    strong { color: var(--paper); font-weight: 500; }
+    .note {
+      border: 1px solid var(--line-strong);
+      background: var(--deep);
+      padding: 1rem 1.4rem;
+      margin: 1.6rem 0 0;
+      max-width: 560px;
+    }
+    .note p { font-size: 0.85rem; color: var(--ash); margin: 0; }
+    .note .note-label { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-dim); display: block; margin-bottom: 0.4rem; }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      margin-top: 0.5rem;
+    }
+    .gallery figure { margin: 0; aspect-ratio: 3/4; overflow: hidden; background: var(--deep); }
+    .gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    @media (max-width: 640px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
+    footer { padding: 3rem 0; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    footer p { font-size: 0.75rem; letter-spacing: 0.08em; color: var(--ash); margin: 0; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    .hero .eyebrow { animation: fadeUp 0.6s ease both 0.05s; }
+    .hero h1 { animation: fadeUp 0.7s ease both 0.15s; }
+    .hero .hero-lead { animation: fadeUp 0.7s ease both 0.3s; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a href="#" class="wordmark">Ajarn <span>Jay</span></a>
+    <div class="header-tag">Saraburi</div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Saraburi</div>
+    <h1>Ajarn Jay</h1>
+    <p class="hero-lead">A traditional Sak Yant master based in Saraburi, Thailand. A little under two hours from Bangkok, bordering Ayutthaya, the ancient capital.</p>
+  </div>
+</div>
+
+<div style="width:100%;margin:0;padding:0;line-height:0;">
+  <img src="images/1782565489371_20241214_0435.jpg" alt="Photograph of Ajarn Jay" style="width:100%;height:auto;display:block;">
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-tag">Who he is</div>
+    <p>Ajarn Jay is a traditionalist. He comes from a real lineage, he knows the rules of Sak Yant deeply, the kata, the sacred script and incantations, and the proper way each design is meant to be done, and he follows them closely. He won't tattoo designs that fall outside the tradition, no matter how popular they've become. What he does tattoo, he's tattooed many times over, and that repetition has sharpened it into mastery. The result is work his many fans genuinely admire.</p>
+    <p>What sets his work apart is something you don't have to take anyone's word for. His skill as an illustrator means his tattoos are simply better looking than most, cleaner line, better composition, more beautifully rendered on skin. You can see it yourself, in the gallery below.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-tag">Designs</div>
+    <p>A sampling of his work.</p>
+    <div class="gallery">
+      <figure><img src="images/1127731802250757_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure><img src="images/1155765526114051_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure><img src="images/1164787768545160_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure><img src="images/1197931578564112_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure><img src="images/1208520590838544_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure><img src="images/1221098119580791_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure><img src="images/1226227075734562_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure><img src="images/1229423935414876_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure><img src="images/1229423942081542_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure><img src="images/1249262460097690_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure><img src="images/1250871063270163_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure><img src="images/1303499848007284_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure><img src="images/1520038396353427_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure><img src="images/1530700485287218_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure><img src="images/1540414874315779_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-tag">Recognition</div>
+    <p>When Ajarn Jay posts a new piece of work, it draws thousands of reactions, mostly from other Thais. He's well known where he is, independent of anyone outside Thailand. His reputation has also reached Europe: two cultural organizations, one in Italy, one spanning France and Belgium, have brought him over in person and published his work.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-tag">Hygiene and process</div>
+    <p>Ajarn Jay's process matches what's required of a licensed tattoo studio in the West: single-use disposable needles, gloves worn throughout, barrier protection on everything he touches during a session.</p>
+  </div>
+</section>
+
+<div style="width:100%;margin:0;padding:0;line-height:0;">
+  <img src="images/1782565489369_20241214_0269.jpg" alt="Photograph of Ajarn Jay" style="width:100%;height:auto;display:block;">
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-tag">The homestay</div>
+    <p>Ajarn Jay also keeps a property in Sao Hai, a short walk from where he works, that he's set up as a place for visiting clients to stay.</p>
+    <div class="note">
+      <span class="note-label">Needs your description</span>
+      <p>The property itself. Nothing online describes this place, this paragraph has to come from you.</p>
+    </div>
+    <p>Every Sunday, from 8 in the morning to 4 in the afternoon, a market opens on the grounds of Wat Ton Tan, right on the Pa Sak river. Food stalls line the riverbank, there are boat rides on the water, and a local weaving group demonstrates traditional cloth making nearby. It's a working community market, not a tourist setup, and it only runs one day a week.</p>
+    <p>A full Sak Yant session, especially for larger pieces, can run for hours. Staying overnight means starting early and finishing properly, instead of rushing back to Bangkok the same day.</p>
+    <p>Sao Hai is roughly two hours from Bangkok by car.</p>
+    <div class="note">
+      <span class="note-label">Needs photos</span>
+      <p>The property and the Sunday market, once shot.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p>Concept proposal, not yet live</p>
+    <p>No contact info shown until Ajarn Jay has seen and approved this</p>
+  </div>
+</footer>
+
+</body>
+</html>
