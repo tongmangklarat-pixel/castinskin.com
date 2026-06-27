@@ -58,9 +58,19 @@
       border: 1px solid var(--line);
       margin-top: 0.5rem;
     }
-    .gallery figure { margin: 0; aspect-ratio: 3/4; overflow: hidden; background: var(--deep); }
+    .gallery figure { margin: 0; aspect-ratio: 3/4; overflow: hidden; background: var(--deep); cursor: zoom-in; }
     .gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
     @media (max-width: 640px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
+    .lightbox {
+      position: fixed; inset: 0; background: rgba(20,18,16,0.94);
+      display: none; align-items: center; justify-content: center;
+      z-index: 9999; padding: 3vh 3vw; cursor: zoom-out;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox img { max-width: 100%; max-height: 100%; display: block; box-shadow: 0 30px 80px rgba(0,0,0,0.55); }
+    @media (prefers-reduced-motion: no-preference) {
+      .lightbox img { animation: fadeUp 0.25s ease both; }
+    }
     footer { padding: 3rem 0; }
     .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
     footer p { font-size: 0.75rem; letter-spacing: 0.08em; color: var(--ash); margin: 0; }
@@ -104,21 +114,21 @@
     <div class="section-tag">Designs</div>
     <p>A sampling of his work.</p>
     <div class="gallery">
-      <figure><img src="1127731802250757_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
-      <figure><img src="1155765526114051_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
-      <figure><img src="1164787768545160_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
-      <figure><img src="1197931578564112_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
-      <figure><img src="1208520590838544_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
-      <figure><img src="1221098119580791_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
-      <figure><img src="1226227075734562_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
-      <figure><img src="1229423935414876_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
-      <figure><img src="1229423942081542_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
-      <figure><img src="1249262460097690_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
-      <figure><img src="1250871063270163_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
-      <figure><img src="1303499848007284_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
-      <figure><img src="1520038396353427_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
-      <figure><img src="1530700485287218_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
-      <figure><img src="1540414874315779_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure tabindex="0" role="button" aria-label="View larger photograph"><img src="1127731802250757_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure tabindex="0" role="button" aria-label="View larger photograph"><img src="1155765526114051_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure tabindex="0" role="button" aria-label="View larger photograph"><img src="1164787768545160_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure tabindex="0" role="button" aria-label="View larger photograph"><img src="1197931578564112_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure tabindex="0" role="button" aria-label="View larger photograph"><img src="1208520590838544_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure tabindex="0" role="button" aria-label="View larger photograph"><img src="1221098119580791_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure tabindex="0" role="button" aria-label="View larger photograph"><img src="1226227075734562_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure tabindex="0" role="button" aria-label="View larger photograph"><img src="1229423935414876_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure tabindex="0" role="button" aria-label="View larger photograph"><img src="1229423942081542_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure tabindex="0" role="button" aria-label="View larger photograph"><img src="1249262460097690_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure tabindex="0" role="button" aria-label="View larger photograph"><img src="1250871063270163_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure tabindex="0" role="button" aria-label="View larger photograph"><img src="1303499848007284_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure tabindex="0" role="button" aria-label="View larger photograph"><img src="1520038396353427_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure tabindex="0" role="button" aria-label="View larger photograph"><img src="1530700485287218_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
+      <figure tabindex="0" role="button" aria-label="View larger photograph"><img src="1540414874315779_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
     </div>
   </div>
 </section>
@@ -165,6 +175,46 @@
     <p>No contact info shown until Ajarn Jay has seen and approved this</p>
   </div>
 </footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+  (function () {
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImg = document.getElementById('lightbox-img');
+
+    function openLightbox(img) {
+      lightboxImg.src = img.src.replace('_sm.jpg', '_lg.jpg');
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('active');
+      lightbox.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImg.src = '';
+    }
+
+    document.querySelectorAll('.gallery figure').forEach(function (fig) {
+      var img = fig.querySelector('img');
+      fig.addEventListener('click', function () { openLightbox(img); });
+      fig.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openLightbox(img);
+        }
+      });
+    });
+
+    lightbox.addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  })();
+</script>
 
 </body>
 </html>
