@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
   <title>Ajarn Jay: Traditional Sak Yant Master, Saraburi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,14 +63,28 @@
     .gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
     @media (max-width: 640px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
     .lightbox {
-      position: fixed; inset: 0; background: rgba(20,18,16,0.94);
+      position: fixed; inset: 0; background: rgba(20,18,16,0.96);
       display: none; align-items: center; justify-content: center;
-      z-index: 9999; padding: 3vh 3vw; cursor: zoom-out;
+      z-index: 9999; padding: 3vh 3vw;
     }
     .lightbox.active { display: flex; }
-    .lightbox img { max-width: 100%; max-height: 100%; display: block; box-shadow: 0 30px 80px rgba(0,0,0,0.55); }
+    .lightbox img { max-width: 100%; max-height: 100%; display: block; box-shadow: 0 30px 80px rgba(0,0,0,0.55); cursor: default; }
     @media (prefers-reduced-motion: no-preference) {
-      .lightbox img { animation: fadeUp 0.25s ease both; }
+      .lightbox img { animation: fadeUp 0.2s ease both; }
+    }
+    .lightbox-close, .lightbox-nav {
+      position: fixed;
+      background: none; border: none; color: var(--paper);
+      font-family: 'Playfair Display', serif; cursor: pointer;
+      opacity: 0.6; transition: opacity 0.15s;
+    }
+    .lightbox-close:hover, .lightbox-nav:hover { opacity: 1; color: var(--gold); }
+    .lightbox-close { top: 1.5rem; right: 1.5rem; font-size: 1.8rem; line-height: 1; padding: 0.5rem; }
+    .lightbox-nav { top: 50%; transform: translateY(-50%); font-size: 2.6rem; padding: 1rem 0.6rem; }
+    .lightbox-prev { left: 0.5rem; }
+    .lightbox-next { right: 0.5rem; }
+    @media (max-width: 640px) {
+      .lightbox-nav { font-size: 2rem; }
     }
     footer { padding: 3rem 0; }
     .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
@@ -104,15 +119,14 @@
 <section>
   <div class="wrap">
     <div class="section-tag">Who he is</div>
-    <p>Ajarn Jay is a traditionalist. He comes from a real lineage, he knows the rules of Sak Yant deeply, the kata, the sacred script and incantations, and the proper way each design is meant to be done, and he follows them closely. He won't tattoo designs that fall outside the tradition, no matter how popular they've become. What he does tattoo, he's tattooed many times over, and that repetition has sharpened it into mastery. The result is work his many fans genuinely admire.</p>
-    <p>What sets his work apart is something you don't have to take anyone's word for. His skill as an illustrator means his tattoos are simply better looking than most, cleaner line, better composition, more beautifully rendered on skin. You can see it yourself, in the gallery below.</p>
+    <p>Ajarn Jay is a traditionalist. He is able to trace his lineage, he knows the rules of Sak Yant deeply, the sacred script and incantations, and the proper way each design is meant to be done. His years and years as a tattooist have sharpened repetition into true mastery. The result is work his many fans genuinely admire.</p>
+    <p>His skill as an illustrator means his tattoos are simply better looking than most, cleaner line, better composition, more beautifully rendered on skin. You can see it yourself, in the gallery below.</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="section-tag">Designs</div>
-    <p>A sampling of his work.</p>
+    <div class="section-tag">A sampling of his work.</div>
     <div class="gallery">
       <figure tabindex="0" role="button" aria-label="View larger photograph"><img src="1127731802250757_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
       <figure tabindex="0" role="button" aria-label="View larger photograph"><img src="1155765526114051_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
@@ -130,13 +144,6 @@
       <figure tabindex="0" role="button" aria-label="View larger photograph"><img src="1530700485287218_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
       <figure tabindex="0" role="button" aria-label="View larger photograph"><img src="1540414874315779_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
     </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="section-tag">Recognition</div>
-    <p>When Ajarn Jay posts a new piece of work, it draws thousands of reactions, mostly from other Thais. He's well known where he is, independent of anyone outside Thailand. His reputation has also reached Europe: two cultural organizations, one in Italy, one spanning France and Belgium, have brought him over in person and published his work.</p>
   </div>
 </section>
 
@@ -177,17 +184,32 @@
 </footer>
 
 <div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+  <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous photograph">&#8249;</button>
   <img id="lightbox-img" src="" alt="">
+  <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next photograph">&#8250;</button>
 </div>
 
 <script>
   (function () {
+    var figures = Array.prototype.slice.call(document.querySelectorAll('.gallery figure'));
+    var sources = figures.map(function (fig) {
+      var img = fig.querySelector('img');
+      return { sm: img.src, lg: img.src.replace('_sm.jpg', '_lg.jpg'), alt: img.alt };
+    });
+
     var lightbox = document.getElementById('lightbox');
     var lightboxImg = document.getElementById('lightbox-img');
+    var currentIndex = 0;
 
-    function openLightbox(img) {
-      lightboxImg.src = img.src.replace('_sm.jpg', '_lg.jpg');
-      lightboxImg.alt = img.alt;
+    function show(index) {
+      currentIndex = (index + sources.length) % sources.length;
+      lightboxImg.src = sources[currentIndex].lg;
+      lightboxImg.alt = sources[currentIndex].alt;
+    }
+
+    function openLightbox(index) {
+      show(index);
       lightbox.classList.add('active');
       lightbox.setAttribute('aria-hidden', 'false');
     }
@@ -198,20 +220,36 @@
       lightboxImg.src = '';
     }
 
-    document.querySelectorAll('.gallery figure').forEach(function (fig) {
-      var img = fig.querySelector('img');
-      fig.addEventListener('click', function () { openLightbox(img); });
+    figures.forEach(function (fig, i) {
+      fig.addEventListener('click', function () { openLightbox(i); });
       fig.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          openLightbox(img);
+          openLightbox(i);
         }
       });
     });
 
-    lightbox.addEventListener('click', closeLightbox);
+    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+    document.getElementById('lightbox-prev').addEventListener('click', function (e) {
+      e.stopPropagation();
+      show(currentIndex - 1);
+    });
+    document.getElementById('lightbox-next').addEventListener('click', function (e) {
+      e.stopPropagation();
+      show(currentIndex + 1);
+    });
+
+    // clicking the dark background (not the image, not the buttons) closes it
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+
     document.addEventListener('keydown', function (e) {
+      if (!lightbox.classList.contains('active')) return;
       if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') show(currentIndex - 1);
+      if (e.key === 'ArrowRight') show(currentIndex + 1);
     });
   })();
 </script>
