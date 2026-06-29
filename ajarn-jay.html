@@ -7,7 +7,7 @@
   <title>Ajarn Jay: Traditional Sak Yant Master, Saraburi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500&family=Noto+Serif+Thai:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --ink: #141210;
@@ -51,6 +51,11 @@
     }
     .note p { font-size: 0.85rem; color: var(--ash); margin: 0; }
     .note .note-label { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-dim); display: block; margin-bottom: 0.4rem; }
+    .footnote {
+      font-size: 0.85rem; color: var(--ash); line-height: 1.6;
+      border-top: 1px solid var(--line); padding-top: 1.3rem; margin-top: 2rem; max-width: 620px;
+    }
+    .footnote strong { color: var(--gold-dim); font-weight: 500; }
     .catalog-cta {
       display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem;
       font-size: 1.02rem; padding: 1.1rem 1.4rem; margin-bottom: 1.8rem;
@@ -84,6 +89,11 @@
     }
     .lightbox-caption strong { color: var(--gold); }
     .lightbox-caption em { color: var(--ash); font-style: italic; }
+    .lightbox-caption .cap-thai {
+      display: block; font-family: 'Noto Serif Thai', serif;
+      font-size: 1.3rem; font-weight: 500; color: var(--gold);
+      margin-bottom: 0.3rem; line-height: 1.4;
+    }
     @media (prefers-reduced-motion: no-preference) {
       .lightbox-content img { animation: fadeUp 0.2s ease both; }
     }
@@ -130,7 +140,7 @@
   <div class="wrap">
     <div class="eyebrow">Saraburi</div>
     <h1>Ajarn Jay</h1>
-    <p class="hero-lead">A traditional Sak Yant master based in Saraburi, Thailand. He is located a little under two hours from Bangkok, bordering Ayutthaya, the ancient capital.</p>
+    <p class="hero-lead">A traditional Sak Yant master based in Saraburi. He is located a little under two hours from Bangkok, bordering Ayutthaya, the ancient capital of Thailand.</p>
   </div>
 </div>
 
@@ -143,6 +153,7 @@
     <div class="section-tag">Who he is</div>
     <p>Ajarn Jay is an established master craftsman of his art. He is able to trace his lineage. He is a traditionalist who knows the rules of Sak Yant deeply, the sacred script and incantations, and the proper way each yantra is meant to be done. His years and years as a tattooist have sharpened repetition into true mastery. The result is work his many disciples and fans genuinely admire.</p>
     <p>His draftsmanship, his command of line, is what truly sets him apart. His tattoos are simply better looking than most: cleaner line, better composition, more beautifully rendered on skin. You can see it yourself, in the gallery below.</p>
+    <p class="footnote"><strong>Hygiene and process.</strong> Ajarn Jay's process matches what's required of a licensed tattoo studio in the West: single-use disposable needles, gloves worn throughout, barrier protection on everything he touches during a session.</p>
   </div>
 </section>
 
@@ -190,13 +201,6 @@
   <img src="20241214_0039.jpg" alt="Photograph of Ajarn Jay" style="width:100%;height:auto;display:block;">
 </div>
 
-<section>
-  <div class="wrap">
-    <div class="section-tag">Hygiene and process</div>
-    <p>Ajarn Jay's process matches what's required of a licensed tattoo studio in the West: single-use disposable needles, gloves worn throughout, barrier protection on everything he touches during a session.</p>
-  </div>
-</section>
-
 <div style="width:100%;margin:0;padding:0;line-height:0;">
   <img src="20241214_0269.jpg" alt="Photograph of Ajarn Jay" style="width:100%;height:auto;display:block;">
 </div>
@@ -239,21 +243,21 @@
 <script>
   (function () {
     var captions = [
-      `<strong>Yant Phra Narai Plik Phaen Din</strong> — Narayana Overturns the Earth<br>Possesses great power and conquering authority.`,
-      `<strong>Yant Nok Sarika Khu Hang Hong Phim Yai</strong> — Pair of Sarika Birds with Swan Tails (Large Version)<br>For charm and great popularity — used for negotiation, singers, speakers, female merchants, and salespeople. Also offers protection from danger and brings safety.`,
-      `This piece features three yantras.<br><br><strong>Yant Buddha Sorn (Yant Kru)</strong> — Overlapping Buddhas Yant (Teacher Yant)<br>The design layers together the five Buddhas of this era — "Sorn" means overlapping or combined. Considered one of the foundational yants within the samnak tradition.<br><br><strong>Yant Solot Mongkol</strong> — Sixteen Auspicious Yant<br>A composite design combining three smaller yants into one. King Rama I had this design placed atop Bangkok's City Pillar Shrine to bring prosperity to the city.<br><br><strong>Yant Tao Ruean Lek</strong> — Turtle Yant<br>Based on the Jataka tale of the Buddha, as a Bodhisattva, born as a great turtle who sacrificed his own body to save starving shipwrecked sailors. Associated with wealth, successful trade, protection, and long life.`,
+      `<span class="cap-thai">ยันต์พระนารายณ์พลิกแผ่นดิน</span><strong>Yant Phra Narai Plik Phaen Din</strong> (Narayana Overturns the Earth)<br>Possesses great power and conquering authority.`,
+      `<span class="cap-thai">ยันต์นกกสาริกาคู่หางหงส์พิมพ์ใหญ่</span><strong>Yant Nok Sarika Khu Hang Hong Phim Yai</strong> (Pair of Sarika Birds with Swan Tails, Large Version)<br>For charm and great popularity, used for negotiation, singers, speakers, merchants, and salespeople. Also offers protection from danger and brings safety.`,
+      `This piece features three yantras.<br><br><span class="cap-thai">ยันต์พุทธซ้อน(ยันต์ครู)</span><strong>Yant Buddha Sorn</strong> (Overlapping Buddhas Yant)<br>The design layers together the five Buddhas of this era. "Sorn" means overlapping or combined. This is a foundational yant in Ajarn Jay's own lineage.<br><br><span class="cap-thai">ยันต์โสฬสมงคล</span><strong>Yant Solot Mongkol</strong> (Sixteen Auspicious Yant)<br>A composite design combining three smaller yants into one. King Rama I had this design placed atop Bangkok's City Pillar Shrine to bring prosperity to the city.<br><br><span class="cap-thai">ยันต์เต่าเรือนเล็ก</span><strong>Yant Tao Ruean Lek</strong> (Turtle Yant)<br>Based on the Jataka tale of the Buddha, as a Bodhisattva, born as a great turtle who sacrificed his own body to save starving shipwrecked sailors. Associated with wealth, successful trade, protection, and long life.`,
       `<strong>Full back Sak Yant</strong><br>Every character and yant on this piece was charged by the Ajarn with full-powered incantations. May the teacher protect and watch over you, bringing peace, happiness, prosperity, and success.`,
-      `<strong>Phra Ruesi Saming Phrai</strong><br>Master of spells, incantations, and mystical knowledge.`,
-      `<strong>Yant Phra Narayana Song Khrut</strong> — Narayana Riding Garuda<br>Renowned for great power and conquering ability, with many reported experiences.`,
-      `<strong>Yant Suea Khu Sattru Phai</strong> — Paired Tigers, Enemies Defeated<br>A tiger yant popular since ancient times, from the belief that the tiger, lord of the forest, is fierce, agile, and powerful.`,
-      `<strong>Yant Na Maha Samret</strong> — Great Success Na Yant<br>Derived from the fourth row of the "Five Rows" yant. Often tattooed at the nape of the neck as an alternative to the Nine Spires yant, believed to bring wealth and success without the risk some associate with Nine Spires of blocking money and fortune.`,
-      `<strong>Yant Suea Liaw Lang</strong> — Tiger Looking Back<br>A tiger-family yant with deep meaning: not only power and fierceness, but wisdom, mindfulness, and compassion.<br><br>The tiger's backward glance is read as a tiger king watching over those behind him, bringing loving-kindness and popularity while keeping a commanding presence. It also signals alertness, caution about unseen danger, and protection from accidents and harm.<br><br>Its power is said to fully manifest only when wisdom and compassion are used together, and life is lived without carelessness.`,
-      `This piece features four yantras, covering nearly the whole back.<br><br><strong>Yant Phra Hanuman Khi Singh</strong>, also called Yant Hanuman Tua 9 — Hanuman Riding the Lion (or Hanuman Body 9)<br>Widely renowned for its sacred artistry and the experiences passed down through generations.<br><em>Note: sourcing on the "Tua 9" / nine-body tradition was thin and informal — worth double-checking.</em><br><br><strong>Yant Kru Buddha Sorn</strong> — Teacher's Overlapping Buddhas Yant<br>Same design as the Yant Buddha Sorn described above.<br><br><strong>Yant Ha Thaeo</strong> — Five Rows Yant<br>The most internationally recognized Thai yant. Five alternating rows, each carrying its own virtue: fixing the harmony of one's home, reversing bad fortune to good, protecting from negative energy, drawing in luck and success, and bringing charm and popularity.<br><br><strong>Yant Chatra Phet</strong> — Diamond Canopy Yant<br>Suited for those with many followers or subordinates. Fixes declining fortune, brings prosperity, helps prevent money from "leaking away," and carries charm and popularity.`,
-      `<strong>Yant Kwang Liaw Lang</strong> — Deer Looking Back<br>Based on the Jataka tale of the Lord Buddha, as a Bodhisattva, born as the Golden Deer King who willingly sacrificed his life to help his followers. Symbolizes charm, loving-kindness, and being loved and adored by people.`,
-      `<strong>Yant Mae Phra Thorani Beep Muay Phom</strong> — Mother Earth Goddess Wringing Her Hair Bun<br>From the Buddhist legend of the Buddha's enlightenment: the Earth Goddess was called as witness to the Buddha's accumulated merit, and wrung floodwater from her hair to wash away the army of Mara. Symbolizes the earth as a nurturing, protective mother, and the defeat of obstacles and evil forces.`,
-      `<strong>Yant Phra Narayana Plaeng Rit</strong> — Narayana Unleashing His Power<br>Carries great power, invulnerability, and protection from danger and accidents — traditionally suited for those in risky work, frequent travelers, or those responsible for many people.`,
-      `<strong>Yant Suwan Bongkot</strong> — Golden Lotus Yant<br><em>Note: this specific name could not be confirmed through research. General lotus yants in this tradition are associated with charm, popularity, and prosperity, but whether this is the same lineage or meaning is unverified — needs your direct knowledge or confirmation.</em>`,
-      `<strong>Yant Hanuman</strong><br>Traditionally tattooed as a pair with Yant Phaya Phali, combining the two greatest and most skilled monkey kings, worn as a body-companion for brave, warrior men. The image shown here is only the Hanuman side.`
+      `<span class="cap-thai">พระฤาษีสมิงพราย</span><strong>Phra Ruesi Saming Phrai</strong><br>Master of spells, incantations, and mystical knowledge.`,
+      `<span class="cap-thai">ยันต์พระนารายณ์ทรงครุฑ หรือ ยันต์พระนารายณ์ทรงสุบรรณ</span><strong>Yant Phra Narayana Song Khrut</strong>, or <strong>Yant Phra Narayana Song Suban</strong> (Narayana Riding Garuda, or Narayana Riding Suban)<br>Renowned for great power and conquering ability.`,
+      `<span class="cap-thai">ยันต์เสือคู่ศัตรูพ่าย</span><strong>Yant Suea Khu Sattru Phai</strong> (Paired Tigers, Vanquisher of Enemies)<br>A tiger yant popular since ancient times, from the belief that the tiger, lord of the forest, is fierce, agile, and powerful.`,
+      `<span class="cap-thai">ยันต์นะมหาสำเร็จ</span><strong>Yant Na Maha Samret</strong> (Great Success Na Yant)<br>Derived from the fourth row of the "Five Rows" yant. Often tattooed at the nape of the neck, in the same way as the Nine Spires yant, and brings wealth and success.`,
+      `<span class="cap-thai">ยันต์เสือเหลียวหลัง</span><strong>Yant Suea Liaw Lang</strong> (Tiger Looking Back)<br>A tiger-family yant with deep meaning: not only power and fierceness, but wisdom, mindfulness, and compassion.<br><br>The tiger's backward glance is read as a tiger king watching over those behind him, bringing loving-kindness and popularity while keeping a commanding presence. It also signals alertness, caution about unseen danger, and protection from accidents and harm.<br><br>Its power is said to fully manifest only when wisdom and compassion are used together, and life is lived without carelessness.`,
+      `This piece features four yantras, covering nearly the whole back.<br><br><span class="cap-thai">ยันต์พระหนุมานขี่สิงห์</span><strong>Yant Phra Hanuman Khi Singh</strong> (Hanuman Riding the Lion)<br>Widely renowned for its sacred artistry and the experiences passed down through generations.<br><br><span class="cap-thai">ยันต์ครูพุทธซ้อน</span><strong>Yant Buddha Sorn</strong><br>Same design as the Yant Buddha Sorn described above.<br><br><span class="cap-thai">ยันต์ห้าแถว</span><strong>Yant Ha Thaeo</strong> (Five Rows Yant)<br>The most internationally recognized Thai yant. Five alternating rows, each carrying its own virtue: fixing the harmony of one's home, reversing bad fortune to good, protecting from negative energy, drawing in luck and success, and bringing charm and popularity.<br><br><span class="cap-thai">ยันต์ฉัตรเพชร</span><strong>Yant Chatra Phet</strong> (Diamond Canopy Yant)<br>Often appears as a variation of, or alongside, the Five Rows yant above. Suited for those with many followers or subordinates. Fixes declining fortune, brings prosperity, helps prevent money from "leaking away," and carries charm and popularity.`,
+      `<span class="cap-thai">ยันต์กวางเหลียวหลัง</span><strong>Yant Kwang Liaw Lang</strong> (Deer Looking Back)<br>Based on the Jataka tale that the Lord Buddha, as a Bodhisattva, was once born as the Golden Deer King, who willingly sacrificed his life to help his followers. Symbolizes charm, loving-kindness, and being loved and adored by people.`,
+      `<span class="cap-thai">ยันต์แม่พระธรณีบีบมวยผม</span><strong>Yant Mae Phra Thorani Beep Muay Phom</strong> (Mother Earth Goddess Wringing Her Hair)<br>From the Buddhist legend of the Buddha's enlightenment: the Earth Goddess was called as witness to the Buddha's accumulated merit, and wrung floodwater from her hair to wash away the army of Mara. Symbolizes the earth as a nurturing, protective mother, and the defeat of obstacles and evil forces.`,
+      `<span class="cap-thai">ยันต์พระนารายณ์แผลงฤทธิ์</span><strong>Yant Phra Narayana Plaeng Rit</strong> (Narayana Unleashing His Power)<br>Carries great power, invulnerability, and protection from danger and accidents, traditionally suited for those in risky work, frequent travelers, or those responsible for many people.`,
+      `<span class="cap-thai">ยันต์สุวรรณบงกช</span><strong>Yant Suwan Bongkot</strong> (Golden Lotus Yant)<br>Brings charm, popularity, and good fortune.`,
+      `<span class="cap-thai">ยันต์หนุมาน</span><strong>Yant Hanuman</strong><br>Traditionally tattooed as a pair with Yant Phaya Phali, combining the two greatest and most skilled monkey kings. The image shown here is only the Hanuman side.`
     ];
 
     var figures = Array.prototype.slice.call(document.querySelectorAll('.gallery figure'));
