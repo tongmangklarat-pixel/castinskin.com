@@ -7,7 +7,7 @@
   <title>Ajarn Jay: Traditional Sak Yant Master, Saraburi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
       --ink: #141210;
@@ -51,13 +51,20 @@
     }
     .note p { font-size: 0.85rem; color: var(--ash); margin: 0; }
     .note .note-label { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-dim); display: block; margin-bottom: 0.4rem; }
+    .catalog-cta {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem;
+      font-size: 1.02rem; padding: 1.1rem 1.4rem; margin-bottom: 1.8rem;
+      border: 1px solid var(--line-strong); background: var(--deep); max-width: none;
+    }
+    .catalog-cta strong { color: var(--gold); font-weight: 500; }
+    .catalog-cta a { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--paper); text-decoration: none; border-bottom: 1px solid var(--line-strong); padding-bottom: 2px; transition: color 0.15s, border-color 0.15s; }
+    .catalog-cta a:hover { color: var(--gold); border-color: var(--gold); }
     .gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1px;
       background: var(--line);
       border: 1px solid var(--line);
-      margin-top: 0.5rem;
     }
     .gallery figure { margin: 0; aspect-ratio: 3/4; overflow: hidden; background: var(--deep); cursor: zoom-in; }
     .gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -65,26 +72,41 @@
     .lightbox {
       position: fixed; inset: 0; background: rgba(20,18,16,0.96);
       display: none; align-items: center; justify-content: center;
-      z-index: 9999; padding: 3vh 3vw;
+      z-index: 9999; padding: 3vh 4.5rem;
     }
     .lightbox.active { display: flex; }
-    .lightbox img { max-width: 100%; max-height: 100%; display: block; box-shadow: 0 30px 80px rgba(0,0,0,0.55); cursor: default; }
+    .lightbox-content { display: flex; flex-direction: column; align-items: center; gap: 1.1rem; max-width: 100%; max-height: 100%; }
+    .lightbox-content img { max-width: 100%; max-height: 68vh; display: block; box-shadow: 0 30px 80px rgba(0,0,0,0.55); cursor: default; }
+    .lightbox-caption {
+      max-width: 640px; max-height: 20vh; overflow-y: auto;
+      padding: 1rem 1.4rem; background: var(--deep); border: 1px solid var(--line-strong);
+      font-size: 0.92rem; line-height: 1.65; color: rgba(242,235,224,0.88); text-align: left;
+    }
+    .lightbox-caption strong { color: var(--gold); }
+    .lightbox-caption em { color: var(--ash); font-style: italic; }
     @media (prefers-reduced-motion: no-preference) {
-      .lightbox img { animation: fadeUp 0.2s ease both; }
+      .lightbox-content img { animation: fadeUp 0.2s ease both; }
     }
     .lightbox-close, .lightbox-nav {
       position: fixed;
-      background: none; border: none; color: var(--paper);
+      background: none; border: none;
       font-family: 'Playfair Display', serif; cursor: pointer;
-      opacity: 0.6; transition: opacity 0.15s;
+      transition: opacity 0.15s, transform 0.15s;
     }
-    .lightbox-close:hover, .lightbox-nav:hover { opacity: 1; color: var(--gold); }
-    .lightbox-close { top: 1.5rem; right: 1.5rem; font-size: 1.8rem; line-height: 1; padding: 0.5rem; }
-    .lightbox-nav { top: 50%; transform: translateY(-50%); font-size: 2.6rem; padding: 1rem 0.6rem; }
-    .lightbox-prev { left: 0.5rem; }
-    .lightbox-next { right: 0.5rem; }
+    .lightbox-close { color: var(--paper); opacity: 0.6; top: 1.5rem; right: 1.5rem; font-size: 1.8rem; line-height: 1; padding: 0.5rem; }
+    .lightbox-close:hover { opacity: 1; color: var(--gold); }
+    .lightbox-nav {
+      color: var(--gold); font-weight: 700; opacity: 0.85;
+      top: 50%; transform: translateY(-50%);
+      font-size: 3.4rem; padding: 1rem 0.8rem;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    }
+    .lightbox-nav:hover { opacity: 1; transform: translateY(-50%) scale(1.08); }
+    .lightbox-prev { left: 0.4rem; }
+    .lightbox-next { right: 0.4rem; }
     @media (max-width: 640px) {
-      .lightbox-nav { font-size: 2rem; }
+      .lightbox { padding: 3vh 2.8rem; }
+      .lightbox-nav { font-size: 2.4rem; padding: 0.6rem 0.3rem; }
     }
     footer { padding: 3rem 0; }
     .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
@@ -127,6 +149,23 @@
 <section>
   <div class="wrap">
     <div class="section-tag">A sampling of his work.</div>
+    <p class="catalog-cta">
+      <strong>See Ajarn Jay's entire catalog:</strong>
+      <a href="https://www.instagram.com/ajarn_jay_sakyant/">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+          <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="17.3" cy="6.7" r="1" fill="currentColor"/>
+        </svg>
+        Instagram
+      </a>
+      <a href="https://www.facebook.com/jaysakyan">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+          <path d="M14.5 8.5H17V5.5H14.5C12.567 5.5 11 7.067 11 9V11.5H9V14.5H11V19.5H14V14.5H16.2L17 11.5H14V9C14 8.724 14.224 8.5 14.5 8.5Z" fill="currentColor"/>
+        </svg>
+        Facebook
+      </a>
+    </p>
     <div class="gallery">
       <figure tabindex="0" role="button" aria-label="View larger photograph"><img src="1155765526114051_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
       <figure tabindex="0" role="button" aria-label="View larger photograph"><img src="1127731802250757_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
@@ -144,9 +183,12 @@
       <figure tabindex="0" role="button" aria-label="View larger photograph"><img src="1530700485287218_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
       <figure tabindex="0" role="button" aria-label="View larger photograph"><img src="1540414874315779_sm.jpg" alt="Photograph of a Sak Yant tattoo by Ajarn Jay"></figure>
     </div>
-    <p style="margin-top:2rem;">Many more examples of his work: <a href="https://www.instagram.com/ajarn_jay_sakyant/">Instagram</a> &middot; <a href="https://www.facebook.com/jaysakyan">Facebook</a></p>
   </div>
 </section>
+
+<div style="width:100%;margin:0;padding:0;line-height:0;">
+  <img src="20241214_0039.jpg" alt="Photograph of Ajarn Jay" style="width:100%;height:auto;display:block;">
+</div>
 
 <section>
   <div class="wrap">
@@ -187,12 +229,33 @@
 <div class="lightbox" id="lightbox" aria-hidden="true">
   <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
   <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous photograph">&#8249;</button>
-  <img id="lightbox-img" src="" alt="">
+  <div class="lightbox-content">
+    <img id="lightbox-img" src="" alt="">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
   <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next photograph">&#8250;</button>
 </div>
 
 <script>
   (function () {
+    var captions = [
+      `<strong>Yant Phra Narai Plik Phaen Din</strong> — Narayana Overturns the Earth<br>Possesses great power and conquering authority.`,
+      `<strong>Yant Nok Sarika Khu Hang Hong Phim Yai</strong> — Pair of Sarika Birds with Swan Tails (Large Version)<br>For charm and great popularity — used for negotiation, singers, speakers, female merchants, and salespeople. Also offers protection from danger and brings safety.`,
+      `This piece features three yantras.<br><br><strong>Yant Buddha Sorn (Yant Kru)</strong> — Overlapping Buddhas Yant (Teacher Yant)<br>The design layers together the five Buddhas of this era — "Sorn" means overlapping or combined. Considered one of the foundational yants within the samnak tradition.<br><br><strong>Yant Solot Mongkol</strong> — Sixteen Auspicious Yant<br>A composite design combining three smaller yants into one. King Rama I had this design placed atop Bangkok's City Pillar Shrine to bring prosperity to the city.<br><br><strong>Yant Tao Ruean Lek</strong> — Turtle Yant<br>Based on the Jataka tale of the Buddha, as a Bodhisattva, born as a great turtle who sacrificed his own body to save starving shipwrecked sailors. Associated with wealth, successful trade, protection, and long life.`,
+      `<strong>Full back Sak Yant</strong><br>Every character and yant on this piece was charged by the Ajarn with full-powered incantations. May the teacher protect and watch over you, bringing peace, happiness, prosperity, and success.`,
+      `<strong>Phra Ruesi Saming Phrai</strong><br>Master of spells, incantations, and mystical knowledge.`,
+      `<strong>Yant Phra Narayana Song Khrut</strong> — Narayana Riding Garuda<br>Renowned for great power and conquering ability, with many reported experiences.`,
+      `<strong>Yant Suea Khu Sattru Phai</strong> — Paired Tigers, Enemies Defeated<br>A tiger yant popular since ancient times, from the belief that the tiger, lord of the forest, is fierce, agile, and powerful.`,
+      `<strong>Yant Na Maha Samret</strong> — Great Success Na Yant<br>Derived from the fourth row of the "Five Rows" yant. Often tattooed at the nape of the neck as an alternative to the Nine Spires yant, believed to bring wealth and success without the risk some associate with Nine Spires of blocking money and fortune.`,
+      `<strong>Yant Suea Liaw Lang</strong> — Tiger Looking Back<br>A tiger-family yant with deep meaning: not only power and fierceness, but wisdom, mindfulness, and compassion.<br><br>The tiger's backward glance is read as a tiger king watching over those behind him, bringing loving-kindness and popularity while keeping a commanding presence. It also signals alertness, caution about unseen danger, and protection from accidents and harm.<br><br>Its power is said to fully manifest only when wisdom and compassion are used together, and life is lived without carelessness.`,
+      `This piece features four yantras, covering nearly the whole back.<br><br><strong>Yant Phra Hanuman Khi Singh</strong>, also called Yant Hanuman Tua 9 — Hanuman Riding the Lion (or Hanuman Body 9)<br>Widely renowned for its sacred artistry and the experiences passed down through generations.<br><em>Note: sourcing on the "Tua 9" / nine-body tradition was thin and informal — worth double-checking.</em><br><br><strong>Yant Kru Buddha Sorn</strong> — Teacher's Overlapping Buddhas Yant<br>Same design as the Yant Buddha Sorn described above.<br><br><strong>Yant Ha Thaeo</strong> — Five Rows Yant<br>The most internationally recognized Thai yant. Five alternating rows, each carrying its own virtue: fixing the harmony of one's home, reversing bad fortune to good, protecting from negative energy, drawing in luck and success, and bringing charm and popularity.<br><br><strong>Yant Chatra Phet</strong> — Diamond Canopy Yant<br>Suited for those with many followers or subordinates. Fixes declining fortune, brings prosperity, helps prevent money from "leaking away," and carries charm and popularity.`,
+      `<strong>Yant Kwang Liaw Lang</strong> — Deer Looking Back<br>Based on the Jataka tale of the Lord Buddha, as a Bodhisattva, born as the Golden Deer King who willingly sacrificed his life to help his followers. Symbolizes charm, loving-kindness, and being loved and adored by people.`,
+      `<strong>Yant Mae Phra Thorani Beep Muay Phom</strong> — Mother Earth Goddess Wringing Her Hair Bun<br>From the Buddhist legend of the Buddha's enlightenment: the Earth Goddess was called as witness to the Buddha's accumulated merit, and wrung floodwater from her hair to wash away the army of Mara. Symbolizes the earth as a nurturing, protective mother, and the defeat of obstacles and evil forces.`,
+      `<strong>Yant Phra Narayana Plaeng Rit</strong> — Narayana Unleashing His Power<br>Carries great power, invulnerability, and protection from danger and accidents — traditionally suited for those in risky work, frequent travelers, or those responsible for many people.`,
+      `<strong>Yant Suwan Bongkot</strong> — Golden Lotus Yant<br><em>Note: this specific name could not be confirmed through research. General lotus yants in this tradition are associated with charm, popularity, and prosperity, but whether this is the same lineage or meaning is unverified — needs your direct knowledge or confirmation.</em>`,
+      `<strong>Yant Hanuman</strong><br>Traditionally tattooed as a pair with Yant Phaya Phali, combining the two greatest and most skilled monkey kings, worn as a body-companion for brave, warrior men. The image shown here is only the Hanuman side.`
+    ];
+
     var figures = Array.prototype.slice.call(document.querySelectorAll('.gallery figure'));
     var sources = figures.map(function (fig) {
       var img = fig.querySelector('img');
@@ -201,12 +264,14 @@
 
     var lightbox = document.getElementById('lightbox');
     var lightboxImg = document.getElementById('lightbox-img');
+    var lightboxCaption = document.getElementById('lightbox-caption');
     var currentIndex = 0;
 
     function show(index) {
       currentIndex = (index + sources.length) % sources.length;
       lightboxImg.src = sources[currentIndex].lg;
       lightboxImg.alt = sources[currentIndex].alt;
+      lightboxCaption.innerHTML = captions[currentIndex] || '';
     }
 
     function openLightbox(index) {
@@ -241,7 +306,6 @@
       show(currentIndex + 1);
     });
 
-    // clicking the dark background (not the image, not the buttons) closes it
     lightbox.addEventListener('click', function (e) {
       if (e.target === lightbox) closeLightbox();
     });
