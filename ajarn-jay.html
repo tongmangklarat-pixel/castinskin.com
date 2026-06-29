@@ -56,6 +56,32 @@
       border-top: 1px solid var(--line); padding-top: 1.3rem; margin-top: 2rem; max-width: 620px;
     }
     .footnote strong { color: var(--gold-dim); font-weight: 500; }
+    .pull-quote {
+      border-left: 2px solid var(--gold-dim);
+      padding: 0.3rem 0 0.3rem 1.8rem;
+      margin: 2.5rem 0 0;
+      max-width: 620px;
+    }
+    .pull-quote-thai {
+      font-family: 'Noto Serif Thai', serif;
+      font-size: 1.15rem; font-weight: 500; color: var(--gold);
+      line-height: 1.75; margin-bottom: 1.1rem;
+    }
+    .pull-quote p {
+      font-family: 'Playfair Display', serif; font-style: italic;
+      font-size: 1.12rem; color: rgba(242,235,224,0.85); line-height: 1.7;
+    }
+    .pull-quote-cite {
+      display: block; margin-top: 1.1rem;
+    }
+    .pull-quote-cite .cite-thai {
+      display: block; font-family: 'Noto Serif Thai', serif; font-style: normal;
+      font-size: 0.95rem; color: var(--gold); margin-bottom: 0.25rem;
+    }
+    .pull-quote-cite .cite-en {
+      display: block; font-family: 'DM Sans', sans-serif; font-style: normal;
+      font-size: 0.74rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ash);
+    }
     .catalog-cta {
       display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem;
       font-size: 1.02rem; padding: 1.1rem 1.4rem; margin-bottom: 1.8rem;
@@ -153,6 +179,14 @@
     <div class="section-tag">Who he is</div>
     <p>Ajarn Jay is an established master craftsman of his art. He is able to trace his lineage. He is a traditionalist who knows the rules of Sak Yant deeply, the sacred script and incantations, and the proper way each yantra is meant to be done. His years and years as a tattooist have sharpened repetition into true mastery. The result is work his many disciples and fans genuinely admire.</p>
     <p>His draftsmanship, his command of line, is what truly sets him apart. His tattoos are simply better looking than most: cleaner line, better composition, more beautifully rendered on skin. You can see it yourself, in the gallery below.</p>
+    <div style="margin: 2rem 0; max-width: 620px;">
+      <img src="20241214_0039.jpg" alt="Photograph of Ajarn Jay" style="width:100%;height:auto;display:block;">
+    </div>
+    <blockquote class="pull-quote">
+      <p class="pull-quote-thai">มากกว่าความขลัง คือมรดกไทยที่โลกยอมรับ เบื้องหลัง "ลายสักยันต์เสริมสิริมงคล" ทุกภาพ มีเรื่องราวและประวัติศาสตร์ที่สืบทอดกันมาอย่างยาวนานจากบรรพบุรุษไทย นี่ไม่ใช่แค่ความเชื่อ แต่คือศิลปะและวัฒนธรรมอันทรงคุณค่าที่แม้แต่ชาวต่างชาติยังมองเห็นความสำคัญและให้ความเคารพศรัทธา ร่วมสืบทอดมรดกแห่งสิริมงคลนี้ไปด้วยกันครับ</p>
+      <p>"More than mysticism, it is Thai heritage the world recognizes. Behind every auspicious yant design lies a story and a history passed down for generations from Thai ancestors. This isn't just belief, it's art and culture of real value, one that even foreigners can see the importance of and treat with respect. Let's carry this heritage forward together."</p>
+      <footer class="pull-quote-cite"><span class="cite-thai">อ.เจ ชุมดวง</span><span class="cite-en">Ajarn Jay (Choomduang)</span></footer>
+    </blockquote>
     <p class="footnote"><strong>Hygiene and process.</strong> Ajarn Jay's process matches what's required of a licensed tattoo studio in the West: single-use disposable needles, gloves worn throughout, barrier protection on everything he touches during a session.</p>
   </div>
 </section>
@@ -198,13 +232,10 @@
 </section>
 
 <div style="width:100%;margin:0;padding:0;line-height:0;">
-  <img src="20241214_0039.jpg" alt="Photograph of Ajarn Jay" style="width:100%;height:auto;display:block;">
-</div>
-
-<div style="width:100%;margin:0;padding:0;line-height:0;">
   <img src="20241214_0269.jpg" alt="Photograph of Ajarn Jay" style="width:100%;height:auto;display:block;">
 </div>
 
+<!--
 <section>
   <div class="wrap">
     <div class="section-tag">The homestay</div>
@@ -222,13 +253,7 @@
     </div>
   </div>
 </section>
-
-<footer>
-  <div class="wrap footer-inner">
-    <p>Concept proposal, not yet live</p>
-    <p>No contact info shown until Ajarn Jay has seen and approved this</p>
-  </div>
-</footer>
+-->
 
 <div class="lightbox" id="lightbox" aria-hidden="true">
   <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
@@ -244,7 +269,7 @@
   (function () {
     var captions = [
       `<span class="cap-thai">ยันต์พระนารายณ์พลิกแผ่นดิน</span><strong>Yant Phra Narai Plik Phaen Din</strong> (Narayana Overturns the Earth)<br>Possesses great power and conquering authority.`,
-      `This piece features three yantras.<br><br><span class="cap-thai">ยันต์พุทธซ้อน(ยันต์ครู)</span><strong>Yant Buddha Sorn</strong> (Overlapping Buddhas Yant)<br>The design layers together the five Buddhas of this era. "Sorn" means overlapping or combined. This is a foundational yant in Ajarn Jay's own lineage.<br><br><span class="cap-thai">ยันต์โสฬสมงคล</span><strong>Yant Solot Mongkol</strong> (Sixteen Auspicious Yant)<br>A composite design combining three smaller yants into one. King Rama I had this design placed atop Bangkok's City Pillar Shrine to bring prosperity to the city.<br><br><span class="cap-thai">ยันต์เต่าเรือนเล็ก</span><strong>Yant Tao Ruean Lek</strong> (Turtle Yant)<br>Based on the Jataka tale of the Buddha, as a Bodhisattva, born as a great turtle who sacrificed his own body to save starving shipwrecked sailors. Associated with wealth, successful trade, protection, and long life.`,
+      `This piece features three yantras.<br><br><span class="cap-thai">ยันต์พุทธซ้อน(ยันต์ครู)</span><strong>Yant Buddha Sorn</strong> (Overlapping Buddhas Yant)<br>The design layers together the five Buddhas of this era. "Sorn" means overlapping or combined. This is a foundational yant in Ajarn Jay's own lineage.<br><br><span class="cap-thai">ยันต์โสฬสมงคล</span><strong>Yant Solot Mongkol</strong> (Sixteen Auspicious Yant)<br>A composite design combining three smaller yants into one. King Rama I had this design placed atop Bangkok's City Pillar Shrine to bring prosperity to the city.<br><br><span class="cap-thai">ยันต์เต่าเรือนเล็ก</span><strong>Yant Tao Ruean Lek</strong> (Turtle Yant)<br>Based on the Jataka tale of the Buddha, as a Bodhisattva, born as a great turtle who sacrificed his own body to save starving shipwrecked sailors. Associated with wealth, successful trade, protection, and long life. Like many traditional ancient yants, the design is a highly abstract representation rather than a literal depiction of the animal.`,
       `<strong>Full back Sak Yant</strong><br>Every character and yant on this piece was charged by the Ajarn with full-powered incantations. May the teacher protect and watch over you, bringing peace, happiness, prosperity, and success.`,
       `<span class="cap-thai">พระฤาษีสมิงพราย</span><strong>Phra Ruesi Saming Phrai</strong><br>Master of spells, incantations, and mystical knowledge.`,
       `<span class="cap-thai">ยันต์พระนารายณ์ทรงครุฑ หรือ ยันต์พระนารายณ์ทรงสุบรรณ</span><strong>Yant Phra Narayana Song Khrut</strong>, or <strong>Yant Phra Narayana Song Suban</strong> (Narayana Riding Garuda, or Narayana Riding Suban)<br>Renowned for great power and conquering ability.`,
