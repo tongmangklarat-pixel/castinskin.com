@@ -99,7 +99,10 @@
     }
     .gallery figure { margin: 0; aspect-ratio: 3/4; overflow: hidden; background: var(--deep); cursor: zoom-in; }
     .gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    @media (max-width: 640px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) {
+      .gallery { grid-template-columns: repeat(2, 1fr); }
+      .gallery figure:last-child { grid-column: 1 / -1; aspect-ratio: 16/9; }
+    }
     .lightbox {
       position: fixed; inset: 0; background: rgba(20,18,16,0.96);
       display: none; align-items: center; justify-content: center;
@@ -177,7 +180,7 @@
 <section>
   <div class="wrap">
     <div class="section-tag">Who he is</div>
-    <p>Ajarn Jay is an established master craftsman of his art. He is able to trace his lineage. He is a traditionalist who knows the rules of Sak Yant deeply, the sacred script and incantations, and the proper way each yantra is meant to be done. His years and years as a tattooist have sharpened repetition into true mastery. The result is work his many disciples and fans genuinely admire.</p>
+    <p>Ajarn Jay is an established master craftsman of his art. He is able to trace his lineage. He is a traditionalist who knows the rules of Sak Yant deeply: the sacred script and incantations, and the proper way each yantra is meant to be done, both physically and spiritually. His years and years as a tattooist have sharpened repetition into true mastery. The result is work his many disciples and fans genuinely admire.</p>
     <p>His draftsmanship, his command of line, is what truly sets him apart. His tattoos are simply better looking than most: cleaner line, better composition, more beautifully rendered on skin. You can see it yourself, in the gallery below.</p>
     <div style="margin: 2rem 0; max-width: 620px;">
       <img src="20241214_0039.jpg" alt="Photograph of Ajarn Jay" style="width:100%;height:auto;display:block;">
@@ -244,12 +247,12 @@
       <span class="note-label">Needs your description</span>
       <p>The property itself. Nothing online describes this place, this paragraph has to come from you.</p>
     </div>
-    <p>Every Sunday, from 8 in the morning to 4 in the afternoon, a market opens on the grounds of Wat Ton Tan, right on the Pa Sak river. Food stalls line the riverbank, there are boat rides on the water, and a local weaving group demonstrates traditional cloth making nearby. It's a working community market, not a tourist setup, and it only runs one day a week.</p>
+    <p>On weekends, a market opens on the grounds of Wat Ton Tan, right on the Pa Sak river, known locally as Ton Tan Market. Food stalls line the riverbank, there are boat rides on the water, and a local weaving group demonstrates traditional cloth making nearby. It's a working community market, not a tourist setup.</p>
     <p>A full Sak Yant session, especially for larger pieces, can run for hours. Staying overnight means starting early and finishing properly, instead of rushing back to Bangkok the same day.</p>
     <p>Sao Hai is roughly two hours from Bangkok by car.</p>
     <div class="note">
       <span class="note-label">Needs photos</span>
-      <p>The property and the Sunday market, once shot.</p>
+      <p>The property and the weekend market, once shot.</p>
     </div>
   </div>
 </section>
@@ -276,7 +279,7 @@
       `<span class="cap-thai">ยันต์เสือคู่ศัตรูพ่าย</span><strong>Yant Suea Khu Sattru Phai</strong> (Paired Tigers, Vanquisher of Enemies)<br>A tiger yant popular since ancient times, from the belief that the tiger, lord of the forest, is fierce, agile, and powerful.`,
       `<span class="cap-thai">ยันต์นะมหาสำเร็จ</span><strong>Yant Na Maha Samret</strong> (Great Success Na Yant)<br>Derived from the fourth row of the "Five Rows" yant. Often tattooed at the nape of the neck, in the same way as the Nine Spires yant, and brings wealth and success.`,
       `<span class="cap-thai">ยันต์เสือเหลียวหลัง</span><strong>Yant Suea Liaw Lang</strong> (Tiger Looking Back)<br>A tiger-family yant with deep meaning: not only power and fierceness, but wisdom, mindfulness, and compassion.<br><br>The tiger's backward glance is read as a tiger king watching over those behind him, bringing loving-kindness and popularity while keeping a commanding presence. It also signals alertness, caution about unseen danger, and protection from accidents and harm.<br><br>Its power is said to fully manifest only when wisdom and compassion are used together, and life is lived without carelessness.`,
-      `This piece features four yantras, covering nearly the whole back.<br><br><span class="cap-thai">ยันต์พระหนุมานขี่สิงห์</span><strong>Yant Phra Hanuman Khi Singh</strong> (Hanuman Riding the Lion)<br>Widely renowned for its sacred artistry and the experiences passed down through generations.<br><br><span class="cap-thai">ยันต์ครูพุทธซ้อน</span><strong>Yant Buddha Sorn</strong><br>Same design as the Yant Buddha Sorn described above.<br><br><span class="cap-thai">ยันต์ห้าแถว</span><strong>Yant Ha Thaeo</strong> (Five Rows Yant)<br>The most internationally recognized Thai yant. Five alternating rows, each carrying its own virtue: fixing the harmony of one's home, reversing bad fortune to good, protecting from negative energy, drawing in luck and success, and bringing charm and popularity.<br><br><span class="cap-thai">ยันต์ฉัตรเพชร</span><strong>Yant Chatra Phet</strong> (Diamond Canopy Yant)<br>Often appears as a variation of, or alongside, the Five Rows yant above. Suited for those with many followers or subordinates. Fixes declining fortune, brings prosperity, helps prevent money from "leaking away," and carries charm and popularity.`,
+      `This piece features four yantras, covering nearly the whole back.<br><br><span class="cap-thai">ยันต์พระหนุมานขี่สิงห์</span><strong>Yant Phra Hanuman Khi Singh</strong> (Hanuman Riding the Lion)<br>Widely renowned for its sacred artistry and the experiences passed down through generations.<br><br><span class="cap-thai">ยันต์ครูพุทธซ้อน</span><strong>Yant Buddha Sorn</strong><br>Same design as the Yant Buddha Sorn described above.<br><br><span class="cap-thai">ยันต์ห้าแถว</span><strong>Yant Ha Thaeo</strong> (Five Rows Yant)<br>The most internationally recognized Thai yant. Five alternating rows, each carrying its own virtue: fixing the harmony of one's home, reversing bad fortune to good, protecting from negative energy, drawing in luck and success, and bringing charm and popularity.<br><br><span class="cap-thai">ยันต์ฉัตรเพชร</span><strong>Yant Chatra Phet</strong> (Diamond Canopy Yant)<br>Often appears alongside the Five Rows yant above, of which it is a variation. Suited for those with many followers or subordinates. Fixes declining fortune, brings prosperity, helps prevent money from "leaking away," and carries charm and popularity.`,
       `<span class="cap-thai">ยันต์กวางเหลียวหลัง</span><strong>Yant Kwang Liaw Lang</strong> (Deer Looking Back)<br>Based on the Jataka tale that the Lord Buddha, as a Bodhisattva, was once born as the Golden Deer King, who willingly sacrificed his life to help his followers. Symbolizes charm, loving-kindness, and being loved and adored by people.`,
       `<span class="cap-thai">ยันต์นกกสาริกาคู่หางหงส์พิมพ์ใหญ่</span><strong>Yant Nok Sarika Khu Hang Hong Phim Yai</strong> (Pair of Sarika Birds with Swan Tails, Large Version)<br>For charm and great popularity, used for negotiation, singers, speakers, merchants, and salespeople. Also offers protection from danger and brings safety.`,
       `<span class="cap-thai">ยันต์แม่พระธรณีบีบมวยผม</span><strong>Yant Mae Phra Thorani Beep Muay Phom</strong> (Mother Earth Goddess Wringing Her Hair)<br>From the Buddhist legend of the Buddha's enlightenment: the Earth Goddess was called as witness to the Buddha's accumulated merit, and wrung floodwater from her hair to wash away the army of Mara. Symbolizes the earth as a nurturing, protective mother, and the defeat of obstacles and evil forces.`,
