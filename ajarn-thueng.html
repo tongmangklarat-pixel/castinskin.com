@@ -86,6 +86,11 @@
     .lightbox-text p { font-size: 0.92rem; color: rgba(242,235,224,0.83); margin: 0; }
     .lightbox-close { position: absolute; top: 1.5rem; right: 1.8rem; color: var(--paper); font-size: 1.6rem; cursor: pointer; line-height: 1; opacity: 0.7; }
     .lightbox-close:hover { opacity: 1; }
+    .lightbox-nav { position: fixed; top: 50%; transform: translateY(-50%); color: var(--paper); font-size: 2.2rem; cursor: pointer; opacity: 0.6; padding: 1rem; z-index: 10001; user-select: none; }
+    .lightbox-nav:hover { opacity: 1; }
+    .lightbox-prev { left: 1rem; }
+    .lightbox-next { right: 1rem; }
+    @media (max-width: 640px) { .lightbox-nav { font-size: 1.8rem; padding: 0.6rem; } }
     @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
     .hero .eyebrow { animation: fadeUp 0.6s ease both 0.05s; }
     .hero h1 { animation: fadeUp 0.7s ease both 0.15s; }
@@ -193,6 +198,8 @@
 </section>
 
 <div class="lightbox-overlay" id="lightboxOverlay">
+  <span class="lightbox-nav lightbox-prev" id="lightboxPrev">&#8249;</span>
+  <span class="lightbox-nav lightbox-next" id="lightboxNext">&#8250;</span>
   <div class="lightbox-box">
     <span class="lightbox-close" id="lightboxClose">&times;</span>
     <img id="lightboxImg" src="" alt="">
@@ -204,21 +211,47 @@
 </div>
 
 <script>
-  document.querySelectorAll('.gallery-item').forEach(function(item) {
+  var galleryItems = Array.prototype.slice.call(document.querySelectorAll('.gallery-item'));
+  var currentIndex = 0;
+
+  function showItem(index) {
+    if (index < 0) index = galleryItems.length - 1;
+    if (index >= galleryItems.length) index = 0;
+    currentIndex = index;
+    var item = galleryItems[currentIndex];
+    var img = item.querySelector('img');
+    document.getElementById('lightboxImg').src = img.getAttribute('src');
+    document.getElementById('lightboxImg').alt = img.getAttribute('alt');
+    document.getElementById('lightboxTitle').textContent = item.getAttribute('data-title');
+    document.getElementById('lightboxText').textContent = item.getAttribute('data-text');
+  }
+
+  galleryItems.forEach(function(item, index) {
     item.addEventListener('click', function() {
-      var img = item.querySelector('img');
-      document.getElementById('lightboxImg').src = img.getAttribute('src');
-      document.getElementById('lightboxImg').alt = img.getAttribute('alt');
-      document.getElementById('lightboxTitle').textContent = item.getAttribute('data-title');
-      document.getElementById('lightboxText').textContent = item.getAttribute('data-text');
+      showItem(index);
       document.getElementById('lightboxOverlay').classList.add('active');
     });
   });
+
   document.getElementById('lightboxClose').addEventListener('click', function() {
     document.getElementById('lightboxOverlay').classList.remove('active');
   });
   document.getElementById('lightboxOverlay').addEventListener('click', function(e) {
     if (e.target === this) this.classList.remove('active');
+  });
+  document.getElementById('lightboxPrev').addEventListener('click', function(e) {
+    e.stopPropagation();
+    showItem(currentIndex - 1);
+  });
+  document.getElementById('lightboxNext').addEventListener('click', function(e) {
+    e.stopPropagation();
+    showItem(currentIndex + 1);
+  });
+  document.addEventListener('keydown', function(e) {
+    if (!document.getElementById('lightboxOverlay').classList.contains('active')) return;
+    if (e.key === 'ArrowLeft') showItem(currentIndex - 1);
+    if (e.key === 'ArrowRight') showItem(currentIndex + 1);
+    if (e.key === 'Escape') document.getElementById('lightboxOverlay').classList.remove('active');
   });
 </script>
 
