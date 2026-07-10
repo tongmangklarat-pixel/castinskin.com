@@ -76,6 +76,16 @@
     .gallery-caption { padding: 0.9rem 1rem 1.1rem; }
     .gallery-caption p { font-size: 0.8rem; color: rgba(242,235,224,0.7); margin: 0; line-height: 1.5; }
     .gallery-caption .gallery-title { display: block; font-size: 0.85rem; color: var(--paper); margin-bottom: 0.3rem; font-weight: 500; }
+    .gallery-item { cursor: pointer; }
+    .lightbox-overlay { display: none; position: fixed; inset: 0; background: rgba(10,8,6,0.92); z-index: 10000; align-items: center; justify-content: center; padding: 2rem; }
+    .lightbox-overlay.active { display: flex; }
+    .lightbox-box { max-width: 640px; width: 100%; max-height: 90vh; overflow-y: auto; background: var(--deep); border: 1px solid var(--line-strong); border-radius: 2px; }
+    .lightbox-box img { width: 100%; height: auto; display: block; }
+    .lightbox-text { padding: 1.6rem 1.8rem 1.8rem; }
+    .lightbox-text h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.2rem; font-weight: 400; color: var(--gold); margin-bottom: 0.8rem; }
+    .lightbox-text p { font-size: 0.92rem; color: rgba(242,235,224,0.83); margin: 0; }
+    .lightbox-close { position: absolute; top: 1.5rem; right: 1.8rem; color: var(--paper); font-size: 1.6rem; cursor: pointer; line-height: 1; opacity: 0.7; }
+    .lightbox-close:hover { opacity: 1; }
     @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
     .hero .eyebrow { animation: fadeUp 0.6s ease both 0.05s; }
     .hero h1 { animation: fadeUp 0.7s ease both 0.15s; }
@@ -155,6 +165,65 @@
 
 <section>
   <div class="wrap">
+    <div class="section-tag">His Work</div>
+    <h2>A selection of designs</h2>
+    <p>A sample of Sak Yant designs Ajarn Thueng has tattooed, each rooted in a specific tradition and lineage.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item" data-title="A Full Back Piece" data-text="This combines Yant Suriya Prapha and Yant Chandra Prapha, the Sun and Moon Yants, from the Luang Pu Nu In tradition at Wat Pa Phuttha Mongkol, Kalasin. The Sun Yant is believed to bring strong charm and favor with others, and success in one's endeavors. The Moon Yant is known for luck and wealth."><img src="post33_4.jpg" loading="lazy" alt="Full back composition combining several yant designs"></div>
+      <div class="gallery-item" data-title="Yant Kaew Mongkol" data-text="The Auspicious Crystal Yant, from the Luang Pu Nu In tradition at Wat Pa Phuttha Mongkol, Kalasin."><img src="post35_0.jpg" loading="lazy" alt="Yant Kaew Mongkol, the Auspicious Crystal Yant"></div>
+      <div class="gallery-item" data-title="Hanuman Unleashing His Power" data-text="From the tradition of Luang Por Boonma at Wat Thep Phon, passed down through Ajarn Pu Boonma Phum Malee."><img src="post42_0.jpg" loading="lazy" alt="Hanuman Unleashing His Power"></div>
+      <div class="gallery-item" data-title="Yant Maha Amnaj" data-text="The Great Authority Yant, from Luang Por Khong's tradition at Wat Wang Sappharot. Well suited to officials, supervisors, and business owners whose work involves managing people."><img src="post44_0.jpg" loading="lazy" alt="Yant Maha Amnaj, the Great Authority Yant"></div>
+      <div class="gallery-item" data-title="Na Chao Nang Aor" data-text="For charm and attraction, from the Wat Pho Bang Ramat tradition."><img src="post57_0.jpg" loading="lazy" alt="Na Chao Nang Aor, for charm and attraction"></div>
+      <div class="gallery-item" data-title="Yant Krathu Jet Baek" data-text="The Seven-Bearer Yant, from Luang Por Khong's tradition at Wat Wang Sappharot, Chanthaburi."><img src="post58_0.jpg" loading="lazy" alt="Yant Krathu Jet Baek, the Seven-Bearer Yant"></div>
+      <div class="gallery-item" data-title="Na Phra Sivali Jok Bat" data-text="Known for bringing charm, fortune, and a steady flow of wealth and abundance."><img src="post60_0.jpg" loading="lazy" alt="Na Phra Sivali Jok Bat, for wealth and prosperity"></div>
+      <div class="gallery-item" data-title="Yant Kaew Sam Prakan" data-text="Also called Fon Saen Ha, from Luang Por Prathueang Atikkanto's own tradition at Wat Nong Yang Thoi, Phetchabun. The old teaching says: never mind the wars of men, even the wars of the gods hold no fear."><img src="post61_0.jpg" loading="lazy" alt="Yant Kaew Sam Prakan, for invulnerability"></div>
+      <div class="gallery-item" data-title="Yant Bua Phra Jao Ha Phra Ong" data-text="The Five Buddhas Lotus Yant, for great fortune."><img src="post62_0.jpg" loading="lazy" alt="Yant Bua Phra Jao Ha Phra Ong, the Five Buddhas Lotus Yant"></div>
+      <div class="gallery-item" data-title="Na Changngang" data-text="A stilling charm, from the Wat Pho Bang Ramat tradition in Talingchan, Thonburi."><img src="post63_1.jpg" loading="lazy" alt="Na Changngang, a stilling charm"></div>
+      <div class="gallery-item" data-title="Na Na Thong" data-text="Also called Na Chapphan Rangsi, from the Wat Pho Bang Ramat tradition. Considered one of the highest forms of charm and favor, with people, celestial beings, and all creatures alike."><img src="post65_0.jpg" loading="lazy" alt="Na Na Thong, also called Na Chapphan Rangsi"></div>
+      <div class="gallery-item" data-title="Yant Phutta Son" data-text="A layered Buddha Yant for charm and fortune. The teacher only inks this design occasionally."><img src="post65_1.jpg" loading="lazy" alt="Yant Phutta Son, a layered Buddha yant rarely inked"></div>
+      <div class="gallery-item" data-title="Yant Yod Mongkut" data-text="The Five Buddhas Crown Yant, from Luang Por Prathueang Atikkanto's own tradition at Wat Nong Yang Thoi, Phetchabun, for universal protection. The teacher has only granted this design to two people."><img src="post69_1.jpg" loading="lazy" alt="Yant Yod Mongkut, the Five Buddhas Crown Yant"></div>
+      <div class="gallery-item" data-title="Yant Hua Jai Solot" data-text="The Heart of the Sixteen, for universal Buddha protection."><img src="post70_1.jpg" loading="lazy" alt="Yant Hua Jai Solot, the Heart of the Sixteen"></div>
+      <div class="gallery-item" data-title="Yant Pla Taphian" data-text="The Carp Yant. The teacher says it brings good fortune in business and trade."><img src="post79_0.jpg" loading="lazy" alt="Yant Pla Taphian, the Carp Yant, for business and trade"></div>
+      <div class="gallery-item" data-title="Yant Piya" data-text="A special design done only once a year. Piya means beloved, the same root as in Phra Piya Maharaj, the beloved king. Inscribed with an old mantra for charm and favor, said to also help in trade and offer protection from harm."><img src="post96_0.jpg" loading="lazy" alt="Yant Piya, a design done only once a year"></div>
+      <div class="gallery-item" data-title="Yant Sarika Pon Yeua" data-text="The Feeding Mynah Yant, from Por Han Awn Ta's tradition in Lom Sak, Phetchabun, for charm and attraction."><img src="post103_0.jpg" loading="lazy" alt="Yant Sarika Pon Yeua, the Feeding Mynah Yant"></div>
+      <div class="gallery-item" data-title="Yant Thao Buddha" data-text="From Luang Por Pan's tradition at Wat Bang Nom Kho in Ayutthaya, passed down through Ajarn Pu Boonma to Ajarn Thueng. Tradition holds that 108 sages joined together to bring this design into being."><img src="post107_0.jpg" loading="lazy" alt="Yant Thao Buddha, from the Wat Bang Nom Kho tradition"></div>
+      <div class="gallery-item" data-title="Hanuman Bearing the Buddha" data-text="A warrior yant, opening with an old incantation invoking Hanuman's strength and valor in battle."><img src="post112_0.jpg" loading="lazy" alt="Hanuman Bearing the Buddha"></div>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox-overlay" id="lightboxOverlay">
+  <div class="lightbox-box">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img id="lightboxImg" src="" alt="">
+    <div class="lightbox-text">
+      <h3 id="lightboxTitle"></h3>
+      <p id="lightboxText"></p>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.gallery-item').forEach(function(item) {
+    item.addEventListener('click', function() {
+      var img = item.querySelector('img');
+      document.getElementById('lightboxImg').src = img.getAttribute('src');
+      document.getElementById('lightboxImg').alt = img.getAttribute('alt');
+      document.getElementById('lightboxTitle').textContent = item.getAttribute('data-title');
+      document.getElementById('lightboxText').textContent = item.getAttribute('data-text');
+      document.getElementById('lightboxOverlay').classList.add('active');
+    });
+  });
+  document.getElementById('lightboxClose').addEventListener('click', function() {
+    document.getElementById('lightboxOverlay').classList.remove('active');
+  });
+  document.getElementById('lightboxOverlay').addEventListener('click', function(e) {
+    if (e.target === this) this.classList.remove('active');
+  });
+</script>
+
+<section>
+  <div class="wrap">
     <div class="section-tag">Who He Is</div>
     <h2>Ajarn Thueng</h2>
     <p>Ajarn Thueng was ordained as a monk and studied for years under Luang Por Prathueang Atikkanto of Wat Nong Yang Thoi in Phetchabun, a monk renowned for his invulnerability magic and his tattooing. After his teacher's death, he went on to study under several more monks and lay masters, learning specific protective, love, and fortune designs from each.</p>
@@ -196,39 +265,7 @@
 
 <div style="width:100%;margin:0;padding:0;line-height:0;"><img src="20260514_0035.jpg" width="2400" height="1349" alt="Ajarn Thueng inscribing an amulet by hand" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;"></div>
 
-<section>
-  <div class="wrap">
-    <div class="section-tag">His Work</div>
-    <h2>A selection of designs</h2>
-    <p>A sample of Sak Yant designs Ajarn Thueng has tattooed, each rooted in a specific tradition and lineage.</p>
-    <div class="gallery-grid">
-      <div class="gallery-item"><img src="post33_4.jpg" loading="lazy" alt="Full back composition combining several yant designs"></div>
-      <div class="gallery-item"><img src="post34_0.jpg" loading="lazy" alt="Yant Phra Jao Pleng Rasami, the Radiant Buddha Yant"></div>
-      <div class="gallery-item"><img src="post35_0.jpg" loading="lazy" alt="Yant Kaew Mongkol, the Auspicious Crystal Yant"></div>
-      <div class="gallery-item"><img src="post42_0.jpg" loading="lazy" alt="Hanuman Unleashing His Power"></div>
-      <div class="gallery-item"><img src="post44_0.jpg" loading="lazy" alt="Yant Maha Amnaj, the Great Authority Yant"></div>
-      <div class="gallery-item"><img src="post54_0.jpg" loading="lazy" alt="Na Maha Laruay, for charm and luck"></div>
-      <div class="gallery-item"><img src="post55_0.jpg" loading="lazy" alt="Na Ut Pak Krabok"></div>
-      <div class="gallery-item"><img src="post57_0.jpg" loading="lazy" alt="Na Chao Nang Aor, for charm and attraction"></div>
-      <div class="gallery-item"><img src="post58_0.jpg" loading="lazy" alt="Yant Krathu Jet Baek, the Seven-Bearer Yant"></div>
-      <div class="gallery-item"><img src="post60_0.jpg" loading="lazy" alt="Na Phra Sivali Jok Bat, for wealth and prosperity"></div>
-      <div class="gallery-item"><img src="post61_0.jpg" loading="lazy" alt="Yant Kaew Sam Prakan, for invulnerability"></div>
-      <div class="gallery-item"><img src="post62_0.jpg" loading="lazy" alt="Yant Bua Phra Jao Ha Phra Ong, the Five Buddhas Lotus Yant"></div>
-      <div class="gallery-item"><img src="post63_1.jpg" loading="lazy" alt="Na Changngang, a stilling charm"></div>
-      <div class="gallery-item"><img src="post65_0.jpg" loading="lazy" alt="Na Na Thong, also called Na Chapphan Rangsi"></div>
-      <div class="gallery-item"><img src="post65_1.jpg" loading="lazy" alt="Yant Phutta Son, a layered Buddha yant rarely inked"></div>
-      <div class="gallery-item"><img src="post69_1.jpg" loading="lazy" alt="Yant Yod Mongkut, the Five Buddhas Crown Yant"></div>
-      <div class="gallery-item"><img src="post70_1.jpg" loading="lazy" alt="Yant Hua Jai Solot, the Heart of the Sixteen"></div>
-      <div class="gallery-item"><img src="post79_0.jpg" loading="lazy" alt="Yant Pla Taphian, the Carp Yant, for business and trade"></div>
-      <div class="gallery-item"><img src="post96_0.jpg" loading="lazy" alt="Yant Piya, a design done only once a year"></div>
-      <div class="gallery-item"><img src="post99_0.jpg" loading="lazy" alt="Na Na Thong, in the Luang Por Khong tradition"></div>
-      <div class="gallery-item"><img src="post100_0.jpg" loading="lazy" alt="Na Sarika, in the Luang Por Khong tradition"></div>
-      <div class="gallery-item"><img src="post103_0.jpg" loading="lazy" alt="Yant Sarika Pon Yeua, the Feeding Mynah Yant"></div>
-      <div class="gallery-item"><img src="post107_0.jpg" loading="lazy" alt="Yant Thao Buddha, from the Wat Bang Nom Kho tradition"></div>
-      <div class="gallery-item"><img src="post112_0.jpg" loading="lazy" alt="Hanuman Bearing the Buddha"></div>
-    </div>
-  </div>
-</section>
+
 
 <section>
   <div class="wrap">
