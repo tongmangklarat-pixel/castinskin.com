@@ -1,221 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cast in Skin: Traditional Sak Yant Tattoos, Bangkok</title>
-  <meta name="description" content="Direct access to traditional Sak Yant Ajarns in Bangkok. Arranged by a local guide.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&family=Noto+Serif+Thai:wght@400;500&display=swap" rel="stylesheet">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5LRXNQWBZP"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-5LRXNQWBZP');
-  </script>
-  <style>
-    :root {
-      --ink: #141210;
-      --deep: #1c1814;
-      --paper: #f2ebe0;
-      --gold: #c49a3c;
-      --gold-dim: #8a6a22;
-      --ash: #7a7068;
-      --line: rgba(196,154,60,0.2);
-      --line-strong: rgba(196,154,60,0.45);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { background: var(--ink); color: var(--paper); font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.75; overflow-x: hidden; }
-    body::after { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 9998; opacity: 0.28; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E"); }
-    .wrap { max-width: 860px; margin: 0 auto; padding: 0 2rem; }
-    header { border-bottom: 1px solid var(--line); padding: 1.6rem 0; }
-    .header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem; }
-    .wordmark { font-family: 'Playfair Display', Georgia, serif; font-size: 1.1rem; letter-spacing: 0.04em; color: var(--gold); font-weight: 400; text-decoration: none; }
-    .wordmark span { font-style: italic; }
-    .header-tag { font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ash); }
-    .hero { padding: 7rem 0 5.5rem; border-bottom: 1px solid var(--line); }
-    .eyebrow { font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 2rem; }
-    h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 400; line-height: 1.2; margin-bottom: 2rem; max-width: 700px; }
-    h1 em { font-style: italic; color: var(--gold); }
-    .hero-lead { font-size: 1.05rem; color: rgba(242,235,224,0.75); max-width: 580px; line-height: 1.7; }
-    section { padding: 5rem 0; border-bottom: 1px solid var(--line); }
-    section:last-of-type { border-bottom: none; }
-    .section-tag { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 2.5rem; }
-    h2 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 400; line-height: 1.3; margin-bottom: 1.8rem; }
-    h2 em { font-style: italic; color: var(--gold); }
-    p { margin-bottom: 1.3rem; color: rgba(242,235,224,0.83); }
-    p:last-child { margin-bottom: 0; }
-    strong { color: var(--paper); font-weight: 500; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-    @media (max-width: 640px) { .two-col { grid-template-columns: 1fr; gap: 2.5rem; } }
-    .two-col > div { display: flex; flex-direction: column; gap: 0; }
-    .two-col p { margin-bottom: 1.3rem; }
-    .two-col p:last-child { margin-bottom: 0; }
-    .pull-quote { border-left: 2px solid var(--gold-dim); padding: 0.2rem 0 0.2rem 1.5rem; margin: 2rem 0; }
-    .pull-quote p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.05rem; color: rgba(242,235,224,0.7); line-height: 1.65; }
-    .steps { display: flex; flex-direction: column; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 2px; overflow: hidden; margin-top: 2rem; }
-    .step { background: var(--deep); padding: 1.4rem 1.8rem; display: flex; gap: 1.4rem; align-items: baseline; }
-    .step-num { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--gold-dim); flex-shrink: 0; width: 1.4rem; }
-    .step-text { font-size: 0.95rem; color: rgba(242,235,224,0.83); line-height: 1.6; }
-    .contact-inner { max-width: 560px; }
-    .contact-options { display: flex; flex-direction: column; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 2px; overflow: hidden; margin-top: 2rem; }
-    .contact-row { background: var(--deep); padding: 1.2rem 1.8rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; text-decoration: none; transition: background 0.15s; }
-    .contact-row:hover { background: #221e1a; }
-    .contact-left { display: flex; align-items: center; gap: 0.75rem; }
-    .contact-icon { width: 18px; height: 18px; flex-shrink: 0; opacity: 0.55; }
-    .contact-platform { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ash); }
-    .contact-handle { font-size: 0.92rem; color: rgba(242,235,224,0.83); }
-    footer { padding: 3rem 0; }
-    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-    footer p { font-size: 0.75rem; letter-spacing: 0.08em; color: var(--ash); margin: 0; }
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-    .hero .eyebrow { animation: fadeUp 0.6s ease both 0.05s; }
-    .hero h1 { animation: fadeUp 0.7s ease both 0.15s; }
-    .hero .hero-lead { animation: fadeUp 0.7s ease both 0.3s; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cast in Skin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #05070a;
+    --ink: #f2ede4;
+    --ink-dim: rgba(242,237,228,0.62);
+    --line: rgba(242,237,228,0.22);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    height: 100%;
+    background: var(--bg);
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  .stage {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .stage img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 68% 45%;
+    filter: saturate(0.92) contrast(1.03);
+  }
+
+  .scrim {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(120% 90% at 50% 42%, rgba(5,7,10,0.35) 0%, rgba(5,7,10,0.72) 55%, rgba(5,7,10,0.94) 100%),
+      linear-gradient(to bottom, rgba(5,7,10,0.55) 0%, rgba(5,7,10,0.15) 22%, rgba(5,7,10,0.15) 70%, rgba(5,7,10,0.85) 100%);
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mark {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: clamp(2.6rem, 8vw, 6rem);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    line-height: 1.05;
+    color: var(--ink);
+    text-shadow: 0 2px 40px rgba(0,0,0,0.55);
+  }
+
+  .rule {
+    width: 64px;
+    height: 1px;
+    background: var(--line);
+    margin: 28px 0 26px;
+  }
+
+  .tagline {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+    letter-spacing: 0.02em;
+    color: var(--ink-dim);
+    max-width: 34ch;
+  }
+
+  .contact {
+    position: relative;
+    z-index: 2;
+    margin-top: clamp(40px, 8vh, 90px);
+    text-align: center;
+  }
+
+  .contact a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 6px;
+    transition: color 0.25s ease, border-color 0.25s ease;
+  }
+
+  .contact a:hover,
+  .contact a:focus-visible {
+    color: var(--ink);
+    border-color: var(--ink-dim);
+  }
+
+  .foot {
+    position: absolute;
+    bottom: 28px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    text-align: center;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(242,237,228,0.38);
+  }
+
+  @media (max-width: 600px) {
+    .stage img { object-position: 74% 42%; }
+  }
+</style>
 </head>
 <body>
 
-<header>
-  <div class="wrap header-inner">
-    <a href="/" class="wordmark">Cast in <span>Skin</span></a>
-    <div class="header-tag">Bangkok</div>
+<div class="stage">
+  <img src="hero.jpg" alt="">
+  <div class="scrim"></div>
+  <div class="content">
+    <div class="mark">Cast in Skin</div>
+    <div class="rule"></div>
+    <p class="tagline">Sacred Thai tattoo, made in the hands of masters</p>
   </div>
-</header>
-
-<div class="hero">
-  <div class="wrap">
-    <div class="eyebrow">Bangkok</div>
-    <h1>Traditional Sak Yant tattoos.<br><em>Direct access to Ajarns (sacred tattoo masters) in Bangkok.</em></h1>
-    <p class="hero-lead">Sak Yant tattoos are traditional blessings inscribed into the skin by masters called Ajarns. They are designed to bring specific things into your life: protection, money, luck, personal magnetism, success in business.</p>
-    <p style="margin-top:2.5rem; font-family:'Playfair Display', Georgia, serif; font-size:clamp(1.3rem, 3vw, 1.8rem); font-weight:400; font-style:italic; color:var(--gold); line-height:1.4; max-width:620px;">These are magic spells cast into skin.</p>
-    <p style="margin-top:1.4rem; font-size:1rem; line-height:1.8; color:rgba(242,235,224,0.75); max-width:620px;">Many visitors to Bangkok who want one end up at commercial shops. These are places I can take you to. Ajarns I have trusted with my own skin and fortune.</p>
+  <div class="contact">
+    <a href="mailto:tong@castinskin.com">tong@castinskin.com</a>
   </div>
 </div>
 
-<div style="width:100%;margin:0;padding:0;line-height:0;"><img src="20260517_0350.jpg" style="width:100%;height:auto;display:block;"></div>
-
-<section id="contact">
-  <div class="wrap">
-    <div class="section-tag">Arrange a Sak Yant</div>
-    <div class="contact-inner">
-      <h2>Request <em>a session.</em></h2>
-      <p>My name is Tong. I was born in Bangkok, moved to the United States as a child in 1984, and returned in 2015. I came to Sak Yant the way most people do, wanting a tattoo, and kept going back. Before I found depth in the spiritual side of it, I was using my eye as a former corporate art director to find the most aesthetically skilled Ajarns I could afford. Several tattoos later, I realized I had access to something worth sharing. I am not a tattooist and I do not give tattoos myself. I am a native English speaker based in Bangkok. Tell me what you are looking for and when you will be in Bangkok, and I will arrange it.</p>
-      <div class="contact-options">
-        <a href="https://line.me/ti/p/~shallowdepth" class="contact-row">
-          <span class="contact-left">
-            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C6.48 2 2 6.02 2 11c0 3.07 1.68 5.78 4.25 7.47L5.5 22l3.75-1.97C10.3 20.66 11.14 21 12 21c5.52 0 10-4.02 10-9S17.52 2 12 2z" fill="currentColor"/>
-              <path d="M7.5 10h1v3h-1zM11.5 10h1v1.5L14 10h1.2l-1.7 1.8L15.3 13H14l-1.5-1.5V13h-1z" fill="var(--ink)"/>
-            </svg>
-            <span class="contact-platform">Line</span>
-          </span>
-          <span class="contact-handle">@shallowdepth</span>
-        </a>
-        <a href="mailto:tong@castinskin.com" class="contact-row">
-          <span class="contact-left">
-            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M2 7l10 7 10-7" stroke="currentColor" stroke-width="1.5"/>
-            </svg>
-            <span class="contact-platform">Email</span>
-          </span>
-          <span class="contact-handle">tong@castinskin.com</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="section-tag">How it works</div>
-    <h2>What happens after you message</h2>
-    <div class="steps">
-      <div class="step"><span class="step-num">1</span><span class="step-text">Send a message on Line or email. Tell me what you are looking for and when you will be in Bangkok.</span></div>
-      <div class="step"><span class="step-num">2</span><span class="step-text">I recommend the right Ajarn based on what you want and arrange the appointment.</span></div>
-      <div class="step"><span class="step-num">3</span><span class="step-text">On the day, I translate between you and the Ajarn and make sure you know what to expect.</span></div>
-      <div class="step"><span class="step-num">4</span><span class="step-text">You receive the tattoo from a traditional Ajarn.</span></div>
-    </div>
-  </div>
-</section>
-
-<div style="width:100%;margin:0;padding:0;line-height:0;"><img src="20260517_0216.jpg" style="width:100%;height:auto;display:block;"></div>
-
-<section>
-  <div class="wrap">
-    <div class="section-tag">History</div>
-    <h2>Where Sak Yant comes from</h2>
-    <p>Sak Yant is a traditional Southeast Asian practice rooted in sacred geometry, ancient script, and Buddhist and animist belief. The tradition is still active and still practiced the same way.</p>
-  </div>
-</section>
-
-<div style="width:100%;margin:0;padding:0;line-height:0;"><img src="20260517_0308.jpg" style="width:100%;height:auto;display:block;"></div>
-
-<section>
-  <div class="wrap">
-    <div class="section-tag">Buddhism and Sak Yant</div>
-    <h2>What this is and is not</h2>
-    <p>Most Westerners assume these are Buddhist tattoos. Some Thai people would say the same, but a lot of them know better because a lot of them are serious Buddhists. Buddhism teaches you to let go of desire. These tattoos exist specifically to get you the things you desire: money, protection, love, power. The people getting tattooed are not losing any sleep over that contradiction. That is Thailand.</p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="section-tag">A common concern</div>
-    <h2>On cultural appropriation</h2>
-    <p>The concern comes up often: is it appropriate for a Western visitor to receive a Sak Yant tattoo? It deserves a direct answer.</p>
-    <p>Sak Yant is not a tribal or indigenous tattoo tradition. The yantra designs come from India and were absorbed into Buddhist and animist practice as they moved east. It has been practiced across Thailand, Cambodia, Laos, and Myanmar for centuries. The argument that it belongs exclusively to one people does not hold up to the tradition's actual history.</p>
-    <p>The pushback Western visitors encounter almost never comes from Thai practitioners. It comes from outside the tradition entirely, from people with no stake in it who have appointed themselves its guardians. The Ajarns I work with run businesses. Access to their work is how they sustain their practice and pass the tradition forward. When someone declines to participate out of guilt, the person absorbing the cost is Thai. The discomfort stays with the visitor. The lost income stays with the Ajarn.</p>
-    <p>You do not need to be Buddhist to receive a Sak Yant. You need to show up with basic respect for where you are and what is happening. That is the whole thing.</p>
-  </div>
-</section>
-
-
-<div style="width:100%;margin:0;padding:0;line-height:0;"><img src="20260517_0020.jpg" style="width:100%;height:auto;display:block;"></div>
-
-<section id="contact-bottom">
-  <div class="wrap">
-    <div class="section-tag">Get in touch</div>
-    <div class="contact-inner">
-      <h2>Ready to <em>arrange a session?</em></h2>
-      <p>Message me on any of the platforms below. Tell me when you will be in Bangkok and what you are looking for. I will take it from there.</p>
-      <div class="contact-options">
-        <a href="https://line.me/ti/p/~shallowdepth" class="contact-row">
-          <span class="contact-left">
-            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C6.48 2 2 6.02 2 11c0 3.07 1.68 5.78 4.25 7.47L5.5 22l3.75-1.97C10.3 20.66 11.14 21 12 21c5.52 0 10-4.02 10-9S17.52 2 12 2z" fill="currentColor"/>
-              <path d="M7.5 10h1v3h-1zM11.5 10h1v1.5L14 10h1.2l-1.7 1.8L15.3 13H14l-1.5-1.5V13h-1z" fill="var(--ink)"/>
-            </svg>
-            <span class="contact-platform">Line</span>
-          </span>
-          <span class="contact-handle">@shallowdepth</span>
-        </a>
-        <a href="mailto:tong@castinskin.com" class="contact-row">
-          <span class="contact-left">
-            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M2 7l10 7 10-7" stroke="currentColor" stroke-width="1.5"/>
-            </svg>
-            <span class="contact-platform">Email</span>
-          </span>
-          <span class="contact-handle">tong@castinskin.com</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap footer-inner">
-    <p>Cast in Skin, Bangkok</p>
-    <a href="photography.html" style="font-size:0.7rem; color:var(--ash); text-decoration:none; letter-spacing:0.08em;">Photography Workshop</a>
-  </div>
-</footer>
+<div class="foot">Bangkok, Thailand</div>
 
 </body>
 </html>
