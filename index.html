@@ -132,6 +132,19 @@
     color: rgba(242,237,228,0.38);
   }
 
+  .contact-primary {
+    color: var(--ink) !important;
+    border-color: var(--ink-dim) !important;
+  }
+
+  .contact-row {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   @media (max-width: 600px) {
     .stage img { object-position: 74% 42%; }
   }
@@ -145,10 +158,14 @@
   <div class="content">
     <div class="mark">Cast in Skin</div>
     <div class="rule"></div>
-    <p class="tagline">Sacred Thai tattoo, made in the hands of masters</p>
+    <p class="tagline">These are magic spells cast into skin.<br>Traditional Thai Sak Yant tattoos.<br>Get in touch to plan your tattoo.</p>
   </div>
   <div class="contact">
-    <a href="mailto:tong@castinskin.com">tong@castinskin.com</a>
+    <div class="contact-row">
+      <a href="https://m.me/61590355785292" class="contact-primary">Messenger</a>
+      <a href="https://line.me/R/ti/p/@shallowdepth">Line</a>
+      <a href="mailto:tong@castinskin.com">Email</a>
+    </div>
   </div>
 </div>
 
