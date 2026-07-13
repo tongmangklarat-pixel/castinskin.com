@@ -172,17 +172,19 @@
 
   @media (max-width: 600px) {
     .stage {
-      min-height: 0;
-      height: auto;
+      min-height: 100vh;
+      position: relative;
       display: block;
     }
     .stage img {
-      position: static;
+      position: absolute;
+      top: 50%;
+      left: 0;
       width: 100%;
       height: auto;
+      transform: translateY(-50%);
       object-fit: initial;
       object-position: initial;
-      display: block;
     }
     .scrim {
       position: absolute;
@@ -190,11 +192,12 @@
     }
     .content {
       position: absolute;
-      inset: 0;
+      top: 64px;
+      left: 0;
+      right: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       padding: 0 24px;
     }
   }
