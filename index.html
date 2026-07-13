@@ -13,6 +13,7 @@
     --ink: #f2ede4;
     --ink-dim: rgba(242,237,228,0.62);
     --line: rgba(242,237,228,0.22);
+    --gold: #c49a3c;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -94,10 +95,25 @@
     max-width: 34ch;
   }
 
+  .tagline-gold {
+    color: var(--gold);
+  }
+
+  .cta {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(1.2rem, 2.4vw, 1.55rem);
+    letter-spacing: 0.01em;
+    color: var(--ink);
+    max-width: 34ch;
+    margin-top: 30px;
+  }
+
   .contact {
     position: relative;
     z-index: 2;
-    margin-top: clamp(40px, 8vh, 90px);
+    margin-top: 20px;
     text-align: center;
   }
 
@@ -111,6 +127,15 @@
     border-bottom: 1px solid var(--line);
     padding-bottom: 6px;
     transition: color 0.25s ease, border-color 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .contact a svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
   }
 
   .contact a:hover,
@@ -158,13 +183,26 @@
   <div class="content">
     <div class="mark">Cast in Skin</div>
     <div class="rule"></div>
-    <p class="tagline">These are magic spells cast into skin.<br>Traditional Thai Sak Yant tattoos.<br>Get in touch to plan your tattoo.</p>
-  </div>
-  <div class="contact">
-    <div class="contact-row">
-      <a href="https://m.me/61590355785292" class="contact-primary">Messenger</a>
-      <a href="https://line.me/R/ti/p/@shallowdepth">Line</a>
-      <a href="mailto:tong@castinskin.com">Email</a>
+    <p class="tagline"><span class="tagline-gold">These are magic spells cast into skin.</span><br>Traditional Thai Sak Yant tattoos.</p>
+    <p class="cta">Get in touch to plan your tattoo.</p>
+    <div class="contact">
+      <div class="contact-row">
+        <a href="https://line.me/R/ti/p/@shallowdepth" class="contact-primary">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#06C755"/>
+            <path d="M18.36 11.2c0-2.87-2.88-5.2-6.36-5.2s-6.36 2.33-6.36 5.2c0 2.57 2.28 4.72 5.37 5.13.21.05.49.14.56.33.06.16.04.42.02.59l-.09.55c-.03.16-.13.63.55.34.68-.28 3.68-2.17 5.02-3.71 1-.93 1.29-1.87 1.29-2.83" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Line
+        </a>
+        <a href="mailto:tong@castinskin.com">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="rgba(242,237,228,0.14)"/>
+            <path d="M6.5 8.5h11a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1v-5a1 1 0 0 1 1-1z" fill="none" stroke="#f2ede4" stroke-width="1.1"/>
+            <path d="M6 9l6 4.2L18 9" fill="none" stroke="#f2ede4" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Email
+        </a>
+      </div>
     </div>
   </div>
 </div>
