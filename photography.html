@@ -6,7 +6,7 @@
   <title>Cast in Skin: Sak Yant Photography Workshop, Bangkok</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&family=Noto+Serif+Thai:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&amp;family=DM+Sans:wght@300;400;500&amp;family=Noto+Serif+Thai:wght@400;500&amp;display=swap" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5LRXNQWBZP"></script>
   <script>
@@ -29,7 +29,6 @@
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-
     body {
       background: var(--ink);
       color: var(--paper);
@@ -38,7 +37,6 @@
       line-height: 1.75;
       overflow-x: hidden;
     }
-
     body::after {
       content: '';
       position: fixed;
@@ -48,265 +46,55 @@
       opacity: 0.28;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
     }
-
     .wrap { max-width: 860px; margin: 0 auto; padding: 0 2rem; }
-
-    header {
-      border-bottom: 1px solid var(--line);
-      padding: 1.6rem 0;
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-    }
-
-    .wordmark {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.1rem;
-      letter-spacing: 0.04em;
-      color: var(--gold);
-      font-weight: 400;
-    }
+    header { border-bottom: 1px solid var(--line); padding: 1.6rem 0; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem; }
+    .wordmark { font-family: 'Playfair Display', Georgia, serif; font-size: 1.1rem; letter-spacing: 0.04em; color: var(--gold); font-weight: 400; }
     .wordmark span { font-style: italic; }
-
-    .header-tag {
-      font-size: 0.7rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--ash);
-    }
-
-    .hero {
-      padding: 7rem 0 5.5rem;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .eyebrow {
-      font-size: 0.7rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 2rem;
-    }
-
-    h1 {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(2.2rem, 5vw, 3.6rem);
-      font-weight: 400;
-      line-height: 1.2;
-      margin-bottom: 2rem;
-      max-width: 700px;
-    }
+    .header-tag { font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ash); }
+    .hero { padding: 7rem 0 5.5rem; border-bottom: 1px solid var(--line); }
+    .eyebrow { font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 2rem; }
+    h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(2.05rem, 4.6vw, 3.45rem); font-weight: 400; line-height: 1.18; margin-bottom: 2rem; max-width: 760px; }
     h1 em { font-style: italic; color: var(--gold); }
-
-    .hero-lead {
-      font-size: 1.05rem;
-      color: rgba(242,235,224,0.75);
-      max-width: 580px;
-      line-height: 1.7;
-    }
-
-    section {
-      padding: 5rem 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .section-tag {
-      font-size: 0.68rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold-dim);
-      margin-bottom: 2.5rem;
-    }
-
-    h2 {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      font-weight: 400;
-      line-height: 1.3;
-      margin-bottom: 1.8rem;
-    }
+    .hero-lead { font-size: 1.05rem; color: rgba(242,235,224,0.75); max-width: 620px; line-height: 1.7; }
+    .event-bar { display: inline-flex; align-items: center; gap: 0.75rem; background: var(--gold); border-radius: 2px; padding: 0.65rem 1.2rem; margin-bottom: 2rem; flex-wrap: wrap; }
+    .event-label { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink); }
+    .event-primary { font-family: 'Playfair Display', serif; font-weight: 500; font-size: 1.05rem; color: #fff; }
+    .event-meta { font-size: 0.68rem; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink); opacity: 0.88; }
+    section { padding: 5rem 0; border-bottom: 1px solid var(--line); }
+    .section-tag { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 2.5rem; }
+    h2 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 400; line-height: 1.3; margin-bottom: 1.8rem; }
     h2 em { font-style: italic; color: var(--gold); }
-
-    p {
-      margin-bottom: 1.3rem;
-      color: rgba(242,235,224,0.83);
-    }
+    p { margin-bottom: 1.3rem; color: rgba(242,235,224,0.83); }
     p:last-child { margin-bottom: 0; }
     strong { color: var(--paper); font-weight: 500; }
-
-    .rule {
-      width: 36px;
-      height: 1px;
-      background: var(--gold-dim);
-      margin: 1.8rem 0;
-    }
-
-    .pull-quote {
-      border-left: 2px solid var(--gold-dim);
-      padding: 0.2rem 0 0.2rem 1.5rem;
-      margin: 2rem 0;
-    }
-
-    .pull-quote p {
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-size: 1.05rem;
-      color: rgba(242,235,224,0.7);
-      line-height: 1.65;
-    }
-
-    .details-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1px;
-      background: var(--line);
-      border: 1px solid var(--line);
-      border-radius: 2px;
-      overflow: hidden;
-      margin-top: 2rem;
-    }
-    @media (max-width: 580px) {
-      .details-row { grid-template-columns: 1fr; }
-    }
-
-    .detail-cell {
-      background: var(--deep);
-      padding: 1.8rem;
-    }
-
-    .detail-label {
-      font-size: 0.68rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--ash);
-      margin-bottom: 0.9rem;
-    }
-
-    .detail-cell p {
-      font-size: 0.92rem;
-      line-height: 1.6;
-    }
-
-    .expect-list {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 1px;
-      background: var(--line);
-      border: 1px solid var(--line);
-      border-radius: 2px;
-      overflow: hidden;
-      margin-top: 2rem;
-    }
-
-    .expect-item {
-      background: var(--deep);
-      padding: 1.4rem 1.8rem;
-      display: grid;
-      grid-template-columns: 1.4rem 1fr;
-      gap: 1rem;
-      align-items: start;
-    }
-
-    .expect-num {
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-size: 0.9rem;
-      color: var(--gold-dim);
-      padding-top: 0.05rem;
-    }
-
-    .expect-text {
-      font-size: 0.93rem;
-      color: rgba(242,235,224,0.83);
-      line-height: 1.6;
-      margin: 0;
-    }
-
-    .divider {
-      padding: 3rem 0 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .divider-label {
-      font-size: 0.68rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--ash);
-      text-align: center;
-      margin-bottom: 0;
-    }
-
-    .video-block { margin: 2.5rem 0; }
-
-    .video-label {
-      font-size: 0.68rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--ash);
-      margin-bottom: 0.6rem;
-    }
-
-    .video-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      font-weight: 400;
-      color: var(--paper);
-      margin-bottom: 0.5rem;
-    }
-    .video-title em { font-style: italic; color: var(--gold); }
-
-    .video-desc {
-      font-size: 0.85rem;
-      color: var(--ash);
-      margin-bottom: 1rem;
-      line-height: 1.5;
-    }
-
-    .video-frame {
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%;
-      background: var(--deep);
-      border: 1px solid var(--line);
-    }
-
-    .video-frame iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
+    .details-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 2px; overflow: hidden; margin-top: 2rem; }
+    .detail-cell { background: var(--deep); padding: 1.8rem; }
+    .detail-label { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ash); margin-bottom: 0.9rem; }
+    .detail-cell p { font-size: 0.92rem; line-height: 1.6; }
+    .expect-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 2px; overflow: hidden; margin-top: 2rem; }
+    .expect-item { background: var(--deep); padding: 1.4rem 1.8rem; display: grid; grid-template-columns: 1.4rem 1fr; gap: 1rem; align-items: start; }
+    .expect-num { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.9rem; color: var(--gold-dim); padding-top: 0.05rem; }
+    .expect-text { font-size: 0.93rem; color: rgba(242,235,224,0.83); line-height: 1.6; margin: 0; }
+    .contact-links { margin-top: 1.5rem; display: flex; gap: 2rem; flex-wrap: wrap; }
+    .contact-links a { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.1rem; color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim); padding-bottom: 3px; }
+    .full-image { width: 100%; margin: 0; padding: 0; line-height: 0; }
+    .full-image img { width: 100%; height: auto; display: block; }
     footer { padding: 3rem 0; }
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    footer p { font-size: 0.75rem; letter-spacing: 0.08em; color: var(--ash); margin: 0; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    .hero .eyebrow { animation: fadeUp 0.6s ease both 0.05s; }
+    .hero h1 { animation: fadeUp 0.7s ease both 0.15s; }
+    .hero .event-bar { animation: fadeUp 0.7s ease both 0.23s; }
+    .hero .hero-lead { animation: fadeUp 0.7s ease both 0.3s; }
+    @media (max-width: 700px) {
+      h1 { font-size: clamp(1.82rem, 8.2vw, 2.2rem); line-height: 1.15; }
+      .hero { padding: 5rem 0 4rem; }
+      .details-row { grid-template-columns: 1fr; }
+      .event-bar { gap: 0.45rem 0.7rem; }
+      .event-primary { font-size: 0.98rem; }
     }
-    footer p {
-      font-size: 0.75rem;
-      letter-spacing: 0.08em;
-      color: var(--ash);
-      margin: 0;
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(16px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .hero .eyebrow    { animation: fadeUp 0.6s ease both 0.05s; }
-    .hero h1          { animation: fadeUp 0.7s ease both 0.15s; }
-    .hero .hero-lead  { animation: fadeUp 0.7s ease both 0.3s; }
   </style>
 </head>
 <body>
@@ -318,170 +106,124 @@
   </div>
 </header>
 
-<!-- HERO -->
 <div class="hero">
   <div class="wrap">
     <div class="eyebrow">Bangkok, Thailand</div>
-    <h1>A photography workshop inside a living <em>sacred tattoo</em> tradition</h1>
-    <div style="display:inline-flex; align-items:center; gap:0.7rem; background:var(--gold); border-radius:2px; padding:0.65rem 1.2rem; margin-bottom:2rem;">
-      <span style="font-size:0.68rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--ink);">Next event</span>
-      <span style="font-family:'Playfair Display',serif; font-weight:500; font-size:1.1rem; color:#ffffff;">Sunday, August 30, 2026</span>
-      <span style="font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink); opacity:0.85;">Maximum 5 people</span>
+    <h1>A documentary photography workshop inside Thailand’s <em>sacred tattoo tradition</em></h1>
+    <div class="event-bar">
+      <span class="event-label">Next event</span>
+      <span class="event-primary">Sunday, August 30, 2026</span>
+      <span class="event-meta">2,000 baht</span>
+      <span class="event-meta">Maximum 5</span>
     </div>
-    <p class="hero-lead">Walk around Thailand long enough and you start noticing the tattoos. The old man selling dried fish at the market. The guy in front of you at the 7-Eleven with the points of a geometric tattoo showing above the back of his t-shirt. Once you know what you're looking at, you see it everywhere. I built this workshop to put photographers inside the ceremony where it's still being made.</p>
-    <p style="margin-top:1.8rem; font-size:1rem; line-height:1.8; color:rgba(242,235,224,0.75); max-width:620px;">These are magic spells cast into your skin. The designs are meant to protect you, bring money, bring luck, make you attractive to other people, charming in speech, well-regarded by those around you. Some are meant to make you feared. Some are meant to make you loved. The people applying them have spent years learning the script, the geometry, and the chants that activate each one. And the tattoos themselves, in the hands of a skilled Ajarn, can be genuinely beautiful.</p>
+    <p class="hero-lead">Spend the day photographing Sak Yant tattooing and the blessing ceremony inside a working sanctuary in Bangkok, with access to a place that would be difficult to enter and photograph on your own.</p>
   </div>
 </div>
 
-<!-- EARLY CONTACT -->
-<section style="padding:2.5rem 0; border-bottom:1px solid var(--line);">
-  <div class="wrap">
-    <p style="font-size:0.95rem; color:rgba(242,235,224,0.75); margin-bottom:1.5rem;">Sunday, August 30, 2026. 2,000 baht per person. Maximum 5. Contact via Line, WhatsApp, or email.</p>
-    <div style="display:flex; gap:1rem; flex-wrap:wrap;">
-      <a href="https://line.me/ti/p/~shallowdepth" style="font-family:'Playfair Display',serif; font-style:italic; font-size:1rem; color:var(--gold); text-decoration:none; border-bottom:1px solid var(--gold-dim); padding-bottom:2px;">Line @shallowdepth</a>
-      <a href="https://wa.me/66984725091" style="font-family:'Playfair Display',serif; font-style:italic; font-size:1rem; color:var(--gold); text-decoration:none; border-bottom:1px solid var(--gold-dim); padding-bottom:2px;">WhatsApp</a>
-      <a href="mailto:tong@castinskin.com?subject=Photography%20Workshop%20Inquiry" style="font-family:'Playfair Display',serif; font-style:italic; font-size:1rem; color:var(--gold); text-decoration:none; border-bottom:1px solid var(--gold-dim); padding-bottom:2px;">tong@castinskin.com</a>
-    </div>
-  </div>
-</section>
-
-<!-- HERO PHOTO -->
-<div style="width:100%; margin:0; padding:0; line-height:0;">
-  <img src="20260524_0093.jpg" alt="Sak Yant tattoo on neck" style="width:100%; height:auto; display:block;">
+<div class="full-image">
+  <img src="20260517_0359.jpg" alt="Sak Yant tattooing inside the sanctuary">
 </div>
 
-<!-- WHAT YOU'RE COMING TO PHOTOGRAPH -->
 <section>
   <div class="wrap">
     <div class="section-tag">The workshop</div>
     <h2>What you are <em>coming to photograph</em></h2>
-    <p>A working Sak Yant ceremony with an Ajarn (tattoo master) who has an active Thai following but no expat or tourist facing presence. The ceremony runs as it would without photographers present. Nothing is staged. You are documenting something that is happening regardless of whether you are there.</p>
-
+    <p>You are photographing a working Sak Yant ceremony inside the tattoo master’s sanctuary. The tattooing and blessing proceed as they would without photographers present. Nothing is staged, and you have time to follow what happens through the day.</p>
     <div class="details-row">
       <div class="detail-cell">
-        <div class="detail-label">Pricing</div>
+        <div class="detail-label">Price</div>
         <p>2,000 baht per person.</p>
       </div>
       <div class="detail-cell">
         <div class="detail-label">Group size</div>
-        <p>Maximum 5 per session.</p>
+        <p>Maximum 5 people.</p>
       </div>
       <div class="detail-cell">
-        <div class="detail-label">What to bring</div>
-        <p>Your camera. Water. Dress politely.</p>
-      </div>
-      <div class="detail-cell">
-        <div class="detail-label">Contact</div>
-        <p>Reach out via <a href="https://line.me/ti/p/~shallowdepth" style="color:var(--gold); text-decoration:none; border-bottom:1px solid var(--gold-dim);">Line</a>, <a href="https://wa.me/66984725091" style="color:var(--gold); text-decoration:none; border-bottom:1px solid var(--gold-dim);">WhatsApp</a>, or <a href="mailto:tong@castinskin.com" style="color:var(--gold); text-decoration:none; border-bottom:1px solid var(--gold-dim);">email</a>.</p>
+        <div class="detail-label">Duration</div>
+        <p>Most of the day. You may leave earlier once you have the photographs you came for.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- IMAGE -->
-<div style="width:100%; margin:0; padding:0; line-height:0;">
-  <img src="20260517_0359.jpg" alt="Sak Yant ceremony" style="width:100%; height:auto; display:block;">
+<div class="full-image">
+  <img src="20260514_0003.jpg" alt="A blessing ceremony inside the sanctuary">
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-tag">Access and context</div>
+    <h2>About your <em>host</em></h2>
+    <p>Your host is Tong, a Bangkok-born photographer and native English speaker. His familiarity with Sak Yant is personal: he first came to it wanting a tattoo and kept returning. The access behind this workshop grew from relationships built over time.</p>
+    <p>Throughout the workshop, he stays with the group, explains what is happening as it unfolds, answers questions, and translates when needed.</p>
+  </div>
+</section>
+
+<div class="full-image">
+  <img src="20260517_0229.jpg" alt="The Ajarn examining a tattooed back">
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-tag">On the day</div>
+    <h2>What to <em>expect</em></h2>
+    <ul class="expect-list">
+      <li class="expect-item"><span class="expect-num">1.</span><p class="expect-text">The group meets at a set point on the BTS or MRT and travels together from there. You receive the exact station once your place is confirmed.</p></li>
+      <li class="expect-item"><span class="expect-num">2.</span><p class="expect-text">The day begins with a short briefing about the space, how to work respectfully inside it, and what to expect.</p></li>
+      <li class="expect-item"><span class="expect-num">3.</span><p class="expect-text">You photograph through the day and may leave earlier once you have the photographs you came for.</p></li>
+    </ul>
+  </div>
+</section>
+
+<div class="full-image">
+  <img src="20260517_0165.jpg" alt="Sak Yant tattooing detail">
 </div>
 
 <section>
   <div class="wrap">
     <div class="section-tag">Contact</div>
     <h2>Get in <em>touch</em></h2>
-    <p>Line, WhatsApp, or email. I respond to everyone.</p>
-    <p style="margin-top:1.5rem; display:flex; gap:2rem; flex-wrap:wrap;">
-      <a href="https://line.me/ti/p/~shallowdepth" style="font-family:'Playfair Display', serif; font-style:italic; font-size:1.1rem; color:var(--gold); text-decoration:none; border-bottom:1px solid var(--gold-dim); padding-bottom:3px;">Line @shallowdepth</a>
-      <a href="https://wa.me/66984725091" style="font-family:'Playfair Display', serif; font-style:italic; font-size:1.1rem; color:var(--gold); text-decoration:none; border-bottom:1px solid var(--gold-dim); padding-bottom:3px;">WhatsApp</a>
-      <a href="mailto:tong@castinskin.com?subject=Photography%20Workshop%20Inquiry" style="font-family:'Playfair Display', serif; font-style:italic; font-size:1.1rem; color:var(--gold); text-decoration:none; border-bottom:1px solid var(--gold-dim); padding-bottom:3px;">tong@castinskin.com</a>
+    <p>Sunday, August 30, 2026. 2,000 baht per person. Maximum 5 people. To ask a question or reserve a place, get in touch by Line, WhatsApp, or email.</p>
+    <p class="contact-links">
+      <a href="https://line.me/ti/p/~shallowdepth">Line @shallowdepth</a>
+      <a href="https://wa.me/66984725091">WhatsApp</a>
+      <a href="mailto:tong@castinskin.com?subject=Photography%20Workshop%20Inquiry">tong@castinskin.com</a>
     </p>
   </div>
 </section>
 
-<!-- IMAGE -->
-<div style="width:100%; margin:0; padding:0; line-height:0;">
-  <img src="20260517_0165.jpg" alt="Sak Yant needle detail" style="width:100%; height:auto; display:block;">
+<div class="full-image">
+  <img src="20260524_0093.jpg" alt="Sak Yant tattoo visible at the back of the neck">
 </div>
 
-<!-- THE TRADITION -->
+<section>
+  <div class="wrap">
+    <div class="section-tag">Everyday Thailand</div>
+    <h2>Once you recognize it, <em>you see it everywhere</em></h2>
+    <p>Walk around Thailand long enough and you start noticing the tattoos: on the old man selling dried fish at the market, or on the person in front of you at the 7-Eleven with the points of a geometric tattoo showing above the back of a T-shirt. Once you know what you are looking at, you see Sak Yant everywhere.</p>
+  </div>
+</section>
+
 <section>
   <div class="wrap">
     <div class="section-tag">The tradition</div>
     <h2>Where this <em>comes from</em></h2>
-
-    <p>The exact origins of Sak Yant are not fully agreed upon. Historians generally place the practice around the third century, when yantra geometry, used in Hindu and tantric practice across South Asia, arrived in what is now Cambodia, Thailand, and Myanmar. The tradition draws from Hindu geometry, Buddhist Pali scripture, and older animist practice. The tattooing of these designs onto the body, rather than wearing or displaying them, is specific to mainland Southeast Asia.</p>
-
-    <p style="font-size:0.82rem; color:var(--ash); line-height:1.6;">A note on pronunciation: Thai people say it closer to "suk-yun." The t at the end of Yant is silent. It appears in the romanization because it exists in the Thai spelling.</p>
-
-    <p>For most of its history in Thailand, Sak Yant still carried a social stigma. It was associated with criminals, fighters, and people in dangerous occupations. Conservative Thai society largely avoided it.</p>
-
-    <p>That began to change in 2003 when Ajarn Noo Kanpai tattooed Angelina Jolie. The global attention that followed introduced the tradition to a western audience and, just as importantly, began removing the stigma inside Thailand itself.</p>
+    <p>The exact origins of Sak Yant are not fully agreed upon. Historians generally place the practice around the third century, when yantra geometry used in Hindu and tantric practice across South Asia arrived in what is now Cambodia, Thailand, and Myanmar. The tradition draws from Hindu geometry, Buddhist Pali scripture, and older animist practice. Tattooing these designs onto the body, rather than wearing or displaying them, is specific to mainland Southeast Asia.</p>
+    <p>For much of its history in Thailand, Sak Yant carried a social stigma. It was associated with criminals, fighters, and people in dangerous occupations, and conservative Thai society largely avoided it.</p>
+    <p>That began to change in 2003 when Ajarn Noo Kanpai tattooed Angelina Jolie. The attention that followed introduced the tradition to a western audience and began removing some of the stigma inside Thailand itself.</p>
   </div>
 </section>
 
-<!-- IMAGE -->
-<div style="width:100%; margin:0; padding:0; line-height:0;">
-  <img src="20260517_0308.jpg" alt="Sak Yant needle and stencil" style="width:100%; height:auto; display:block;">
+<div class="full-image">
+  <img src="20260517_0001.jpg" alt="Sak Yant tattooing in progress">
 </div>
 
-<!-- WHAT TO EXPECT -->
-<section>
-  <div class="wrap">
-    <div class="section-tag">On the day</div>
-    <h2>What to <em>expect</em></h2>
-
-    <ul class="expect-list">
-      <div class="expect-item">
-        <span class="expect-num">1.</span>
-        <p class="expect-text">We meet at a set point on the BTS or MRT and travel together from there. I send the exact station once you are confirmed. Early start.</p>
-      </div>
-      <div class="expect-item">
-        <span class="expect-num">2.</span>
-        <p class="expect-text">I run a briefing before the session that covers how to behave in the space and what to expect from the day.</p>
-      </div>
-      <div class="expect-item">
-        <span class="expect-num">3.</span>
-        <p class="expect-text">You photograph freely during the tattooing session. No posed shots, no directed moments. You work the room the way you would on a documentary assignment.</p>
-      </div>
-      <div class="expect-item">
-        <span class="expect-num">4.</span>
-        <p class="expect-text">Still photography only. No video.</p>
-      </div>
-      <div class="expect-item">
-        <span class="expect-num">5.</span>
-        <p class="expect-text">There's a one-hour lunch break, usually somewhere between 11 AM and noon, when the Ajarn pauses for lunch too. Local Thai food nearby.</p>
-      </div>
-    </ul>
-  </div>
-</section>
-
-<!-- IMAGE -->
-<div style="width:100%; margin:0; padding:0; line-height:0;">
-  <img src="20260517_0001.jpg" alt="Sak Yant tattooing in progress" style="width:100%; height:auto; display:block;">
-</div>
-
-<section>
-  <div class="wrap">
-    <div class="section-tag">About your host</div>
-    <h2>Who is <em>running this</em></h2>
-    <p>Tong was born in Bangkok, moved to the United States as a child in 1984, and returned in 2015. A photographer and former senior art director at Bose Corporation, he came to Sak Yant the way most people do, wanting a tattoo, and kept going back. Several tattoos later, he realized he had access to something worth sharing.</p>
-    <p>The access exists because of relationships built over time, not a booking form. The briefing works because he can explain what is happening in the room without filtering it through a translator or a tourism framework.</p>
-  </div>
-</section>
-
-
-
-<!-- CATS SECTION -->
 <section style="border-bottom:none;">
   <div class="wrap">
     <div style="max-width:540px; margin:0 auto; border:1px solid var(--line); border-radius:2px; background:var(--deep); padding:2.5rem 2.2rem;">
-      <img
-        src="20250809_0049.jpg"
-        alt="Edward, before everything happened"
-        style="width:240px; max-width:100%; display:block; margin:0 auto 0.7rem auto;"
-      >
+      <img src="20250809_0049.jpg" alt="Edward, before everything happened" style="width:240px; max-width:100%; display:block; margin:0 auto 0.7rem auto;">
       <p style="font-size:0.72rem; color:var(--ash); text-align:center; font-style:italic; font-family:'Playfair Display', serif; margin-bottom:2rem;">Edward, before everything happened.</p>
-
       <p style="font-size:0.85rem; line-height:1.7; color:rgba(242,235,224,0.7);">This work is run out of Bangkok by one person, six rescued cats, and relationships built inside Thai tattoo culture. Edward is the one currently in recovery. He was a stray I fed outside my house almost every day, until he disappeared for two days and came back scared and hissing. The vet x-rayed him: his pelvis was cracked in half and one leg had come out of the joint. He also had a fungal infection that got missed the first time around. He takes antifungal medication every day. He is patient. He is getting better.</p>
-
       <p style="font-size:0.85rem; line-height:1.7; color:rgba(242,235,224,0.7); margin-bottom:0;">A portion of every booking goes to their care. Six cats is not a small number, and it is not something I am interested in changing. Book a workshop. The photographs will be real. So is everything else here.</p>
     </div>
   </div>
