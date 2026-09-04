@@ -68,10 +68,23 @@
     .paypal-button:disabled { cursor: wait; opacity: 0.62; }
     .booking-note { margin-top: 0.85rem; color: var(--ash); font-size: 0.78rem; line-height: 1.55; }
     .booking-note a { color: var(--gold); }
+    .payment-divider { display: flex; align-items: center; gap: 0.8rem; margin: 1.6rem 0; color: var(--ash); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; }
+    .payment-divider::before, .payment-divider::after { content: ''; height: 1px; flex: 1; background: var(--line); }
+    .thai-payment-title { display: block; color: var(--paper); font-family: 'Playfair Display', Georgia, serif; font-size: 1.35rem; font-weight: 400; line-height: 1.3; }
+    .thai-payment-intro { margin: 0.5rem 0 1.1rem; color: rgba(242,235,224,0.78); font-size: 0.9rem; line-height: 1.55; }
+    .promptpay-layout { display: grid; grid-template-columns: 210px 1fr; gap: 1.3rem; align-items: start; }
+    .promptpay-image-link { display: block; background: #fff; line-height: 0; }
+    .promptpay-image { display: block; width: 100%; height: auto; }
+    .promptpay-steps { display: flex; flex-direction: column; gap: 0.65rem; }
+    .promptpay-steps p { margin: 0; color: rgba(242,235,224,0.83); font-size: 0.84rem; line-height: 1.5; }
+    .promptpay-steps strong { color: var(--gold); }
+    .promptpay-whatsapp { display: inline-block; margin-top: 0.35rem; border-color: var(--gold); color: var(--gold); text-align: center; }
+    .promptpay-note { margin-top: 0.9rem; color: var(--ash); font-size: 0.76rem; line-height: 1.5; }
     .payment-followup { border-bottom: 1px solid var(--line-strong); background: var(--gold); color: var(--ink); }
     .payment-followup[hidden] { display: none; }
     .payment-followup-inner { padding-top: 1rem; padding-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
     .payment-followup p { margin: 0; color: var(--ink); font-size: 0.9rem; }
+    .confirmation-actions { display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap; }
     .confirmation-button { flex: 0 0 auto; padding: 0.65rem 0.9rem; border: 1px solid var(--ink); color: var(--ink); text-decoration: none; font-size: 0.78rem; font-weight: 500; }
     .event-bar { display: inline-flex; align-items: center; gap: 0.75rem; background: var(--gold); border-radius: 2px; padding: 0.65rem 1.2rem; margin-bottom: 2rem; flex-wrap: wrap; }
     .event-label { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink); }
@@ -117,7 +130,11 @@
       .event-primary { font-size: 0.98rem; }
       .booking-card { padding: 1.3rem; }
       .booking-title { font-size: 1.25rem; }
+      .promptpay-layout { grid-template-columns: 1fr; }
+      .promptpay-image-link { width: min(100%, 280px); margin: 0 auto; }
       .payment-followup-inner { align-items: stretch; flex-direction: column; }
+      .confirmation-actions { align-items: stretch; }
+      .confirmation-actions .confirmation-button { flex: 1 1 auto; }
       .confirmation-button { text-align: center; }
     }
   </style>
@@ -133,8 +150,11 @@
 
 <div class="payment-followup" id="payment-followup" hidden>
   <div class="wrap payment-followup-inner">
-    <p><strong>Payment completed?</strong> Send your name to Tong now so he can match the payment and confirm your meeting details.</p>
-    <a class="confirmation-button" id="payment-whatsapp" href="https://wa.me/66984725091">Confirm on WhatsApp</a>
+    <p><strong>Payment completed?</strong> Send your name to Tong now by WhatsApp or Line so he can match the payment and confirm your meeting details.</p>
+    <div class="confirmation-actions">
+      <a class="confirmation-button" id="payment-whatsapp" href="https://wa.me/66984725091">WhatsApp</a>
+      <a class="confirmation-button" href="https://line.me/ti/p/~shallowdepth">Line</a>
+    </div>
   </div>
 </div>
 
@@ -166,7 +186,27 @@
         <input type="hidden" name="cancel_return" value="https://castinskin.com/photography#reserve">
         <button class="paypal-button" id="paypal-button" type="submit" disabled>Calculating today’s price…</button>
       </form>
-      <p class="booking-note">Payment reserves one place for the next event shown above. The US-dollar amount uses the latest published exchange rate and is shown again by PayPal before you pay. After payment, <a id="booking-whatsapp" href="https://wa.me/66984725091">send your name to Tong on WhatsApp</a> so he can match the payment and send the meeting details.</p>
+      <p class="booking-note">Payment reserves one place for the next event shown above. The US-dollar amount uses the latest published exchange rate and is shown again by PayPal before you pay. After payment, send your name and PayPal email to Tong by <a id="booking-whatsapp" href="https://wa.me/66984725091">WhatsApp</a> or <a href="https://line.me/ti/p/~shallowdepth">Line</a> so he can match the payment and send the meeting details.</p>
+      <div class="payment-divider"><span>Or pay from a Thai bank</span></div>
+      <div class="thai-payment">
+        <strong class="thai-payment-title">Pay 2,000 baht by Thai bank transfer</strong>
+        <p class="thai-payment-intro">For anyone in Thailand who uses a Thai banking app. Transfer directly with the PromptPay QR below.</p>
+        <div class="promptpay-layout">
+          <a class="promptpay-image-link" href="promptpay-qr.jpg" download="cast-in-skin-promptpay-qr.jpg" aria-label="Open or save the full-size PromptPay QR code">
+            <img class="promptpay-image" src="promptpay-qr.jpg" alt="PromptPay QR code for the Cast in Skin workshop bank transfer">
+          </a>
+          <div class="promptpay-steps">
+            <p><strong>1.</strong> Scan the QR in your Thai banking app. On one phone, tap the QR to open it, save it, then choose the image from your banking app.</p>
+            <p><strong>2.</strong> Transfer exactly <strong>2,000 baht</strong>.</p>
+            <p><strong>3.</strong> Send Tong your name and payment slip by WhatsApp or Line so he can identify your payment and confirm your place.</p>
+            <div class="confirmation-actions">
+              <a class="confirmation-button promptpay-whatsapp" id="promptpay-whatsapp" href="https://wa.me/66984725091">WhatsApp</a>
+              <a class="confirmation-button promptpay-whatsapp" href="https://line.me/ti/p/~shallowdepth">Line</a>
+            </div>
+          </div>
+        </div>
+        <p class="promptpay-note">The QR transfers to the account shown in the image. Payment reserves one place for <span id="promptpay-event-date">the next event shown above</span>.</p>
+      </div>
     </div>
   </div>
 </div>
@@ -326,13 +366,19 @@
     var followup = document.getElementById('payment-followup');
     var paymentWhatsApp = document.getElementById('payment-whatsapp');
     var bookingWhatsApp = document.getElementById('booking-whatsapp');
+    var promptPayWhatsApp = document.getElementById('promptpay-whatsapp');
+    var promptPayEventDate = document.getElementById('promptpay-event-date');
     var confirmationMessage = 'I have paid for the Cast in Skin photography workshop on ' + eventDate + '. My name and PayPal email are: ';
     var confirmationUrl = 'https://wa.me/66984725091?text=' + encodeURIComponent(confirmationMessage);
+    var promptPayMessage = 'I have paid 2,000 baht by Thai bank transfer for the Cast in Skin photography workshop on ' + eventDate + '. My name is: (Please attach your payment slip.)';
+    var promptPayUrl = 'https://wa.me/66984725091?text=' + encodeURIComponent(promptPayMessage);
 
     itemName.value = 'Cast in Skin Sak Yant Photography Workshop — ' + eventDate;
     itemNumber.value = 'PHOTO-' + eventDate.replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '').toUpperCase();
     paymentWhatsApp.href = confirmationUrl;
     bookingWhatsApp.href = confirmationUrl;
+    promptPayWhatsApp.href = promptPayUrl;
+    promptPayEventDate.textContent = eventDate;
 
     if (new URLSearchParams(window.location.search).get('payment') === 'complete') {
       followup.hidden = false;
