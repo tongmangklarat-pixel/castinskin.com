@@ -75,42 +75,6 @@
     h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(2.05rem, 4.6vw, 3.45rem); font-weight: 400; line-height: 1.18; margin-bottom: 2rem; max-width: 760px; }
     h1 em { font-style: italic; color: var(--gold); }
     .hero-lead { font-size: 1.05rem; color: rgba(242,235,224,0.75); max-width: 620px; line-height: 1.7; }
-    .booking-card { margin-top: 2.4rem; padding: 1.6rem; border: 1px solid var(--line-strong); background: var(--deep); max-width: 680px; }
-    .booking-label { display: block; margin-bottom: 0.45rem; color: var(--gold); font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; }
-    .booking-title { display: block; color: var(--paper); font-family: 'Playfair Display', Georgia, serif; font-size: 1.45rem; font-weight: 400; line-height: 1.3; }
-    .booking-price { min-height: 1.75rem; margin: 0.65rem 0 1rem; color: rgba(242,235,224,0.78); font-size: 0.9rem; }
-    .paypal-button { width: 100%; min-height: 3.4rem; border: 0; border-radius: 2px; padding: 0.85rem 1.2rem; background: var(--gold); color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 500; cursor: pointer; }
-    .paypal-button:hover:not(:disabled), .paypal-button:focus-visible:not(:disabled) { background: #d9af50; }
-    .paypal-button:focus-visible, .confirmation-button:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
-    .paypal-button:disabled { cursor: wait; opacity: 0.62; }
-    .booking-note { margin-top: 0.85rem; color: var(--ash); font-size: 0.78rem; line-height: 1.55; }
-    .booking-note a { color: var(--gold); }
-    .payment-divider { display: flex; align-items: center; gap: 0.8rem; margin: 1.6rem 0; color: var(--ash); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; }
-    .payment-divider::before, .payment-divider::after { content: ''; height: 1px; flex: 1; background: var(--line); }
-    .thai-payment-title { display: block; color: var(--paper); font-family: 'Playfair Display', Georgia, serif; font-size: 1.35rem; font-weight: 400; line-height: 1.3; }
-    .thai-payment-intro { margin: 0.5rem 0 1.1rem; color: rgba(242,235,224,0.78); font-size: 0.9rem; line-height: 1.55; }
-    .promptpay-layout { display: grid; grid-template-columns: 210px 1fr; gap: 1.3rem; align-items: start; }
-    .promptpay-image-link { display: block; background: #fff; line-height: 0; }
-    .promptpay-image { display: block; width: 100%; height: auto; }
-    .promptpay-steps { display: flex; flex-direction: column; gap: 0.65rem; }
-    .promptpay-steps p { margin: 0; color: rgba(242,235,224,0.83); font-size: 0.84rem; line-height: 1.5; }
-    .promptpay-steps strong { color: var(--gold); }
-    .confirmation-button.promptpay-whatsapp { display: inline-block; margin-top: 0.35rem; border-color: var(--gold); color: var(--gold); text-align: center; }
-    .confirmation-button.promptpay-whatsapp:hover, .confirmation-button.promptpay-whatsapp:focus-visible { background: var(--gold); color: var(--ink); }
-    .promptpay-note { margin-top: 0.9rem; color: var(--ash); font-size: 0.76rem; line-height: 1.5; }
-    .promptpay-details { margin-top: 1.1rem; border: 1px solid var(--line); border-radius: 2px; background: rgba(0,0,0,0.12); }
-    .promptpay-summary { cursor: pointer; padding: 0.8rem 1.05rem; color: var(--gold); font-size: 0.83rem; font-weight: 500; letter-spacing: 0.02em; list-style: none; }
-    .promptpay-summary::-webkit-details-marker { display: none; }
-    .promptpay-summary::after { content: ' +'; color: var(--ash); }
-    .promptpay-details[open] .promptpay-summary::after { content: ' \2212'; }
-    .promptpay-reveal { padding: 0 1.05rem 1.1rem; }
-    .promptpay-reveal .promptpay-image-link { width: min(100%, 220px); }
-    .payment-followup { border-bottom: 1px solid var(--line-strong); background: var(--gold); color: var(--ink); }
-    .payment-followup[hidden] { display: none; }
-    .payment-followup-inner { padding-top: 1rem; padding-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-    .payment-followup p { margin: 0; color: var(--ink); font-size: 0.9rem; }
-    .confirmation-actions { display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap; }
-    .confirmation-button { flex: 0 0 auto; padding: 0.65rem 0.9rem; border: 1px solid var(--ink); color: var(--ink); text-decoration: none; font-size: 0.78rem; font-weight: 500; }
     .event-bar { display: inline-flex; align-items: center; gap: 0.75rem; background: var(--gold); border-radius: 2px; padding: 0.65rem 1.2rem; margin-bottom: 2rem; flex-wrap: wrap; }
     .event-label { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink); }
     .event-primary { font-family: 'Playfair Display', serif; font-weight: 500; font-size: 1.05rem; color: #fff; }
@@ -133,7 +97,8 @@
     .expect-text { font-size: 0.93rem; color: rgba(242,235,224,0.83); line-height: 1.6; margin: 0; }
     .contact-links { margin-top: 1.5rem; display: flex; gap: 0.7rem; flex-wrap: wrap; }
     .contact-links a { padding: 0.5rem 1rem; border: 1px solid #1DB954; border-radius: 2px; background: #1DB954; color: #fff; text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
-    .quick-contact { display: flex; justify-content: center; gap: 0.9rem; flex-wrap: wrap; padding: 1.4rem 0 0.3rem; }
+    .quick-contact-note { text-align: center; color: rgba(242,235,224,0.75); font-size: 0.88rem; padding-top: 2.2rem; }
+    .quick-contact { display: flex; justify-content: center; gap: 0.9rem; flex-wrap: wrap; padding: 1.4rem 0 2.4rem; }
     .quick-contact a { padding: 0.55rem 1.1rem; border: 1px solid #1DB954; border-radius: 2px; background: #1DB954; color: #fff; text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
     .review-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1.4rem; margin-top: 2rem; }
     .review-item { background: var(--deep); border: 1px solid var(--line); border-radius: 2px; padding: 2rem 2.2rem; }
@@ -155,14 +120,6 @@
       .details-row { grid-template-columns: 1fr; }
       .event-bar { gap: 0.45rem 0.7rem; }
       .event-primary { font-size: 0.98rem; }
-      .booking-card { padding: 1.3rem; }
-      .booking-title { font-size: 1.25rem; }
-      .promptpay-layout { grid-template-columns: 1fr; }
-      .promptpay-image-link { width: min(100%, 280px); margin: 0 auto; }
-      .payment-followup-inner { align-items: stretch; flex-direction: column; }
-      .confirmation-actions { align-items: stretch; }
-      .confirmation-actions .confirmation-button { flex: 1 1 auto; }
-      .confirmation-button { text-align: center; }
     }
   </style>
 </head>
@@ -174,16 +131,6 @@
     <div class="header-tag">Sak Yant Photography, Bangkok</div>
   </div>
 </header>
-
-<div class="payment-followup" id="payment-followup" hidden>
-  <div class="wrap payment-followup-inner">
-    <p><strong>Payment completed?</strong> Send your name to Tong now by WhatsApp or Line so he can match the payment and confirm your meeting details.</p>
-    <div class="confirmation-actions">
-      <a class="confirmation-button" id="payment-whatsapp" href="https://wa.me/66984725091">WhatsApp</a>
-      <a class="confirmation-button" href="https://line.me/ti/p/~shallowdepth">Line</a>
-    </div>
-  </div>
-</div>
 
 <div class="hero">
   <div class="wrap">
@@ -203,59 +150,12 @@
   <img src="20260517_0359.jpg" alt="Sak Yant tattooing inside the sanctuary">
 </div>
 
+<div class="quick-contact-note">If you have any questions, or want to reserve a place, get in touch:</div>
 <div class="quick-contact">
   <a href="https://line.me/ti/p/~shallowdepth">Line</a>
   <a href="https://wa.me/66984725091">WhatsApp</a>
   <a href="mailto:tong@castinskin.com?subject=Photography%20Workshop%20Inquiry">Email</a>
 </div>
-
-<section style="padding-top: 0.4rem;">
-  <div class="wrap">
-    <div class="booking-card" id="reserve">
-      <span class="booking-label">Reserve your place</span>
-      <div class="thai-payment">
-        <strong class="thai-payment-title">Pay 2,000 baht by Thai bank transfer</strong>
-        <p class="thai-payment-intro">For anyone in Thailand who uses a Thai banking app. Transfer 2,000 baht with the PromptPay QR code.</p>
-        <details class="promptpay-details">
-          <summary class="promptpay-summary">Show the PromptPay QR code</summary>
-          <div class="promptpay-reveal">
-            <a class="promptpay-image-link" href="promptpay-qr.jpg" download="cast-in-skin-promptpay-qr.jpg" aria-label="Open or save the full-size PromptPay QR code">
-              <img class="promptpay-image" src="promptpay-qr.jpg" alt="PromptPay QR code for the Cast in Skin workshop bank transfer">
-            </a>
-            <p class="promptpay-note">The QR transfers to the account shown in the image. Payment reserves one place for <span id="promptpay-event-date">the next event shown above</span>.</p>
-          </div>
-        </details>
-        <div class="promptpay-steps" style="margin-top: 0.9rem;">
-          <p>Transfer exactly <strong>2,000 baht</strong>, then send Tong your name and payment slip by WhatsApp or Line so he can match your payment and confirm your place.</p>
-          <div class="confirmation-actions">
-            <a class="confirmation-button promptpay-whatsapp" id="promptpay-whatsapp" href="https://wa.me/66984725091">WhatsApp</a>
-            <a class="confirmation-button promptpay-whatsapp" href="https://line.me/ti/p/~shallowdepth">Line</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="payment-divider"><span>Or pay with PayPal</span></div>
-
-      <strong class="booking-title">Pay with PayPal</strong>
-      <p class="thai-payment-intro">For anyone with a US PayPal account. Pay the US-dollar equivalent of 2,000 baht, with no Thai bank app or QR code needed.</p>
-      <p class="booking-price" id="usd-price" aria-live="polite">Today: US$60</p>
-      <form id="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-        <input type="hidden" name="cmd" value="_xclick">
-        <input type="hidden" name="business" value="mangklarat@gmail.com">
-        <input type="hidden" name="item_name" id="paypal-item-name" value="Cast in Skin Sak Yant Photography Workshop">
-        <input type="hidden" name="item_number" id="paypal-item-number" value="CAST-IN-SKIN-PHOTOGRAPHY">
-        <input type="hidden" name="amount" id="paypal-amount" value="60.00">
-        <input type="hidden" name="currency_code" value="USD">
-        <input type="hidden" name="quantity" value="1">
-        <input type="hidden" name="no_shipping" value="1">
-        <input type="hidden" name="return" value="https://castinskin.com/photography?payment=complete#payment-followup">
-        <input type="hidden" name="cancel_return" value="https://castinskin.com/photography#reserve">
-        <button class="paypal-button" id="paypal-button" type="submit">Pay with PayPal</button>
-      </form>
-      <p class="booking-note">After paying, send Tong your name on <a id="booking-whatsapp" href="https://wa.me/66984725091">WhatsApp</a> or <a href="https://line.me/ti/p/~shallowdepth">Line</a> so he can confirm your place.</p>
-    </div>
-  </div>
-</section>
 
 <div class="full-image">
   <img src="20260517_0229.jpg" alt="The Ajarn examining a tattooed back">
@@ -376,67 +276,6 @@
     <p>castinskin.com</p>
   </div>
 </footer>
-
-<script>
-  (function () {
-    var workshopPriceBaht = 2000;
-    var eventDateElement = document.querySelector('.event-primary');
-    var eventDate = eventDateElement ? eventDateElement.textContent.trim() : 'the next advertised workshop';
-    var priceText = document.getElementById('usd-price');
-    var amountInput = document.getElementById('paypal-amount');
-    var payButton = document.getElementById('paypal-button');
-    var paypalForm = document.getElementById('paypal-form');
-    var itemName = document.getElementById('paypal-item-name');
-    var itemNumber = document.getElementById('paypal-item-number');
-    var followup = document.getElementById('payment-followup');
-    var paymentWhatsApp = document.getElementById('payment-whatsapp');
-    var bookingWhatsApp = document.getElementById('booking-whatsapp');
-    var promptPayWhatsApp = document.getElementById('promptpay-whatsapp');
-    var promptPayEventDate = document.getElementById('promptpay-event-date');
-    var confirmationMessage = 'I have paid for the Cast in Skin photography workshop on ' + eventDate + '. My name and PayPal email are: ';
-    var confirmationUrl = 'https://wa.me/66984725091?text=' + encodeURIComponent(confirmationMessage);
-    var promptPayMessage = 'I have paid 2,000 baht by Thai bank transfer for the Cast in Skin photography workshop on ' + eventDate + '. My name is: (Please attach your payment slip.)';
-    var promptPayUrl = 'https://wa.me/66984725091?text=' + encodeURIComponent(promptPayMessage);
-
-    itemName.value = 'Cast in Skin Sak Yant Photography Workshop, ' + eventDate;
-    itemNumber.value = 'PHOTO-' + eventDate.replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '').toUpperCase();
-    paymentWhatsApp.href = confirmationUrl;
-    bookingWhatsApp.href = confirmationUrl;
-    promptPayWhatsApp.href = promptPayUrl;
-    promptPayEventDate.textContent = eventDate;
-
-    if (new URLSearchParams(window.location.search).get('payment') === 'complete') {
-      followup.hidden = false;
-    }
-
-    fetch('https://api.frankfurter.dev/v2/rate/THB/USD', { cache: 'no-store' })
-      .then(function (response) {
-        if (!response.ok) throw new Error('Exchange rate unavailable');
-        return response.json();
-      })
-      .then(function (data) {
-        if (!data.rate || !isFinite(data.rate)) throw new Error('Invalid exchange rate');
-        var usdAmount = (workshopPriceBaht * Number(data.rate)).toFixed(2);
-        amountInput.value = usdAmount;
-        priceText.textContent = 'Today: US$' + usdAmount;
-        payButton.textContent = 'Pay US$' + usdAmount + ' with PayPal';
-      })
-      .catch(function () {
-        priceText.textContent = 'Today: US$60 (the US-dollar equivalent of 2,000 baht)';
-        payButton.textContent = 'Pay US$60 with PayPal';
-      });
-
-    paypalForm.addEventListener('submit', function () {
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', 'begin_checkout', {
-          currency: 'USD',
-          value: Number(amountInput.value),
-          items: [{ item_name: itemName.value, quantity: 1 }]
-        });
-      }
-    });
-  }());
-</script>
 
 </body>
 </html>
