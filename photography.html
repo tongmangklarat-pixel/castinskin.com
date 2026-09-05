@@ -98,6 +98,13 @@
     .confirmation-button.promptpay-whatsapp { display: inline-block; margin-top: 0.35rem; border-color: var(--gold); color: var(--gold); text-align: center; }
     .confirmation-button.promptpay-whatsapp:hover, .confirmation-button.promptpay-whatsapp:focus-visible { background: var(--gold); color: var(--ink); }
     .promptpay-note { margin-top: 0.9rem; color: var(--ash); font-size: 0.76rem; line-height: 1.5; }
+    .promptpay-details { margin-top: 1.1rem; border: 1px solid var(--line); border-radius: 2px; background: rgba(0,0,0,0.12); }
+    .promptpay-summary { cursor: pointer; padding: 0.8rem 1.05rem; color: var(--gold); font-size: 0.83rem; font-weight: 500; letter-spacing: 0.02em; list-style: none; }
+    .promptpay-summary::-webkit-details-marker { display: none; }
+    .promptpay-summary::after { content: ' +'; color: var(--ash); }
+    .promptpay-details[open] .promptpay-summary::after { content: ' \2212'; }
+    .promptpay-reveal { padding: 0 1.05rem 1.1rem; }
+    .promptpay-reveal .promptpay-image-link { width: min(100%, 220px); }
     .payment-followup { border-bottom: 1px solid var(--line-strong); background: var(--gold); color: var(--ink); }
     .payment-followup[hidden] { display: none; }
     .payment-followup-inner { padding-top: 1rem; padding-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
@@ -189,42 +196,48 @@
     <p class="hero-lead">Spend the day photographing Sak Yant tattooing and the blessing ceremony inside a working sanctuary in Bangkok, with access to a place that would be difficult to enter and photograph on your own.</p>
     <div class="booking-card" id="reserve">
       <span class="booking-label">Reserve your place</span>
-      <strong class="booking-title">Pay 2,000 baht securely in US dollars</strong>
-      <p class="booking-price" id="usd-price" aria-live="polite">Calculating today’s US-dollar amount…</p>
+      <div class="thai-payment">
+        <strong class="thai-payment-title">Pay 2,000 baht by Thai bank transfer</strong>
+        <p class="thai-payment-intro">For anyone in Thailand who uses a Thai banking app. Transfer 2,000 baht with the PromptPay QR code.</p>
+        <div class="promptpay-steps">
+          <p><strong>1.</strong> Open the QR code below, then scan it in your Thai banking app, or save it and choose it from the app.</p>
+          <p><strong>2.</strong> Transfer exactly <strong>2,000 baht</strong>.</p>
+          <p><strong>3.</strong> Send Tong your name and payment slip by WhatsApp or Line so he can identify your payment and confirm your place.</p>
+          <div class="confirmation-actions">
+            <a class="confirmation-button promptpay-whatsapp" id="promptpay-whatsapp" href="https://wa.me/66984725091">WhatsApp</a>
+            <a class="confirmation-button promptpay-whatsapp" href="https://line.me/ti/p/~shallowdepth">Line</a>
+          </div>
+        </div>
+        <details class="promptpay-details">
+          <summary class="promptpay-summary">Show the PromptPay QR code</summary>
+          <div class="promptpay-reveal">
+            <a class="promptpay-image-link" href="promptpay-qr.jpg" download="cast-in-skin-promptpay-qr.jpg" aria-label="Open or save the full-size PromptPay QR code">
+              <img class="promptpay-image" src="promptpay-qr.jpg" alt="PromptPay QR code for the Cast in Skin workshop bank transfer">
+            </a>
+            <p class="promptpay-note">The QR transfers to the account shown in the image. Payment reserves one place for <span id="promptpay-event-date">the next event shown above</span>.</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="payment-divider"><span>Or pay with PayPal</span></div>
+
+      <strong class="booking-title">Pay with PayPal</strong>
+      <p class="thai-payment-intro">For anyone with a US PayPal account. Pay the US-dollar equivalent of 2,000 baht, with no Thai bank app or QR code needed.</p>
+      <p class="booking-price" id="usd-price" aria-live="polite">Today: US$60</p>
       <form id="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
         <input type="hidden" name="cmd" value="_xclick">
         <input type="hidden" name="business" value="mangklarat@gmail.com">
         <input type="hidden" name="item_name" id="paypal-item-name" value="Cast in Skin Sak Yant Photography Workshop">
         <input type="hidden" name="item_number" id="paypal-item-number" value="CAST-IN-SKIN-PHOTOGRAPHY">
-        <input type="hidden" name="amount" id="paypal-amount" value="">
+        <input type="hidden" name="amount" id="paypal-amount" value="60.00">
         <input type="hidden" name="currency_code" value="USD">
         <input type="hidden" name="quantity" value="1">
         <input type="hidden" name="no_shipping" value="1">
         <input type="hidden" name="return" value="https://castinskin.com/photography?payment=complete#payment-followup">
         <input type="hidden" name="cancel_return" value="https://castinskin.com/photography#reserve">
-        <button class="paypal-button" id="paypal-button" type="submit" disabled>Calculating today’s price…</button>
+        <button class="paypal-button" id="paypal-button" type="submit">Pay with PayPal</button>
       </form>
-      <p class="booking-note">Payment reserves one place for the next event shown above. The US-dollar amount uses the latest published exchange rate and is shown again by PayPal before you pay. After payment, send your name and PayPal email to Tong by <a id="booking-whatsapp" href="https://wa.me/66984725091">WhatsApp</a> or <a href="https://line.me/ti/p/~shallowdepth">Line</a> so he can match the payment and send the meeting details.</p>
-      <div class="payment-divider"><span>Or pay from a Thai bank</span></div>
-      <div class="thai-payment">
-        <strong class="thai-payment-title">Pay 2,000 baht by Thai bank transfer</strong>
-        <p class="thai-payment-intro">For anyone in Thailand who uses a Thai banking app. Transfer directly with the PromptPay QR below.</p>
-        <div class="promptpay-layout">
-          <a class="promptpay-image-link" href="promptpay-qr.jpg" download="cast-in-skin-promptpay-qr.jpg" aria-label="Open or save the full-size PromptPay QR code">
-            <img class="promptpay-image" src="promptpay-qr.jpg" alt="PromptPay QR code for the Cast in Skin workshop bank transfer">
-          </a>
-          <div class="promptpay-steps">
-            <p><strong>1.</strong> Scan the QR in your Thai banking app. On one phone, tap the QR to open it, save it, then choose the image from your banking app.</p>
-            <p><strong>2.</strong> Transfer exactly <strong>2,000 baht</strong>.</p>
-            <p><strong>3.</strong> Send Tong your name and payment slip by WhatsApp or Line so he can identify your payment and confirm your place.</p>
-            <div class="confirmation-actions">
-              <a class="confirmation-button promptpay-whatsapp" id="promptpay-whatsapp" href="https://wa.me/66984725091">WhatsApp</a>
-              <a class="confirmation-button promptpay-whatsapp" href="https://line.me/ti/p/~shallowdepth">Line</a>
-            </div>
-          </div>
-        </div>
-        <p class="promptpay-note">The QR transfers to the account shown in the image. Payment reserves one place for <span id="promptpay-event-date">the next event shown above</span>.</p>
-      </div>
+      <p class="booking-note">After paying, send Tong your name on <a id="booking-whatsapp" href="https://wa.me/66984725091">WhatsApp</a> or <a href="https://line.me/ti/p/~shallowdepth">Line</a> so he can confirm your place.</p>
     </div>
   </div>
 </div>
@@ -238,33 +251,6 @@
     <div class="section-tag">The workshop</div>
     <h2>What you are <em>coming to photograph</em></h2>
     <p>You are photographing a working Sak Yant ceremony inside the tattoo master’s sanctuary. The tattooing and blessing proceed as they would without photographers present. Nothing is staged, and you have time to follow what happens through the day.</p>
-    <div class="details-row">
-      <div class="detail-cell">
-        <div class="detail-label">Price</div>
-        <p>2,000 baht per person.</p>
-      </div>
-      <div class="detail-cell">
-        <div class="detail-label">Group size</div>
-        <p>Maximum 8 people.</p>
-      </div>
-      <div class="detail-cell">
-        <div class="detail-label">Duration</div>
-        <p>Most of the day. You may leave earlier once you have the photographs you came for.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="full-image">
-  <img src="20260514_0003.jpg" alt="A blessing ceremony inside the sanctuary">
-</div>
-
-<section>
-  <div class="wrap">
-    <div class="section-tag">Access and context</div>
-    <h2>About your <em>host</em></h2>
-    <p>Your host is Tong, a Bangkok-born photographer and native English speaker. His familiarity with Sak Yant is personal: he first came to it wanting a tattoo and kept returning. The access behind this workshop grew from relationships built over time.</p>
-    <p>Throughout the workshop, he stays with the group, explains what is happening as it unfolds, answers questions, and translates when needed.</p>
   </div>
 </section>
 
@@ -299,6 +285,19 @@
         <p class="review-attribution">Jim E.</p>
       </li>
     </ul>
+  </div>
+</section>
+
+<div class="full-image">
+  <img src="20260514_0003.jpg" alt="A blessing ceremony inside the sanctuary">
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-tag">Access and context</div>
+    <h2>About your <em>host</em></h2>
+    <p>Your host is Tong, a Bangkok-born photographer and native English speaker. His familiarity with Sak Yant is personal: he first came to it wanting a tattoo and kept returning. The access behind this workshop grew from relationships built over time.</p>
+    <p>Throughout the workshop, he stays with the group, explains what is happening as it unfolds, answers questions, and translates when needed.</p>
   </div>
 </section>
 
@@ -397,7 +396,7 @@
     var promptPayMessage = 'I have paid 2,000 baht by Thai bank transfer for the Cast in Skin photography workshop on ' + eventDate + '. My name is: (Please attach your payment slip.)';
     var promptPayUrl = 'https://wa.me/66984725091?text=' + encodeURIComponent(promptPayMessage);
 
-    itemName.value = 'Cast in Skin Sak Yant Photography Workshop — ' + eventDate;
+    itemName.value = 'Cast in Skin Sak Yant Photography Workshop, ' + eventDate;
     itemNumber.value = 'PHOTO-' + eventDate.replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '').toUpperCase();
     paymentWhatsApp.href = confirmationUrl;
     bookingWhatsApp.href = confirmationUrl;
@@ -417,18 +416,12 @@
         if (!data.rate || !isFinite(data.rate)) throw new Error('Invalid exchange rate');
         var usdAmount = (workshopPriceBaht * Number(data.rate)).toFixed(2);
         amountInput.value = usdAmount;
-        priceText.textContent = 'Today’s PayPal amount: US$' + usdAmount + ' — equal to 2,000 baht.';
-        payButton.textContent = 'Reserve now — pay US$' + usdAmount;
-        payButton.disabled = false;
+        priceText.textContent = 'Today: US$' + usdAmount;
+        payButton.textContent = 'Pay US$' + usdAmount + ' with PayPal';
       })
       .catch(function () {
-        priceText.textContent = 'Today’s US-dollar price could not be loaded. Please contact Tong to pay 2,000 baht.';
-        payButton.textContent = 'Contact Tong to reserve';
-        payButton.type = 'button';
-        payButton.disabled = false;
-        payButton.addEventListener('click', function () {
-          window.location.href = confirmationUrl;
-        });
+        priceText.textContent = 'Today: US$60 (the US-dollar equivalent of 2,000 baht)';
+        payButton.textContent = 'Pay US$60 with PayPal';
       });
 
     paypalForm.addEventListener('submit', function () {
