@@ -95,11 +95,13 @@
     .expect-item { background: var(--deep); padding: 1.4rem 1.8rem; display: grid; grid-template-columns: 1.4rem 1fr; gap: 1rem; align-items: start; }
     .expect-num { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.9rem; color: var(--gold-dim); padding-top: 0.05rem; }
     .expect-text { font-size: 0.93rem; color: rgba(242,235,224,0.83); line-height: 1.6; margin: 0; }
-    .contact-links { margin-top: 1.5rem; display: flex; gap: 0.7rem; flex-wrap: wrap; }
-    .contact-links a { padding: 0.5rem 1rem; border: 1px solid #1DB954; border-radius: 2px; background: #1DB954; color: #fff; text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+    .contact-links { margin-top: 1.5rem; display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
+    .contact-links a { padding: 0.42rem 0.85rem; border: 1px solid rgba(242,235,224,0.35); border-radius: 2px; background: transparent; color: rgba(242,235,224,0.75); text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+    .contact-links a.primary { padding: 0.6rem 1.2rem; border: 1px solid #0084FF; background: #0084FF; color: #fff; font-size: 0.8rem; }
     .quick-contact-note { text-align: center; color: rgba(242,235,224,0.75); font-size: 0.88rem; padding-top: 2.2rem; }
-    .quick-contact { display: flex; justify-content: center; gap: 0.9rem; flex-wrap: wrap; padding: 1.4rem 0 2.4rem; }
-    .quick-contact a { padding: 0.55rem 1.1rem; border: 1px solid #1DB954; border-radius: 2px; background: #1DB954; color: #fff; text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+    .quick-contact { display: flex; justify-content: center; align-items: center; gap: 0.7rem; flex-wrap: wrap; padding: 1.4rem 0 2.4rem; }
+    .quick-contact a { padding: 0.45rem 0.95rem; border: 1px solid rgba(242,235,224,0.35); border-radius: 2px; background: transparent; color: rgba(242,235,224,0.75); text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+    .quick-contact a.primary { padding: 0.75rem 1.5rem; border: 1px solid #0084FF; background: #0084FF; color: #fff; font-size: 0.92rem; }
     .review-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1.4rem; margin-top: 2rem; }
     .review-item { background: var(--deep); border: 1px solid var(--line); border-radius: 2px; padding: 2rem 2.2rem; }
     .review-quote { font-size: 0.95rem; line-height: 1.75; color: rgba(242,235,224,0.83); margin-bottom: 1.2rem; }
@@ -152,6 +154,7 @@
 
 <div class="quick-contact-note">If you have any questions, or want to reserve a place, get in touch:</div>
 <div class="quick-contact">
+  <a class="primary" href="https://m.me/61590355785292">Message us on Facebook</a>
   <a href="https://line.me/ti/p/~shallowdepth">Line</a>
   <a href="https://wa.me/66984725091">WhatsApp</a>
   <a href="mailto:tong@castinskin.com?subject=Photography%20Workshop%20Inquiry">Email</a>
@@ -224,8 +227,9 @@
   <div class="wrap">
     <div class="section-tag">Contact</div>
     <h2>Get in <em>touch</em></h2>
-    <p>To ask a question or reserve a place, get in touch by Line, WhatsApp, or email.</p>
+    <p>To ask a question or reserve a place, message us on Facebook, or get in touch by Line, WhatsApp, or email.</p>
     <p class="contact-links">
+      <a class="primary" href="https://m.me/61590355785292">Message us on Facebook</a>
       <a href="https://line.me/ti/p/~shallowdepth">Line</a>
       <a href="https://wa.me/66984725091">WhatsApp</a>
       <a href="mailto:tong@castinskin.com?subject=Photography%20Workshop%20Inquiry">Email</a>
