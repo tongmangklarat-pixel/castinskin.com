@@ -1,0 +1,2720 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thai Sacred &amp; Occult Glossary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&family=Noto+Serif+Thai:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: Cast in Skin house style. One narrow column, hairline gold rules, sticky filter bar, term entries as a ledger */
+:root{
+  --ink:#141210; --deep:#1c1814; --paper:#f2ebe0; --gold:#c49a3c; --gold-dim:#8a6a22; --ash:#7a7068;
+  --line:rgba(196,154,60,0.2); --line-strong:rgba(196,154,60,0.45);
+  --paper-83:rgba(242,235,224,0.83); --paper-70:rgba(242,235,224,0.7);
+  --ok:#9fbf8f; --unv:#d98a6a;
+  --f-display:'Playfair Display',Georgia,serif; --f-body:'DM Sans',Helvetica,Arial,sans-serif; --f-thai:'Noto Serif Thai','Thonburi',serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--ink);color:var(--paper);font-family:var(--f-body);font-size:17px;line-height:1.7;padding-inline:16px;padding-block:0 48px;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.28;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E")}
+.wrap{max-width:860px;margin:0 auto}
+header.top{border-bottom:1px solid var(--line);padding-block:1.4rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.6rem}
+.wordmark{font-family:var(--f-display);font-size:1.1rem;letter-spacing:.04em;color:var(--gold)}
+.wordmark span{font-style:italic}
+.tag{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ash)}
+.hero{padding-block:4rem 3rem;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 1.4rem}
+h1{font-family:var(--f-display);font-weight:400;font-size:clamp(2rem,5vw,3.2rem);line-height:1.2;margin:0 0 1.4rem;text-wrap:balance}
+h1 em,h2 em{font-style:italic;color:var(--gold)}
+.lead{color:var(--paper-70);max-width:600px;margin:0}
+.keys{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2.2rem}
+.key{background:var(--deep);padding:1.1rem 1.3rem;min-width:0}
+.key h3{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dim);margin:0 0 .6rem;font-weight:500}
+.key p{margin:0;font-size:.88rem;color:var(--paper-83);line-height:1.6}
+.key b{color:var(--gold);font-weight:500}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--ink);padding-block:.9rem;border-bottom:1px solid var(--line);display:grid;gap:.7rem}
+.row1{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+#q{flex:1 1 220px;min-width:0;font:inherit;font-size:.95rem;padding:.6rem .9rem;background:var(--deep);color:var(--paper);border:1px solid var(--line-strong);border-radius:2px}
+#q::placeholder{color:var(--ash)}
+.speed{display:flex;border:1px solid var(--line-strong);border-radius:2px;overflow:hidden}
+.speed button{font:500 .72rem var(--f-body);letter-spacing:.14em;text-transform:uppercase;border:0;background:var(--deep);color:var(--ash);padding:.65rem .9rem;cursor:pointer}
+.speed button[aria-pressed="true"]{background:rgba(196,154,60,.18);color:var(--gold)}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.chip{font:500 .68rem var(--f-body);letter-spacing:.14em;text-transform:uppercase;padding:.45rem .8rem;border-radius:2px;border:1px solid var(--line);background:transparent;color:var(--ash);cursor:pointer}
+.chip[aria-pressed="true"]{border-color:var(--gold);color:var(--gold);background:rgba(196,154,60,.1)}
+.voice{font-size:.78rem;color:var(--ash)}
+.voice.warn{color:var(--unv)}
+button:focus-visible,input:focus-visible,a:focus-visible{outline:1px solid var(--gold);outline-offset:3px}
+section.grp{padding-block:2.6rem 0}
+h2{font-family:var(--f-display);font-weight:400;font-size:clamp(1.4rem,3vw,1.8rem);margin:0 0 .4rem}
+.sec-tag{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dim);margin:0 0 1.2rem}
+.item{display:grid;grid-template-columns:44px minmax(0,1fr);gap:.2rem 1.1rem;padding-block:1.4rem;border-top:1px solid var(--line)}
+.play{width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);background:transparent;color:var(--gold);cursor:pointer;display:grid;place-items:center;transition:background .15s}
+.play:hover,.play.on{background:rgba(196,154,60,.22)}
+.play svg{width:14px;height:14px;fill:currentColor;margin-left:2px}
+.head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.2rem 1rem;min-width:0}
+.th{font-family:var(--f-thai);font-weight:500;font-size:clamp(1.5rem,4vw,1.9rem);line-height:1.35;cursor:pointer;color:var(--paper)}
+.ph{font-size:.95rem;color:var(--gold);letter-spacing:.02em}
+.st{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;padding:.15rem .5rem;border:1px solid currentColor;border-radius:2px;align-self:center}
+.st.Sourced{color:var(--ok)} .st.Standard{color:var(--ash)} .st.Unverified{color:var(--unv)}
+.body{grid-column:2;min-width:0}
+.term{font-family:var(--f-display);font-style:italic;color:var(--paper);font-size:1.05rem;margin:.15rem 0 .35rem}
+.desc{margin:0;color:var(--paper-83);font-size:.95rem;max-width:62ch}
+.src{margin:.5rem 0 0;font-size:.74rem;color:var(--ash);letter-spacing:.02em}
+.src a{color:var(--ash);text-decoration:underline;text-decoration-color:var(--line-strong);text-underline-offset:3px}
+.src a:hover{color:var(--gold)}
+.imgs{display:inline-flex;align-items:center;gap:.4rem;margin-top:.7rem;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid var(--line-strong);padding:.35rem .7rem;border-radius:2px}
+.imgs:hover{background:rgba(196,154,60,.12)}
+.imgs svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:1.6}
+.empty{color:var(--ash);padding-block:2rem}
+footer{border-top:1px solid var(--line);margin-top:3rem;padding-top:1.6rem;font-size:.75rem;letter-spacing:.06em;color:var(--ash)}
+@media (max-width:520px){.chips{flex-wrap:nowrap;overflow-x:auto;padding-bottom:.2rem}.chip{white-space:nowrap}.item{grid-template-columns:40px minmax(0,1fr);gap:.2rem .8rem}.play{width:40px;height:40px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+:root{--ash:#b2a79b;--gold-dim:#bd9b59}.th{cursor:default}.play:disabled{opacity:.4;cursor:default}.item{scroll-margin-top:180px}summary{cursor:pointer}a{overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><div class="wordmark">Cast in <span>Skin</span></div><div class="tag">Field reference</div></header>
+<section class="hero">
+  <p class="eyebrow">Glossary</p>
+  <h1>Thai Sacred <em>&amp;</em> Occult Glossary</h1>
+  <p class="lead">The core vocabulary of Thai amulets, spirits, ritual and sak yant, in Thai script, described from Thai-language sources: Silpa Watthanatham, Thai university research, and the amulet columns of Thai newspapers. Use the play buttons to hear the Thai pronunciation.</p>
+  <div class="keys">
+    <div class="key"><h3>A beginner’s reference</h3><p>145 terms across seven categories. Search a Thai word, an English name, or a meaning to explore the vocabulary.</p></div>
+    <div class="key"><h3>Listen in Thai</h3><p>Playback uses your device’s Thai speech voice. Choose normal or slow speed. Voice availability and pronunciation depend on your device.</p></div>
+    <div class="key"><h3>Understanding the tradition</h3><p>Descriptions explain cultural meanings and traditional beliefs. Ritual practices and interpretations can differ between regions and teachers.</p></div>
+    <div class="key"><h3>Explore further</h3><p>Each entry links to references. Image buttons open Google Images searches for the Thai term; individual results are not curated.</p></div>
+  </div>
+</section>
+<div class="bar">
+  <div class="row1">
+    <input id="q" type="search" placeholder="Search English, Thai or meaning" aria-label="Search terms">
+    <div class="speed" role="group" aria-label="Speaking speed">
+      <button id="sp-n" type="button" aria-pressed="true" data-r="0.9">Normal</button>
+      <button id="sp-s" type="button" aria-pressed="false" data-r="0.65">Slow</button>
+    </div>
+  </div>
+  <div class="chips" id="chips"></div>
+  <div class="voice" id="voice">Looking for a Thai voice…</div>
+</div>
+<main id="out"></main><noscript>
+<p>Enable JavaScript for search and audio. The complete reference follows.</p><article><h2 lang="th">ของขลัง</h2><h3>Sacred objects</h3><p>Objects regarded as possessing sacred or protective power. This broad term includes both natural objects and things made or consecrated for ritual use.</p></article>
+<article><h2 lang="th">เครื่องราง</h2><h3>Charms</h3><p>A charm carried, worn, or kept for protection or good fortune. The word covers many forms and materials; it does not, by itself, mean that an object needs no consecration.</p></article>
+<article><h2 lang="th">พระพิมพ์</h2><h3>Votive tablets</h3><p>A sacred image made in a mould, usually a small Buddhist tablet. Many historical examples were deposited in stupas as acts of devotion. Such tablets later became important in amulet collecting.</p></article>
+<article><h2 lang="th">ตะกรุด</h2><h3>Takrut</h3><p>A rolled scroll charm, commonly made from a thin metal sheet inscribed with sacred letters or diagrams. It may be worn on a cord or carried. Its attributed purpose depends on the inscription and the teacher’s tradition.</p></article>
+<article><h2 lang="th">พระเครื่อง</h2><h3>Buddhist amulets</h3><p>A small Buddhist amulet, commonly depicting the Buddha or a revered monk. It may be worn or kept as an object of devotion and protection. Clay, powder mixtures, and metal are common materials.</p></article>
+<article><h2 lang="th">พระสมเด็จ</h2><h3>Phra Somdet</h3><p>A well-known amulet type, commonly a rectangular powder tablet showing a seated Buddha beneath an arch. Especially associated with Somdet To of Wat Rakhang and widely studied by collectors.</p></article>
+<article><h2 lang="th">เหรียญ</h2><h3>Medallions</h3><p>A coin or medal. In amulet use, it commonly means a metal medallion bearing a monk, Buddha, or sacred figure.</p></article>
+<article><h2 lang="th">พระขุนแผน</h2><h3>Phra Khun Phaen</h3><p>An amulet name associated with the hero of the Khun Chang Khun Phaen story. Many examples show a seated Buddha rather than the literary character. They are popularly associated with attraction and favourable regard.</p></article>
+<article><h2 lang="th">กุมารทอง</h2><h3>Kuman Thong</h3><p>A child-spirit figure associated with protection and good fortune. Literary accounts and present-day devotional figures belong to different contexts. Devotees may offer food, drinks, or toys as part of caring for the figure.</p></article>
+<article><h2 lang="th">ปลัดขิก</h2><h3>Palad Khik</h3><p>A phallic charm, commonly carved or cast. It is associated with protection, fertility, and prosperity. Its meanings and use vary across local traditions.</p></article>
+<article><h2 lang="th">ผ้ายันต์</h2><h3>Yantra cloth</h3><p>Cloth bearing sacred diagrams or inscriptions. It may be displayed in a home or shop, carried, or worn, according to the tradition in which it was made.</p></article>
+<article><h2 lang="th">มีดหมอ</h2><h3>Ritual knife</h3><p>A ritual knife used in Thai magical practice. It is associated with protective rites and the removal of harmful influences.</p></article>
+<article><h2 lang="th">ประคำ</h2><h3>Prayer beads</h3><p>A string of beads used to count recitations or meditation repetitions. Beads may also be worn as a sacred object; bead counts vary.</p></article>
+<article><h2 lang="th">พระบูชา</h2><h3>Altar Buddha images</h3><p>A Buddha image intended for veneration on an altar or another dedicated place, rather than principally for wearing on the body.</p></article>
+<article><h2 lang="th">เบญจภาคี</h2><h3>Benjaphakhi</h3><p>A collectors’ grouping of five celebrated amulet types: Phra Somdet, Phra Rod, Phra Nang Phaya, Phra Phong Suphan, and Phra Sum Ko. It is a collecting convention, not a ranking of Buddhist spiritual attainment.</p></article>
+<article><h2 lang="th">วัตถุมงคล</h2><h3>Auspicious sacred objects</h3><p>A broad term for objects regarded as sacred or auspicious, including amulets and charms.</p></article>
+<article><h2 lang="th">ศาลพระภูมิ</h2><h3>Spirit house</h3><p>A shrine for the protective spirit of a place. It is one kind of shrine encountered at Thai homes and other properties.</p></article>
+<article><h2 lang="th">พระปิดตา</h2><h3>Phra Pidta</h3><p>An amulet showing a seated figure covering its eyes. Some forms have additional hands covering other bodily openings. The different forms should not all be treated as the same iconographic type.</p></article>
+<article><h2 lang="th">พระกริ่ง</h2><h3>Phra Kring</h3><p>A small Buddha image containing a pellet that rattles when shaken. The type is associated with the Medicine Buddha and is venerated in connection with health and protection.</p></article>
+<article><h2 lang="th">พระอุปคุต</h2><h3>Phra Upakut</h3><p>A revered monk of Buddhist legend, associated with protection and the overcoming of obstacles. Northern Thai traditions honour him through ceremonies including midnight almsgiving when a full moon falls on a Wednesday.</p></article>
+<article><h2 lang="th">สีผึ้ง</h2><h3>Consecrated lip wax</h3><p>Wax-based lip balm. In charm traditions, a consecrated version is associated with favourable speech and attraction. Recipes vary; the word itself is also used for ordinary lip balm.</p></article>
+<article><h2 lang="th">หุ่นพยนต์</h2><h3>Hun Phayon</h3><p>A human-shaped effigy consecrated as a guardian. It can be made from woven or moulded materials and is associated with protecting a home or its owner.</p></article>
+<article><h2 lang="th">รักยม</h2><h3>Rak Yom</h3><p>A pair of small child figures traditionally made from two kinds of wood, rak and mayom. They are kept as charms associated with affection and favourable regard.</p></article>
+<article><h2 lang="th">เสื้อยันต์</h2><h3>Yantra shirt</h3><p>A shirt or vest bearing sacred diagrams and inscriptions. Traditionally associated with protection in conflict.</p></article>
+<article><h2 lang="th">น้ำมันพราย</h2><h3>Spirit oil</h3><p>An oil associated in Thai folklore and accounts of sorcery with human remains and spirit power. It appears particularly in stories of attraction magic. The name is not proof of the contents of a commercial product.</p></article>
+<article><h2 lang="th">เหล็กจาร</h2><h3>Inscribing stylus</h3><p>A pointed metal stylus used to incise writing, including inscriptions on palm leaves or metal sheets.</p></article>
+<article><h2 lang="th">รูปหล่อ</h2><h3>Cast images</h3><p>A cast image, often of a revered monk. Small examples may be worn as amulets; larger ones can be kept on an altar.</p></article>
+<article><h2 lang="th">จตุคามรามเทพ</h2><h3>Jatukham Ramathep</h3><p>Sacred figures associated with Nakhon Si Thammarat and its relic stupa. Amulets bearing this name became especially prominent during the nationwide collecting boom of the 2000s.</p></article>
+<article><h2 lang="th">ประเจียด</h2><h3>Protective armband</h3><p>A protective cloth traditionally worn around the upper arm, often bearing sacred inscriptions. Related armbands remain part of Muay Thai practice.</p></article>
+<article><h2 lang="th">มงคล</h2><h3>Mongkhon headband</h3><p>An auspicious or sacred object; in Muay Thai, the word refers to the headband worn during the pre-fight ceremony. The ordinary Thai word also means auspiciousness.</p></article>
+<article><h2 lang="th">เฉลว</h2><h3>Chalaeo</h3><p>A woven bamboo marker used in practices including traditional medicine and the marking or protection of ritual space. Its pattern and purpose vary by locality.</p></article>
+<article><h2 lang="th">พระธาตุ</h2><h3>Relics</h3><p>Sacred relics, especially remains associated with the Buddha or revered Buddhist practitioners. The word can also appear in the name of a shrine or stupa containing relics.</p></article>
+<article><h2 lang="th">สาลิกา</h2><h3>Salika bird charm</h3><p>A bird motif associated with pleasing or persuasive speech. In charm traditions, it appears in forms such as paired birds and the “golden tongue” motif.</p></article>
+<article><h2 lang="th">พญาเต่าเรือน</h2><h3>Turtle charm</h3><p>A turtle-shaped charm associated with longevity, prosperity, and protection. It is a familiar animal form in Thai amulet traditions.</p></article>
+<article><h2 lang="th">ปลาตะเพียน</h2><h3>Barb-fish motif</h3><p>The barb fish, used as an auspicious motif. Woven fish mobiles and fish-shaped charms are associated with abundance and prosperity.</p></article>
+<article><h2 lang="th">ไซดักทรัพย์</h2><h3>Wealth-trap charm</h3><p>A miniature fish trap displayed as a charm for attracting wealth, especially in shops. Its symbolism draws on the idea of gathering and retaining what enters the trap.</p></article>
+<article><h2 lang="th">เบี้ยแก้</h2><h3>Cowrie-shell charm</h3><p>A cowrie-shell charm associated with protection against harmful magic. Some traditions seal ritual substances inside the shell and cover it with woven cord.</p></article>
+<article><h2 lang="th">ปี่เซียะ</h2><h3>Pixiu</h3><p>A Chinese auspicious creature also familiar in Thailand. Figures are associated with attracting and retaining wealth.</p></article>
+<article><h2 lang="th">เขี้ยวเสือ</h2><h3>Tiger-fang charm</h3><p>A tiger fang used as a traditional charm or carved into a small tiger figure. Such objects are associated with strength and protection.</p></article>
+<article><h2 lang="th">คงกระพันชาตรี</h2><h3>Invulnerability</h3><p>A traditional expression for protection from weapons and bodily harm. In sacred tattoo and amulet practice, it names an attributed protective power.</p></article>
+<article><h2 lang="th">แคล้วคลาด</h2><h3>Avoidance of danger</h3><p>Escaping or avoiding danger. In amulet and tattoo descriptions, it refers to protection understood as harm missing the wearer.</p></article>
+<article><h2 lang="th">เมตตามหานิยม</h2><h3>Goodwill and popularity</h3><p>A common amulet and tattoo purpose: attracting kindness, goodwill, and favourable regard. The phrase combines loving-kindness with popularity.</p></article>
+<article><h2 lang="th">มหาเสน่ห์</h2><h3>Attraction</h3><p>A term for strong attraction or personal allure, particularly in love-charms. It describes the intended effect attributed to a charm or practice.</p></article>
+<article><h2 lang="th">มหาลาภ</h2><h3>Good fortune</h3><p>“Great gain” or good fortune. In amulet descriptions, it expresses a wish for prosperity or favourable opportunities.</p></article>
+<article><h2 lang="th">มหาอุด</h2><h3>Weapon-stopping protection</h3><p>A traditional protective power said to prevent a weapon from functioning. The term appears in accounts of incantations and protective amulets.</p></article>
+<article><h2 lang="th">มหานิยม</h2><h3>Popularity</h3><p>Popularity or favourable regard. In charm terminology, it describes the wish to be liked and well received by others.</p></article>
+<article><h2 lang="th">กันผี</h2><h3>Spirit protection</h3><p>“To ward off ghosts.” A stated purpose of protective charms, sacred diagrams, and rites.</p></article>
+<article><h2 lang="th">ลิ้นทอง</h2><h3>Golden tongue</h3><p>“Golden tongue.” In charm terminology, a motif associated with attractive or persuasive speech.</p></article>
+<article><h2 lang="th">จินดามณี</h2><h3>Wish-fulfilling jewel</h3><p>A wish-fulfilling jewel in religious and literary imagery. The name is also used for some sacred powders and charms.</p></article>
+<article><h2 lang="th">มหาอำนาจ</h2><h3>Authority</h3><p>“Great authority.” In amulet and tattoo descriptions, it refers to the wish for personal authority, influence, and respect.</p></article>
+<article><h2 lang="th">มวลสาร</h2><h3>Amulet ingredients</h3><p>The ingredients or substances incorporated into an amulet. The term can cover both the main material and smaller additions valued for their ritual associations.</p></article>
+<article><h2 lang="th">ว่าน</h2><h3>Wan plants</h3><p>A Thai plant category associated with medicinal, auspicious, or magical uses. Some are grown as sacred plants or incorporated into amulet mixtures.</p></article>
+<article><h2 lang="th">สายสิญจน์</h2><h3>Sacred thread</h3><p>White thread used in religious ceremonies. It may connect participants or objects during chanting and blessing rites.</p></article>
+<article><h2 lang="th">ปรอท</h2><h3>Mercury</h3><p>Mercury, a metallic element. It also appears in Thai traditions of alchemy and sacred objects, where extraordinary properties are attributed to it.</p></article>
+<article><h2 lang="th">เหล็กไหล</h2><h3>Lek Lai</h3><p>A substance described in Thai belief as having extraordinary powers, often connected with caves and extraction rituals. The religious name does not identify a single scientifically established metal or mineral.</p></article>
+<article><h2 lang="th">สำริด</h2><h3>Bronze</h3><p>Bronze, a copper-based alloy used for casting images and other objects.</p></article>
+<article><h2 lang="th">ชนวน</h2><h3>Casting metal</h3><p>Metal set aside for use in a sacred casting, including material from earlier castings or inscribed metal sheets. It is incorporated into a new image or amulet.</p></article>
+<article><h2 lang="th">ตะกั่ว</h2><h3>Lead</h3><p>Lead, a soft metal that can be formed into sheets or cast objects. It occurs among traditional amulet materials.</p></article>
+<article><h2 lang="th">ใบลาน</h2><h3>Palm leaf</h3><p>Palm leaf prepared as a writing surface. Historically used for manuscripts, including religious texts.</p></article>
+<article><h2 lang="th">ครั่ง</h2><h3>Lac</h3><p>Lac, a resinous substance produced by lac insects. Used as a coating, adhesive, or sealing material. It is distinct from tree lacquer.</p></article>
+<article><h2 lang="th">นวโลหะ</h2><h3>Nine-metal alloy</h3><p>A traditional name for a nine-metal alloy used in sacred casting. The name refers to a prescribed material category, not a laboratory analysis of an individual object.</p></article>
+<article><h2 lang="th">นาก</h2><h3>Nak alloy</h3><p>A reddish alloy made with gold, silver, and copper. Used in jewellery and sacred metalwork.</p></article>
+<article><h2 lang="th">รัก</h2><h3>Tree lacquer</h3><p>Tree lacquer used as a coating or adhesive, including in gilding. In descriptions of sacred objects, it refers to the lacquer material.</p></article>
+<article><h2 lang="th">ดินเผา</h2><h3>Fired clay</h3><p>Clay hardened by firing. Used for pottery, votive tablets, and other objects.</p></article>
+<article><h2 lang="th">ทองแดง</h2><h3>Copper</h3><p>Copper, a reddish metal widely used in casting and metalwork.</p></article>
+<article><h2 lang="th">ผง</h2><h3>Powder</h3><p>Powder. In an amulet description, it indicates a powder-based material; the word alone does not specify the ingredients.</p></article>
+<article><h2 lang="th">ผงวิเศษ</h2><h3>Sacred powder</h3><p>Powder prepared through ritual practices such as writing and erasing sacred characters. Named powder traditions are used in the making of some amulets.</p></article>
+<article><h2 lang="th">เงิน</h2><h3>Silver</h3><p>Silver. In everyday Thai the same word also means money; in a material description it refers to the metal.</p></article>
+<article><h2 lang="th">ทองเหลือง</h2><h3>Brass</h3><p>An alloy of copper and zinc, used in images, medallions, and other metal objects.</p></article>
+<article><h2 lang="th">นาค</h2><h3>Naga</h3><p>A great serpent being in Buddhist and other South and Southeast Asian traditions. Naga imagery appears in Thai temples, amulets, and sacred designs.</p></article>
+<article><h2 lang="th">หนุมาน</h2><h3>Hanuman</h3><p>The monkey warrior of the Ramakien, the Thai telling of the Ramayana. His image is used in amulets and sacred tattoos, commonly associated with courage and strength.</p></article>
+<article><h2 lang="th">นางกวัก</h2><h3>Beckoning lady</h3><p>The beckoning female figure often displayed in shops. She is associated with attracting customers and prosperity. Stories about her origin are devotional legends.</p></article>
+<article><h2 lang="th">ฤๅษี</h2><h3>Hermit sage</h3><p>A hermit or ascetic sage. Such figures are honoured as teachers in traditions of ritual knowledge, healing, and the arts.</p></article>
+<article><h2 lang="th">พระพิฆเนศ</h2><h3>Ganesha</h3><p>Ganesha, the elephant-headed Hindu deity associated with wisdom, beginnings, and the removal of obstacles. Widely honoured in Thailand, especially in connection with the arts and success.</p></article>
+<article><h2 lang="th">ท้าวเวสสุวรรณ</h2><h3>Thao Wessuwan</h3><p>The guardian king of the north and a protector in Buddhist tradition. Commonly depicted as a powerful yaksha holding a club; venerated for protection and prosperity.</p></article>
+<article><h2 lang="th">ผี</h2><h3>Ghost or spirit</h3><p>A broad Thai word for a ghost or spirit. Different traditions describe many kinds, including spirits of the dead and spirits associated with places.</p></article>
+<article><h2 lang="th">เจ้าที่</h2><h3>Spirit of a place</h3><p>A spirit associated with a particular place. Offerings or shrines may acknowledge its presence and seek a harmonious relationship with it.</p></article>
+<article><h2 lang="th">เสือสมิง</h2><h3>Shapeshifting tiger</h3><p>A shapeshifting tiger of Thai folklore. Stories describe either a person becoming a tiger or a tiger taking human form. The details vary among regional traditions.</p></article>
+<article><h2 lang="th">พราย</h2><h3>Prai spirit</h3><p>A spirit in Thai folklore and magical traditions. In amulet descriptions, the word can indicate an association with spirits or spirit-related materials; its meaning depends on context.</p></article>
+<article><h2 lang="th">ผีตายโหง</h2><h3>Ghost of a violent death</h3><p>The ghost of a person who died violently or suddenly, in Thai popular belief.</p></article>
+<article><h2 lang="th">ผีครู</h2><h3>Teacher spirits</h3><p>Teacher spirits honoured within a particular tradition. The term may refer to deceased teachers or sacred patrons, depending on the lineage.</p></article>
+<article><h2 lang="th">ยักษ์</h2><h3>Yaksha</h3><p>A giant or powerful supernatural being in Thai religious art and literature. Some appear as guardians at temples.</p></article>
+<article><h2 lang="th">พระนารายณ์</h2><h3>Vishnu</h3><p>Vishnu, a major Hindu deity, known in Thai as Phra Narai. He appears in Thai religious art, royal symbolism, and some sacred objects.</p></article>
+<article><h2 lang="th">พระแม่สุรัสวดี</h2><h3>Saraswati</h3><p>Saraswati, a Hindu goddess associated with learning, music, and the arts.</p></article>
+<article><h2 lang="th">ราหู</h2><h3>Rahu</h3><p>A supernatural figure associated with eclipses, traditionally pictured swallowing the sun or moon. In Thai devotional practice, Rahu is also invoked in connection with misfortune and changes of fortune.</p></article>
+<article><h2 lang="th">เทพพนม</h2><h3>Celestial worshipper</h3><p>A celestial figure shown with hands joined in reverence. A familiar motif in Thai decorative and religious art.</p></article>
+<article><h2 lang="th">ผีปอบ</h2><h3>Pop spirit</h3><p>A spirit in Thai popular belief said to enter a person and consume internal organs. It belongs to the vocabulary of folklore and possession stories.</p></article>
+<article><h2 lang="th">พระสีวลี</h2><h3>Phra Sivali</h3><p>An arahant disciple of the Buddha especially associated with receiving offerings and abundance. His images are venerated for prosperity and support on journeys.</p></article>
+<article><h2 lang="th">พระสังกัจจายน์</h2><h3>Phra Sangkajai</h3><p>A plump monk figure identified in Thai tradition with the Buddha’s disciple Mahakaccana. It is venerated in connection with abundance and good fortune.</p></article>
+<article><h2 lang="th">ท้าวจตุโลกบาล</h2><h3>Four Guardian Kings</h3><p>The Four Guardian Kings associated with the four cardinal directions in Buddhist cosmology. Thao Wessuwan is the guardian of the north.</p></article>
+<article><h2 lang="th">ไอ้ไข่</h2><h3>Ai Khai</h3><p>A child-spirit figure associated with Wat Chedi in Nakhon Si Thammarat. Devotees seek good fortune and make offerings in fulfilment of vows.</p></article>
+<article><h2 lang="th">แม่ซื้อ</h2><h3>Infant guardian spirits</h3><p>Spirits associated with babies in Thai belief. They may be understood as guardians or as beings who affect a child’s well-being. A documented tradition describes seven figures corresponding to the days of the week.</p></article>
+<article><h2 lang="th">คาถา</h2><h3>Incantation</h3><p>A verse or incantation recited in religious or magical practice. Many Thai ritual formulas use Pali; others include Thai or other languages.</p></article>
+<article><h2 lang="th">ยันต์</h2><h3>Sacred diagram</h3><p>A sacred diagram combining lines, letters, numbers, or images. It may be drawn, inscribed, printed, or tattooed. Its meaning and ritual use belong to the tradition in which it is made.</p></article>
+<article><h2 lang="th">อักษรขอม</h2><h3>Khom script</h3><p>A Khmer-derived writing tradition used in Thai religious manuscripts and sacred diagrams. It can write languages such as Pali; a script and the language written in it are different things.</p></article>
+<article><h2 lang="th">วิชา</h2><h3>Ritual knowledge</h3><p>Knowledge or a field of study. In sacred practice, it can mean a body of ritual knowledge transmitted from teacher to student.</p></article>
+<article><h2 lang="th">ปลุกเสก</h2><h3>Consecration</h3><p>The consecration of an object through ritual, commonly involving recitation and concentrated intention. In the tradition, this establishes or strengthens its sacred power.</p></article>
+<article><h2 lang="th">ขันครู</h2><h3>Teacher-offering tray</h3><p>An offering arrangement honouring teachers, particularly in northern Thai traditions. Its contents and the occasions on which it is presented depend on the practice.</p></article>
+<article><h2 lang="th">ไหว้ครู</h2><h3>Honouring teachers</h3><p>Paying respect to teachers. A wai khru ceremony honours living teachers and the teachers of a lineage. It is found in sacred tattooing and many other Thai arts.</p></article>
+<article><h2 lang="th">บูชา</h2><h3>Veneration</h3><p>To venerate or honour, often through offerings. In the context of sacred objects, the word is also used for acquiring an image or amulet.</p></article>
+<article><h2 lang="th">น้ำมนต์</h2><h3>Blessed water</h3><p>Water blessed in a religious rite, commonly through chanting. It is used in ceremonies of blessing and purification.</p></article>
+<article><h2 lang="th">สำนัก</h2><h3>School or practice centre</h3><p>An establishment, centre, or school. In this context it often refers to a teacher’s place of practice and instruction.</p></article>
+<article><h2 lang="th">หลวงปู่</h2><h3>Luang Pu</h3><p>“Venerable grandfather.” A respectful form of address for an elderly monk.</p></article>
+<article><h2 lang="th">หลวงพ่อ</h2><h3>Luang Pho</h3><p>“Venerable father.” A respectful form of address for a monk; it is also used in the names of revered Buddha images.</p></article>
+<article><h2 lang="th">เกจิอาจารย์</h2><h3>Ritual master</h3><p>A teacher respected for knowledge of incantations and the consecration of sacred objects. The word is often used of monks associated with amulet traditions.</p></article>
+<article><h2 lang="th">ข้อห้าม</h2><h3>Rules of conduct</h3><p>Prohibitions or rules of conduct. In sacred tattoo and amulet traditions, these may include ethical commitments and lineage-specific observances. The relevant teacher explains the rules of that practice.</p></article>
+<article><h2 lang="th">ยันต์แปดทิศ</h2><h3>Eight-direction yantra</h3><p>A sacred design associated with the eight directions: the four cardinal directions and the four intermediate ones. In tattoo traditions it is commonly linked with protection in every direction.</p></article>
+<article><h2 lang="th">สักยันต์</h2><h3>Sacred tattooing</h3><p>Tattooing sacred diagrams or inscriptions onto the body as part of a ritual tradition. Practised by monks and lay teachers; meanings, blessings, and observances depend on the lineage.</p></article>
+<article><h2 lang="th">อาจารย์</h2><h3>Teacher</h3><p>A teacher or instructor. In sacred tattoo and ritual contexts it is a respectful title for a teacher, whether ordained or lay.</p></article>
+<article><h2 lang="th">พุทธาภิเษก</h2><h3>Buddhist consecration</h3><p>A Buddhist ceremony for consecrating images or sacred objects, involving monastic recitation and meditation.</p></article>
+<article><h2 lang="th">อักขระ</h2><h3>Letters and characters</h3><p>Written letters or characters. In a sacred diagram, individual characters can represent syllables or abbreviated formulas.</p></article>
+<article><h2 lang="th">บาลี</h2><h3>Pali</h3><p>The language of the Theravada Buddhist scriptures and many chants. Pali can be written in several scripts, including Thai and Khom.</p></article>
+<article><h2 lang="th">ค่าครู</h2><h3>Teacher offering</h3><p>An offering made in acknowledgement of a teacher and the knowledge received. In sacred tattoo practice it may accompany flowers, incense, and candles; arrangements vary by school.</p></article>
+<article><h2 lang="th">ยันต์เก้ายอด</h2><h3>Nine-spire yantra</h3><p>A sacred design with nine pointed spires. It is an important teacher-associated tattoo design at Wat Bang Phra and in related practice.</p></article>
+<article><h2 lang="th">ยันต์ห้าแถว</h2><h3>Five-line yantra</h3><p>A sacred tattoo arranged in five vertical lines of writing. A well-known modern tradition is associated with Ajarn Noo Kanphai. Its formulas and explanations depend on the teacher.</p></article>
+<article><h2 lang="th">บุญ</h2><h3>Merit</h3><p>Good action and its beneficial results in Buddhist understanding. Generosity, ethical conduct, and mental cultivation are familiar ways of making merit.</p></article>
+<article><h2 lang="th">ศีล</h2><h3>Ethical precepts</h3><p>Moral discipline and rules of conduct in Buddhism. The five lay precepts concern refraining from killing, stealing, sexual misconduct, false speech, and intoxicants that lead to heedlessness.</p></article>
+<article><h2 lang="th">บารมี</h2><h3>Spiritual qualities</h3><p>Virtues cultivated through practice. In Thai usage, the word can also express the moral stature or influence attributed to a respected person.</p></article>
+<article><h2 lang="th">พุทธคุณ</h2><h3>Qualities of the Buddha</h3><p>The virtues of the Buddha. In amulet discourse, the word is also used for the blessings or protective qualities attributed to a Buddhist sacred object.</p></article>
+<article><h2 lang="th">หัวใจคาถา</h2><h3>Heart formula</h3><p>A short formula made from selected syllables of a longer sacred text or incantation. Such formulas appear in recitation and sacred diagrams.</p></article>
+<article><h2 lang="th">ไสยศาสตร์</h2><h3>Magical arts</h3><p>The study or practice of magical arts and rites. It covers a range of practices; labels such as protective or harmful describe their intended use.</p></article>
+<article><h2 lang="th">ขันห้า</h2><h3>Fivefold offering</h3><p>An offering arrangement using sets of five, such as flowers and candles. Found in regional rites, including acts of respect to teachers and sacred beings.</p></article>
+<article><h2 lang="th">เสาร์ห้า</h2><h3>Saturday the Fifth</h3><p>A Saturday coinciding with the fifth waxing or waning lunar day of the fifth Thai lunar month. Regarded in some traditions as an auspicious occasion for consecration.</p></article>
+<article><h2 lang="th">ครูบาอาจารย์</h2><h3>Revered teachers</h3><p>A respectful expression for teachers. In ritual practice it can refer collectively to the teachers from whom a tradition is received.</p></article>
+<article><h2 lang="th">ครูบา</h2><h3>Kruba</h3><p>An honorific used for respected monks, especially in northern Thailand.</p></article>
+<article><h2 lang="th">อาถรรพ์</h2><h3>Supernatural influence</h3><p>A mysterious or supernatural influence, often one believed to cause events or misfortune. The word also relates to protective or harmful magical rites.</p></article>
+<article><h2 lang="th">นะโม ตัสสะ</h2><h3>Homage to the Buddha</h3><p>The opening words of a Pali homage to the Buddha. The homage is commonly recited three times before Buddhist chanting.</p></article>
+<article><h2 lang="th">อิติปิโส</h2><h3>Recollection of the Buddha</h3><p>The opening words of a Pali recollection of the Buddha’s qualities. In Thai usage the name also refers to a familiar chant, often recited together with recollections of the Dhamma and Sangha.</p></article>
+<article><h2 lang="th">คาถาอาราธนาพระ</h2><h3>Amulet invocation</h3><p>A formula recited when respectfully inviting the blessing or protection associated with a Buddhist amulet. The wording used can vary.</p></article>
+<article><h2 lang="th">การห้อยพระ</h2><h3>Wearing an amulet</h3><p>Wearing a Buddhist amulet suspended on a cord or necklace. Respectful handling is important; particular arrangements and observances differ between traditions.</p></article>
+<article><h2 lang="th">อาคม</h2><h3>Magical knowledge</h3><p>Magical knowledge or incantations. Often used together with the word for incantation in the expression คาถาอาคม.</p></article>
+<article><h2 lang="th">อักษรธรรมล้านนา</h2><h3>Lanna Tham script</h3><p>A script used in northern Thai religious manuscripts and some sacred diagrams. It is distinct from the modern Thai script used for the headwords in this glossary.</p></article>
+<article><h2 lang="th">ลงยันต์</h2><h3>Inscribing a yantra</h3><p>To write or inscribe a sacred diagram. In traditional practice, this involves prescribed forms and ritual recitation.</p></article>
+<article><h2 lang="th">เนื้อ</h2><h3>Material</h3><p>The material or substance of an object. In an amulet description, it identifies what the piece is made from, such as clay, powder, or metal.</p></article>
+<article><h2 lang="th">รุ่น</h2><h3>Edition or batch</h3><p>An edition, series, or production batch. Amulet descriptions use it to distinguish one issue from another.</p></article>
+<article><h2 lang="th">พิมพ์</h2><h3>Mould or design type</h3><p>A mould or the design produced from it. In collecting, the word distinguishes an amulet’s design or mould type.</p></article>
+<article><h2 lang="th">เช่าพระ</h2><h3>Acquiring an amulet</h3><p>A respectful expression for acquiring a Buddhist amulet. Although the verb ordinarily means “rent,” this usage does not necessarily imply a temporary loan.</p></article>
+<article><h2 lang="th">เศรษฐี</h2><h3>Wealthy person</h3><p>A wealthy person. In the name of an amulet or sacred design, the word evokes wealth and prosperity.</p></article>
+<article><h2 lang="th">รุ่นแรก</h2><h3>First edition</h3><p>The first edition or production batch. It identifies order of issue and does not by itself establish authenticity, quality, or value.</p></article>
+<article><h2 lang="th">พิเศษ</h2><h3>Special</h3><p>Special or different from the ordinary version. In an object’s name it may distinguish a particular edition or feature.</p></article>
+<article><h2 lang="th">โบราณ</h2><h3>Old or traditional</h3><p>Old, ancient, or traditional, depending on context. The word in a title does not establish an object’s age.</p></article>
+<article><h2 lang="th">ชุดใหญ่</h2><h3>Large set</h3><p>A large set. A descriptive phrase used to distinguish a set from a smaller one.</p></article>
+<article><h2 lang="th">กรรมการ</h2><h3>Committee edition</h3><p>A committee or committee member. In an amulet title, it commonly identifies an edition associated with the organising committee.</p></article>
+<article><h2 lang="th">กะไหล่ทอง</h2><h3>Gold-plated</h3><p>Coated or plated with gold. It describes a surface finish, not an object made entirely of gold.</p></article>
+<article><h2 lang="th">กรุ</h2><h3>Relic deposit</h3><p>A chamber or deposit containing sacred objects, often within a stupa. In amulet descriptions, it can identify the deposit from which a piece is said to have come.</p></article>
+</noscript>
+<footer>Thai Sacred &amp; Occult Glossary. Compiled for Cast in Skin from Thai-language sources, October 2026.</footer>
+</div>
+<script>
+const DATA = [
+  {
+    "sec": "Objects",
+    "term": "Sacred objects",
+    "th": "ของขลัง",
+    "d": "Objects regarded as possessing sacred or protective power. This broad term includes both natural objects and things made or consecrated for ritual use.",
+    "src": [
+      {
+        "n": "Thai dictionary: ของขลัง",
+        "u": "https://dict.longdo.com/search/%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%82%E0%B8%A5%E0%B8%B1%E0%B8%87"
+      }
+    ],
+    "img": null,
+    "id": "term-1",
+    "searchName": "Khong Khlang",
+    "essential": true
+  },
+  {
+    "sec": "Objects",
+    "term": "Charms",
+    "th": "เครื่องราง",
+    "d": "A charm carried, worn, or kept for protection or good fortune. The word covers many forms and materials; it does not, by itself, mean that an object needs no consecration.",
+    "src": [
+      {
+        "n": "Thai dictionary: เครื่องราง",
+        "u": "https://dict.longdo.com/search/%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%A3%E0%B8%B2%E0%B8%87"
+      }
+    ],
+    "img": null,
+    "id": "term-2",
+    "searchName": "Khrueang Rang",
+    "essential": true
+  },
+  {
+    "sec": "Objects",
+    "term": "Votive tablets",
+    "th": "พระพิมพ์",
+    "d": "A sacred image made in a mould, usually a small Buddhist tablet. Many historical examples were deposited in stupas as acts of devotion. Such tablets later became important in amulet collecting.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: origin of amulets",
+        "u": "https://www.silpa-mag.com/culture/article_28483"
+      }
+    ],
+    "img": "พระพิมพ์ กรุ",
+    "id": "term-3",
+    "searchName": "Phra Phim",
+    "essential": true
+  },
+  {
+    "sec": "Objects",
+    "term": "Takrut",
+    "th": "ตะกรุด",
+    "d": "A rolled scroll charm, commonly made from a thin metal sheet inscribed with sacred letters or diagrams. It may be worn on a cord or carried. Its attributed purpose depends on the inscription and the teacher’s tradition.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: charms of gangsters",
+        "u": "https://www.silpa-mag.com/culture/article_19675"
+      }
+    ],
+    "img": "ตะกรุด",
+    "id": "term-4",
+    "searchName": "Takrut",
+    "essential": true
+  },
+  {
+    "sec": "Objects",
+    "term": "Buddhist amulets",
+    "th": "พระเครื่อง",
+    "d": "A small Buddhist amulet, commonly depicting the Buddha or a revered monk. It may be worn or kept as an object of devotion and protection. Clay, powder mixtures, and metal are common materials.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: origin of amulets",
+        "u": "https://www.silpa-mag.com/culture/article_28483"
+      }
+    ],
+    "img": "พระเครื่อง",
+    "id": "term-5",
+    "searchName": "Phra (amulet images)",
+    "essential": true
+  },
+  {
+    "sec": "Objects",
+    "term": "Phra Somdet",
+    "th": "พระสมเด็จ",
+    "d": "A well-known amulet type, commonly a rectangular powder tablet showing a seated Buddha beneath an arch. Especially associated with Somdet To of Wat Rakhang and widely studied by collectors.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: Phra Rod and the Benjaphakhi",
+        "u": "https://www.silpa-mag.com/culture/article_136591"
+      }
+    ],
+    "img": "พระสมเด็จ",
+    "id": "term-8",
+    "searchName": "Phra Somdej",
+    "essential": true
+  },
+  {
+    "sec": "Objects",
+    "term": "Medallions",
+    "th": "เหรียญ",
+    "d": "A coin or medal. In amulet use, it commonly means a metal medallion bearing a monk, Buddha, or sacred figure.",
+    "src": [
+      {
+        "n": "Thai dictionary: เหรียญ",
+        "u": "https://dict.longdo.com/search/%E0%B9%80%E0%B8%AB%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%8D"
+      }
+    ],
+    "img": "เหรียญพระเกจิ",
+    "id": "term-11",
+    "searchName": "Rian",
+    "essential": true
+  },
+  {
+    "sec": "Objects",
+    "term": "Phra Khun Phaen",
+    "th": "พระขุนแผน",
+    "d": "An amulet name associated with the hero of the Khun Chang Khun Phaen story. Many examples show a seated Buddha rather than the literary character. They are popularly associated with attraction and favourable regard.",
+    "src": [
+      {
+        "n": "Post Today: Phra Khun Paen",
+        "u": "https://www.posttoday.com/dhamma/587037"
+      },
+      {
+        "n": "Silpa Watthanatham: magic in Khun Chang Khun Paen",
+        "u": "https://www.silpa-mag.com/culture/article_166096"
+      }
+    ],
+    "img": "พระขุนแผน",
+    "id": "term-12",
+    "searchName": "Phra Khun Phaen",
+    "essential": true
+  },
+  {
+    "sec": "Objects",
+    "term": "Kuman Thong",
+    "th": "กุมารทอง",
+    "d": "A child-spirit figure associated with protection and good fortune. Literary accounts and present-day devotional figures belong to different contexts. Devotees may offer food, drinks, or toys as part of caring for the figure.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: magic in Khun Chang Khun Paen",
+        "u": "https://www.silpa-mag.com/culture/article_166096"
+      }
+    ],
+    "img": "กุมารทอง",
+    "id": "term-15",
+    "searchName": "Kuman Thong",
+    "essential": true
+  },
+  {
+    "sec": "Objects",
+    "term": "Palad Khik",
+    "th": "ปลัดขิก",
+    "d": "A phallic charm, commonly carved or cast. It is associated with protection, fertility, and prosperity. Its meanings and use vary across local traditions.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: palad khik",
+        "u": "https://www.silpa-mag.com/history/article_9760"
+      }
+    ],
+    "img": "ปลัดขิก",
+    "id": "term-21",
+    "searchName": "Palad Khik",
+    "essential": true
+  },
+  {
+    "sec": "Objects",
+    "term": "Yantra cloth",
+    "th": "ผ้ายันต์",
+    "d": "Cloth bearing sacred diagrams or inscriptions. It may be displayed in a home or shop, carried, or worn, according to the tradition in which it was made.",
+    "src": [
+      {
+        "n": "Matichon Weekly: Lanna yant",
+        "u": "https://www.matichon.co.th/weekly/column/article_453352"
+      }
+    ],
+    "img": "ผ้ายันต์",
+    "id": "term-22",
+    "searchName": "Pha Yant",
+    "essential": true
+  },
+  {
+    "sec": "Objects",
+    "term": "Ritual knife",
+    "th": "มีดหมอ",
+    "d": "A ritual knife used in Thai magical practice. It is associated with protective rites and the removal of harmful influences.",
+    "src": [
+      {
+        "n": "Thai dictionary: มีดหมอ",
+        "u": "https://dict.longdo.com/search/%E0%B8%A1%E0%B8%B5%E0%B8%94%E0%B8%AB%E0%B8%A1%E0%B8%AD"
+      }
+    ],
+    "img": "มีดหมอ",
+    "id": "term-28",
+    "searchName": "Mitmor",
+    "essential": true
+  },
+  {
+    "sec": "Objects",
+    "term": "Prayer beads",
+    "th": "ประคำ",
+    "d": "A string of beads used to count recitations or meditation repetitions. Beads may also be worn as a sacred object; bead counts vary.",
+    "src": [
+      {
+        "n": "Thai dictionary: ประคำ",
+        "u": "https://dict.longdo.com/search/%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%84%E0%B8%B3"
+      }
+    ],
+    "img": "ลูกประคำ เครื่องราง",
+    "id": "term-30",
+    "searchName": "Prakham",
+    "essential": true
+  },
+  {
+    "sec": "Objects",
+    "term": "Altar Buddha images",
+    "th": "พระบูชา",
+    "d": "A Buddha image intended for veneration on an altar or another dedicated place, rather than principally for wearing on the body.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: origin of amulets",
+        "u": "https://www.silpa-mag.com/culture/article_28483"
+      }
+    ],
+    "img": "พระบูชา",
+    "id": "term-35",
+    "searchName": "Phra Bucha",
+    "essential": true
+  },
+  {
+    "sec": "Objects",
+    "term": "Benjaphakhi",
+    "th": "เบญจภาคี",
+    "d": "A collectors’ grouping of five celebrated amulet types: Phra Somdet, Phra Rod, Phra Nang Phaya, Phra Phong Suphan, and Phra Sum Ko. It is a collecting convention, not a ranking of Buddhist spiritual attainment.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: Phra Rod and the Benjaphakhi",
+        "u": "https://www.silpa-mag.com/culture/article_136591"
+      }
+    ],
+    "img": "พระเบญจภาคี",
+    "id": "term-36",
+    "searchName": "Benjaphakhi",
+    "essential": true
+  },
+  {
+    "sec": "Objects",
+    "th": "วัตถุมงคล",
+    "term": "Auspicious sacred objects",
+    "d": "A broad term for objects regarded as sacred or auspicious, including amulets and charms.",
+    "src": [
+      {
+        "n": "Thai dictionary: วัตถุมงคล",
+        "u": "https://dict.longdo.com/search/%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%96%E0%B8%B8%E0%B8%A1%E0%B8%87%E0%B8%84%E0%B8%A5"
+      }
+    ],
+    "img": null,
+    "essential": true,
+    "id": "term-176",
+    "searchName": ""
+  },
+  {
+    "sec": "Objects",
+    "th": "ศาลพระภูมิ",
+    "term": "Spirit house",
+    "d": "A shrine for the protective spirit of a place. It is one kind of shrine encountered at Thai homes and other properties.",
+    "src": [
+      {
+        "n": "Thai dictionary: ศาลพระภูมิ",
+        "u": "https://dict.longdo.com/search/%E0%B8%A8%E0%B8%B2%E0%B8%A5%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A0%E0%B8%B9%E0%B8%A1%E0%B8%B4"
+      }
+    ],
+    "img": "ศาลพระภูมิ",
+    "essential": true,
+    "id": "term-178",
+    "searchName": ""
+  },
+  {
+    "sec": "Objects",
+    "term": "Phra Pidta",
+    "th": "พระปิดตา",
+    "d": "An amulet showing a seated figure covering its eyes. Some forms have additional hands covering other bodily openings. The different forms should not all be treated as the same iconographic type.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: maha ud",
+        "u": "https://www.silpa-mag.com/culture/article_131661"
+      }
+    ],
+    "img": "พระปิดตา",
+    "id": "term-6",
+    "searchName": "Phra Pidta",
+    "essential": false
+  },
+  {
+    "sec": "Objects",
+    "term": "Phra Kring",
+    "th": "พระกริ่ง",
+    "d": "A small Buddha image containing a pellet that rattles when shaken. The type is associated with the Medicine Buddha and is venerated in connection with health and protection.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: Medicine Buddha and phra kring",
+        "u": "https://www.silpa-mag.com/?p=47004"
+      }
+    ],
+    "img": "พระกริ่ง",
+    "id": "term-7",
+    "searchName": "Phra Kring",
+    "essential": false
+  },
+  {
+    "sec": "Objects",
+    "term": "Phra Upakut",
+    "th": "พระอุปคุต",
+    "d": "A revered monk of Buddhist legend, associated with protection and the overcoming of obstacles. Northern Thai traditions honour him through ceremonies including midnight almsgiving when a full moon falls on a Wednesday.",
+    "src": [
+      {
+        "n": "Matichon Weekly: Upakut traditions",
+        "u": "https://www.matichon.co.th/weekly/column/article_9405"
+      }
+    ],
+    "img": "พระอุปคุต",
+    "id": "term-9",
+    "searchName": "Phra Upakut",
+    "essential": false
+  },
+  {
+    "sec": "Objects",
+    "term": "Consecrated lip wax",
+    "th": "สีผึ้ง",
+    "d": "Wax-based lip balm. In charm traditions, a consecrated version is associated with favourable speech and attraction. Recipes vary; the word itself is also used for ordinary lip balm.",
+    "src": [
+      {
+        "n": "Thai dictionary: สีผึ้ง",
+        "u": "https://dict.longdo.com/search/%E0%B8%AA%E0%B8%B5%E0%B8%9C%E0%B8%B6%E0%B9%89%E0%B8%87"
+      },
+      {
+        "n": "Prakumkrong: si pueng and khi pueng",
+        "u": "https://prakumkrong.com/12266/"
+      }
+    ],
+    "img": "สีผึ้ง เครื่องราง",
+    "id": "term-13",
+    "searchName": "Si Pueng",
+    "essential": false
+  },
+  {
+    "sec": "Objects",
+    "term": "Hun Phayon",
+    "th": "หุ่นพยนต์",
+    "d": "A human-shaped effigy consecrated as a guardian. It can be made from woven or moulded materials and is associated with protecting a home or its owner.",
+    "src": [
+      {
+        "n": "Naewna: hoon payon",
+        "u": "https://www.naewna.com/n/?p=40423"
+      }
+    ],
+    "img": "หุ่นพยนต์",
+    "id": "term-16",
+    "searchName": "Hun Phayon",
+    "essential": false
+  },
+  {
+    "sec": "Objects",
+    "term": "Rak Yom",
+    "th": "รักยม",
+    "d": "A pair of small child figures traditionally made from two kinds of wood, rak and mayom. They are kept as charms associated with affection and favourable regard.",
+    "src": [
+      {
+        "n": "Thai dictionary: รักยม",
+        "u": "https://dict.longdo.com/search/%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A2%E0%B8%A1"
+      }
+    ],
+    "img": "รักยม",
+    "id": "term-17",
+    "searchName": "Rak Yom",
+    "essential": false
+  },
+  {
+    "sec": "Objects",
+    "term": "Yantra shirt",
+    "th": "เสื้อยันต์",
+    "d": "A shirt or vest bearing sacred diagrams and inscriptions. Traditionally associated with protection in conflict.",
+    "src": [
+      {
+        "n": "Thai dictionary: เสื้อยันต์",
+        "u": "https://dict.longdo.com/search/%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%A2%E0%B8%B1%E0%B8%99%E0%B8%95%E0%B9%8C"
+      },
+      {
+        "n": "Silpa Watthanatham: charms of gangsters",
+        "u": "https://www.silpa-mag.com/culture/article_19675"
+      }
+    ],
+    "img": "เสื้อยันต์",
+    "id": "term-23",
+    "searchName": "Sua Yant",
+    "essential": false
+  },
+  {
+    "sec": "Objects",
+    "term": "Spirit oil",
+    "th": "น้ำมันพราย",
+    "d": "An oil associated in Thai folklore and accounts of sorcery with human remains and spirit power. It appears particularly in stories of attraction magic. The name is not proof of the contents of a commercial product.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: making nam man prai",
+        "u": "https://www.silpa-mag.com/culture/article_103331"
+      }
+    ],
+    "img": null,
+    "id": "term-24",
+    "searchName": "Nam Man Prai",
+    "essential": false
+  },
+  {
+    "sec": "Objects",
+    "term": "Inscribing stylus",
+    "th": "เหล็กจาร",
+    "d": "A pointed metal stylus used to incise writing, including inscriptions on palm leaves or metal sheets.",
+    "src": [
+      {
+        "n": "Thai dictionary: เหล็กจาร",
+        "u": "https://dict.longdo.com/search/%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B9%87%E0%B8%81%E0%B8%88%E0%B8%B2%E0%B8%A3"
+      }
+    ],
+    "img": "เหล็กจาร",
+    "id": "term-29",
+    "searchName": "Lek Jaan",
+    "essential": false
+  },
+  {
+    "sec": "Objects",
+    "term": "Cast images",
+    "th": "รูปหล่อ",
+    "d": "A cast image, often of a revered monk. Small examples may be worn as amulets; larger ones can be kept on an altar.",
+    "src": [
+      {
+        "n": "Thai dictionary: รูปหล่อ",
+        "u": "https://dict.longdo.com/search/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%AB%E0%B8%A5%E0%B9%88%E0%B8%AD"
+      }
+    ],
+    "img": "รูปหล่อ หลวงพ่อ",
+    "id": "term-34",
+    "searchName": "Roop Lor",
+    "essential": false
+  },
+  {
+    "sec": "Objects",
+    "term": "Jatukham Ramathep",
+    "th": "จตุคามรามเทพ",
+    "d": "Sacred figures associated with Nakhon Si Thammarat and its relic stupa. Amulets bearing this name became especially prominent during the nationwide collecting boom of the 2000s.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: Jatukham",
+        "u": "https://www.silpa-mag.com/culture/article_100912"
+      }
+    ],
+    "img": "จตุคามรามเทพ",
+    "id": "term-37",
+    "searchName": "Jatukham Rammathep",
+    "essential": false
+  },
+  {
+    "sec": "Objects",
+    "term": "Protective armband",
+    "th": "ประเจียด",
+    "d": "A protective cloth traditionally worn around the upper arm, often bearing sacred inscriptions. Related armbands remain part of Muay Thai practice.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: Taksin's pha prajiad",
+        "u": "https://www.silpa-mag.com/?p=36619"
+      }
+    ],
+    "img": "ประเจียด มวยไทย",
+    "id": "term-38",
+    "searchName": "Prajiad",
+    "essential": false
+  },
+  {
+    "sec": "Objects",
+    "term": "Mongkhon headband",
+    "th": "มงคล",
+    "d": "An auspicious or sacred object; in Muay Thai, the word refers to the headband worn during the pre-fight ceremony. The ordinary Thai word also means auspiciousness.",
+    "src": [
+      {
+        "n": "Thai dictionary: มงคล",
+        "u": "https://dict.longdo.com/search/%E0%B8%A1%E0%B8%87%E0%B8%84%E0%B8%A5"
+      }
+    ],
+    "img": "มงคล มวยไทย",
+    "id": "term-39",
+    "searchName": "Mongkhon",
+    "essential": false
+  },
+  {
+    "sec": "Objects",
+    "term": "Chalaeo",
+    "th": "เฉลว",
+    "d": "A woven bamboo marker used in practices including traditional medicine and the marking or protection of ritual space. Its pattern and purpose vary by locality.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: chalaew",
+        "u": "https://www.silpa-mag.com/culture/article_137384"
+      }
+    ],
+    "img": "เฉลว",
+    "id": "term-41",
+    "searchName": "Chalaew",
+    "essential": false
+  },
+  {
+    "sec": "Objects",
+    "th": "พระธาตุ",
+    "term": "Relics",
+    "d": "Sacred relics, especially remains associated with the Buddha or revered Buddhist practitioners. The word can also appear in the name of a shrine or stupa containing relics.",
+    "src": [
+      {
+        "n": "Thai dictionary: พระธาตุ",
+        "u": "https://dict.longdo.com/search/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%98%E0%B8%B2%E0%B8%95%E0%B8%B8"
+      },
+      {
+        "n": "Sirindhorn Anthropology Centre: relics and society",
+        "u": "https://www.sac.or.th/portal/th/article/detail/828"
+      }
+    ],
+    "img": "พระธาตุ เจดีย์",
+    "essential": false,
+    "id": "term-177",
+    "searchName": ""
+  },
+  {
+    "sec": "Animals",
+    "term": "Salika bird charm",
+    "th": "สาลิกา",
+    "d": "A bird motif associated with pleasing or persuasive speech. In charm traditions, it appears in forms such as paired birds and the “golden tongue” motif.",
+    "src": [
+      {
+        "n": "Thai dictionary: สาลิกา",
+        "u": "https://dict.longdo.com/search/%E0%B8%AA%E0%B8%B2%E0%B8%A5%E0%B8%B4%E0%B8%81%E0%B8%B2"
+      },
+      {
+        "n": "Sirindhorn Anthropology Centre: transcription of a ritual manuscript",
+        "u": "https://manuscripts.sac.or.th/article-download.php?id=53"
+      }
+    ],
+    "img": "สาลิกาลิ้นทอง เครื่องราง",
+    "id": "term-48",
+    "searchName": "Salika",
+    "essential": true
+  },
+  {
+    "sec": "Animals",
+    "term": "Turtle charm",
+    "th": "พญาเต่าเรือน",
+    "d": "A turtle-shaped charm associated with longevity, prosperity, and protection. It is a familiar animal form in Thai amulet traditions.",
+    "src": [
+      {
+        "n": "Sanook: animal charms",
+        "u": "http://www.sanook.com/horoscope/116249/"
+      }
+    ],
+    "img": "พญาเต่าเรือน",
+    "id": "term-42",
+    "searchName": "Phaya Tao Ruean",
+    "essential": false
+  },
+  {
+    "sec": "Animals",
+    "term": "Barb-fish motif",
+    "th": "ปลาตะเพียน",
+    "d": "The barb fish, used as an auspicious motif. Woven fish mobiles and fish-shaped charms are associated with abundance and prosperity.",
+    "src": [
+      {
+        "n": "Sanook: animal charms",
+        "u": "http://www.sanook.com/horoscope/116249/"
+      }
+    ],
+    "img": "ปลาตะเพียน",
+    "id": "term-43",
+    "searchName": "Pla Taphian",
+    "essential": false
+  },
+  {
+    "sec": "Animals",
+    "term": "Wealth-trap charm",
+    "th": "ไซดักทรัพย์",
+    "d": "A miniature fish trap displayed as a charm for attracting wealth, especially in shops. Its symbolism draws on the idea of gathering and retaining what enters the trap.",
+    "src": [
+      {
+        "n": "Wongnai: charms for business",
+        "u": "https://www.wongnai.com/articles/thai-amulet-for-business"
+      }
+    ],
+    "img": "ไซดักทรัพย์",
+    "id": "term-44",
+    "searchName": "Sai Dak Sap",
+    "essential": false
+  },
+  {
+    "sec": "Animals",
+    "term": "Cowrie-shell charm",
+    "th": "เบี้ยแก้",
+    "d": "A cowrie-shell charm associated with protection against harmful magic. Some traditions seal ritual substances inside the shell and cover it with woven cord.",
+    "src": [
+      {
+        "n": "Sanook: animal charms",
+        "u": "http://www.sanook.com/horoscope/116249/"
+      }
+    ],
+    "img": "เบี้ยแก้",
+    "id": "term-45",
+    "searchName": "Bia Gae",
+    "essential": false
+  },
+  {
+    "sec": "Animals",
+    "term": "Pixiu",
+    "th": "ปี่เซียะ",
+    "d": "A Chinese auspicious creature also familiar in Thailand. Figures are associated with attracting and retaining wealth.",
+    "src": [
+      {
+        "n": "Wongnai: charms for business",
+        "u": "https://www.wongnai.com/articles/thai-amulet-for-business"
+      }
+    ],
+    "img": "ปี่เซียะ",
+    "id": "term-47",
+    "searchName": "Pi Xiu",
+    "essential": false
+  },
+  {
+    "sec": "Animals",
+    "term": "Tiger-fang charm",
+    "th": "เขี้ยวเสือ",
+    "d": "A tiger fang used as a traditional charm or carved into a small tiger figure. Such objects are associated with strength and protection.",
+    "src": [
+      {
+        "n": "Sirindhorn Anthropology Centre: tigers in old manuscripts",
+        "u": "https://www.sac.or.th/portal/th/article/detail/307"
+      }
+    ],
+    "img": "เขี้ยวเสือ แกะ",
+    "id": "term-50",
+    "searchName": "Khiao Suea",
+    "essential": false
+  },
+  {
+    "sec": "Purposes",
+    "term": "Invulnerability",
+    "th": "คงกระพันชาตรี",
+    "d": "A traditional expression for protection from weapons and bodily harm. In sacred tattoo and amulet practice, it names an attributed protective power.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: invulnerability arts",
+        "u": "https://www.silpa-mag.com/culture/article_132222"
+      }
+    ],
+    "img": null,
+    "id": "term-58",
+    "searchName": "Kong Krapan Chatri",
+    "essential": true
+  },
+  {
+    "sec": "Purposes",
+    "term": "Avoidance of danger",
+    "th": "แคล้วคลาด",
+    "d": "Escaping or avoiding danger. In amulet and tattoo descriptions, it refers to protection understood as harm missing the wearer.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: invulnerability arts",
+        "u": "https://www.silpa-mag.com/culture/article_132222"
+      }
+    ],
+    "img": null,
+    "id": "term-59",
+    "searchName": "Klaew Klaad",
+    "essential": true
+  },
+  {
+    "sec": "Purposes",
+    "term": "Goodwill and popularity",
+    "th": "เมตตามหานิยม",
+    "d": "A common amulet and tattoo purpose: attracting kindness, goodwill, and favourable regard. The phrase combines loving-kindness with popularity.",
+    "src": [
+      {
+        "n": "Matichon Weekly: Lanna yant",
+        "u": "https://www.matichon.co.th/weekly/column/article_453352"
+      }
+    ],
+    "img": null,
+    "id": "term-60",
+    "searchName": "Metta Maha Niyom",
+    "essential": true
+  },
+  {
+    "sec": "Purposes",
+    "term": "Attraction",
+    "th": "มหาเสน่ห์",
+    "d": "A term for strong attraction or personal allure, particularly in love-charms. It describes the intended effect attributed to a charm or practice.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: magic in Khun Chang Khun Paen",
+        "u": "https://www.silpa-mag.com/culture/article_166096"
+      }
+    ],
+    "img": null,
+    "id": "term-62",
+    "searchName": "Maha Saneh",
+    "essential": true
+  },
+  {
+    "sec": "Purposes",
+    "term": "Good fortune",
+    "th": "มหาลาภ",
+    "d": "“Great gain” or good fortune. In amulet descriptions, it expresses a wish for prosperity or favourable opportunities.",
+    "src": [
+      {
+        "n": "Wongnai: charms for business",
+        "u": "https://www.wongnai.com/articles/thai-amulet-for-business"
+      }
+    ],
+    "img": null,
+    "id": "term-56",
+    "searchName": "Maha Lap",
+    "essential": false
+  },
+  {
+    "sec": "Purposes",
+    "term": "Weapon-stopping protection",
+    "th": "มหาอุด",
+    "d": "A traditional protective power said to prevent a weapon from functioning. The term appears in accounts of incantations and protective amulets.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: maha ud",
+        "u": "https://www.silpa-mag.com/culture/article_131661"
+      }
+    ],
+    "img": null,
+    "id": "term-57",
+    "searchName": "Maha Ud",
+    "essential": false
+  },
+  {
+    "sec": "Purposes",
+    "term": "Popularity",
+    "th": "มหานิยม",
+    "d": "Popularity or favourable regard. In charm terminology, it describes the wish to be liked and well received by others.",
+    "src": [
+      {
+        "n": "Matichon Weekly: Lanna yant",
+        "u": "https://www.matichon.co.th/weekly/column/article_453352"
+      }
+    ],
+    "img": null,
+    "id": "term-61",
+    "searchName": "Maha Niyom",
+    "essential": false
+  },
+  {
+    "sec": "Purposes",
+    "term": "Spirit protection",
+    "th": "กันผี",
+    "d": "“To ward off ghosts.” A stated purpose of protective charms, sacred diagrams, and rites.",
+    "src": [
+      {
+        "n": "Matichon Weekly: Lanna yant",
+        "u": "https://www.matichon.co.th/weekly/column/article_453352"
+      }
+    ],
+    "img": null,
+    "id": "term-64",
+    "searchName": "Gun Phi",
+    "essential": false
+  },
+  {
+    "sec": "Purposes",
+    "term": "Golden tongue",
+    "th": "ลิ้นทอง",
+    "d": "“Golden tongue.” In charm terminology, a motif associated with attractive or persuasive speech.",
+    "src": [
+      {
+        "n": "Sirindhorn Anthropology Centre: transcription of a ritual manuscript",
+        "u": "https://manuscripts.sac.or.th/article-download.php?id=53"
+      }
+    ],
+    "img": null,
+    "id": "term-68",
+    "searchName": "Lin Thong",
+    "essential": false
+  },
+  {
+    "sec": "Purposes",
+    "term": "Wish-fulfilling jewel",
+    "th": "จินดามณี",
+    "d": "A wish-fulfilling jewel in religious and literary imagery. The name is also used for some sacred powders and charms.",
+    "src": [
+      {
+        "n": "Thai dictionary: จินดามณี",
+        "u": "https://dict.longdo.com/search/%E0%B8%88%E0%B8%B4%E0%B8%99%E0%B8%94%E0%B8%B2%E0%B8%A1%E0%B8%93%E0%B8%B5"
+      }
+    ],
+    "img": null,
+    "id": "term-69",
+    "searchName": "Jindamanee",
+    "essential": false
+  },
+  {
+    "sec": "Purposes",
+    "term": "Authority",
+    "th": "มหาอำนาจ",
+    "d": "“Great authority.” In amulet and tattoo descriptions, it refers to the wish for personal authority, influence, and respect.",
+    "src": [
+      {
+        "n": "Rajamangala University of Technology Suvarnabhumi: cultural research on Ko Kret",
+        "u": "https://rdi2.rmutsb.ac.th/2011/download/n60/12.pdf"
+      }
+    ],
+    "img": null,
+    "id": "term-70",
+    "searchName": "Maha Amnaj",
+    "essential": false
+  },
+  {
+    "sec": "Materials",
+    "term": "Amulet ingredients",
+    "th": "มวลสาร",
+    "d": "The ingredients or substances incorporated into an amulet. The term can cover both the main material and smaller additions valued for their ritual associations.",
+    "src": [
+      {
+        "n": "GotoKnow: muansarn in amulets",
+        "u": "https://www.gotoknow.org/posts/584835"
+      }
+    ],
+    "img": null,
+    "id": "term-71",
+    "searchName": "Muansarn",
+    "essential": true
+  },
+  {
+    "sec": "Materials",
+    "term": "Wan plants",
+    "th": "ว่าน",
+    "d": "A Thai plant category associated with medicinal, auspicious, or magical uses. Some are grown as sacred plants or incorporated into amulet mixtures.",
+    "src": [
+      {
+        "n": "Thai dictionary: ว่าน",
+        "u": "https://dict.longdo.com/search/%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%99"
+      }
+    ],
+    "img": null,
+    "id": "term-81",
+    "searchName": "Wan",
+    "essential": true
+  },
+  {
+    "sec": "Materials",
+    "term": "Sacred thread",
+    "th": "สายสิญจน์",
+    "d": "White thread used in religious ceremonies. It may connect participants or objects during chanting and blessing rites.",
+    "src": [
+      {
+        "n": "Thai dictionary: สายสิญจน์",
+        "u": "https://dict.longdo.com/search/%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B8%AA%E0%B8%B4%E0%B8%8D%E0%B8%88%E0%B8%99%E0%B9%8C"
+      }
+    ],
+    "img": "สายสิญจน์",
+    "id": "term-97",
+    "searchName": "Sai Sin",
+    "essential": true
+  },
+  {
+    "sec": "Materials",
+    "term": "Mercury",
+    "th": "ปรอท",
+    "d": "Mercury, a metallic element. It also appears in Thai traditions of alchemy and sacred objects, where extraordinary properties are attributed to it.",
+    "src": [
+      {
+        "n": "Thai dictionary: ปรอท",
+        "u": "https://dict.longdo.com/search/%E0%B8%9B%E0%B8%A3%E0%B8%AD%E0%B8%97"
+      },
+      {
+        "n": "Silpa Watthanatham: lek lai and phra parod",
+        "u": "https://www.silpa-mag.com/history/article_49990"
+      }
+    ],
+    "img": null,
+    "id": "term-87",
+    "searchName": "Parod",
+    "essential": false
+  },
+  {
+    "sec": "Materials",
+    "term": "Lek Lai",
+    "th": "เหล็กไหล",
+    "d": "A substance described in Thai belief as having extraordinary powers, often connected with caves and extraction rituals. The religious name does not identify a single scientifically established metal or mineral.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: lek lai and phra parod",
+        "u": "https://www.silpa-mag.com/history/article_49990"
+      }
+    ],
+    "img": "เหล็กไหล",
+    "id": "term-88",
+    "searchName": "Lek Lai",
+    "essential": false
+  },
+  {
+    "sec": "Materials",
+    "term": "Bronze",
+    "th": "สำริด",
+    "d": "Bronze, a copper-based alloy used for casting images and other objects.",
+    "src": [
+      {
+        "n": "Thai dictionary: สำริด",
+        "u": "https://dict.longdo.com/search/%E0%B8%AA%E0%B8%B3%E0%B8%A3%E0%B8%B4%E0%B8%94"
+      }
+    ],
+    "img": "พระเนื้อสำริด",
+    "id": "term-90",
+    "searchName": "Samrit",
+    "essential": false
+  },
+  {
+    "sec": "Materials",
+    "term": "Casting metal",
+    "th": "ชนวน",
+    "d": "Metal set aside for use in a sacred casting, including material from earlier castings or inscribed metal sheets. It is incorporated into a new image or amulet.",
+    "src": [
+      {
+        "n": "GotoKnow: muansarn in amulets",
+        "u": "https://www.gotoknow.org/posts/584835"
+      }
+    ],
+    "img": "พระเนื้อชนวน",
+    "id": "term-91",
+    "searchName": "Chanuan",
+    "essential": false
+  },
+  {
+    "sec": "Materials",
+    "term": "Lead",
+    "th": "ตะกั่ว",
+    "d": "Lead, a soft metal that can be formed into sheets or cast objects. It occurs among traditional amulet materials.",
+    "src": [
+      {
+        "n": "Thai dictionary: ตะกั่ว",
+        "u": "https://dict.longdo.com/search/%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7"
+      }
+    ],
+    "img": "ตะกรุดตะกั่ว",
+    "id": "term-92",
+    "searchName": "Takua",
+    "essential": false
+  },
+  {
+    "sec": "Materials",
+    "term": "Palm leaf",
+    "th": "ใบลาน",
+    "d": "Palm leaf prepared as a writing surface. Historically used for manuscripts, including religious texts.",
+    "src": [
+      {
+        "n": "Thai dictionary: ใบลาน",
+        "u": "https://dict.longdo.com/search/%E0%B9%83%E0%B8%9A%E0%B8%A5%E0%B8%B2%E0%B8%99"
+      }
+    ],
+    "img": "ตะกรุดใบลาน",
+    "id": "term-95",
+    "searchName": "Bai Lan",
+    "essential": false
+  },
+  {
+    "sec": "Materials",
+    "term": "Lac",
+    "th": "ครั่ง",
+    "d": "Lac, a resinous substance produced by lac insects. Used as a coating, adhesive, or sealing material. It is distinct from tree lacquer.",
+    "src": [
+      {
+        "n": "Thai dictionary: ครั่ง",
+        "u": "https://dict.longdo.com/search/%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B9%88%E0%B8%87"
+      },
+      {
+        "n": "Ubon Ratchathani University: lac",
+        "u": "https://phar.ubu.ac.th/herb-DetailThaicrudedrug/198"
+      }
+    ],
+    "img": "ครั่ง ยางไม้",
+    "id": "term-96",
+    "searchName": "Krang",
+    "essential": false
+  },
+  {
+    "sec": "Materials",
+    "term": "Nine-metal alloy",
+    "th": "นวโลหะ",
+    "d": "A traditional name for a nine-metal alloy used in sacred casting. The name refers to a prescribed material category, not a laboratory analysis of an individual object.",
+    "src": [
+      {
+        "n": "Thai dictionary: นวโลหะ",
+        "u": "https://dict.longdo.com/search/%E0%B8%99%E0%B8%A7%E0%B9%82%E0%B8%A5%E0%B8%AB%E0%B8%B0"
+      }
+    ],
+    "img": "พระเนื้อนวโลหะ",
+    "id": "term-106",
+    "searchName": "Nawaloha",
+    "essential": false
+  },
+  {
+    "sec": "Materials",
+    "term": "Nak alloy",
+    "th": "นาก",
+    "d": "A reddish alloy made with gold, silver, and copper. Used in jewellery and sacred metalwork.",
+    "src": [
+      {
+        "n": "Thai dictionary: นาก",
+        "u": "https://dict.longdo.com/search/%E0%B8%99%E0%B8%B2%E0%B8%81"
+      }
+    ],
+    "img": "พระเนื้อนาก",
+    "id": "term-107",
+    "searchName": "Nak (red gold)",
+    "essential": false
+  },
+  {
+    "sec": "Materials",
+    "term": "Tree lacquer",
+    "th": "รัก",
+    "d": "Tree lacquer used as a coating or adhesive, including in gilding. In descriptions of sacred objects, it refers to the lacquer material.",
+    "src": [
+      {
+        "n": "Thai dictionary: รัก",
+        "u": "https://dict.longdo.com/search/%E0%B8%A3%E0%B8%B1%E0%B8%81"
+      }
+    ],
+    "img": null,
+    "id": "term-108",
+    "searchName": "Rak",
+    "essential": false
+  },
+  {
+    "sec": "Materials",
+    "term": "Fired clay",
+    "th": "ดินเผา",
+    "d": "Clay hardened by firing. Used for pottery, votive tablets, and other objects.",
+    "src": [
+      {
+        "n": "Thai dictionary: ดินเผา",
+        "u": "https://dict.longdo.com/search/%E0%B8%94%E0%B8%B4%E0%B8%99%E0%B9%80%E0%B8%9C%E0%B8%B2"
+      }
+    ],
+    "img": null,
+    "id": "term-172",
+    "searchName": "Din Pao",
+    "essential": false
+  },
+  {
+    "sec": "Materials",
+    "term": "Copper",
+    "th": "ทองแดง",
+    "d": "Copper, a reddish metal widely used in casting and metalwork.",
+    "src": [
+      {
+        "n": "Thai dictionary: ทองแดง",
+        "u": "https://dict.longdo.com/search/%E0%B8%97%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%94%E0%B8%87"
+      }
+    ],
+    "img": null,
+    "id": "term-174",
+    "searchName": "Thong Daeng",
+    "essential": false
+  },
+  {
+    "sec": "Materials",
+    "th": "ผง",
+    "term": "Powder",
+    "d": "Powder. In an amulet description, it indicates a powder-based material; the word alone does not specify the ingredients.",
+    "src": [
+      {
+        "n": "Thai dictionary: ผง",
+        "u": "https://dict.longdo.com/search/%E0%B8%9C%E0%B8%87"
+      }
+    ],
+    "img": "พระผง",
+    "essential": false,
+    "id": "term-179",
+    "searchName": ""
+  },
+  {
+    "sec": "Materials",
+    "th": "ผงวิเศษ",
+    "term": "Sacred powder",
+    "d": "Powder prepared through ritual practices such as writing and erasing sacred characters. Named powder traditions are used in the making of some amulets.",
+    "src": [
+      {
+        "n": "Post Today: the five sacred powders",
+        "u": "https://www.posttoday.com/dhamma/596209"
+      }
+    ],
+    "img": null,
+    "essential": false,
+    "id": "term-180",
+    "searchName": ""
+  },
+  {
+    "sec": "Materials",
+    "th": "เงิน",
+    "term": "Silver",
+    "d": "Silver. In everyday Thai the same word also means money; in a material description it refers to the metal.",
+    "src": [
+      {
+        "n": "Thai dictionary: เงิน",
+        "u": "https://dict.longdo.com/search/%E0%B9%80%E0%B8%87%E0%B8%B4%E0%B8%99"
+      }
+    ],
+    "img": "พระเครื่อง เนื้อเงิน",
+    "essential": false,
+    "id": "term-181",
+    "searchName": ""
+  },
+  {
+    "sec": "Materials",
+    "th": "ทองเหลือง",
+    "term": "Brass",
+    "d": "An alloy of copper and zinc, used in images, medallions, and other metal objects.",
+    "src": [
+      {
+        "n": "Thai dictionary: ทองเหลือง",
+        "u": "https://dict.longdo.com/search/%E0%B8%97%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%87"
+      }
+    ],
+    "img": "พระเครื่อง ทองเหลือง",
+    "essential": false,
+    "id": "term-182",
+    "searchName": ""
+  },
+  {
+    "sec": "Spirits",
+    "term": "Naga",
+    "th": "นาค",
+    "d": "A great serpent being in Buddhist and other South and Southeast Asian traditions. Naga imagery appears in Thai temples, amulets, and sacred designs.",
+    "src": [
+      {
+        "n": "Thai dictionary: นาค",
+        "u": "https://dict.longdo.com/search/%E0%B8%99%E0%B8%B2%E0%B8%84"
+      }
+    ],
+    "img": "พญานาค เครื่องราง",
+    "id": "term-102",
+    "searchName": "Nak (naga)",
+    "essential": true
+  },
+  {
+    "sec": "Spirits",
+    "term": "Hanuman",
+    "th": "หนุมาน",
+    "d": "The monkey warrior of the Ramakien, the Thai telling of the Ramayana. His image is used in amulets and sacred tattoos, commonly associated with courage and strength.",
+    "src": [
+      {
+        "n": "Nakhon Pathom Rajabhat University: Wat Bang Phra tattoo traditions",
+        "u": "https://arit.npru.ac.th/npdata/index.php?act=6a992d5529f459a44fee58c733255e86&lntype=editor_left&slm_id=1802"
+      }
+    ],
+    "img": "หนุมาน เครื่องราง",
+    "id": "term-118",
+    "searchName": "Hanuman",
+    "essential": true
+  },
+  {
+    "sec": "Spirits",
+    "term": "Beckoning lady",
+    "th": "นางกวัก",
+    "d": "The beckoning female figure often displayed in shops. She is associated with attracting customers and prosperity. Stories about her origin are devotional legends.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: Nang Kwak",
+        "u": "https://www.silpa-mag.com/culture/article_130165"
+      }
+    ],
+    "img": "นางกวัก",
+    "id": "term-119",
+    "searchName": "Nang Kwak",
+    "essential": true
+  },
+  {
+    "sec": "Spirits",
+    "term": "Hermit sage",
+    "th": "ฤๅษี",
+    "d": "A hermit or ascetic sage. Such figures are honoured as teachers in traditions of ritual knowledge, healing, and the arts.",
+    "src": [
+      {
+        "n": "Thai dictionary: ฤๅษี",
+        "u": "https://dict.longdo.com/search/%E0%B8%A4%E0%B9%85%E0%B8%A9%E0%B8%B5"
+      },
+      {
+        "n": "Silpa Watthanatham: spirit and human teachers",
+        "u": "https://www.silpa-mag.com/history/article_14573"
+      }
+    ],
+    "img": "ฤๅษี",
+    "id": "term-122",
+    "searchName": "Ruesi",
+    "essential": true
+  },
+  {
+    "sec": "Spirits",
+    "term": "Ganesha",
+    "th": "พระพิฆเนศ",
+    "d": "Ganesha, the elephant-headed Hindu deity associated with wisdom, beginnings, and the removal of obstacles. Widely honoured in Thailand, especially in connection with the arts and success.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: Ganesha",
+        "u": "https://www.silpa-mag.com/culture/article_127229"
+      }
+    ],
+    "img": "พระพิฆเนศ",
+    "id": "term-127",
+    "searchName": "Phra Phikanet",
+    "essential": true
+  },
+  {
+    "sec": "Spirits",
+    "term": "Thao Wessuwan",
+    "th": "ท้าวเวสสุวรรณ",
+    "d": "The guardian king of the north and a protector in Buddhist tradition. Commonly depicted as a powerful yaksha holding a club; venerated for protection and prosperity.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: Thao Wessuwan",
+        "u": "https://www.silpa-mag.com/culture/article_141136"
+      }
+    ],
+    "img": "ท้าวเวสสุวรรณ",
+    "id": "term-128",
+    "searchName": "Thao Wessuwan",
+    "essential": true
+  },
+  {
+    "sec": "Spirits",
+    "th": "ผี",
+    "term": "Ghost or spirit",
+    "d": "A broad Thai word for a ghost or spirit. Different traditions describe many kinds, including spirits of the dead and spirits associated with places.",
+    "src": [
+      {
+        "n": "Thai dictionary: ผี",
+        "u": "https://dict.longdo.com/search/%E0%B8%9C%E0%B8%B5"
+      }
+    ],
+    "img": null,
+    "essential": true,
+    "id": "term-183",
+    "searchName": ""
+  },
+  {
+    "sec": "Spirits",
+    "th": "เจ้าที่",
+    "term": "Spirit of a place",
+    "d": "A spirit associated with a particular place. Offerings or shrines may acknowledge its presence and seek a harmonious relationship with it.",
+    "src": [
+      {
+        "n": "Thai dictionary: เจ้าที่",
+        "u": "https://dict.longdo.com/search/%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%97%E0%B8%B5%E0%B9%88"
+      }
+    ],
+    "img": null,
+    "essential": true,
+    "id": "term-184",
+    "searchName": ""
+  },
+  {
+    "sec": "Spirits",
+    "term": "Shapeshifting tiger",
+    "th": "เสือสมิง",
+    "d": "A shapeshifting tiger of Thai folklore. Stories describe either a person becoming a tiger or a tiger taking human form. The details vary among regional traditions.",
+    "src": [
+      {
+        "n": "Sirindhorn Anthropology Centre: tigers in old manuscripts",
+        "u": "https://www.sac.or.th/portal/th/article/detail/307"
+      }
+    ],
+    "img": "เสือสมิง เครื่องราง",
+    "id": "term-54",
+    "searchName": "Suea Saming",
+    "essential": false
+  },
+  {
+    "sec": "Spirits",
+    "term": "Prai spirit",
+    "th": "พราย",
+    "d": "A spirit in Thai folklore and magical traditions. In amulet descriptions, the word can indicate an association with spirits or spirit-related materials; its meaning depends on context.",
+    "src": [
+      {
+        "n": "Thai dictionary: พราย",
+        "u": "https://dict.longdo.com/search/%E0%B8%9E%E0%B8%A3%E0%B8%B2%E0%B8%A2"
+      },
+      {
+        "n": "Silpa Watthanatham: charms of gangsters",
+        "u": "https://www.silpa-mag.com/culture/article_19675"
+      }
+    ],
+    "img": null,
+    "id": "term-72",
+    "searchName": "Prai",
+    "essential": false
+  },
+  {
+    "sec": "Spirits",
+    "term": "Ghost of a violent death",
+    "th": "ผีตายโหง",
+    "d": "The ghost of a person who died violently or suddenly, in Thai popular belief.",
+    "src": [
+      {
+        "n": "Thai dictionary: ผีตายโหง",
+        "u": "https://dict.longdo.com/search/%E0%B8%9C%E0%B8%B5%E0%B8%95%E0%B8%B2%E0%B8%A2%E0%B9%82%E0%B8%AB%E0%B8%87"
+      }
+    ],
+    "img": null,
+    "id": "term-75",
+    "searchName": "Phi Tai Hong",
+    "essential": false
+  },
+  {
+    "sec": "Spirits",
+    "term": "Teacher spirits",
+    "th": "ผีครู",
+    "d": "Teacher spirits honoured within a particular tradition. The term may refer to deceased teachers or sacred patrons, depending on the lineage.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: spirit and human teachers",
+        "u": "https://www.silpa-mag.com/history/article_14573"
+      }
+    ],
+    "img": null,
+    "id": "term-109",
+    "searchName": "Phi Kru",
+    "essential": false
+  },
+  {
+    "sec": "Spirits",
+    "term": "Yaksha",
+    "th": "ยักษ์",
+    "d": "A giant or powerful supernatural being in Thai religious art and literature. Some appear as guardians at temples.",
+    "src": [
+      {
+        "n": "Thai dictionary: ยักษ์",
+        "u": "https://dict.longdo.com/search/%E0%B8%A2%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B9%8C"
+      }
+    ],
+    "img": "ยักษ์ วัด",
+    "id": "term-113",
+    "searchName": "Yak",
+    "essential": false
+  },
+  {
+    "sec": "Spirits",
+    "term": "Vishnu",
+    "th": "พระนารายณ์",
+    "d": "Vishnu, a major Hindu deity, known in Thai as Phra Narai. He appears in Thai religious art, royal symbolism, and some sacred objects.",
+    "src": [
+      {
+        "n": "Thai dictionary: พระนารายณ์",
+        "u": "https://dict.longdo.com/search/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C"
+      }
+    ],
+    "img": "พระนารายณ์",
+    "id": "term-115",
+    "searchName": "Phra Narai",
+    "essential": false
+  },
+  {
+    "sec": "Spirits",
+    "term": "Saraswati",
+    "th": "พระแม่สุรัสวดี",
+    "d": "Saraswati, a Hindu goddess associated with learning, music, and the arts.",
+    "src": [
+      {
+        "n": "Thai PBS: Saraswati Puja",
+        "u": "https://www.thaipbs.or.th/program/LokLakMiti/episodes/86770"
+      }
+    ],
+    "img": "พระแม่สุรัสวดี",
+    "id": "term-116",
+    "searchName": "Phra Mae Suraswati",
+    "essential": false
+  },
+  {
+    "sec": "Spirits",
+    "term": "Rahu",
+    "th": "ราหู",
+    "d": "A supernatural figure associated with eclipses, traditionally pictured swallowing the sun or moon. In Thai devotional practice, Rahu is also invoked in connection with misfortune and changes of fortune.",
+    "src": [
+      {
+        "n": "Thai dictionary: ราหู",
+        "u": "https://dict.longdo.com/search/%E0%B8%A3%E0%B8%B2%E0%B8%AB%E0%B8%B9"
+      },
+      {
+        "n": "Sirindhorn Anthropology Centre: Rahu in Lao Wiang belief",
+        "u": "https://ethnicity.sac.or.th/ethnic_research_detail?RES_ID=1464"
+      }
+    ],
+    "img": "พระราหู",
+    "id": "term-117",
+    "searchName": "Rahu",
+    "essential": false
+  },
+  {
+    "sec": "Spirits",
+    "term": "Celestial worshipper",
+    "th": "เทพพนม",
+    "d": "A celestial figure shown with hands joined in reverence. A familiar motif in Thai decorative and religious art.",
+    "src": [
+      {
+        "n": "Thai dictionary: เทพพนม",
+        "u": "https://dict.longdo.com/search/%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%9E%E0%B8%99%E0%B8%A1"
+      }
+    ],
+    "img": "เทพพนม",
+    "id": "term-121",
+    "searchName": "Thep Phanom",
+    "essential": false
+  },
+  {
+    "sec": "Spirits",
+    "term": "Pop spirit",
+    "th": "ผีปอบ",
+    "d": "A spirit in Thai popular belief said to enter a person and consume internal organs. It belongs to the vocabulary of folklore and possession stories.",
+    "src": [
+      {
+        "n": "Thai dictionary: ผีปอบ",
+        "u": "https://dict.longdo.com/search/%E0%B8%9C%E0%B8%B5%E0%B8%9B%E0%B8%AD%E0%B8%9A"
+      }
+    ],
+    "img": null,
+    "id": "term-124",
+    "searchName": "Phi Pob",
+    "essential": false
+  },
+  {
+    "sec": "Spirits",
+    "term": "Phra Sivali",
+    "th": "พระสีวลี",
+    "d": "An arahant disciple of the Buddha especially associated with receiving offerings and abundance. His images are venerated for prosperity and support on journeys.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: Nang Kwak",
+        "u": "https://www.silpa-mag.com/culture/article_130165"
+      }
+    ],
+    "img": "พระสีวลี",
+    "id": "term-125",
+    "searchName": "Phra Sivali",
+    "essential": false
+  },
+  {
+    "sec": "Spirits",
+    "term": "Phra Sangkajai",
+    "th": "พระสังกัจจายน์",
+    "d": "A plump monk figure identified in Thai tradition with the Buddha’s disciple Mahakaccana. It is venerated in connection with abundance and good fortune.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: Phra Sangkajai",
+        "u": "https://www.silpa-mag.com/culture/article_136469"
+      }
+    ],
+    "img": "พระสังกัจจายน์",
+    "id": "term-126",
+    "searchName": "Phra Sangkajai",
+    "essential": false
+  },
+  {
+    "sec": "Spirits",
+    "term": "Four Guardian Kings",
+    "th": "ท้าวจตุโลกบาล",
+    "d": "The Four Guardian Kings associated with the four cardinal directions in Buddhist cosmology. Thao Wessuwan is the guardian of the north.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: Thao Wessuwan",
+        "u": "https://www.silpa-mag.com/culture/article_141136"
+      }
+    ],
+    "img": "ท้าวจตุโลกบาล",
+    "id": "term-129",
+    "searchName": "Thao Jatulokaban",
+    "essential": false
+  },
+  {
+    "sec": "Spirits",
+    "term": "Ai Khai",
+    "th": "ไอ้ไข่",
+    "d": "A child-spirit figure associated with Wat Chedi in Nakhon Si Thammarat. Devotees seek good fortune and make offerings in fulfilment of vows.",
+    "src": [
+      {
+        "n": "Khaosod: Ai Khai",
+        "u": "https://www.khaosod.co.th/special-stories/news_4921017"
+      }
+    ],
+    "img": "ไอ้ไข่ วัดเจดีย์",
+    "id": "term-130",
+    "searchName": "Ai Khai",
+    "essential": false
+  },
+  {
+    "sec": "Spirits",
+    "term": "Infant guardian spirits",
+    "th": "แม่ซื้อ",
+    "d": "Spirits associated with babies in Thai belief. They may be understood as guardians or as beings who affect a child’s well-being. A documented tradition describes seven figures corresponding to the days of the week.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: Mae Sue",
+        "u": "https://www.silpa-mag.com/culture/article_162484"
+      }
+    ],
+    "img": "แม่ซื้อ",
+    "id": "term-131",
+    "searchName": "Mae Sue",
+    "essential": false
+  },
+  {
+    "sec": "Practice",
+    "term": "Incantation",
+    "th": "คาถา",
+    "d": "A verse or incantation recited in religious or magical practice. Many Thai ritual formulas use Pali; others include Thai or other languages.",
+    "src": [
+      {
+        "n": "Thai dictionary: คาถา",
+        "u": "https://dict.longdo.com/search/%E0%B8%84%E0%B8%B2%E0%B8%96%E0%B8%B2"
+      },
+      {
+        "n": "Thailand Cultural Encyclopedia: yantra",
+        "u": "https://db.sac.or.th/thailand-cultural-encyclopedia/detail.php?id=3534"
+      }
+    ],
+    "img": null,
+    "id": "term-132",
+    "searchName": "Kata",
+    "essential": true
+  },
+  {
+    "sec": "Practice",
+    "term": "Sacred diagram",
+    "th": "ยันต์",
+    "d": "A sacred diagram combining lines, letters, numbers, or images. It may be drawn, inscribed, printed, or tattooed. Its meaning and ritual use belong to the tradition in which it is made.",
+    "src": [
+      {
+        "n": "Thailand Cultural Encyclopedia: yantra",
+        "u": "https://db.sac.or.th/thailand-cultural-encyclopedia/detail.php?id=3534"
+      }
+    ],
+    "img": "ยันต์",
+    "id": "term-133",
+    "searchName": "Yant",
+    "essential": true
+  },
+  {
+    "sec": "Practice",
+    "term": "Khom script",
+    "th": "อักษรขอม",
+    "d": "A Khmer-derived writing tradition used in Thai religious manuscripts and sacred diagrams. It can write languages such as Pali; a script and the language written in it are different things.",
+    "src": [
+      {
+        "n": "Thailand Cultural Encyclopedia: yantra",
+        "u": "https://db.sac.or.th/thailand-cultural-encyclopedia/detail.php?id=3534"
+      }
+    ],
+    "img": "อักษรขอม",
+    "id": "term-136",
+    "searchName": "Aksorn Khom",
+    "essential": true
+  },
+  {
+    "sec": "Practice",
+    "term": "Ritual knowledge",
+    "th": "วิชา",
+    "d": "Knowledge or a field of study. In sacred practice, it can mean a body of ritual knowledge transmitted from teacher to student.",
+    "src": [
+      {
+        "n": "Thai dictionary: วิชา",
+        "u": "https://dict.longdo.com/search/%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2"
+      },
+      {
+        "n": "Silpa Watthanatham: magic in Khun Chang Khun Paen",
+        "u": "https://www.silpa-mag.com/culture/article_166096"
+      }
+    ],
+    "img": null,
+    "id": "term-137",
+    "searchName": "Wicha",
+    "essential": true
+  },
+  {
+    "sec": "Practice",
+    "term": "Consecration",
+    "th": "ปลุกเสก",
+    "d": "The consecration of an object through ritual, commonly involving recitation and concentrated intention. In the tradition, this establishes or strengthens its sacred power.",
+    "src": [
+      {
+        "n": "Thai dictionary: ปลุกเสก",
+        "u": "https://dict.longdo.com/search/%E0%B8%9B%E0%B8%A5%E0%B8%B8%E0%B8%81%E0%B9%80%E0%B8%AA%E0%B8%81"
+      },
+      {
+        "n": "Thailand Cultural Encyclopedia: sacred diagrams and tattooing",
+        "u": "https://db.sac.or.th/thailand-cultural-encyclopedia/detail.php?id=25729"
+      }
+    ],
+    "img": null,
+    "id": "term-140",
+    "searchName": "Pluk Sek",
+    "essential": true
+  },
+  {
+    "sec": "Practice",
+    "term": "Teacher-offering tray",
+    "th": "ขันครู",
+    "d": "An offering arrangement honouring teachers, particularly in northern Thai traditions. Its contents and the occasions on which it is presented depend on the practice.",
+    "src": [
+      {
+        "n": "Matichon Weekly: khan kru",
+        "u": "https://www.matichon.co.th/weekly/column/article_160353"
+      }
+    ],
+    "img": "ขันครู",
+    "id": "term-141",
+    "searchName": "Khan Kru",
+    "essential": true
+  },
+  {
+    "sec": "Practice",
+    "term": "Honouring teachers",
+    "th": "ไหว้ครู",
+    "d": "Paying respect to teachers. A wai khru ceremony honours living teachers and the teachers of a lineage. It is found in sacred tattooing and many other Thai arts.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: spirit and human teachers",
+        "u": "https://www.silpa-mag.com/history/article_14573"
+      },
+      {
+        "n": "Nakhon Pathom Rajabhat University: Wat Bang Phra tattoo traditions",
+        "u": "https://arit.npru.ac.th/npdata/index.php?act=6a992d5529f459a44fee58c733255e86&lntype=editor_left&slm_id=1802"
+      }
+    ],
+    "img": "พิธีไหว้ครู สักยันต์",
+    "id": "term-143",
+    "searchName": "Wai Kru",
+    "essential": true
+  },
+  {
+    "sec": "Practice",
+    "term": "Veneration",
+    "th": "บูชา",
+    "d": "To venerate or honour, often through offerings. In the context of sacred objects, the word is also used for acquiring an image or amulet.",
+    "src": [
+      {
+        "n": "Thai dictionary: บูชา",
+        "u": "https://dict.longdo.com/search/%E0%B8%9A%E0%B8%B9%E0%B8%8A%E0%B8%B2"
+      }
+    ],
+    "img": null,
+    "id": "term-144",
+    "searchName": "Bucha",
+    "essential": true
+  },
+  {
+    "sec": "Practice",
+    "term": "Blessed water",
+    "th": "น้ำมนต์",
+    "d": "Water blessed in a religious rite, commonly through chanting. It is used in ceremonies of blessing and purification.",
+    "src": [
+      {
+        "n": "Thai dictionary: น้ำมนต์",
+        "u": "https://dict.longdo.com/search/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A1%E0%B8%99%E0%B8%95%E0%B9%8C"
+      }
+    ],
+    "img": null,
+    "id": "term-145",
+    "searchName": "Nam Mon",
+    "essential": true
+  },
+  {
+    "sec": "Practice",
+    "term": "School or practice centre",
+    "th": "สำนัก",
+    "d": "An establishment, centre, or school. In this context it often refers to a teacher’s place of practice and instruction.",
+    "src": [
+      {
+        "n": "Thai dictionary: สำนัก",
+        "u": "https://dict.longdo.com/search/%E0%B8%AA%E0%B8%B3%E0%B8%99%E0%B8%B1%E0%B8%81"
+      }
+    ],
+    "img": null,
+    "id": "term-148",
+    "searchName": "Samnak",
+    "essential": true
+  },
+  {
+    "sec": "Practice",
+    "term": "Luang Pu",
+    "th": "หลวงปู่",
+    "d": "“Venerable grandfather.” A respectful form of address for an elderly monk.",
+    "src": [
+      {
+        "n": "Thai dictionary: หลวง",
+        "u": "https://dict.longdo.com/search/%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87"
+      }
+    ],
+    "img": null,
+    "id": "term-151",
+    "searchName": "Luang Pu",
+    "essential": true
+  },
+  {
+    "sec": "Practice",
+    "term": "Luang Pho",
+    "th": "หลวงพ่อ",
+    "d": "“Venerable father.” A respectful form of address for a monk; it is also used in the names of revered Buddha images.",
+    "src": [
+      {
+        "n": "Thai dictionary: หลวงพ่อ",
+        "u": "https://dict.longdo.com/search/%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87%E0%B8%9E%E0%B9%88%E0%B8%AD"
+      }
+    ],
+    "img": null,
+    "id": "term-152",
+    "searchName": "Luang Por",
+    "essential": true
+  },
+  {
+    "sec": "Practice",
+    "term": "Ritual master",
+    "th": "เกจิอาจารย์",
+    "d": "A teacher respected for knowledge of incantations and the consecration of sacred objects. The word is often used of monks associated with amulet traditions.",
+    "src": [
+      {
+        "n": "Thai dictionary: เกจิอาจารย์",
+        "u": "https://dict.longdo.com/search/%E0%B9%80%E0%B8%81%E0%B8%88%E0%B8%B4%E0%B8%AD%E0%B8%B2%E0%B8%88%E0%B8%B2%E0%B8%A3%E0%B8%A2%E0%B9%8C"
+      }
+    ],
+    "img": null,
+    "id": "term-154",
+    "searchName": "Keji Ajarn",
+    "essential": true
+  },
+  {
+    "sec": "Practice",
+    "term": "Rules of conduct",
+    "th": "ข้อห้าม",
+    "d": "Prohibitions or rules of conduct. In sacred tattoo and amulet traditions, these may include ethical commitments and lineage-specific observances. The relevant teacher explains the rules of that practice.",
+    "src": [
+      {
+        "n": "Nakhon Pathom Rajabhat University: Wat Bang Phra tattoo traditions",
+        "u": "https://arit.npru.ac.th/npdata/index.php?act=6a992d5529f459a44fee58c733255e86&lntype=editor_left&slm_id=1802"
+      }
+    ],
+    "img": null,
+    "id": "term-160",
+    "searchName": "Kho Ham",
+    "essential": true
+  },
+  {
+    "sec": "Practice",
+    "term": "Eight-direction yantra",
+    "th": "ยันต์แปดทิศ",
+    "d": "A sacred design associated with the eight directions: the four cardinal directions and the four intermediate ones. In tattoo traditions it is commonly linked with protection in every direction.",
+    "src": [
+      {
+        "n": "Nakhon Pathom Rajabhat University: Wat Bang Phra tattoo traditions",
+        "u": "https://arit.npru.ac.th/npdata/index.php?act=6a992d5529f459a44fee58c733255e86&lntype=editor_left&slm_id=1802"
+      }
+    ],
+    "img": "ยันต์แปดทิศ",
+    "id": "term-163",
+    "searchName": "Yant Paet Thit",
+    "essential": true
+  },
+  {
+    "sec": "Practice",
+    "th": "สักยันต์",
+    "term": "Sacred tattooing",
+    "d": "Tattooing sacred diagrams or inscriptions onto the body as part of a ritual tradition. Practised by monks and lay teachers; meanings, blessings, and observances depend on the lineage.",
+    "src": [
+      {
+        "n": "Silpa Watthanatham: sak yant as a charm",
+        "u": "https://www.silpa-mag.com/culture/article_156682"
+      }
+    ],
+    "img": "สักยันต์",
+    "essential": true,
+    "id": "term-185",
+    "searchName": ""
+  },
+  {
+    "sec": "Practice",
+    "th": "อาจารย์",
+    "term": "Teacher",
+    "d": "A teacher or instructor. In sacred tattoo and ritual contexts it is a respectful title for a teacher, whether ordained or lay.",
+    "src": [
+      {
+        "n": "Thai dictionary: อาจารย์",
+        "u": "https://dict.longdo.com/search/%E0%B8%AD%E0%B8%B2%E0%B8%88%E0%B8%B2%E0%B8%A3%E0%B8%A2%E0%B9%8C"
+      },
+      {
+        "n": "Nakhon Pathom Rajabhat University: Wat Bang Phra tattoo traditions",
+        "u": "https://arit.npru.ac.th/npdata/index.php?act=6a992d5529f459a44fee58c733255e86&lntype=editor_left&slm_id=1802"
+      }
+    ],
+    "img": null,
+    "essential": true,
+    "id": "term-186",
+    "searchName": ""
+  },
+  {
+    "sec": "Practice",
+    "th": "พุทธาภิเษก",
+    "term": "Buddhist consecration",
+    "d": "A Buddhist ceremony for consecrating images or sacred objects, involving monastic recitation and meditation.",
+    "src": [
+      {
+        "n": "Thai dictionary: พุทธาภิเษก",
+        "u": "https://dict.longdo.com/search/%E0%B8%9E%E0%B8%B8%E0%B8%97%E0%B8%98%E0%B8%B2%E0%B8%A0%E0%B8%B4%E0%B9%80%E0%B8%A9%E0%B8%81"
+      }
+    ],
+    "img": "พิธีพุทธาภิเษก",
+    "essential": true,
+    "id": "term-187",
+    "searchName": ""
+  },
+  {
+    "sec": "Practice",
+    "th": "อักขระ",
+    "term": "Letters and characters",
+    "d": "Written letters or characters. In a sacred diagram, individual characters can represent syllables or abbreviated formulas.",
+    "src": [
+      {
+        "n": "Thai dictionary: อักขระ",
+        "u": "https://dict.longdo.com/search/%E0%B8%AD%E0%B8%B1%E0%B8%81%E0%B8%82%E0%B8%A3%E0%B8%B0"
+      },
+      {
+        "n": "Thailand Cultural Encyclopedia: yantra",
+        "u": "https://db.sac.or.th/thailand-cultural-encyclopedia/detail.php?id=3534"
+      }
+    ],
+    "img": null,
+    "essential": true,
+    "id": "term-188",
+    "searchName": ""
+  },
+  {
+    "sec": "Practice",
+    "th": "บาลี",
+    "term": "Pali",
+    "d": "The language of the Theravada Buddhist scriptures and many chants. Pali can be written in several scripts, including Thai and Khom.",
+    "src": [
+      {
+        "n": "Thai dictionary: บาลี",
+        "u": "https://dict.longdo.com/search/%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%B5"
+      },
+      {
+        "n": "Thailand Cultural Encyclopedia: yantra",
+        "u": "https://db.sac.or.th/thailand-cultural-encyclopedia/detail.php?id=3534"
+      }
+    ],
+    "img": null,
+    "essential": true,
+    "id": "term-189",
+    "searchName": ""
+  },
+  {
+    "sec": "Practice",
+    "th": "ค่าครู",
+    "term": "Teacher offering",
+    "d": "An offering made in acknowledgement of a teacher and the knowledge received. In sacred tattoo practice it may accompany flowers, incense, and candles; arrangements vary by school.",
+    "src": [
+      {
+        "n": "Nakhon Pathom Rajabhat University: Wat Bang Phra tattoo traditions",
+        "u": "https://arit.npru.ac.th/npdata/index.php?act=6a992d5529f459a44fee58c733255e86&lntype=editor_left&slm_id=1802"
+      }
+    ],
+    "img": null,
+    "essential": true,
+    "id": "term-192",
+    "searchName": ""
+  },
+  {
+    "sec": "Practice",
+    "th": "ยันต์เก้ายอด",
+    "term": "Nine-spire yantra",
+    "d": "A sacred design with nine pointed spires. It is an important teacher-associated tattoo design at Wat Bang Phra and in related practice.",
+    "src": [
+      {
+        "n": "Nakhon Pathom Rajabhat University: Wat Bang Phra tattoo traditions",
+        "u": "https://arit.npru.ac.th/npdata/index.php?act=6a992d5529f459a44fee58c733255e86&lntype=editor_left&slm_id=1802"
+      }
+    ],
+    "img": "ยันต์เก้ายอด",
+    "essential": true,
+    "id": "term-193",
+    "searchName": ""
+  },
+  {
+    "sec": "Practice",
+    "th": "ยันต์ห้าแถว",
+    "term": "Five-line yantra",
+    "d": "A sacred tattoo arranged in five vertical lines of writing. A well-known modern tradition is associated with Ajarn Noo Kanphai. Its formulas and explanations depend on the teacher.",
+    "src": [
+      {
+        "n": "Chulalongkorn University: study of five-line tattoo beliefs",
+        "u": "https://cuir.car.chula.ac.th/handle/123456789/20300"
+      }
+    ],
+    "img": "ยันต์ห้าแถว",
+    "essential": true,
+    "id": "term-194",
+    "searchName": ""
+  },
+  {
+    "sec": "Practice",
+    "th": "บุญ",
+    "term": "Merit",
+    "d": "Good action and its beneficial results in Buddhist understanding. Generosity, ethical conduct, and mental cultivation are familiar ways of making merit.",
+    "src": [
+      {
+        "n": "Thai dictionary: บุญ",
+        "u": "https://dict.longdo.com/search/%E0%B8%9A%E0%B8%B8%E0%B8%8D"
+      }
+    ],
+    "img": null,
+    "essential": true,
+    "id": "term-195",
+    "searchName": ""
+  },
+  {
+    "sec": "Practice",
+    "th": "ศีล",
+    "term": "Ethical precepts",
+    "d": "Moral discipline and rules of conduct in Buddhism. The five lay precepts concern refraining from killing, stealing, sexual misconduct, false speech, and intoxicants that lead to heedlessness.",
+    "src": [
+      {
+        "n": "Thai dictionary: ศีล",
+        "u": "https://dict.longdo.com/search/%E0%B8%A8%E0%B8%B5%E0%B8%A5"
+      },
+      {
+        "n": "Thai dictionary: เบญจศีล",
+        "u": "https://dict.longdo.com/search/%E0%B9%80%E0%B8%9A%E0%B8%8D%E0%B8%88%E0%B8%A8%E0%B8%B5%E0%B8%A5"
+      }
+    ],
+    "img": null,
+    "essential": true,
+    "id": "term-196",
+    "searchName": ""
+  },
+  {
+    "sec": "Practice",
+    "th": "บารมี",
+    "term": "Spiritual qualities",
+    "d": "Virtues cultivated through practice. In Thai usage, the word can also express the moral stature or influence attributed to a respected person.",
+    "src": [
+      {
+        "n": "Thai dictionary: บารมี",
+        "u": "https://dict.longdo.com/search/%E0%B8%9A%E0%B8%B2%E0%B8%A3%E0%B8%A1%E0%B8%B5"
+      }
+    ],
+    "img": null,
+    "essential": true,
+    "id": "term-197",
+    "searchName": ""
+  },
+  {
+    "sec": "Practice",
+    "th": "พุทธคุณ",
+    "term": "Qualities of the Buddha",
+    "d": "The virtues of the Buddha. In amulet discourse, the word is also used for the blessings or protective qualities attributed to a Buddhist sacred object.",
+    "src": [
+      {
+        "n": "Thai dictionary: พุทธคุณ",
+        "u": "https://dict.longdo.com/search/%E0%B8%9E%E0%B8%B8%E0%B8%97%E0%B8%98%E0%B8%84%E0%B8%B8%E0%B8%93"
+      },
+      {
+        "n": "Silpa Watthanatham: khun sai sorcery",
+        "u": "https://www.silpa-mag.com/culture/article_75484"
+      }
+    ],
+    "img": null,
+    "essential": true,
+    "id": "term-198",
+    "searchName": ""
+  },
+  {
+    "sec": "Practice",
+    "term": "Heart formula",
+    "th": "หัวใจคาถา",
+    "d": "A short formula made from selected syllables of a longer sacred text or incantation. Such formulas appear in recitation and sacred diagrams.",
+    "src": [
+      {
+        "n": "Thailand Cultural Encyclopedia: yantra",
+        "u": "https://db.sac.or.th/thailand-cultural-encyclopedia/detail.php?id=3534"
+      }
+    ],
+    "img": null,
+    "id": "term-134",
+    "searchName": "Hua Chai Katha",
+    "essential": false
+  },
+  {
+    "sec": "Practice",
+    "term": "Magical arts",
+    "th": "ไสยศาสตร์",
+    "d": "The study or practice of magical arts and rites. It covers a range of practices; labels such as protective or harmful describe their intended use.",
+    "src": [
+      {
+        "n": "Thai dictionary: ไสยศาสตร์",
+        "u": "https://dict.longdo.com/search/%E0%B9%84%E0%B8%AA%E0%B8%A2%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C"
+      }
+    ],
+    "img": null,
+    "id": "term-138",
+    "searchName": "Saiyasat",
+    "essential": false
+  },
+  {
+    "sec": "Practice",
+    "term": "Fivefold offering",
+    "th": "ขันห้า",
+    "d": "An offering arrangement using sets of five, such as flowers and candles. Found in regional rites, including acts of respect to teachers and sacred beings.",
+    "src": [
+      {
+        "n": "Thailand Cultural Encyclopedia: a ritual use of khan ha",
+        "u": "https://db.sac.or.th/thailand-cultural-encyclopedia/detail.php?id=3975"
+      }
+    ],
+    "img": "ขันห้า บูชาครู",
+    "id": "term-142",
+    "searchName": "Khan Ha",
+    "essential": false
+  },
+  {
+    "sec": "Practice",
+    "term": "Saturday the Fifth",
+    "th": "เสาร์ห้า",
+    "d": "A Saturday coinciding with the fifth waxing or waning lunar day of the fifth Thai lunar month. Regarded in some traditions as an auspicious occasion for consecration.",
+    "src": [
+      {
+        "n": "Sanook: the lunar meaning of Sao Ha",
+        "u": "https://www.sanook.com/horoscope/240593/"
+      }
+    ],
+    "img": null,
+    "id": "term-147",
+    "searchName": "Sao Ha",
+    "essential": false
+  },
+  {
+    "sec": "Practice",
+    "term": "Revered teachers",
+    "th": "ครูบาอาจารย์",
+    "d": "A respectful expression for teachers. In ritual practice it can refer collectively to the teachers from whom a tradition is received.",
+    "src": [
+      {
+        "n": "Thai dictionary: ครูบาอาจารย์",
+        "u": "https://dict.longdo.com/search/%E0%B8%84%E0%B8%A3%E0%B8%B9%E0%B8%9A%E0%B8%B2%E0%B8%AD%E0%B8%B2%E0%B8%88%E0%B8%B2%E0%B8%A3%E0%B8%A2%E0%B9%8C"
+      }
+    ],
+    "img": null,
+    "id": "term-149",
+    "searchName": "Kruba Ajarn",
+    "essential": false
+  },
+  {
+    "sec": "Practice",
+    "term": "Kruba",
+    "th": "ครูบา",
+    "d": "An honorific used for respected monks, especially in northern Thailand.",
+    "src": [
+      {
+        "n": "Thai dictionary: ครูบา",
+        "u": "https://dict.longdo.com/search/%E0%B8%84%E0%B8%A3%E0%B8%B9%E0%B8%9A%E0%B8%B2"
+      }
+    ],
+    "img": null,
+    "id": "term-150",
+    "searchName": "Kruba",
+    "essential": false
+  },
+  {
+    "sec": "Practice",
+    "term": "Supernatural influence",
+    "th": "อาถรรพ์",
+    "d": "A mysterious or supernatural influence, often one believed to cause events or misfortune. The word also relates to protective or harmful magical rites.",
+    "src": [
+      {
+        "n": "Thai dictionary: อาถรรพ์",
+        "u": "https://dict.longdo.com/search/%E0%B8%AD%E0%B8%B2%E0%B8%96%E0%B8%A3%E0%B8%A3%E0%B8%9E%E0%B9%8C"
+      }
+    ],
+    "img": null,
+    "id": "term-156",
+    "searchName": "Atthan",
+    "essential": false
+  },
+  {
+    "sec": "Practice",
+    "term": "Homage to the Buddha",
+    "th": "นะโม ตัสสะ",
+    "d": "The opening words of a Pali homage to the Buddha. The homage is commonly recited three times before Buddhist chanting.",
+    "src": [
+      {
+        "n": "TrueplookPanya: Itipiso chant",
+        "u": "https://www.trueplookpanya.com/dhamma/content/86874"
+      }
+    ],
+    "img": null,
+    "id": "term-157",
+    "searchName": "Namo Tassa",
+    "essential": false
+  },
+  {
+    "sec": "Practice",
+    "term": "Recollection of the Buddha",
+    "th": "อิติปิโส",
+    "d": "The opening words of a Pali recollection of the Buddha’s qualities. In Thai usage the name also refers to a familiar chant, often recited together with recollections of the Dhamma and Sangha.",
+    "src": [
+      {
+        "n": "TrueplookPanya: Itipiso chant",
+        "u": "https://www.trueplookpanya.com/dhamma/content/86874"
+      }
+    ],
+    "img": null,
+    "id": "term-158",
+    "searchName": "Itipiso",
+    "essential": false
+  },
+  {
+    "sec": "Practice",
+    "term": "Amulet invocation",
+    "th": "คาถาอาราธนาพระ",
+    "d": "A formula recited when respectfully inviting the blessing or protection associated with a Buddhist amulet. The wording used can vary.",
+    "src": [
+      {
+        "n": "Thai dictionary: อาราธนา",
+        "u": "https://dict.longdo.com/search/%E0%B8%AD%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%98%E0%B8%99%E0%B8%B2"
+      },
+      {
+        "n": "National Office of Buddhism: prayer manual, amulet invocation",
+        "u": "https://mkm.onab.go.th/th/file/get/file/20220118d41d8cd98f00b204e9800998ecf8427e120054.pdf"
+      }
+    ],
+    "img": null,
+    "id": "term-159",
+    "searchName": "Kata Aratana Phra",
+    "essential": false
+  },
+  {
+    "sec": "Practice",
+    "term": "Wearing an amulet",
+    "th": "การห้อยพระ",
+    "d": "Wearing a Buddhist amulet suspended on a cord or necklace. Respectful handling is important; particular arrangements and observances differ between traditions.",
+    "src": [
+      {
+        "n": "Thai dictionary: ห้อย",
+        "u": "https://dict.longdo.com/search/%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%A2"
+      },
+      {
+        "n": "Silpa Watthanatham: origin of amulets",
+        "u": "https://www.silpa-mag.com/culture/article_28483"
+      }
+    ],
+    "img": null,
+    "id": "term-161",
+    "searchName": "Hoi Phra",
+    "essential": false
+  },
+  {
+    "sec": "Practice",
+    "term": "Magical knowledge",
+    "th": "อาคม",
+    "d": "Magical knowledge or incantations. Often used together with the word for incantation in the expression คาถาอาคม.",
+    "src": [
+      {
+        "n": "Thai dictionary: อาคม",
+        "u": "https://dict.longdo.com/search/%E0%B8%AD%E0%B8%B2%E0%B8%84%E0%B8%A1"
+      }
+    ],
+    "img": null,
+    "id": "term-162",
+    "searchName": "Akhom",
+    "essential": false
+  },
+  {
+    "sec": "Practice",
+    "th": "อักษรธรรมล้านนา",
+    "term": "Lanna Tham script",
+    "d": "A script used in northern Thai religious manuscripts and some sacred diagrams. It is distinct from the modern Thai script used for the headwords in this glossary.",
+    "src": [
+      {
+        "n": "Matichon Weekly: Lanna yant",
+        "u": "https://www.matichon.co.th/weekly/column/article_453352"
+      }
+    ],
+    "img": "อักษรธรรมล้านนา",
+    "essential": false,
+    "id": "term-190",
+    "searchName": ""
+  },
+  {
+    "sec": "Practice",
+    "th": "ลงยันต์",
+    "term": "Inscribing a yantra",
+    "d": "To write or inscribe a sacred diagram. In traditional practice, this involves prescribed forms and ritual recitation.",
+    "src": [
+      {
+        "n": "Thailand Cultural Encyclopedia: yantra",
+        "u": "https://db.sac.or.th/thailand-cultural-encyclopedia/detail.php?id=3534"
+      }
+    ],
+    "img": null,
+    "essential": false,
+    "id": "term-191",
+    "searchName": ""
+  },
+  {
+    "sec": "Naming",
+    "term": "Material",
+    "th": "เนื้อ",
+    "d": "The material or substance of an object. In an amulet description, it identifies what the piece is made from, such as clay, powder, or metal.",
+    "src": [
+      {
+        "n": "Thai dictionary: เนื้อ",
+        "u": "https://dict.longdo.com/search/%E0%B9%80%E0%B8%99%E0%B8%B7%E0%B9%89%E0%B8%AD"
+      }
+    ],
+    "img": null,
+    "id": "term-164",
+    "searchName": "Nuea",
+    "essential": true
+  },
+  {
+    "sec": "Naming",
+    "term": "Edition or batch",
+    "th": "รุ่น",
+    "d": "An edition, series, or production batch. Amulet descriptions use it to distinguish one issue from another.",
+    "src": [
+      {
+        "n": "Thai dictionary: รุ่น",
+        "u": "https://dict.longdo.com/search/%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99"
+      }
+    ],
+    "img": null,
+    "id": "term-165",
+    "searchName": "Roon",
+    "essential": true
+  },
+  {
+    "sec": "Naming",
+    "term": "Mould or design type",
+    "th": "พิมพ์",
+    "d": "A mould or the design produced from it. In collecting, the word distinguishes an amulet’s design or mould type.",
+    "src": [
+      {
+        "n": "Thai dictionary: พิมพ์",
+        "u": "https://dict.longdo.com/search/%E0%B8%9E%E0%B8%B4%E0%B8%A1%E0%B8%9E%E0%B9%8C"
+      }
+    ],
+    "img": null,
+    "id": "term-167",
+    "searchName": "Pim",
+    "essential": true
+  },
+  {
+    "sec": "Naming",
+    "th": "เช่าพระ",
+    "term": "Acquiring an amulet",
+    "d": "A respectful expression for acquiring a Buddhist amulet. Although the verb ordinarily means “rent,” this usage does not necessarily imply a temporary loan.",
+    "src": [
+      {
+        "n": "Thai dictionary: เช่า",
+        "u": "https://dict.longdo.com/search/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2"
+      },
+      {
+        "n": "Thai dictionary: บูชา",
+        "u": "https://dict.longdo.com/search/%E0%B8%9A%E0%B8%B9%E0%B8%8A%E0%B8%B2"
+      }
+    ],
+    "img": null,
+    "essential": true,
+    "id": "term-199",
+    "searchName": ""
+  },
+  {
+    "sec": "Naming",
+    "term": "Wealthy person",
+    "th": "เศรษฐี",
+    "d": "A wealthy person. In the name of an amulet or sacred design, the word evokes wealth and prosperity.",
+    "src": [
+      {
+        "n": "Thai dictionary: เศรษฐี",
+        "u": "https://dict.longdo.com/search/%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B8%A9%E0%B8%90%E0%B8%B5"
+      }
+    ],
+    "img": null,
+    "id": "term-67",
+    "searchName": "Setthi",
+    "essential": false
+  },
+  {
+    "sec": "Naming",
+    "term": "First edition",
+    "th": "รุ่นแรก",
+    "d": "The first edition or production batch. It identifies order of issue and does not by itself establish authenticity, quality, or value.",
+    "src": [
+      {
+        "n": "Thai dictionary: รุ่น",
+        "u": "https://dict.longdo.com/search/%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99"
+      }
+    ],
+    "img": null,
+    "id": "term-166",
+    "searchName": "Roon Rek",
+    "essential": false
+  },
+  {
+    "sec": "Naming",
+    "term": "Special",
+    "th": "พิเศษ",
+    "d": "Special or different from the ordinary version. In an object’s name it may distinguish a particular edition or feature.",
+    "src": [
+      {
+        "n": "Thai dictionary: พิเศษ",
+        "u": "https://dict.longdo.com/search/%E0%B8%9E%E0%B8%B4%E0%B9%80%E0%B8%A8%E0%B8%A9"
+      }
+    ],
+    "img": null,
+    "id": "term-168",
+    "searchName": "Piset",
+    "essential": false
+  },
+  {
+    "sec": "Naming",
+    "term": "Old or traditional",
+    "th": "โบราณ",
+    "d": "Old, ancient, or traditional, depending on context. The word in a title does not establish an object’s age.",
+    "src": [
+      {
+        "n": "Thai dictionary: โบราณ",
+        "u": "https://dict.longdo.com/search/%E0%B9%82%E0%B8%9A%E0%B8%A3%E0%B8%B2%E0%B8%93"
+      }
+    ],
+    "img": null,
+    "id": "term-169",
+    "searchName": "Boran",
+    "essential": false
+  },
+  {
+    "sec": "Naming",
+    "term": "Large set",
+    "th": "ชุดใหญ่",
+    "d": "A large set. A descriptive phrase used to distinguish a set from a smaller one.",
+    "src": [
+      {
+        "n": "Thai dictionary: ชุด",
+        "u": "https://dict.longdo.com/search/%E0%B8%8A%E0%B8%B8%E0%B8%94"
+      },
+      {
+        "n": "Thai dictionary: ใหญ่",
+        "u": "https://dict.longdo.com/search/%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88"
+      }
+    ],
+    "img": null,
+    "id": "term-170",
+    "searchName": "Chut Yai",
+    "essential": false
+  },
+  {
+    "sec": "Naming",
+    "term": "Committee edition",
+    "th": "กรรมการ",
+    "d": "A committee or committee member. In an amulet title, it commonly identifies an edition associated with the organising committee.",
+    "src": [
+      {
+        "n": "Thai dictionary: กรรมการ",
+        "u": "https://dict.longdo.com/search/%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3"
+      }
+    ],
+    "img": null,
+    "id": "term-171",
+    "searchName": "Gamakan",
+    "essential": false
+  },
+  {
+    "sec": "Naming",
+    "term": "Gold-plated",
+    "th": "กะไหล่ทอง",
+    "d": "Coated or plated with gold. It describes a surface finish, not an object made entirely of gold.",
+    "src": [
+      {
+        "n": "Thai dictionary: กะไหล่ทอง",
+        "u": "https://dict.longdo.com/search/%E0%B8%81%E0%B8%B0%E0%B9%84%E0%B8%AB%E0%B8%A5%E0%B9%88%E0%B8%97%E0%B8%AD%E0%B8%87"
+      }
+    ],
+    "img": null,
+    "id": "term-173",
+    "searchName": "Kalai Thong",
+    "essential": false
+  },
+  {
+    "sec": "Naming",
+    "th": "กรุ",
+    "term": "Relic deposit",
+    "d": "A chamber or deposit containing sacred objects, often within a stupa. In amulet descriptions, it can identify the deposit from which a piece is said to have come.",
+    "src": [
+      {
+        "n": "Thai dictionary: กรุ",
+        "u": "https://dict.longdo.com/search/%E0%B8%81%E0%B8%A3%E0%B8%B8"
+      },
+      {
+        "n": "Silpa Watthanatham: origin of amulets",
+        "u": "https://www.silpa-mag.com/culture/article_28483"
+      }
+    ],
+    "img": null,
+    "essential": false,
+    "id": "term-200",
+    "searchName": ""
+  }
+];
+const SECS=["All","Objects","Animals","Purposes","Materials","Spirits","Practice","Naming"];
+const LABEL={Objects:["Object categories","What the amulets are"],Animals:["Animal charms","Figures and animal parts for wealth and protection"],Purposes:["Purposes","Traditional aims and attributed qualities"],Materials:["Materials","What they are made from"],Spirits:["Spirits and beings","Figures in religion, folklore and ritual"],Practice:["Ritual, people and practice","Teachers, ceremonies and sacred tattooing"],Naming:["Naming words","Reading a collector's title"]};
+let sec="All",rate=0.9,thVoice=null;
+const out=document.getElementById('out'),chips=document.getElementById('chips'),q=document.getElementById('q'),vEl=document.getElementById('voice');
+const tts='speechSynthesis' in window;
+function pickVoice(){setTimeout(()=>document.querySelectorAll('.play').forEach(b=>b.disabled=!tts||!thVoice),0);
+  if(!tts){vEl.textContent="This browser can't speak text. Copy the Thai into a translator app to hear it.";vEl.className="voice warn";return}
+  const vs=speechSynthesis.getVoices();
+  thVoice=vs.find(v=>/^th/i.test(v.lang))||null;
+  if(thVoice){vEl.textContent="Thai voice: "+thVoice.name;vEl.className="voice"}
+  else {vEl.textContent="No Thai voice found on this device. Add a Thai voice in your system's speech settings, then reload.";vEl.className="voice warn"}
+}
+pickVoice();if(tts){speechSynthesis.onvoiceschanged=pickVoice}
+function say(text,btn){
+  if(!tts||!thVoice){pickVoice();return;}speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);u.lang="th-TH";if(thVoice)u.voice=thVoice;u.rate=rate;
+  document.querySelectorAll('.play.on').forEach(b=>b.classList.remove('on'));
+  if(btn){btn.classList.add('on');u.onend=u.onerror=()=>btn.classList.remove('on')}
+  speechSynthesis.speak(u);
+}
+document.querySelectorAll('.speed button').forEach(b=>b.onclick=()=>{rate=+b.dataset.r;document.querySelectorAll('.speed button').forEach(x=>x.setAttribute('aria-pressed',x===b))});
+SECS.forEach(s=>{const b=document.createElement('button');b.type='button';b.className='chip';b.textContent=s==="All"?"All":LABEL[s][0];
+  b.setAttribute('aria-pressed',s===sec);b.onclick=()=>{sec=s;chips.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c===b));render()};chips.appendChild(b)});
+const icon='<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg>';
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function render(){
+  const t=q.value.trim().toLowerCase();
+  const rows=DATA.filter(d=>(sec==="All"||d.sec===sec)&&(!t||(d.term+" "+d.th+" "+d.d+" "+d.searchName).toLowerCase().includes(t)));
+  if(!rows.length){out.innerHTML='<p class="empty">No terms match that search.</p>';return}
+  let h="",last="";
+  rows.forEach(d=>{
+    if(d.sec!==last){if(last)h+='</section>';h+='<section class="grp"><h2>'+LABEL[d.sec][0]+'</h2><p class="sec-tag">'+LABEL[d.sec][1]+'</p>';last=d.sec}
+    const sp=d.th.replace(/\s*\/\s*/g," ");
+    const src=d.src.length?'<p class="src">Source: '+d.src.map(s=>'<a href="'+esc(s.u)+'" target="_blank" rel="noopener noreferrer">'+esc(s.n)+'</a>').join(' · ')+'</p>':'';
+    const img=d.img?'<a class="imgs" href="https://www.google.com/search?tbm=isch&q='+encodeURIComponent(d.img)+'" target="_blank" rel="noopener noreferrer">See images<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4 2h6v6M10 2L3 9"/></svg></a>':'';
+    h+='<article id="'+esc(d.id)+'" class="item"><button class="play" type="button" data-t="'+esc(sp)+'" aria-label="Play '+esc(d.term)+'">'+icon+'</button>'+
+      '<div class="head"><span class="th" lang="th">'+esc(d.th)+'</span></div>'+
+      '<div class="body"><p class="term">'+esc(d.term)+'</p><p class="desc">'+esc(d.d)+'</p>'+src+img+'</div></article>';
+  });
+  out.innerHTML=h+'</section>';out.querySelectorAll('.play').forEach(b=>b.disabled=!tts||!thVoice);
+}
+out.addEventListener('click',e=>{const el=e.target.closest('[data-t]');if(!el)return;
+  const btn=el.classList.contains('play')?el:el.closest('.item').querySelector('.play');say(el.dataset.t,btn)});
+q.addEventListener('input',render);
+render();
+</script>
+</body>
+</html>
