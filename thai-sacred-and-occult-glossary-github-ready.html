@@ -57,7 +57,7 @@ h2{font-family:var(--f-display);font-weight:400;font-size:clamp(1.4rem,3vw,1.8re
 .play svg{width:14px;height:14px;fill:currentColor;margin-left:2px}
 .head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.2rem 1rem;min-width:0}
 .th{font-family:var(--f-thai);font-weight:500;font-size:clamp(1.5rem,4vw,1.9rem);line-height:1.35;cursor:pointer;color:var(--paper)}
-.ph{font-size:.95rem;color:var(--gold);letter-spacing:.02em}
+.ph{font-size:.95rem;color:var(--gold);letter-spacing:.02em;font-family:var(--f-body);font-weight:400}
 .st{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;padding:.15rem .5rem;border:1px solid currentColor;border-radius:2px;align-self:center}
 .st.Sourced{color:var(--ok)} .st.Standard{color:var(--ash)} .st.Unverified{color:var(--unv)}
 .body{grid-column:2;min-width:0}
@@ -346,7 +346,7 @@ const DATA = [
     ],
     "img": "พระสมเด็จ",
     "id": "term-8",
-    "searchName": "Phra Somdej",
+    "searchName": "Phra Somdet",
     "essential": true
   },
   {
@@ -511,7 +511,7 @@ const DATA = [
     "img": null,
     "essential": true,
     "id": "term-176",
-    "searchName": ""
+    "searchName": "Watthu Mongkhon"
   },
   {
     "sec": "Objects",
@@ -527,7 +527,7 @@ const DATA = [
     "img": "ศาลพระภูมิ",
     "essential": true,
     "id": "term-178",
-    "searchName": ""
+    "searchName": "San Phra Phum"
   },
   {
     "sec": "Objects",
@@ -779,7 +779,7 @@ const DATA = [
     "img": "พระธาตุ เจดีย์",
     "essential": false,
     "id": "term-177",
-    "searchName": ""
+    "searchName": "Phra That"
   },
   {
     "sec": "Animals",
@@ -1335,7 +1335,7 @@ const DATA = [
     "img": "พระผง",
     "essential": false,
     "id": "term-179",
-    "searchName": ""
+    "searchName": "Phong"
   },
   {
     "sec": "Materials",
@@ -1351,7 +1351,7 @@ const DATA = [
     "img": null,
     "essential": false,
     "id": "term-180",
-    "searchName": ""
+    "searchName": "Phong Wiset"
   },
   {
     "sec": "Materials",
@@ -1367,7 +1367,7 @@ const DATA = [
     "img": "พระเครื่อง เนื้อเงิน",
     "essential": false,
     "id": "term-181",
-    "searchName": ""
+    "searchName": "Ngoen"
   },
   {
     "sec": "Materials",
@@ -1383,7 +1383,7 @@ const DATA = [
     "img": "พระเครื่อง ทองเหลือง",
     "essential": false,
     "id": "term-182",
-    "searchName": ""
+    "searchName": "Thong Lueang"
   },
   {
     "sec": "Spirits",
@@ -1499,7 +1499,7 @@ const DATA = [
     "img": null,
     "essential": true,
     "id": "term-183",
-    "searchName": ""
+    "searchName": "Phi"
   },
   {
     "sec": "Spirits",
@@ -1515,7 +1515,7 @@ const DATA = [
     "img": null,
     "essential": true,
     "id": "term-184",
-    "searchName": ""
+    "searchName": "Chao Thi"
   },
   {
     "sec": "Spirits",
@@ -1782,7 +1782,7 @@ const DATA = [
     ],
     "img": null,
     "id": "term-132",
-    "searchName": "Kata",
+    "searchName": "Katha",
     "essential": true
   },
   {
@@ -1870,7 +1870,7 @@ const DATA = [
     ],
     "img": "ขันครู",
     "id": "term-141",
-    "searchName": "Khan Kru",
+    "searchName": "Khan Khru",
     "essential": true
   },
   {
@@ -2035,7 +2035,7 @@ const DATA = [
     "img": "สักยันต์",
     "essential": true,
     "id": "term-185",
-    "searchName": ""
+    "searchName": "Sak Yant"
   },
   {
     "sec": "Practice",
@@ -2055,7 +2055,7 @@ const DATA = [
     "img": null,
     "essential": true,
     "id": "term-186",
-    "searchName": ""
+    "searchName": "Ajarn"
   },
   {
     "sec": "Practice",
@@ -2071,7 +2071,7 @@ const DATA = [
     "img": "พิธีพุทธาภิเษก",
     "essential": true,
     "id": "term-187",
-    "searchName": ""
+    "searchName": "Phutthaphisek"
   },
   {
     "sec": "Practice",
@@ -2091,7 +2091,7 @@ const DATA = [
     "img": null,
     "essential": true,
     "id": "term-188",
-    "searchName": ""
+    "searchName": "Akkhara"
   },
   {
     "sec": "Practice",
@@ -2111,7 +2111,7 @@ const DATA = [
     "img": null,
     "essential": true,
     "id": "term-189",
-    "searchName": ""
+    "searchName": "Bali (Pali)"
   },
   {
     "sec": "Practice",
@@ -2127,7 +2127,7 @@ const DATA = [
     "img": null,
     "essential": true,
     "id": "term-192",
-    "searchName": ""
+    "searchName": "Kha Khru"
   },
   {
     "sec": "Practice",
@@ -2143,7 +2143,7 @@ const DATA = [
     "img": "ยันต์เก้ายอด",
     "essential": true,
     "id": "term-193",
-    "searchName": ""
+    "searchName": "Yant Gao Yord"
   },
   {
     "sec": "Practice",
@@ -2159,7 +2159,7 @@ const DATA = [
     "img": "ยันต์ห้าแถว",
     "essential": true,
     "id": "term-194",
-    "searchName": ""
+    "searchName": "Yant Ha Taew"
   },
   {
     "sec": "Practice",
@@ -2175,7 +2175,7 @@ const DATA = [
     "img": null,
     "essential": true,
     "id": "term-195",
-    "searchName": ""
+    "searchName": "Bun"
   },
   {
     "sec": "Practice",
@@ -2195,7 +2195,7 @@ const DATA = [
     "img": null,
     "essential": true,
     "id": "term-196",
-    "searchName": ""
+    "searchName": "Sin"
   },
   {
     "sec": "Practice",
@@ -2211,7 +2211,7 @@ const DATA = [
     "img": null,
     "essential": true,
     "id": "term-197",
-    "searchName": ""
+    "searchName": "Barami"
   },
   {
     "sec": "Practice",
@@ -2231,7 +2231,7 @@ const DATA = [
     "img": null,
     "essential": true,
     "id": "term-198",
-    "searchName": ""
+    "searchName": "Phutthakhun"
   },
   {
     "sec": "Practice",
@@ -2447,7 +2447,7 @@ const DATA = [
     "img": "อักษรธรรมล้านนา",
     "essential": false,
     "id": "term-190",
-    "searchName": ""
+    "searchName": "Akson Tham Lanna"
   },
   {
     "sec": "Practice",
@@ -2463,7 +2463,7 @@ const DATA = [
     "img": null,
     "essential": false,
     "id": "term-191",
-    "searchName": ""
+    "searchName": "Long Yant"
   },
   {
     "sec": "Naming",
@@ -2531,7 +2531,7 @@ const DATA = [
     "img": null,
     "essential": true,
     "id": "term-199",
-    "searchName": ""
+    "searchName": "Chao Phra"
   },
   {
     "sec": "Naming",
@@ -2667,7 +2667,7 @@ const DATA = [
     "img": null,
     "essential": false,
     "id": "term-200",
-    "searchName": ""
+    "searchName": "Kru"
   }
 ];
 const SECS=["All","Objects","Animals","Purposes","Materials","Spirits","Practice","Naming"];
@@ -2706,7 +2706,7 @@ function render(){
     const src=d.src.length?'<p class="src">Source: '+d.src.map(s=>'<a href="'+esc(s.u)+'" target="_blank" rel="noopener noreferrer">'+esc(s.n)+'</a>').join(' · ')+'</p>':'';
     const img=d.img?'<a class="imgs" href="https://www.google.com/search?tbm=isch&q='+encodeURIComponent(d.img)+'" target="_blank" rel="noopener noreferrer">See images<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4 2h6v6M10 2L3 9"/></svg></a>':'';
     h+='<article id="'+esc(d.id)+'" class="item"><button class="play" type="button" data-t="'+esc(sp)+'" aria-label="Play '+esc(d.term)+'">'+icon+'</button>'+
-      '<div class="head"><span class="th" lang="th">'+esc(d.th)+'</span></div>'+
+      '<div class="head"><span class="th" lang="th">'+esc(d.th)+'</span><span class="ph">'+esc(d.searchName)+'</span></div>'+
       '<div class="body"><p class="term">'+esc(d.term)+'</p><p class="desc">'+esc(d.d)+'</p>'+src+img+'</div></article>';
   });
   out.innerHTML=h+'</section>';out.querySelectorAll('.play').forEach(b=>b.disabled=!tts||!thVoice);
