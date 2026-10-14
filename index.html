@@ -201,6 +201,43 @@
       padding: 0 24px;
     }
   }
+
+  .page-links {
+    width: min(100%, 460px);
+    margin-top: 30px;
+    border-top: 1px solid var(--line);
+  }
+
+  .page-links a {
+    display: block;
+    padding: 13px 12px;
+    border-bottom: 1px solid var(--line);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+    line-height: 1.4;
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .page-links a:hover,
+  .page-links a:focus-visible {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+  }
+
+  .page-links a:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+  }
+
+  /* Allow the extra links to fit on short screens without covering the footer. */
+  .content { padding-top: 64px; padding-bottom: 96px; }
+  @media (max-width: 600px) {
+    .stage { display: flex; }
+    .content { position: relative; top: auto; }
+    .foot { position: relative; bottom: auto; padding: 0 24px 28px; margin-top: -48px; }
+  }
 </style>
 </head>
 <body>
@@ -212,10 +249,14 @@
     <div class="mark">Cast in Skin</div>
     <div class="rule"></div>
     <p class="tagline"><span class="tagline-gold">These are magic spells cast into skin.</span><br>Traditional Thai Sak Yant tattoos.</p>
-    <p class="cta">Get in touch to plan your tattoo.</p>
+    <nav class="page-links" aria-label="Explore Cast in Skin">
+      <a href="photography.html">Photography workshop</a>
+      <a href="ajarn-thueng-tattoo.html">Sak Yant tattoos</a>
+      <a href="thai-sacred-occult-glossary.html">Thai Sacred &amp; Occult Glossary</a>
+    </nav>
     <div class="contact">
       <div class="contact-row">
-        <a href="https://line.me/R/ti/p/@shallowdepth" class="contact-primary">
+        <a href="https://line.me/R/ti/p/@shallowdepth" >
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <circle cx="12" cy="12" r="12" fill="#06C755"/>
             <path d="M18.36 11.2c0-2.87-2.88-5.2-6.36-5.2s-6.36 2.33-6.36 5.2c0 2.57 2.28 4.72 5.37 5.13.21.05.49.14.56.33.06.16.04.42.02.59l-.09.55c-.03.16-.13.63.55.34.68-.28 3.68-2.17 5.02-3.71 1-.93 1.29-1.87 1.29-2.83" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
