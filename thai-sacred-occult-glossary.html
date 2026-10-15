@@ -7729,7 +7729,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
   function pickVoice() {
     const voices = synth ? synth.getVoices() : [];
     thaiVoice = voices.find(voice => /^th(?:-|_|$)/i.test(voice.lang)) || null;
-    entries.forEach(entry => entry.querySelector(".play").disabled = !thaiVoice);
+    document.querySelectorAll(".play").forEach(button => button.disabled = !thaiVoice);
     if (!synth) {
       voiceStatus.textContent = "Thai audio is not supported in this browser.";
     } else if (thaiVoice) {
