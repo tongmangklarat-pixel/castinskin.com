@@ -138,6 +138,25 @@ footer p { margin: 0 0 8px; max-width: 760px; }
   a { text-decoration: none; }
 }
 
+
+.purpose-control { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; padding: 8px 0; }
+.purpose-control label { color: var(--gold); font-size: 13px; }
+.purpose-control select { max-width: 100%; min-height: 42px; padding: 7px 10px; background: var(--deep); color: var(--paper); border: 1px solid var(--line); border-radius: 3px; font: 13px var(--body); }
+.purpose-control p { margin: 0; font-size: 12px; color: var(--muted); }
+.purpose-links { margin: 12px 0 0; font-size: 13px; color: var(--muted); }
+.group { scroll-margin-top: 270px; }
+.shared-purposes { border: 1px solid var(--line); background: var(--deep); padding: 20px; margin: 18px 0 26px; }
+.shared-purposes h3 { margin: 0 0 10px; color: var(--gold); font: 500 18px var(--body); }
+.shared-purposes p { color: var(--muted); font-size: 14px; margin: 10px 0; }
+@media (max-width: 600px) {
+ .purpose-control p { display: none; }
+ .search { flex: 1 1 190px; }
+ .purpose-control { flex-wrap: nowrap; gap: 8px; padding: 5px 0; }
+ .purpose-control label { font-size: 12px; white-space: nowrap; }
+ .purpose-control select { flex: 1; min-width: 0; width: 0; }
+ .options { gap: 4px 8px; }
+ .item, .group { scroll-margin-top: 290px; }
+}
   </style>
 </head>
 <body>
@@ -152,7 +171,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
       <h1 id="page-title">Thai Sacred <em>&amp;</em> Occult Glossary</h1>
       <p class="lead">Understand the words you encounter in Thai amulets, spirits, ritual and sak yant. Read the Thai name, follow its Roman transcription, and listen to it spoken aloud. Use the picture buttons to recognize objects and figures you see in homes, shops, shrines, and tattoos.</p>
       <div class="intro">
-        <div><h2>200 terms, eight topics</h2><p>Start with a short definition. Open the context for history, symbolism, and the traditions behind a word.</p></div>
+        <div><h2>212 terms, eight topics</h2><p>Start with a short definition. Open the context for history, symbolism, and the traditions behind a word.</p></div>
         <div><h2>See, read &amp; listen</h2><p><strong>See pictures</strong> opens a selection of images for the Thai word. Follow the Roman transcription and use the play button to hear it in Thai.</p></div>
         <div><h2>Traditions in context</h2><p>Accounts of sacred power describe beliefs and practices. Meanings and observances can differ by region, teacher, and lineage.</p></div>
       </div>
@@ -183,6 +202,19 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         <button class="chip" data-category="Practice" type="button" aria-pressed="false">Ritual &amp; practice</button>
         <button class="chip" data-category="Naming" type="button" aria-pressed="false">Naming words</button>
       </div>
+      <div class="purpose-control">
+        <label for="purpose-filter">Explore by purpose</label>
+        <select id="purpose-filter">
+          <option value="All">All purposes</option>
+          <option value="protection">Protection and avoiding danger</option>
+          <option value="goodwill">Goodwill and attraction</option>
+          <option value="prosperity">Fortune and business</option>
+          <option value="authority">Authority and influence</option>
+          <option value="spirits">Spirit and sorcery protection</option>
+          <option value="misfortune">Averting misfortune</option>
+        </select>
+        <p>Find connected terms across tattoos, objects, and practices.</p>
+      </div>
       <div class="options">
         <button class="essential" id="essentials" type="button" aria-pressed="false">Essentials</button>
         <p id="results" role="status" aria-live="polite"></p>
@@ -194,7 +226,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
     <main id="out">
       <section class="group" aria-labelledby="section-sakyant">
         <h2 id="section-sakyant">Sak Yant tattoos</h2>
-        <p class="group-intro">Tattooing methods, tools, designs, and sacred writing · 10 terms</p>
+        <p class="group-intro">Tattooing methods, tools, designs, and sacred writing · 11 terms</p>
         <p class="group-intro">Explore the terms used when receiving or learning about sacred tattoos. A design’s interpretation and observances depend on its teacher and tradition.</p>
                 <aside class="needle-guide" aria-labelledby="needle-guide-title">
           <h3 id="needle-guide-title">Tattooing tools at a glance</h3>
@@ -210,7 +242,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         </aside>
 <div class="subgroup"><h3 class="subgroup-title">Tattooing methods and tools</h3>
 <article class="item" id="term-185"
-          data-category="SakYant" data-essential="true"
+          data-purposes="protection goodwill prosperity authority" data-category="SakYant" data-essential="true"
           >
           <button class="play" type="button" data-thai="สักยันต์"
             aria-label="Play Sak Yant in Thai" aria-pressed="false" disabled>▶</button>
@@ -232,6 +264,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             <details class="sources">
               <summary>Sources</summary>
               <ul>
+                <li><a href="https://museum.socanth.tu.ac.th/general/tattooing/" target="_blank" rel="noopener noreferrer">Thammasat Museum of Anthropology: tattooing and its purposes</a></li>
                 <li>
                   <a href="https://www.silpa-mag.com/culture/article_156682" target="_blank" rel="noopener noreferrer">
                     Silpa Watthanatham: sak yant as a charm
@@ -239,12 +272,13 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               <li><a href="https://has.hcu.ac.th/xmlui/handle/123456789/760" target="_blank" rel="noopener noreferrer">University research: ink and oil sacred tattooing</a></li></ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a> · <a href="#term-60">Goodwill and attraction</a> · <a href="#term-206">Fortune and business</a> · <a href="#term-70">Authority and influence</a></p>
             <div class="actions">
               <a href="#term-185" aria-label="Link to Sak Yant">Link to this term</a>
             </div>
           </div>
         </article>
-<article class="item" id="term-202" data-category="SakYant" data-essential="true">
+<article class="item" id="term-202" data-purposes="" data-category="SakYant" data-essential="true">
           <button class="play" type="button" data-thai="เข็มผ่าปาก" aria-label="Play Khem Pha Pak in Thai" aria-pressed="false" disabled>▶</button>
           <div class="entry-text">
             <h3 class="thai" lang="th">เข็มผ่าปาก</h3>
@@ -266,7 +300,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             <div class="actions"><a href="#term-202" aria-label="Link to Khem Pha Pak">Link to this term</a></div>
           </div>
         </article>
-<article class="item" id="term-203" data-category="SakYant" data-essential="true">
+<article class="item" id="term-203" data-purposes="" data-category="SakYant" data-essential="true">
           <button class="play" type="button" data-thai="สักหมึก" aria-label="Play Sak Muek in Thai" aria-pressed="false" disabled>▶</button>
           <div class="entry-text">
             <h3 class="thai" lang="th">สักหมึก</h3>
@@ -280,10 +314,47 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             <details class="sources"><summary>Sources</summary><ul>
                 <li><a href="https://has.hcu.ac.th/xmlui/handle/123456789/760" target="_blank" rel="noopener noreferrer">Huachiew Chalermprakiet University: forms and beliefs of Thai sacred tattooing</a></li>
             </ul></details>
+            <p class="related">Explore also: <a href="#term-211">Muek Sak</a></p>
             <div class="actions"><a href="#term-203" aria-label="Link to Sak Muek">Link to this term</a></div>
           </div>
         </article>
-<article class="item" id="term-204" data-category="SakYant" data-essential="true">
+        <article class="item" id="term-211"
+          data-purposes="" data-category="SakYant" data-essential="true">
+          <button class="play" type="button" data-thai="หมึกสัก"
+            aria-label="Play Muek Sak in Thai" aria-pressed="false" disabled>▶</button>
+          <div class="entry-text">
+            <h3 class="thai" lang="th">หมึกสัก</h3>
+            <p class="roman">Muek Sak</p>
+            <p class="translation">Tattoo ink</p>
+            <p class="definition">Ink used to make a visible tattoo or an inscription.</p>
+            <a class="audio-online" href="https://translate.google.com/?sl=th&amp;tl=en&amp;text=%E0%B8%AB%E0%B8%A1%E0%B8%B6%E0%B8%81%E0%B8%AA%E0%B8%B1%E0%B8%81&amp;op=translate" target="_blank" rel="noopener noreferrer"
+              aria-label="Hear Muek Sak in Thai on Google Translate">Hear Thai online ↗</a>
+            <a class="pictures" href="https://www.google.com/search?tbm=isch&amp;q=%E0%B8%AB%E0%B8%A1%E0%B8%B6%E0%B8%81%E0%B8%AA%E0%B8%B1%E0%B8%81%20%E0%B8%AA%E0%B8%B1%E0%B8%81%E0%B8%A2%E0%B8%B1%E0%B8%99%E0%B8%95%E0%B9%8C"
+              aria-label="See pictures of Muek Sak in Google Images" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8" cy="8" r="1.5"/><path d="m3 17 5-5 4 4 4-6 5 7"/></svg>
+              See pictures ↗
+            </a>
+            <details class="context">
+              <summary>Context &amp; tradition</summary>
+              <p>In sacred-tattoo traditions, accounts may describe ingredients and preparation as part of a teacher’s practice. The material and its preparation vary; the word itself simply names tattoo ink.</p>
+            </details>
+            <details class="sources">
+              <summary>Sources</summary>
+              <ul>
+                <li>
+                  <a href="https://so05.tci-thaijo.org/index.php/balajhss/article/download/75181/60597" target="_blank" rel="noopener noreferrer">
+                    RMUTL: tattoo ink in Lanna charm traditions
+                  </a>
+                </li>
+              </ul>
+            </details>
+            <p class="related">Explore also: <a href="#term-203">Sak Muek</a> · <a href="#term-204">Sak Nam Man</a> · <a href="#term-202">Khem Pha Pak</a></p>
+            <div class="actions">
+              <a href="#term-211" aria-label="Link to Muek Sak">Link to this term</a>
+            </div>
+          </div>
+        </article>
+<article class="item" id="term-204" data-purposes="" data-category="SakYant" data-essential="true">
           <button class="play" type="button" data-thai="สักน้ำมัน" aria-label="Play Sak Nam Man in Thai" aria-pressed="false" disabled>▶</button>
           <div class="entry-text">
             <h3 class="thai" lang="th">สักน้ำมัน</h3>
@@ -297,12 +368,13 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             <details class="sources"><summary>Sources</summary><ul>
                 <li><a href="https://has.hcu.ac.th/xmlui/handle/123456789/760" target="_blank" rel="noopener noreferrer">Huachiew Chalermprakiet University: forms and beliefs of Thai sacred tattooing</a></li>
             </ul></details>
+            <p class="related">Explore also: <a href="#term-211">Muek Sak</a></p>
             <div class="actions"><a href="#term-204" aria-label="Link to Sak Nam Man">Link to this term</a></div>
           </div>
         </article>
         </div><div class="subgroup"><h3 class="subgroup-title">Designs and sacred writing</h3>
 <article class="item" id="term-193"
-          data-category="SakYant" data-essential="true"
+          data-purposes="protection" data-category="SakYant" data-essential="true"
           >
           <button class="play" type="button" data-thai="ยันต์เก้ายอด"
             aria-label="Play Yant Kao Yot in Thai" aria-pressed="false" disabled>▶</button>
@@ -330,13 +402,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
               <a href="#term-193" aria-label="Link to Yant Kao Yot">Link to this term</a>
             </div>
           </div>
         </article>
 <article class="item" id="term-194"
-          data-category="SakYant" data-essential="true"
+          data-purposes="" data-category="SakYant" data-essential="true"
           >
           <button class="play" type="button" data-thai="ยันต์ห้าแถว"
             aria-label="Play Yant Ha Thaeo in Thai" aria-pressed="false" disabled>▶</button>
@@ -364,13 +437,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="related">Explore also: <a href="#term-60">Metta Maha Niyom</a> · <a href="#term-206">Chok Lap</a></p>
             <div class="actions">
               <a href="#term-194" aria-label="Link to Yant Ha Thaeo">Link to this term</a>
             </div>
           </div>
         </article>
 <article class="item" id="term-163"
-          data-category="SakYant" data-essential="true"
+          data-purposes="protection spirits" data-category="SakYant" data-essential="true"
           >
           <button class="play" type="button" data-thai="ยันต์แปดทิศ"
             aria-label="Play Yant Paet Thit in Thai" aria-pressed="false" disabled>▶</button>
@@ -398,13 +472,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a> · <a href="#term-64">Spirit and sorcery protection</a></p>
             <div class="actions">
               <a href="#term-163" aria-label="Link to Yant Paet Thit">Link to this term</a>
             </div>
           </div>
         </article>
 <article class="item" id="term-191"
-          data-category="SakYant" data-essential="false"
+          data-purposes="" data-category="SakYant" data-essential="false"
           >
           <button class="play" type="button" data-thai="ลงยันต์"
             aria-label="Play Long Yant in Thai" aria-pressed="false" disabled>▶</button>
@@ -437,7 +512,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
 <article class="item" id="term-136"
-          data-category="SakYant" data-essential="true"
+          data-purposes="" data-category="SakYant" data-essential="true"
           >
           <button class="play" type="button" data-thai="อักษรขอม"
             aria-label="Play Akson Khom in Thai" aria-pressed="false" disabled>▶</button>
@@ -471,7 +546,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
 <article class="item" id="term-190"
-          data-category="SakYant" data-essential="false"
+          data-purposes="" data-category="SakYant" data-essential="false"
           >
           <button class="play" type="button" data-thai="อักษรธรรมล้านนา"
             aria-label="Play Akson Tham Lanna in Thai" aria-pressed="false" disabled>▶</button>
@@ -529,11 +604,11 @@ footer p { margin: 0 0 8px; max-width: 760px; }
       <p class="empty" id="empty" hidden>No terms match. Reset the filters to show the complete glossary.</p>
       <section class="group" aria-labelledby="section-objects">
         <h2 id="section-objects">Objects and sacred things</h2>
-        <p class="group-intro">Amulets, figures, and things carried or kept. · 44 terms</p>
+        <p class="group-intro">Amulets, figures, and things carried or kept. · 45 terms</p>
         <div class="subgroup">
           <h3 class="subgroup-title">Sacred-object vocabulary</h3>
         <article class="item" id="term-1"
-          data-category="Objects" data-essential="true"
+          data-purposes="" data-category="Objects" data-essential="true"
           >
           <button class="play" type="button" data-thai="ของขลัง"
             aria-label="Play Khong Khlang in Thai" aria-pressed="false" disabled>▶</button>
@@ -573,7 +648,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-2"
-          data-category="Objects" data-essential="true"
+          data-purposes="" data-category="Objects" data-essential="true"
           >
           <button class="play" type="button" data-thai="เครื่องราง"
             aria-label="Play Khrueang Rang in Thai" aria-pressed="false" disabled>▶</button>
@@ -608,7 +683,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-176"
-          data-category="Objects" data-essential="true"
+          data-purposes="" data-category="Objects" data-essential="true"
           >
           <button class="play" type="button" data-thai="วัตถุมงคล"
             aria-label="Play Watthu Mongkhon in Thai" aria-pressed="false" disabled>▶</button>
@@ -643,7 +718,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-25"
-          data-category="Objects" data-essential="false"
+          data-purposes="" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="กายสิทธิ์"
             aria-label="Play Kayasit in Thai" aria-pressed="false" disabled>▶</button>
@@ -679,7 +754,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         <div class="subgroup">
           <h3 class="subgroup-title">Devotional images, amulets, and relics</h3>
         <article class="item" id="term-35"
-          data-category="Objects" data-essential="true"
+          data-purposes="" data-category="Objects" data-essential="true"
           >
           <button class="play" type="button" data-thai="พระบูชา"
             aria-label="Play Phra Bucha in Thai" aria-pressed="false" disabled>▶</button>
@@ -712,7 +787,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-177"
-          data-category="Objects" data-essential="false"
+          data-purposes="" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="พระธาตุ"
             aria-label="Play Phra That in Thai" aria-pressed="false" disabled>▶</button>
@@ -750,7 +825,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-5"
-          data-category="Objects" data-essential="true"
+          data-purposes="" data-category="Objects" data-essential="true"
           >
           <button class="play" type="button" data-thai="พระเครื่อง"
             aria-label="Play Phra Khrueang in Thai" aria-pressed="false" disabled>▶</button>
@@ -785,7 +860,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-3"
-          data-category="Objects" data-essential="true"
+          data-purposes="" data-category="Objects" data-essential="true"
           >
           <button class="play" type="button" data-thai="พระพิมพ์"
             aria-label="Play Phra Phim in Thai" aria-pressed="false" disabled>▶</button>
@@ -819,7 +894,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-8"
-          data-category="Objects" data-essential="true"
+          data-purposes="" data-category="Objects" data-essential="true"
           >
           <button class="play" type="button" data-thai="พระสมเด็จ"
             aria-label="Play Phra Somdet in Thai" aria-pressed="false" disabled>▶</button>
@@ -858,7 +933,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-6"
-          data-category="Objects" data-essential="false"
+          data-purposes="" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="พระปิดตา"
             aria-label="Play Phra Pit Ta in Thai" aria-pressed="false" disabled>▶</button>
@@ -892,7 +967,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-7"
-          data-category="Objects" data-essential="false"
+          data-purposes="protection" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="พระกริ่ง"
             aria-label="Play Phra Kring in Thai" aria-pressed="false" disabled>▶</button>
@@ -920,13 +995,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
               <a href="#term-7" aria-label="Link to Phra Kring">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-9"
-          data-category="Objects" data-essential="false"
+          data-purposes="protection" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="พระอุปคุต"
             aria-label="Play Phra Upakut in Thai" aria-pressed="false" disabled>▶</button>
@@ -953,13 +1029,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
               <a href="#term-9" aria-label="Link to Phra Upakut">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-36"
-          data-category="Objects" data-essential="true"
+          data-purposes="" data-category="Objects" data-essential="true"
           >
           <button class="play" type="button" data-thai="เบญจภาคี"
             aria-label="Play Benchaphakhi in Thai" aria-pressed="false" disabled>▶</button>
@@ -992,7 +1069,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-12"
-          data-category="Objects" data-essential="true"
+          data-purposes="goodwill" data-category="Objects" data-essential="true"
           >
           <button class="play" type="button" data-thai="พระขุนแผน"
             aria-label="Play Phra Khun Phaen in Thai" aria-pressed="false" disabled>▶</button>
@@ -1025,13 +1102,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a></p>
             <div class="actions">
               <a href="#term-12" aria-label="Link to Phra Khun Phaen">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-11"
-          data-category="Objects" data-essential="true"
+          data-purposes="" data-category="Objects" data-essential="true"
           >
           <button class="play" type="button" data-thai="เหรียญ"
             aria-label="Play Rian in Thai" aria-pressed="false" disabled>▶</button>
@@ -1064,7 +1142,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-14"
-          data-category="Objects" data-essential="false"
+          data-purposes="" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="ล็อกเกต"
             aria-label="Play Lokket in Thai" aria-pressed="false" disabled>▶</button>
@@ -1097,7 +1175,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-34"
-          data-category="Objects" data-essential="false"
+          data-purposes="" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="รูปหล่อ"
             aria-label="Play Rup Lo in Thai" aria-pressed="false" disabled>▶</button>
@@ -1133,7 +1211,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         <div class="subgroup">
           <h3 class="subgroup-title">Guardians and shrines</h3>
         <article class="item" id="term-37"
-          data-category="Objects" data-essential="false"
+          data-purposes="" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="จตุคามรามเทพ"
             aria-label="Play Chatukham Ramathep in Thai" aria-pressed="false" disabled>▶</button>
@@ -1166,7 +1244,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-16"
-          data-category="Objects" data-essential="false"
+          data-purposes="protection spirits" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="หุ่นพยนต์"
             aria-label="Play Hun Phayon in Thai" aria-pressed="false" disabled>▶</button>
@@ -1194,13 +1272,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               <li><a href="https://archive.lib.cmu.ac.th/full/T/2560/socant70560kma_ch2.pdf" target="_blank" rel="noopener noreferrer">Child-spirit traditions: Chiang Mai University research</a></li></ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a> · <a href="#term-64">Spirit and sorcery protection</a></p>
             <div class="actions">
               <a href="#term-16" aria-label="Link to Hun Phayon">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-178"
-          data-category="Objects" data-essential="true"
+          data-purposes="" data-category="Objects" data-essential="true"
           >
           <button class="play" type="button" data-thai="ศาลพระภูมิ"
             aria-label="Play San Phra Phum in Thai" aria-pressed="false" disabled>▶</button>
@@ -1227,8 +1306,45 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="related">Explore also: <a href="#term-214">San Ta Yai</a> · <a href="#term-184">Chao Thi</a></p>
             <div class="actions">
               <a href="#term-178" aria-label="Link to San Phra Phum">Link to this term</a>
+            </div>
+          </div>
+        </article>
+        <article class="item" id="term-214"
+          data-purposes="" data-category="Objects" data-essential="true">
+          <button class="play" type="button" data-thai="ศาลตายาย"
+            aria-label="Play San Ta Yai in Thai" aria-pressed="false" disabled>▶</button>
+          <div class="entry-text">
+            <h3 class="thai" lang="th">ศาลตายาย</h3>
+            <p class="roman">San Ta Yai</p>
+            <p class="translation">Local guardian-spirit shrine</p>
+            <p class="definition">A shrine for spirits understood to be the earlier inhabitants or owners of a place.</p>
+            <a class="audio-online" href="https://translate.google.com/?sl=th&amp;tl=en&amp;text=%E0%B8%A8%E0%B8%B2%E0%B8%A5%E0%B8%95%E0%B8%B2%E0%B8%A2%E0%B8%B2%E0%B8%A2&amp;op=translate" target="_blank" rel="noopener noreferrer"
+              aria-label="Hear San Ta Yai in Thai on Google Translate">Hear Thai online ↗</a>
+            <a class="pictures" href="https://www.google.com/search?tbm=isch&amp;q=%E0%B8%A8%E0%B8%B2%E0%B8%A5%E0%B8%95%E0%B8%B2%E0%B8%A2%E0%B8%B2%E0%B8%A2"
+              aria-label="See pictures of San Ta Yai in Google Images" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8" cy="8" r="1.5"/><path d="m3 17 5-5 4 4 4-6 5 7"/></svg>
+              See pictures ↗
+            </a>
+            <details class="context">
+              <summary>Context &amp; tradition</summary>
+              <p>Often placed near a phra phum shrine, it has a distinct ritual role. A common form has four posts.</p>
+            </details>
+            <details class="sources">
+              <summary>Sources</summary>
+              <ul>
+                <li>
+                  <a href="https://culturio.sac.or.th/content/1263" target="_blank" rel="noopener noreferrer">
+                    SAC Culturio: local guardian shrines
+                  </a>
+                </li>
+              </ul>
+            </details>
+            <p class="related">Explore also: <a href="#term-178">San Phra Phum</a> · <a href="#term-184">Chao Thi</a> · <a href="#term-212">Khrueang Sen</a></p>
+            <div class="actions">
+              <a href="#term-214" aria-label="Link to San Ta Yai">Link to this term</a>
             </div>
           </div>
         </article>
@@ -1236,7 +1352,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         <div class="subgroup">
           <h3 class="subgroup-title">Inscribed charms and ritual implements</h3>
         <article class="item" id="term-4"
-          data-category="Objects" data-essential="true"
+          data-purposes="" data-category="Objects" data-essential="true"
           >
           <button class="play" type="button" data-thai="ตะกรุด"
             aria-label="Play Takrut in Thai" aria-pressed="false" disabled>▶</button>
@@ -1275,7 +1391,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-22"
-          data-category="Objects" data-essential="true"
+          data-purposes="" data-category="Objects" data-essential="true"
           >
           <button class="play" type="button" data-thai="ผ้ายันต์"
             aria-label="Play Pha Yant in Thai" aria-pressed="false" disabled>▶</button>
@@ -1309,7 +1425,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-23"
-          data-category="Objects" data-essential="false"
+          data-purposes="" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="เสื้อยันต์"
             aria-label="Play Suea Yant in Thai" aria-pressed="false" disabled>▶</button>
@@ -1347,7 +1463,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-28"
-          data-category="Objects" data-essential="true"
+          data-purposes="protection spirits" data-category="Objects" data-essential="true"
           >
           <button class="play" type="button" data-thai="มีดหมอ"
             aria-label="Play Mit Mo in Thai" aria-pressed="false" disabled>▶</button>
@@ -1380,13 +1496,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a> · <a href="#term-64">Spirit and sorcery protection</a></p>
             <div class="actions">
               <a href="#term-28" aria-label="Link to Mit Mo">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-29"
-          data-category="Objects" data-essential="false"
+          data-purposes="" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="เหล็กจาร"
             aria-label="Play Lek Chan in Thai" aria-pressed="false" disabled>▶</button>
@@ -1418,7 +1535,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-30"
-          data-category="Objects" data-essential="true"
+          data-purposes="" data-category="Objects" data-essential="true"
           >
           <button class="play" type="button" data-thai="ประคำ"
             aria-label="Play Prakham in Thai" aria-pressed="false" disabled>▶</button>
@@ -1452,7 +1569,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-38"
-          data-category="Objects" data-essential="false"
+          data-purposes="protection" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="ประเจียด"
             aria-label="Play Prachiat in Thai" aria-pressed="false" disabled>▶</button>
@@ -1479,13 +1596,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
               <a href="#term-38" aria-label="Link to Prachiat">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-39"
-          data-category="Objects" data-essential="false"
+          data-purposes="protection" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="มงคล"
             aria-label="Play Mongkhon in Thai" aria-pressed="false" disabled>▶</button>
@@ -1512,13 +1630,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
               <a href="#term-39" aria-label="Link to Mongkhon">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-40"
-          data-category="Objects" data-essential="false"
+          data-purposes="" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="พิศมร"
             aria-label="Play Phitsamon in Thai" aria-pressed="false" disabled>▶</button>
@@ -1557,7 +1676,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-41"
-          data-category="Objects" data-essential="false"
+          data-purposes="" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="เฉลว"
             aria-label="Play Chalaeo in Thai" aria-pressed="false" disabled>▶</button>
@@ -1593,7 +1712,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         <div class="subgroup">
           <h3 class="subgroup-title">Other charm forms</h3>
         <article class="item" id="term-31"
-          data-category="Objects" data-essential="false"
+          data-purposes="" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="ลูกอม"
             aria-label="Play Luk Om in Thai" aria-pressed="false" disabled>▶</button>
@@ -1632,7 +1751,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-32"
-          data-category="Objects" data-essential="false"
+          data-purposes="" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="ลูกอมปรอท"
             aria-label="Play Luk Om Parot in Thai" aria-pressed="false" disabled>▶</button>
@@ -1665,7 +1784,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-33"
-          data-category="Objects" data-essential="false"
+          data-purposes="protection" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="เข็มทอง"
             aria-label="Play Khem Thong in Thai" aria-pressed="false" disabled>▶</button>
@@ -1697,13 +1816,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
               <a href="#term-33" aria-label="Link to Khem Thong">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-44"
-          data-category="Objects" data-essential="false"
+          data-purposes="prosperity" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="ไซดักทรัพย์"
             aria-label="Play Sai Dak Sap in Thai" aria-pressed="false" disabled>▶</button>
@@ -1730,6 +1850,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-206">Fortune and business</a></p>
             <div class="actions">
               <a href="#term-44" aria-label="Link to Sai Dak Sap">Link to this term</a>
             </div>
@@ -1739,7 +1860,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         <div class="subgroup">
           <h3 class="subgroup-title">Attraction and fertility charms</h3>
         <article class="item" id="term-13"
-          data-category="Objects" data-essential="false"
+          data-purposes="goodwill" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="สีผึ้ง"
             aria-label="Play Si Phueng in Thai" aria-pressed="false" disabled>▶</button>
@@ -1772,13 +1893,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a></p>
             <div class="actions">
               <a href="#term-13" aria-label="Link to Si Phueng">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-18"
-          data-category="Objects" data-essential="false"
+          data-purposes="goodwill" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="งั่ง"
             aria-label="Play Ngang in Thai" aria-pressed="false" disabled>▶</button>
@@ -1811,13 +1933,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a></p>
             <div class="actions">
               <a href="#term-18" aria-label="Link to Ngang">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-19"
-          data-category="Objects" data-essential="false"
+          data-purposes="goodwill" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="แม่เป๋อ"
             aria-label="Play Mae Poe in Thai" aria-pressed="false" disabled>▶</button>
@@ -1845,13 +1968,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a></p>
             <div class="actions">
               <a href="#term-19" aria-label="Link to Mae Poe">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-20"
-          data-category="Objects" data-essential="false"
+          data-purposes="goodwill" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="อิ่น"
             aria-label="Play In in Thai" aria-pressed="false" disabled>▶</button>
@@ -1879,13 +2003,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a></p>
             <div class="actions">
               <a href="#term-20" aria-label="Link to In">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-21"
-          data-category="Objects" data-essential="true"
+          data-purposes="goodwill" data-category="Objects" data-essential="true"
           >
           <button class="play" type="button" data-thai="ปลัดขิก"
             aria-label="Play Palad Khik in Thai" aria-pressed="false" disabled>▶</button>
@@ -1912,6 +2037,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a></p>
             <div class="actions">
               <a href="#term-21" aria-label="Link to Palad Khik">Link to this term</a>
             </div>
@@ -1921,7 +2047,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         <div class="subgroup">
           <h3 class="subgroup-title">Child-spirit figures and funerary charms</h3>
         <article class="item" id="term-15"
-          data-category="Objects" data-essential="true"
+          data-purposes="" data-category="Objects" data-essential="true"
           >
           <button class="play" type="button" data-thai="กุมารทอง"
             aria-label="Play Kuman Thong in Thai" aria-pressed="false" disabled>▶</button>
@@ -1954,13 +2080,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="related">Explore also: <a href="#term-212">Khrueang Sen</a></p>
             <div class="actions">
               <a href="#term-15" aria-label="Link to Kuman Thong">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-17"
-          data-category="Objects" data-essential="false"
+          data-purposes="" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="รักยม"
             aria-label="Play Rak Yom in Thai" aria-pressed="false" disabled>▶</button>
@@ -1999,7 +2126,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-10"
-          data-category="Objects" data-essential="false"
+          data-purposes="" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="พระกระดูกผี"
             aria-label="Play Phra Kraduk Phi in Thai" aria-pressed="false" disabled>▶</button>
@@ -2033,7 +2160,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-24"
-          data-category="Objects" data-essential="false"
+          data-purposes="goodwill" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="น้ำมันพราย"
             aria-label="Play Nam Man Prai in Thai" aria-pressed="false" disabled>▶</button>
@@ -2061,13 +2188,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a></p>
             <div class="actions">
               <a href="#term-24" aria-label="Link to Nam Man Prai">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-26"
-          data-category="Objects" data-essential="false"
+          data-purposes="" data-category="Objects" data-essential="false"
           >
           <button class="play" type="button" data-thai="ปั้นเหน่ง"
             aria-label="Play Pan Neng in Thai" aria-pressed="false" disabled>▶</button>
@@ -2109,9 +2237,9 @@ footer p { margin: 0 0 8px; max-width: 760px; }
       </section>
       <section class="group" aria-labelledby="section-animals">
         <h2 id="section-animals">Animal charms and related terms</h2>
-        <p class="group-intro">Animal symbols, materials, and associated vocabulary in charm traditions. · 11 terms</p>
+        <p class="group-intro">Animal symbols, materials, and associated vocabulary in charm traditions. · 12 terms</p>
         <article class="item" id="term-42"
-          data-category="Animals" data-essential="false"
+          data-purposes="protection prosperity" data-category="Animals" data-essential="false"
           >
           <button class="play" type="button" data-thai="พญาเต่าเรือน"
             aria-label="Play Phaya Tao Ruean in Thai" aria-pressed="false" disabled>▶</button>
@@ -2138,13 +2266,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a> · <a href="#term-206">Fortune and business</a></p>
             <div class="actions">
               <a href="#term-42" aria-label="Link to Phaya Tao Ruean">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-43"
-          data-category="Animals" data-essential="false"
+          data-purposes="prosperity" data-category="Animals" data-essential="false"
           >
           <button class="play" type="button" data-thai="ปลาตะเพียน"
             aria-label="Play Pla Taphian in Thai" aria-pressed="false" disabled>▶</button>
@@ -2171,13 +2300,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-206">Fortune and business</a></p>
             <div class="actions">
               <a href="#term-43" aria-label="Link to Pla Taphian">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-45"
-          data-category="Animals" data-essential="false"
+          data-purposes="spirits" data-category="Animals" data-essential="false"
           >
           <button class="play" type="button" data-thai="เบี้ยแก้"
             aria-label="Play Bia Kae in Thai" aria-pressed="false" disabled>▶</button>
@@ -2204,13 +2334,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-64">Spirit and sorcery protection</a></p>
             <div class="actions">
               <a href="#term-45" aria-label="Link to Bia Kae">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-46"
-          data-category="Animals" data-essential="false"
+          data-purposes="prosperity" data-category="Animals" data-essential="false"
           >
           <button class="play" type="button" data-thai="บ่วงนาคบาศ"
             aria-label="Play Buang Nakabat in Thai" aria-pressed="false" disabled>▶</button>
@@ -2237,13 +2368,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-206">Fortune and business</a></p>
             <div class="actions">
               <a href="#term-46" aria-label="Link to Buang Nakabat">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-47"
-          data-category="Animals" data-essential="false"
+          data-purposes="prosperity" data-category="Animals" data-essential="false"
           >
           <button class="play" type="button" data-thai="ปี่เซียะ"
             aria-label="Play Pi Sia in Thai" aria-pressed="false" disabled>▶</button>
@@ -2270,13 +2402,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-206">Fortune and business</a></p>
             <div class="actions">
               <a href="#term-47" aria-label="Link to Pi Sia">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-48"
-          data-category="Animals" data-essential="true"
+          data-purposes="goodwill prosperity" data-category="Animals" data-essential="true"
           >
           <button class="play" type="button" data-thai="สาลิกา"
             aria-label="Play Salika in Thai" aria-pressed="false" disabled>▶</button>
@@ -2308,13 +2441,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a> · <a href="#term-206">Fortune and business</a></p>
             <div class="actions">
               <a href="#term-48" aria-label="Link to Salika">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-50"
-          data-category="Animals" data-essential="false"
+          data-purposes="protection" data-category="Animals" data-essential="false"
           >
           <button class="play" type="button" data-thai="เขี้ยวเสือ"
             aria-label="Play Khiao Suea in Thai" aria-pressed="false" disabled>▶</button>
@@ -2341,13 +2475,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
               <a href="#term-50" aria-label="Link to Khiao Suea">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-51"
-          data-category="Animals" data-essential="false"
+          data-purposes="protection" data-category="Animals" data-essential="false"
           >
           <button class="play" type="button" data-thai="เขี้ยวหมูตัน"
             aria-label="Play Khiao Mu Tan in Thai" aria-pressed="false" disabled>▶</button>
@@ -2380,13 +2515,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
               <a href="#term-51" aria-label="Link to Khiao Mu Tan">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-52"
-          data-category="Animals" data-essential="false"
+          data-purposes="" data-category="Animals" data-essential="false"
           >
           <button class="play" type="button" data-thai="กระเบนท้องน้ำ"
             aria-label="Play Kraben Thong Nam in Thai" aria-pressed="false" disabled>▶</button>
@@ -2429,7 +2565,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-53"
-          data-category="Animals" data-essential="false"
+          data-purposes="" data-category="Animals" data-essential="false"
           >
           <button class="play" type="button" data-thai="ขนหางช้าง"
             aria-label="Play Khon Hang Chang in Thai" aria-pressed="false" disabled>▶</button>
@@ -2462,7 +2598,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-101"
-          data-category="Animals" data-essential="false"
+          data-purposes="" data-category="Animals" data-essential="false"
           >
           <button class="play" type="button" data-thai="ช้างตกมัน"
             aria-label="Play Chang Tok Man in Thai" aria-pressed="false" disabled>▶</button>
@@ -2494,40 +2630,126 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </div>
           </div>
         </article>
-      </section>
-      <section class="group" aria-labelledby="section-purposes">
-        <h2 id="section-purposes">Purposes and attributed powers</h2>
-        <p class="group-intro">Words describing the aims of protective and attraction practices. · 13 terms</p>
-        <article class="item" id="term-56"
-          data-category="Purposes" data-essential="false"
-          >
-          <button class="play" type="button" data-thai="มหาลาภ"
-            aria-label="Play Maha Lap in Thai" aria-pressed="false" disabled>▶</button>
+        <article class="item" id="term-210"
+          data-purposes="protection spirits" data-category="Animals" data-essential="true">
+          <button class="play" type="button" data-thai="วัวธนู"
+            aria-label="Play Wua Thanu in Thai" aria-pressed="false" disabled>▶</button>
           <div class="entry-text">
-            <h3 class="thai" lang="th">มหาลาภ</h3>
-            <p class="roman">Maha Lap</p>
-            <p class="translation">Good fortune</p>
-            <p class="definition">“Great gain” or good fortune.</p>
-            <a class="audio-online" href="https://translate.google.com/?sl=th&amp;tl=en&amp;text=%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A5%E0%B8%B2%E0%B8%A0&amp;op=translate" target="_blank" rel="noopener noreferrer"
-              aria-label="Hear Maha Lap in Thai on Google Translate">Hear Thai online ↗</a>
-            <div class="context-note"><p>In amulet descriptions, it expresses a wish for prosperity or favourable opportunities.</p></div>
+            <h3 class="thai" lang="th">วัวธนู</h3>
+            <p class="roman">Wua Thanu</p>
+            <p class="translation">Guardian cattle effigy</p>
+            <p class="definition">A cattle-shaped effigy associated with supernatural guardianship.</p>
+            <a class="audio-online" href="https://translate.google.com/?sl=th&amp;tl=en&amp;text=%E0%B8%A7%E0%B8%B1%E0%B8%A7%E0%B8%98%E0%B8%99%E0%B8%B9&amp;op=translate" target="_blank" rel="noopener noreferrer"
+              aria-label="Hear Wua Thanu in Thai on Google Translate">Hear Thai online ↗</a>
+            <a class="pictures" href="https://www.google.com/search?tbm=isch&amp;q=%E0%B8%A7%E0%B8%B1%E0%B8%A7%E0%B8%98%E0%B8%99%E0%B8%B9%20%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%A3%E0%B8%B2%E0%B8%87"
+              aria-label="See pictures of Wua Thanu in Google Images" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8" cy="8" r="1.5"/><path d="m3 17 5-5 4 4 4-6 5 7"/></svg>
+              See pictures ↗
+            </a>
+            <details class="context">
+              <summary>Context &amp; tradition</summary>
+              <p>In Lanna accounts, it is kept to guard against threatening spirits and other dangers. Forms, materials, and explanations vary by maker and tradition.</p>
+            </details>
             <details class="sources">
               <summary>Sources</summary>
               <ul>
                 <li>
-                  <a href="https://www.wongnai.com/articles/thai-amulet-for-business" target="_blank" rel="noopener noreferrer">
-                    Wongnai: charms for business
+                  <a href="https://so05.tci-thaijo.org/index.php/balajhss/article/view/75181" target="_blank" rel="noopener noreferrer">
+                    RMUTL: Lanna charms
                   </a>
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a> · <a href="#term-64">Spirit and sorcery protection</a></p>
+            <p class="related">Explore also: <a href="#term-16">Hun Phayon</a> · <a href="#term-54">Suea Saming</a> · <a href="#term-55">Suea Yen</a></p>
             <div class="actions">
-              <a href="#term-56" aria-label="Link to Maha Lap">Link to this term</a>
+              <a href="#term-210" aria-label="Link to Wua Thanu">Link to this term</a>
             </div>
           </div>
         </article>
-        <article class="item" id="term-57"
-          data-category="Purposes" data-essential="false"
+      </section>
+      <section class="group" aria-labelledby="section-purposes">
+        <h2 id="section-purposes">Purposes and attributed powers</h2>
+        <p class="group-intro">Words describing the aims of protective and attraction practices. · 15 terms</p>
+                <aside class="shared-purposes" aria-labelledby="shared-purposes-title">
+          <h3 id="shared-purposes-title">The same aims, different forms</h3>
+          <p>These words describe benefits attributed to tattoos, amulets, recitations, substances, and rites.
+            A single practice may be associated with several aims. Its meaning depends on the teacher and tradition.</p>
+          <p>Use the purpose selector above to explore connected entries across topics.
+            Related-purpose links identify associations discussed here; they are not a complete list of every tradition.</p>
+          <p>Escaping danger, resisting injury, and preventing a weapon from firing are distinct ideas.
+            Compare <a href="#term-59">Khlaeo Khlat</a>, <a href="#term-58">Khong Kraphan Chatri</a>,
+            and <a href="#term-57">Maha Ut</a>.</p>
+          <details class="sources"><summary>Sources</summary><ul>
+            <li><a href="https://db.sac.or.th/thailand-cultural-encyclopedia/detail.php?id=2539" target="_blank" rel="noopener noreferrer">Thai Cultural Encyclopedia: yantra purposes and uses</a></li>
+            <li><a href="https://so05.tci-thaijo.org/index.php/balajhss/article/view/75181" target="_blank" rel="noopener noreferrer">RMUTL: Lanna charm traditions</a></li>
+            <li><a href="https://so02.tci-thaijo.org/index.php/cultural_approach/article/view/250551" target="_blank" rel="noopener noreferrer">Journal of Cultural Approach: animal charms and attributed qualities</a></li>
+          </ul></details>
+        </aside>
+        <div class="subgroup">
+          <h3 class="subgroup-title">Protection and avoiding danger</h3>
+<article class="item" id="term-59"
+          data-purposes="protection" data-category="Purposes" data-essential="true"
+          >
+          <button class="play" type="button" data-thai="แคล้วคลาด"
+            aria-label="Play Khlaeo Khlat in Thai" aria-pressed="false" disabled>▶</button>
+          <div class="entry-text">
+            <h3 class="thai" lang="th">แคล้วคลาด</h3>
+            <p class="roman">Khlaeo Khlat</p>
+            <p class="translation">Avoidance of danger</p>
+            <p class="definition">Escaping or avoiding danger.</p>
+            <a class="audio-online" href="https://translate.google.com/?sl=th&amp;tl=en&amp;text=%E0%B9%81%E0%B8%84%E0%B8%A5%E0%B9%89%E0%B8%A7%E0%B8%84%E0%B8%A5%E0%B8%B2%E0%B8%94&amp;op=translate" target="_blank" rel="noopener noreferrer"
+              aria-label="Hear Khlaeo Khlat in Thai on Google Translate">Hear Thai online ↗</a>
+            <details class="context"><summary>Explore meaning &amp; tradition</summary><p><strong>Danger that does not reach you.</strong> Khlaeo khlat expresses avoidance of danger: an accident or attack misses, is escaped, or does not reach the person. This is different from a story in which a blade strikes someone but fails to injure an allegedly invulnerable body.</p><p><strong>Why the distinction matters.</strong> English descriptions may group several Thai purposes under “protection.” Separating avoidance, bodily invulnerability, and weapon-stopping protection helps a reader understand the particular claim associated with a charm or tattoo.</p><p><strong>Reading across the glossary.</strong> The name of a physical object, such as takrut, identifies its form. Khlaeo khlat identifies an aim attributed to it. The same aim can appear in accounts of different objects and practices, so it belongs among purposes rather than one exclusive object type.</p></details>
+            <p class="related">Related: <a href="#term-58">Khong Kraphan Chatri</a></p>
+            <details class="sources">
+              <summary>Sources</summary>
+              <ul>
+                <li>
+                  <a href="https://www.silpa-mag.com/culture/article_132222" target="_blank" rel="noopener noreferrer">
+                    Silpa Watthanatham: invulnerability arts
+                  </a>
+                </li>
+              </ul>
+            </details>
+            <p class="related">Explore also: <a href="#term-57">Maha Ut</a> · <a href="#term-163">Yant Paet Thit</a> · <a href="#term-193">Yant Kao Yot</a></p>
+            <div class="actions">
+              <a href="#term-59" aria-label="Link to Khlaeo Khlat">Link to this term</a>
+            </div>
+          </div>
+        </article>
+<article class="item" id="term-58"
+          data-purposes="protection" data-category="Purposes" data-essential="true"
+          >
+          <button class="play" type="button" data-thai="คงกระพันชาตรี"
+            aria-label="Play Khong Kraphan Chatri in Thai" aria-pressed="false" disabled>▶</button>
+          <div class="entry-text">
+            <h3 class="thai" lang="th">คงกระพันชาตรี</h3>
+            <p class="roman">Khong Kraphan Chatri</p>
+            <p class="translation">Invulnerability</p>
+            <p class="definition">A traditional expression for protection from weapons and bodily harm.</p>
+            <a class="audio-online" href="https://translate.google.com/?sl=th&amp;tl=en&amp;text=%E0%B8%84%E0%B8%87%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%A3%E0%B8%B5&amp;op=translate" target="_blank" rel="noopener noreferrer"
+              aria-label="Hear Khong Kraphan Chatri in Thai on Google Translate">Hear Thai online ↗</a>
+            <details class="context"><summary>Explore meaning &amp; tradition</summary><p><strong>An attributed condition of the body.</strong> Khong kraphan describes bodily resistance to weapons in Thai accounts of protective magic. A Thai cultural account distinguishes it from chatri, associated with freedom from pain and a light body. The combined expression names a field of protective practice, not one particular object.</p><p><strong>Several physical forms.</strong> Accounts discuss tattoos, amulets, oils, and implanted objects within this tradition. This explains why the same purpose vocabulary appears in both tattoo and amulet descriptions: the attributed aim can be shared even when the medium differs.</p><p><strong>Compare the protective words.</strong> Maha ut concerns stopping a weapon’s effect. Khlaeo khlat concerns avoiding the danger. Reading these distinctions gives more information than translating all three simply as “protection.”</p></details>
+            <p class="related">Related: <a href="#term-57">Maha Ut</a> · <a href="#term-59">Khlaeo Khlat</a> · <a href="#term-185">Sak Yant</a></p>
+            <details class="sources">
+              <summary>Sources</summary>
+              <ul>
+                <li>
+                  <a href="https://www.silpa-mag.com/culture/article_132222" target="_blank" rel="noopener noreferrer">
+                    Silpa Watthanatham: invulnerability arts
+                  </a>
+                </li>
+              </ul>
+            </details>
+            <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
+            <div class="actions">
+              <a href="#term-58" aria-label="Link to Khong Kraphan Chatri">Link to this term</a>
+            </div>
+          </div>
+        </article>
+<article class="item" id="term-57"
+          data-purposes="protection" data-category="Purposes" data-essential="false"
           >
           <button class="play" type="button" data-thai="มหาอุด"
             aria-label="Play Maha Ut in Thai" aria-pressed="false" disabled>▶</button>
@@ -2555,71 +2777,46 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
               <a href="#term-57" aria-label="Link to Maha Ut">Link to this term</a>
             </div>
           </div>
         </article>
-        <article class="item" id="term-58"
-          data-category="Purposes" data-essential="true"
+<article class="item" id="term-64"
+          data-purposes="spirits" data-category="Purposes" data-essential="false"
           >
-          <button class="play" type="button" data-thai="คงกระพันชาตรี"
-            aria-label="Play Khong Kraphan Chatri in Thai" aria-pressed="false" disabled>▶</button>
+          <button class="play" type="button" data-thai="กันผี"
+            aria-label="Play Kan Phi in Thai" aria-pressed="false" disabled>▶</button>
           <div class="entry-text">
-            <h3 class="thai" lang="th">คงกระพันชาตรี</h3>
-            <p class="roman">Khong Kraphan Chatri</p>
-            <p class="translation">Invulnerability</p>
-            <p class="definition">A traditional expression for protection from weapons and bodily harm.</p>
-            <a class="audio-online" href="https://translate.google.com/?sl=th&amp;tl=en&amp;text=%E0%B8%84%E0%B8%87%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%A3%E0%B8%B5&amp;op=translate" target="_blank" rel="noopener noreferrer"
-              aria-label="Hear Khong Kraphan Chatri in Thai on Google Translate">Hear Thai online ↗</a>
-            <details class="context"><summary>Explore meaning &amp; tradition</summary><p><strong>An attributed condition of the body.</strong> Khong kraphan describes bodily resistance to weapons in Thai accounts of protective magic. A Thai cultural account distinguishes it from chatri, associated with freedom from pain and a light body. The combined expression names a field of protective practice, not one particular object.</p><p><strong>Several physical forms.</strong> Accounts discuss tattoos, amulets, oils, and implanted objects within this tradition. This explains why the same purpose vocabulary appears in both tattoo and amulet descriptions: the attributed aim can be shared even when the medium differs.</p><p><strong>Compare the protective words.</strong> Maha ut concerns stopping a weapon’s effect. Khlaeo khlat concerns avoiding the danger. Reading these distinctions gives more information than translating all three simply as “protection.”</p></details>
-            <p class="related">Related: <a href="#term-57">Maha Ut</a> · <a href="#term-59">Khlaeo Khlat</a> · <a href="#term-185">Sak Yant</a></p>
+            <h3 class="thai" lang="th">กันผี</h3>
+            <p class="roman">Kan Phi</p>
+            <p class="translation">Spirit protection</p>
+            <p class="definition">“To ward off ghosts.” A stated purpose of protective charms, sacred diagrams, and rites.</p>
+            <a class="audio-online" href="https://translate.google.com/?sl=th&amp;tl=en&amp;text=%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%9C%E0%B8%B5&amp;op=translate" target="_blank" rel="noopener noreferrer"
+              aria-label="Hear Kan Phi in Thai on Google Translate">Hear Thai online ↗</a>
+            <div class="context-note"><p>Protection from ghosts and spirits.</p></div>
             <details class="sources">
               <summary>Sources</summary>
               <ul>
                 <li>
-                  <a href="https://www.silpa-mag.com/culture/article_132222" target="_blank" rel="noopener noreferrer">
-                    Silpa Watthanatham: invulnerability arts
+                  <a href="https://www.matichon.co.th/weekly/column/article_453352" target="_blank" rel="noopener noreferrer">
+                    Matichon Weekly: Lanna yant
                   </a>
                 </li>
               </ul>
             </details>
+            <p class="related">Explore also: <a href="#term-208">Khun Sai</a> · <a href="#term-45">Bia Kae</a> · <a href="#term-210">Wua Thanu</a></p>
             <div class="actions">
-              <a href="#term-58" aria-label="Link to Khong Kraphan Chatri">Link to this term</a>
+              <a href="#term-64" aria-label="Link to Kan Phi">Link to this term</a>
             </div>
           </div>
         </article>
-        <article class="item" id="term-59"
-          data-category="Purposes" data-essential="true"
-          >
-          <button class="play" type="button" data-thai="แคล้วคลาด"
-            aria-label="Play Khlaeo Khlat in Thai" aria-pressed="false" disabled>▶</button>
-          <div class="entry-text">
-            <h3 class="thai" lang="th">แคล้วคลาด</h3>
-            <p class="roman">Khlaeo Khlat</p>
-            <p class="translation">Avoidance of danger</p>
-            <p class="definition">Escaping or avoiding danger.</p>
-            <a class="audio-online" href="https://translate.google.com/?sl=th&amp;tl=en&amp;text=%E0%B9%81%E0%B8%84%E0%B8%A5%E0%B9%89%E0%B8%A7%E0%B8%84%E0%B8%A5%E0%B8%B2%E0%B8%94&amp;op=translate" target="_blank" rel="noopener noreferrer"
-              aria-label="Hear Khlaeo Khlat in Thai on Google Translate">Hear Thai online ↗</a>
-            <details class="context"><summary>Explore meaning &amp; tradition</summary><p><strong>Danger that does not reach you.</strong> Khlaeo khlat expresses avoidance of danger: an accident or attack misses, is escaped, or does not reach the person. This is different from a story in which a blade strikes someone but fails to injure an allegedly invulnerable body.</p><p><strong>Why the distinction matters.</strong> English descriptions may group several Thai purposes under “protection.” Separating avoidance, bodily invulnerability, and weapon-stopping protection helps a reader understand the particular claim associated with a charm or tattoo.</p><p><strong>Reading across the glossary.</strong> The name of a physical object, such as takrut, identifies its form. Khlaeo khlat identifies an aim attributed to it. The same aim can appear in accounts of different objects and practices, so it belongs among purposes rather than one exclusive object type.</p></details>
-            <p class="related">Related: <a href="#term-58">Khong Kraphan Chatri</a></p>
-            <details class="sources">
-              <summary>Sources</summary>
-              <ul>
-                <li>
-                  <a href="https://www.silpa-mag.com/culture/article_132222" target="_blank" rel="noopener noreferrer">
-                    Silpa Watthanatham: invulnerability arts
-                  </a>
-                </li>
-              </ul>
-            </details>
-            <div class="actions">
-              <a href="#term-59" aria-label="Link to Khlaeo Khlat">Link to this term</a>
-            </div>
-          </div>
-        </article>
-        <article class="item" id="term-60"
-          data-category="Purposes" data-essential="true"
+        </div>
+        <div class="subgroup">
+          <h3 class="subgroup-title">Goodwill, popularity, and attraction</h3>
+<article class="item" id="term-60"
+          data-purposes="goodwill prosperity" data-category="Purposes" data-essential="true"
           >
           <button class="play" type="button" data-thai="เมตตามหานิยม"
             aria-label="Play Metta Maha Niyom in Thai" aria-pressed="false" disabled>▶</button>
@@ -2642,13 +2839,15 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-206">Fortune and business</a></p>
+            <p class="related">Explore also: <a href="#term-207">Kha Khai</a> · <a href="#term-48">Salika</a> · <a href="#term-216">Long Na Na Thong</a></p>
             <div class="actions">
               <a href="#term-60" aria-label="Link to Metta Maha Niyom">Link to this term</a>
             </div>
           </div>
         </article>
-        <article class="item" id="term-61"
-          data-category="Purposes" data-essential="false"
+<article class="item" id="term-61"
+          data-purposes="goodwill" data-category="Purposes" data-essential="false"
           >
           <button class="play" type="button" data-thai="มหานิยม"
             aria-label="Play Maha Niyom in Thai" aria-pressed="false" disabled>▶</button>
@@ -2670,13 +2869,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a></p>
             <div class="actions">
               <a href="#term-61" aria-label="Link to Maha Niyom">Link to this term</a>
             </div>
           </div>
         </article>
-        <article class="item" id="term-62"
-          data-category="Purposes" data-essential="true"
+<article class="item" id="term-62"
+          data-purposes="goodwill" data-category="Purposes" data-essential="true"
           >
           <button class="play" type="button" data-thai="มหาเสน่ห์"
             aria-label="Play Maha Sane in Thai" aria-pressed="false" disabled>▶</button>
@@ -2699,13 +2899,15 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a></p>
+            <p class="related">Explore also: <a href="#term-13">Si Phueng</a> · <a href="#term-216">Long Na Na Thong</a></p>
             <div class="actions">
               <a href="#term-62" aria-label="Link to Maha Sane">Link to this term</a>
             </div>
           </div>
         </article>
-        <article class="item" id="term-63"
-          data-category="Purposes" data-essential="false"
+<article class="item" id="term-63"
+          data-purposes="goodwill" data-category="Purposes" data-essential="false"
           >
           <button class="play" type="button" data-thai="เสน่ห์พราย"
             aria-label="Play Sane Prai in Thai" aria-pressed="false" disabled>▶</button>
@@ -2733,69 +2935,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a></p>
             <div class="actions">
               <a href="#term-63" aria-label="Link to Sane Prai">Link to this term</a>
             </div>
           </div>
         </article>
-        <article class="item" id="term-64"
-          data-category="Purposes" data-essential="false"
-          >
-          <button class="play" type="button" data-thai="กันผี"
-            aria-label="Play Kan Phi in Thai" aria-pressed="false" disabled>▶</button>
-          <div class="entry-text">
-            <h3 class="thai" lang="th">กันผี</h3>
-            <p class="roman">Kan Phi</p>
-            <p class="translation">Spirit protection</p>
-            <p class="definition">“To ward off ghosts.” A stated purpose of protective charms, sacred diagrams, and rites.</p>
-            <a class="audio-online" href="https://translate.google.com/?sl=th&amp;tl=en&amp;text=%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%9C%E0%B8%B5&amp;op=translate" target="_blank" rel="noopener noreferrer"
-              aria-label="Hear Kan Phi in Thai on Google Translate">Hear Thai online ↗</a>
-            <div class="context-note"><p>Protection from ghosts and spirits.</p></div>
-            <details class="sources">
-              <summary>Sources</summary>
-              <ul>
-                <li>
-                  <a href="https://www.matichon.co.th/weekly/column/article_453352" target="_blank" rel="noopener noreferrer">
-                    Matichon Weekly: Lanna yant
-                  </a>
-                </li>
-              </ul>
-            </details>
-            <div class="actions">
-              <a href="#term-64" aria-label="Link to Kan Phi">Link to this term</a>
-            </div>
-          </div>
-        </article>
-        <article class="item" id="term-65"
-          data-category="Purposes" data-essential="false"
-          >
-          <button class="play" type="button" data-thai="ค้ำคูณ"
-            aria-label="Play Kham Khun in Thai" aria-pressed="false" disabled>▶</button>
-          <div class="entry-text">
-            <h3 class="thai" lang="th">ค้ำคูณ</h3>
-            <p class="roman">Kham Khun</p>
-            <p class="translation">Support and prosperity</p>
-            <p class="definition">A regional expression connecting support with prosperity or auspicious increase.</p>
-            <a class="audio-online" href="https://translate.google.com/?sl=th&amp;tl=en&amp;text=%E0%B8%84%E0%B9%89%E0%B8%B3%E0%B8%84%E0%B8%B9%E0%B8%93&amp;op=translate" target="_blank" rel="noopener noreferrer"
-              aria-label="Hear Kham Khun in Thai on Google Translate">Hear Thai online ↗</a>
-            <div class="context-note"><p>In an Isan wedding account, khun leaves are explained through the idea of kham khun, supporting prosperity. Regional symbolism gives the expression its context.</p></div>
-            <details class="sources">
-              <summary>Sources</summary>
-              <ul>
-                <li>
-                  <a href="https://doi.nrct.go.th/ListDoi/Download/273895?Resolve_DOI=10.14457%2FSU.res.2011.41" target="_blank" rel="noopener noreferrer">
-                    Silpakorn University research: Isan wedding symbolism
-                  </a>
-                </li>
-              </ul>
-            </details>
-            <div class="actions">
-              <a href="#term-65" aria-label="Link to Kham Khun">Link to this term</a>
-            </div>
-          </div>
-        </article>
-        <article class="item" id="term-68"
-          data-category="Purposes" data-essential="false"
+<article class="item" id="term-68"
+          data-purposes="goodwill prosperity" data-category="Purposes" data-essential="false"
           >
           <button class="play" type="button" data-thai="ลิ้นทอง"
             aria-label="Play Lin Thong in Thai" aria-pressed="false" disabled>▶</button>
@@ -2817,13 +2964,172 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a> · <a href="#term-206">Fortune and business</a></p>
             <div class="actions">
               <a href="#term-68" aria-label="Link to Lin Thong">Link to this term</a>
             </div>
           </div>
         </article>
-        <article class="item" id="term-69"
-          data-category="Purposes" data-essential="false"
+        </div>
+        <div class="subgroup">
+          <h3 class="subgroup-title">Fortune, trade, and prosperity</h3>
+<article class="item" id="term-206"
+          data-purposes="prosperity" data-category="Purposes" data-essential="true">
+          <button class="play" type="button" data-thai="โชคลาภ"
+            aria-label="Play Chok Lap in Thai" aria-pressed="false" disabled>▶</button>
+          <div class="entry-text">
+            <h3 class="thai" lang="th">โชคลาภ</h3>
+            <p class="roman">Chok Lap</p>
+            <p class="translation">Luck and fortunate gain</p>
+            <p class="definition">Good fortune, especially the prospect of receiving something beneficial or valuable.</p>
+            <a class="audio-online" href="https://translate.google.com/?sl=th&amp;tl=en&amp;text=%E0%B9%82%E0%B8%8A%E0%B8%84%E0%B8%A5%E0%B8%B2%E0%B8%A0&amp;op=translate" target="_blank" rel="noopener noreferrer"
+              aria-label="Hear Chok Lap in Thai on Google Translate">Hear Thai online ↗</a>
+            <details class="context">
+              <summary>Context &amp; tradition</summary>
+              <p>In amulet, yantra, and ritual descriptions, this names a hoped-for benefit. It can concern an unexpected gain as well as prosperity more broadly; the word itself does not identify a particular object or ceremony.</p>
+            </details>
+            <details class="sources">
+              <summary>Sources</summary>
+              <ul>
+                <li>
+                  <a href="https://db.sac.or.th/thailand-cultural-encyclopedia/detail.php?id=2539" target="_blank" rel="noopener noreferrer">
+                    Thai Cultural Encyclopedia: yantras and their purposes
+                  </a>
+                </li>
+              </ul>
+            </details>
+            <p class="related">Explore also: <a href="#term-56">Maha Lap</a> · <a href="#term-207">Kha Khai</a> · <a href="#term-44">Sai Dak Sap</a> · <a href="#term-125">Phra Siwali</a> · <a href="#term-194">Yant Ha Thaeo</a></p>
+            <div class="actions">
+              <a href="#term-206" aria-label="Link to Chok Lap">Link to this term</a>
+            </div>
+          </div>
+        </article>
+<article class="item" id="term-56"
+          data-purposes="prosperity" data-category="Purposes" data-essential="false"
+          >
+          <button class="play" type="button" data-thai="มหาลาภ"
+            aria-label="Play Maha Lap in Thai" aria-pressed="false" disabled>▶</button>
+          <div class="entry-text">
+            <h3 class="thai" lang="th">มหาลาภ</h3>
+            <p class="roman">Maha Lap</p>
+            <p class="translation">Good fortune</p>
+            <p class="definition">“Great gain” or good fortune.</p>
+            <a class="audio-online" href="https://translate.google.com/?sl=th&amp;tl=en&amp;text=%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A5%E0%B8%B2%E0%B8%A0&amp;op=translate" target="_blank" rel="noopener noreferrer"
+              aria-label="Hear Maha Lap in Thai on Google Translate">Hear Thai online ↗</a>
+            <div class="context-note"><p>In amulet descriptions, it expresses a wish for prosperity or favourable opportunities.</p></div>
+            <details class="sources">
+              <summary>Sources</summary>
+              <ul>
+                <li>
+                  <a href="https://www.wongnai.com/articles/thai-amulet-for-business" target="_blank" rel="noopener noreferrer">
+                    Wongnai: charms for business
+                  </a>
+                </li>
+              </ul>
+            </details>
+            <p class="purpose-links">Related purposes: <a href="#term-206">Fortune and business</a></p>
+            <div class="actions">
+              <a href="#term-56" aria-label="Link to Maha Lap">Link to this term</a>
+            </div>
+          </div>
+        </article>
+<article class="item" id="term-207"
+          data-purposes="prosperity" data-category="Purposes" data-essential="true">
+          <button class="play" type="button" data-thai="ค้าขาย"
+            aria-label="Play Kha Khai in Thai" aria-pressed="false" disabled>▶</button>
+          <div class="entry-text">
+            <h3 class="thai" lang="th">ค้าขาย</h3>
+            <p class="roman">Kha Khai</p>
+            <p class="translation">Trade and business</p>
+            <p class="definition">Trading or doing business; in charm descriptions, the wish for successful sales and commerce.</p>
+            <a class="audio-online" href="https://translate.google.com/?sl=th&amp;tl=en&amp;text=%E0%B8%84%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%A2&amp;op=translate" target="_blank" rel="noopener noreferrer"
+              aria-label="Hear Kha Khai in Thai on Google Translate">Hear Thai online ↗</a>
+            <details class="context">
+              <summary>Context &amp; tradition</summary>
+              <p>This is an ordinary Thai expression used in descriptions of charms and rituals for shopkeepers and other traders. Goodwill, persuasive speech, attracting customers, and prosperity may be described together in this context.</p>
+            </details>
+            <details class="sources">
+              <summary>Sources</summary>
+              <ul>
+                <li>
+                  <a href="https://www.finearts.go.th/performing/view/33969-เรื่อง-ของขลังนางกวัก" target="_blank" rel="noopener noreferrer">
+                    Fine Arts Department: Nang Kwak and trade
+                  </a>
+                </li>
+              </ul>
+            </details>
+            <p class="purpose-links">Related purposes: <a href="#term-206">Fortune and business</a></p>
+            <p class="related">Explore also: <a href="#term-60">Metta Maha Niyom</a> · <a href="#term-68">Lin Thong</a> · <a href="#term-48">Salika</a> · <a href="#term-119">Nang Kwak</a> · <a href="#term-216">Long Na Na Thong</a></p>
+            <div class="actions">
+              <a href="#term-207" aria-label="Link to Kha Khai">Link to this term</a>
+            </div>
+          </div>
+        </article>
+<article class="item" id="term-65"
+          data-purposes="prosperity" data-category="Purposes" data-essential="false"
+          >
+          <button class="play" type="button" data-thai="ค้ำคูณ"
+            aria-label="Play Kham Khun in Thai" aria-pressed="false" disabled>▶</button>
+          <div class="entry-text">
+            <h3 class="thai" lang="th">ค้ำคูณ</h3>
+            <p class="roman">Kham Khun</p>
+            <p class="translation">Support and prosperity</p>
+            <p class="definition">A regional expression connecting support with prosperity or auspicious increase.</p>
+            <a class="audio-online" href="https://translate.google.com/?sl=th&amp;tl=en&amp;text=%E0%B8%84%E0%B9%89%E0%B8%B3%E0%B8%84%E0%B8%B9%E0%B8%93&amp;op=translate" target="_blank" rel="noopener noreferrer"
+              aria-label="Hear Kham Khun in Thai on Google Translate">Hear Thai online ↗</a>
+            <div class="context-note"><p>In an Isan wedding account, khun leaves are explained through the idea of kham khun, supporting prosperity. Regional symbolism gives the expression its context.</p></div>
+            <details class="sources">
+              <summary>Sources</summary>
+              <ul>
+                <li>
+                  <a href="https://doi.nrct.go.th/ListDoi/Download/273895?Resolve_DOI=10.14457%2FSU.res.2011.41" target="_blank" rel="noopener noreferrer">
+                    Silpakorn University research: Isan wedding symbolism
+                  </a>
+                </li>
+              </ul>
+            </details>
+            <p class="purpose-links">Related purposes: <a href="#term-206">Fortune and business</a></p>
+            <div class="actions">
+              <a href="#term-65" aria-label="Link to Kham Khun">Link to this term</a>
+            </div>
+          </div>
+        </article>
+        </div>
+        <div class="subgroup">
+          <h3 class="subgroup-title">Authority and influence</h3>
+<article class="item" id="term-70"
+          data-purposes="authority" data-category="Purposes" data-essential="false"
+          >
+          <button class="play" type="button" data-thai="มหาอำนาจ"
+            aria-label="Play Maha Amnat in Thai" aria-pressed="false" disabled>▶</button>
+          <div class="entry-text">
+            <h3 class="thai" lang="th">มหาอำนาจ</h3>
+            <p class="roman">Maha Amnat</p>
+            <p class="translation">Authority</p>
+            <p class="definition">“Great authority.” In amulet and tattoo descriptions, it refers to the wish for personal authority, influence, and respect.</p>
+            <a class="audio-online" href="https://translate.google.com/?sl=th&amp;tl=en&amp;text=%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%AD%E0%B8%B3%E0%B8%99%E0%B8%B2%E0%B8%88&amp;op=translate" target="_blank" rel="noopener noreferrer"
+              aria-label="Hear Maha Amnat in Thai on Google Translate">Hear Thai online ↗</a>
+            <details class="sources">
+              <summary>Sources</summary>
+              <ul>
+                <li>
+                  <a href="https://rdi2.rmutsb.ac.th/2011/download/n60/12.pdf" target="_blank" rel="noopener noreferrer">
+                    Rajamangala University of Technology Suvarnabhumi: cultural research on Ko Kret
+                  </a>
+                </li>
+              </ul>
+            </details>
+            <p class="related">Explore also: <a href="#term-118">Hanuman</a> · <a href="#term-50">Khiao Suea</a></p>
+            <div class="actions">
+              <a href="#term-70" aria-label="Link to Maha Amnat">Link to this term</a>
+            </div>
+          </div>
+        </article>
+        </div>
+        <div class="subgroup">
+          <h3 class="subgroup-title">Other auspicious concepts</h3>
+<article class="item" id="term-69"
+          data-purposes="" data-category="Purposes" data-essential="false"
           >
           <button class="play" type="button" data-thai="จินดามณี"
             aria-label="Play Chindamani in Thai" aria-pressed="false" disabled>▶</button>
@@ -2855,41 +3161,15 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </div>
           </div>
         </article>
-        <article class="item" id="term-70"
-          data-category="Purposes" data-essential="false"
-          >
-          <button class="play" type="button" data-thai="มหาอำนาจ"
-            aria-label="Play Maha Amnat in Thai" aria-pressed="false" disabled>▶</button>
-          <div class="entry-text">
-            <h3 class="thai" lang="th">มหาอำนาจ</h3>
-            <p class="roman">Maha Amnat</p>
-            <p class="translation">Authority</p>
-            <p class="definition">“Great authority.” In amulet and tattoo descriptions, it refers to the wish for personal authority, influence, and respect.</p>
-            <a class="audio-online" href="https://translate.google.com/?sl=th&amp;tl=en&amp;text=%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%AD%E0%B8%B3%E0%B8%99%E0%B8%B2%E0%B8%88&amp;op=translate" target="_blank" rel="noopener noreferrer"
-              aria-label="Hear Maha Amnat in Thai on Google Translate">Hear Thai online ↗</a>
-            <details class="sources">
-              <summary>Sources</summary>
-              <ul>
-                <li>
-                  <a href="https://rdi2.rmutsb.ac.th/2011/download/n60/12.pdf" target="_blank" rel="noopener noreferrer">
-                    Rajamangala University of Technology Suvarnabhumi: cultural research on Ko Kret
-                  </a>
-                </li>
-              </ul>
-            </details>
-            <div class="actions">
-              <a href="#term-70" aria-label="Link to Maha Amnat">Link to this term</a>
-            </div>
-          </div>
-        </article>
-      </section>
+        </div>
+</section>
       <section class="group" aria-labelledby="section-materials">
         <h2 id="section-materials">Materials</h2>
         <p class="group-intro">Reading what an object is made from. · 38 terms</p>
         <div class="subgroup">
           <h3 class="subgroup-title">Material vocabulary and prepared powders</h3>
         <article class="item" id="term-71"
-          data-category="Materials" data-essential="true"
+          data-purposes="" data-category="Materials" data-essential="true"
           >
           <button class="play" type="button" data-thai="มวลสาร"
             aria-label="Play Muan San in Thai" aria-pressed="false" disabled>▶</button>
@@ -2923,7 +3203,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-179"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="ผง"
             aria-label="Play Phong in Thai" aria-pressed="false" disabled>▶</button>
@@ -2956,7 +3236,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-180"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="ผงวิเศษ"
             aria-label="Play Phong Wiset in Thai" aria-pressed="false" disabled>▶</button>
@@ -2989,7 +3269,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-84"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="อิทธิเจ"
             aria-label="Play Itthiche in Thai" aria-pressed="false" disabled>▶</button>
@@ -3026,7 +3306,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         <div class="subgroup">
           <h3 class="subgroup-title">Metals, alloys, and casting materials</h3>
         <article class="item" id="term-90"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="สำริด"
             aria-label="Play Samrit in Thai" aria-pressed="false" disabled>▶</button>
@@ -3059,7 +3339,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-106"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="นวโลหะ"
             aria-label="Play Nawaloha in Thai" aria-pressed="false" disabled>▶</button>
@@ -3093,7 +3373,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-175"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="สัตโลหะ"
             aria-label="Play Satthaloha in Thai" aria-pressed="false" disabled>▶</button>
@@ -3127,7 +3407,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-107"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="นาก"
             aria-label="Play Nak in Thai" aria-pressed="false" disabled>▶</button>
@@ -3161,7 +3441,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-181"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="เงิน"
             aria-label="Play Ngoen in Thai" aria-pressed="false" disabled>▶</button>
@@ -3194,7 +3474,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-93"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="เงินโบราณ"
             aria-label="Play Ngoen Boran in Thai" aria-pressed="false" disabled>▶</button>
@@ -3232,7 +3512,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-174"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="ทองแดง"
             aria-label="Play Thong Daeng in Thai" aria-pressed="false" disabled>▶</button>
@@ -3264,7 +3544,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-182"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="ทองเหลือง"
             aria-label="Play Thong Lueang in Thai" aria-pressed="false" disabled>▶</button>
@@ -3296,7 +3576,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-92"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="ตะกั่ว"
             aria-label="Play Takua in Thai" aria-pressed="false" disabled>▶</button>
@@ -3329,7 +3609,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-91"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="ชนวน"
             aria-label="Play Chanuan in Thai" aria-pressed="false" disabled>▶</button>
@@ -3363,7 +3643,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-94"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="ฝาบาตร"
             aria-label="Play Fa Bat in Thai" aria-pressed="false" disabled>▶</button>
@@ -3399,7 +3679,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         <div class="subgroup">
           <h3 class="subgroup-title">Plants, resins, clay, and ritual supplies</h3>
         <article class="item" id="term-81"
-          data-category="Materials" data-essential="true"
+          data-purposes="" data-category="Materials" data-essential="true"
           >
           <button class="play" type="button" data-thai="ว่าน"
             aria-label="Play Wan in Thai" aria-pressed="false" disabled>▶</button>
@@ -3438,7 +3718,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-83"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="ว่านยา"
             aria-label="Play Wan Ya in Thai" aria-pressed="false" disabled>▶</button>
@@ -3471,7 +3751,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-95"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="ใบลาน"
             aria-label="Play Bai Lan in Thai" aria-pressed="false" disabled>▶</button>
@@ -3505,7 +3785,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-96"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="ครั่ง"
             aria-label="Play Khrang in Thai" aria-pressed="false" disabled>▶</button>
@@ -3544,7 +3824,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-108"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="รัก"
             aria-label="Play Rak in Thai" aria-pressed="false" disabled>▶</button>
@@ -3578,7 +3858,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-172"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="ดินเผา"
             aria-label="Play Din Phao in Thai" aria-pressed="false" disabled>▶</button>
@@ -3612,7 +3892,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-97"
-          data-category="Materials" data-essential="true"
+          data-purposes="" data-category="Materials" data-essential="true"
           >
           <button class="play" type="button" data-thai="สายสิญจน์"
             aria-label="Play Sai Sin in Thai" aria-pressed="false" disabled>▶</button>
@@ -3649,7 +3929,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         <div class="subgroup">
           <h3 class="subgroup-title">Revered bodily relics</h3>
         <article class="item" id="term-98"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="พระเกศา"
             aria-label="Play Phra Kesa in Thai" aria-pressed="false" disabled>▶</button>
@@ -3690,7 +3970,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         <div class="subgroup">
           <h3 class="subgroup-title">Natural charm substances and animal materials</h3>
         <article class="item" id="term-87"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="ปรอท"
             aria-label="Play Parot in Thai" aria-pressed="false" disabled>▶</button>
@@ -3729,7 +4009,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-88"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="เหล็กไหล"
             aria-label="Play Lek Lai in Thai" aria-pressed="false" disabled>▶</button>
@@ -3763,7 +4043,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-103"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="คด"
             aria-label="Play Khot in Thai" aria-pressed="false" disabled>▶</button>
@@ -3796,7 +4076,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-104"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="กัลปังหาดำ"
             aria-label="Play Kanlapangha Dam in Thai" aria-pressed="false" disabled>▶</button>
@@ -3829,7 +4109,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-105"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="ผลพระเจ้าห้าพระองค์"
             aria-label="Play Phon Phra Chao Ha Phra Ong in Thai" aria-pressed="false" disabled>▶</button>
@@ -3862,7 +4142,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-86"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="ดินโป่ง"
             aria-label="Play Din Pong in Thai" aria-pressed="false" disabled>▶</button>
@@ -3895,7 +4175,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-99"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="งากระเด็น"
             aria-label="Play Nga Kraden in Thai" aria-pressed="false" disabled>▶</button>
@@ -3928,7 +4208,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-100"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="หนังหน้าผากเสือ"
             aria-label="Play Nang Na Phak Suea in Thai" aria-pressed="false" disabled>▶</button>
@@ -3964,7 +4244,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         <div class="subgroup">
           <h3 class="subgroup-title">Funerary and spirit-associated materials</h3>
         <article class="item" id="term-73"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="ผงพราย"
             aria-label="Play Phong Prai in Thai" aria-pressed="false" disabled>▶</button>
@@ -4003,7 +4283,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-74"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="กระดูกผี"
             aria-label="Play Kraduk Phi in Thai" aria-pressed="false" disabled>▶</button>
@@ -4037,7 +4317,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-77"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="ผ้าห่อศพ"
             aria-label="Play Pha Ho Sop in Thai" aria-pressed="false" disabled>▶</button>
@@ -4075,7 +4355,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-78"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="ผ้าปิดหน้าศพ"
             aria-label="Play Pha Pit Na Sop in Thai" aria-pressed="false" disabled>▶</button>
@@ -4113,7 +4393,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-79"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="เงินปากผี"
             aria-label="Play Ngoen Pak Phi in Thai" aria-pressed="false" disabled>▶</button>
@@ -4147,7 +4427,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-80"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="ไม้เสียบผี"
             aria-label="Play Mai Siap Phi in Thai" aria-pressed="false" disabled>▶</button>
@@ -4185,7 +4465,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-85"
-          data-category="Materials" data-essential="false"
+          data-purposes="" data-category="Materials" data-essential="false"
           >
           <button class="play" type="button" data-thai="ดินเจ็ดป่าช้า"
             aria-label="Play Din Chet Pa Cha in Thai" aria-pressed="false" disabled>▶</button>
@@ -4225,7 +4505,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         <div class="subgroup">
           <h3 class="subgroup-title">Buddhist disciples</h3>
         <article class="item" id="term-125"
-          data-category="Spirits" data-essential="false"
+          data-purposes="prosperity" data-category="Spirits" data-essential="false"
           >
           <button class="play" type="button" data-thai="พระสีวลี"
             aria-label="Play Phra Siwali in Thai" aria-pressed="false" disabled>▶</button>
@@ -4253,13 +4533,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-206">Fortune and business</a></p>
             <div class="actions">
               <a href="#term-125" aria-label="Link to Phra Siwali">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-126"
-          data-category="Spirits" data-essential="false"
+          data-purposes="" data-category="Spirits" data-essential="false"
           >
           <button class="play" type="button" data-thai="พระสังกัจจายน์"
             aria-label="Play Phra Sangkatchai in Thai" aria-pressed="false" disabled>▶</button>
@@ -4295,7 +4576,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         <div class="subgroup">
           <h3 class="subgroup-title">Deities, epic figures, and celestial guardians</h3>
         <article class="item" id="term-114"
-          data-category="Spirits" data-essential="false"
+          data-purposes="" data-category="Spirits" data-essential="false"
           >
           <button class="play" type="button" data-thai="พิษณุ"
             aria-label="Play Phitsanu in Thai" aria-pressed="false" disabled>▶</button>
@@ -4329,7 +4610,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-115"
-          data-category="Spirits" data-essential="false"
+          data-purposes="" data-category="Spirits" data-essential="false"
           >
           <button class="play" type="button" data-thai="พระนารายณ์"
             aria-label="Play Phra Narai in Thai" aria-pressed="false" disabled>▶</button>
@@ -4363,7 +4644,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-116"
-          data-category="Spirits" data-essential="false"
+          data-purposes="" data-category="Spirits" data-essential="false"
           >
           <button class="play" type="button" data-thai="พระแม่สุรัสวดี"
             aria-label="Play Phra Mae Suratsawadi in Thai" aria-pressed="false" disabled>▶</button>
@@ -4396,7 +4677,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-127"
-          data-category="Spirits" data-essential="true"
+          data-purposes="" data-category="Spirits" data-essential="true"
           >
           <button class="play" type="button" data-thai="พระพิฆเนศ"
             aria-label="Play Phra Phikhanet in Thai" aria-pressed="false" disabled>▶</button>
@@ -4429,7 +4710,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-117"
-          data-category="Spirits" data-essential="false"
+          data-purposes="" data-category="Spirits" data-essential="false"
           >
           <button class="play" type="button" data-thai="ราหู"
             aria-label="Play Rahu in Thai" aria-pressed="false" disabled>▶</button>
@@ -4467,7 +4748,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-128"
-          data-category="Spirits" data-essential="true"
+          data-purposes="protection prosperity spirits" data-category="Spirits" data-essential="true"
           >
           <button class="play" type="button" data-thai="ท้าวเวสสุวรรณ"
             aria-label="Play Thao Wetsuwan in Thai" aria-pressed="false" disabled>▶</button>
@@ -4495,13 +4776,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a> · <a href="#term-206">Fortune and business</a> · <a href="#term-64">Spirit and sorcery protection</a></p>
             <div class="actions">
               <a href="#term-128" aria-label="Link to Thao Wetsuwan">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-129"
-          data-category="Spirits" data-essential="false"
+          data-purposes="protection" data-category="Spirits" data-essential="false"
           >
           <button class="play" type="button" data-thai="ท้าวจตุโลกบาล"
             aria-label="Play Thao Chatulokaban in Thai" aria-pressed="false" disabled>▶</button>
@@ -4529,13 +4811,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
               <a href="#term-129" aria-label="Link to Thao Chatulokaban">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-113"
-          data-category="Spirits" data-essential="false"
+          data-purposes="" data-category="Spirits" data-essential="false"
           >
           <button class="play" type="button" data-thai="ยักษ์"
             aria-label="Play Yak in Thai" aria-pressed="false" disabled>▶</button>
@@ -4568,7 +4851,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-112"
-          data-category="Spirits" data-essential="false"
+          data-purposes="" data-category="Spirits" data-essential="false"
           >
           <button class="play" type="button" data-thai="กุมภัณฑ์"
             aria-label="Play Kumphan in Thai" aria-pressed="false" disabled>▶</button>
@@ -4602,7 +4885,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-102"
-          data-category="Spirits" data-essential="true"
+          data-purposes="protection" data-category="Spirits" data-essential="true"
           >
           <button class="play" type="button" data-thai="นาค"
             aria-label="Play Nak in Thai" aria-pressed="false" disabled>▶</button>
@@ -4630,13 +4913,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
               <a href="#term-102" aria-label="Link to Nak">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-118"
-          data-category="Spirits" data-essential="true"
+          data-purposes="protection" data-category="Spirits" data-essential="true"
           >
           <button class="play" type="button" data-thai="หนุมาน"
             aria-label="Play Hanuman in Thai" aria-pressed="false" disabled>▶</button>
@@ -4664,13 +4948,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
               <a href="#term-118" aria-label="Link to Hanuman">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-121"
-          data-category="Spirits" data-essential="false"
+          data-purposes="" data-category="Spirits" data-essential="false"
           >
           <button class="play" type="button" data-thai="เทพพนม"
             aria-label="Play Thep Phanom in Thai" aria-pressed="false" disabled>▶</button>
@@ -4706,7 +4991,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         <div class="subgroup">
           <h3 class="subgroup-title">Sages and auspicious figures</h3>
         <article class="item" id="term-122"
-          data-category="Spirits" data-essential="true"
+          data-purposes="" data-category="Spirits" data-essential="true"
           >
           <button class="play" type="button" data-thai="ฤๅษี"
             aria-label="Play Ruesi in Thai" aria-pressed="false" disabled>▶</button>
@@ -4745,7 +5030,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-119"
-          data-category="Spirits" data-essential="true"
+          data-purposes="goodwill prosperity" data-category="Spirits" data-essential="true"
           >
           <button class="play" type="button" data-thai="นางกวัก"
             aria-label="Play Nang Kwak in Thai" aria-pressed="false" disabled>▶</button>
@@ -4773,6 +5058,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a> · <a href="#term-206">Fortune and business</a></p>
             <div class="actions">
               <a href="#term-119" aria-label="Link to Nang Kwak">Link to this term</a>
             </div>
@@ -4782,7 +5068,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         <div class="subgroup">
           <h3 class="subgroup-title">Local guardians and teacher spirits</h3>
         <article class="item" id="term-184"
-          data-category="Spirits" data-essential="true"
+          data-purposes="" data-category="Spirits" data-essential="true"
           >
           <button class="play" type="button" data-thai="เจ้าที่"
             aria-label="Play Chao Thi in Thai" aria-pressed="false" disabled>▶</button>
@@ -4809,13 +5095,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="related">Explore also: <a href="#term-214">San Ta Yai</a> · <a href="#term-212">Khrueang Sen</a></p>
             <div class="actions">
               <a href="#term-184" aria-label="Link to Chao Thi">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-131"
-          data-category="Spirits" data-essential="false"
+          data-purposes="" data-category="Spirits" data-essential="false"
           >
           <button class="play" type="button" data-thai="แม่ซื้อ"
             aria-label="Play Mae Sue in Thai" aria-pressed="false" disabled>▶</button>
@@ -4848,7 +5135,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-109"
-          data-category="Spirits" data-essential="false"
+          data-purposes="" data-category="Spirits" data-essential="false"
           >
           <button class="play" type="button" data-thai="ผีครู"
             aria-label="Play Phi Khru in Thai" aria-pressed="false" disabled>▶</button>
@@ -4885,7 +5172,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         <div class="subgroup">
           <h3 class="subgroup-title">Ghosts, child spirits, and shapeshifters</h3>
         <article class="item" id="term-183"
-          data-category="Spirits" data-essential="true"
+          data-purposes="" data-category="Spirits" data-essential="true"
           >
           <button class="play" type="button" data-thai="ผี"
             aria-label="Play Phi in Thai" aria-pressed="false" disabled>▶</button>
@@ -4919,7 +5206,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-72"
-          data-category="Spirits" data-essential="false"
+          data-purposes="" data-category="Spirits" data-essential="false"
           >
           <button class="play" type="button" data-thai="พราย"
             aria-label="Play Prai in Thai" aria-pressed="false" disabled>▶</button>
@@ -4953,7 +5240,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-110"
-          data-category="Spirits" data-essential="false"
+          data-purposes="" data-category="Spirits" data-essential="false"
           >
           <button class="play" type="button" data-thai="พรายกุมาร"
             aria-label="Play Prai Kuman in Thai" aria-pressed="false" disabled>▶</button>
@@ -4992,7 +5279,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-111"
-          data-category="Spirits" data-essential="false"
+          data-purposes="" data-category="Spirits" data-essential="false"
           >
           <button class="play" type="button" data-thai="ลูกกรอก"
             aria-label="Play Luk Krok in Thai" aria-pressed="false" disabled>▶</button>
@@ -5026,7 +5313,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-130"
-          data-category="Spirits" data-essential="false"
+          data-purposes="" data-category="Spirits" data-essential="false"
           >
           <button class="play" type="button" data-thai="ไอ้ไข่"
             aria-label="Play Ai Khai in Thai" aria-pressed="false" disabled>▶</button>
@@ -5060,7 +5347,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-75"
-          data-category="Spirits" data-essential="false"
+          data-purposes="" data-category="Spirits" data-essential="false"
           >
           <button class="play" type="button" data-thai="ผีตายโหง"
             aria-label="Play Phi Tai Hong in Thai" aria-pressed="false" disabled>▶</button>
@@ -5094,7 +5381,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-76"
-          data-category="Spirits" data-essential="false"
+          data-purposes="" data-category="Spirits" data-essential="false"
           >
           <button class="play" type="button" data-thai="ผีตายทั้งกลม"
             aria-label="Play Phi Tai Thang Klom in Thai" aria-pressed="false" disabled>▶</button>
@@ -5128,7 +5415,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-123"
-          data-category="Spirits" data-essential="false"
+          data-purposes="" data-category="Spirits" data-essential="false"
           >
           <button class="play" type="button" data-thai="ผีโป่ง"
             aria-label="Play Phi Pong in Thai" aria-pressed="false" disabled>▶</button>
@@ -5162,7 +5449,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-124"
-          data-category="Spirits" data-essential="false"
+          data-purposes="" data-category="Spirits" data-essential="false"
           >
           <button class="play" type="button" data-thai="ผีปอบ"
             aria-label="Play Phi Pop in Thai" aria-pressed="false" disabled>▶</button>
@@ -5195,7 +5482,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-54"
-          data-category="Spirits" data-essential="false"
+          data-purposes="" data-category="Spirits" data-essential="false"
           >
           <button class="play" type="button" data-thai="เสือสมิง"
             aria-label="Play Suea Saming in Thai" aria-pressed="false" disabled>▶</button>
@@ -5229,7 +5516,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-55"
-          data-category="Spirits" data-essential="false"
+          data-purposes="" data-category="Spirits" data-essential="false"
           >
           <button class="play" type="button" data-thai="เสือเย็น"
             aria-label="Play Suea Yen in Thai" aria-pressed="false" disabled>▶</button>
@@ -5266,11 +5553,11 @@ footer p { margin: 0 0 8px; max-width: 760px; }
       </section>
       <section class="group" aria-labelledby="section-practice">
         <h2 id="section-practice">Ritual, teachers, and practice</h2>
-        <p class="group-intro">Teachers, knowledge, ceremonies, and observances. · 42 terms</p>
+        <p class="group-intro">Teachers, knowledge, ceremonies, and observances. · 48 terms</p>
         <div class="subgroup">
           <h3 class="subgroup-title">Buddhist observances and devotional language</h3>
         <article class="item" id="term-195"
-          data-category="Practice" data-essential="true"
+          data-purposes="" data-category="Practice" data-essential="true"
           >
           <button class="play" type="button" data-thai="บุญ"
             aria-label="Play Bun in Thai" aria-pressed="false" disabled>▶</button>
@@ -5300,7 +5587,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-196"
-          data-category="Practice" data-essential="true"
+          data-purposes="" data-category="Practice" data-essential="true"
           >
           <button class="play" type="button" data-thai="ศีล"
             aria-label="Play Sin in Thai" aria-pressed="false" disabled>▶</button>
@@ -5335,7 +5622,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-197"
-          data-category="Practice" data-essential="true"
+          data-purposes="" data-category="Practice" data-essential="true"
           >
           <button class="play" type="button" data-thai="บารมี"
             aria-label="Play Barami in Thai" aria-pressed="false" disabled>▶</button>
@@ -5365,7 +5652,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-198"
-          data-category="Practice" data-essential="true"
+          data-purposes="" data-category="Practice" data-essential="true"
           >
           <button class="play" type="button" data-thai="พุทธคุณ"
             aria-label="Play Phutthakhun in Thai" aria-pressed="false" disabled>▶</button>
@@ -5400,7 +5687,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-157"
-          data-category="Practice" data-essential="false"
+          data-purposes="" data-category="Practice" data-essential="false"
           >
           <button class="play" type="button" data-thai="นะโม ตัสสะ"
             aria-label="Play Namo Tassa in Thai" aria-pressed="false" disabled>▶</button>
@@ -5434,7 +5721,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-158"
-          data-category="Practice" data-essential="false"
+          data-purposes="" data-category="Practice" data-essential="false"
           >
           <button class="play" type="button" data-thai="อิติปิโส"
             aria-label="Play Itipiso in Thai" aria-pressed="false" disabled>▶</button>
@@ -5468,7 +5755,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-144"
-          data-category="Practice" data-essential="true"
+          data-purposes="" data-category="Practice" data-essential="true"
           >
           <button class="play" type="button" data-thai="บูชา"
             aria-label="Play Bucha in Thai" aria-pressed="false" disabled>▶</button>
@@ -5505,7 +5792,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         <div class="subgroup">
           <h3 class="subgroup-title">Teachers, titles, and schools</h3>
         <article class="item" id="term-149"
-          data-category="Practice" data-essential="false"
+          data-purposes="" data-category="Practice" data-essential="false"
           >
           <button class="play" type="button" data-thai="ครูบาอาจารย์"
             aria-label="Play Khru Ba Achan in Thai" aria-pressed="false" disabled>▶</button>
@@ -5538,7 +5825,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-150"
-          data-category="Practice" data-essential="false"
+          data-purposes="" data-category="Practice" data-essential="false"
           >
           <button class="play" type="button" data-thai="ครูบา"
             aria-label="Play Khru Ba in Thai" aria-pressed="false" disabled>▶</button>
@@ -5570,7 +5857,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-151"
-          data-category="Practice" data-essential="true"
+          data-purposes="" data-category="Practice" data-essential="true"
           >
           <button class="play" type="button" data-thai="หลวงปู่"
             aria-label="Play Luang Pu in Thai" aria-pressed="false" disabled>▶</button>
@@ -5603,7 +5890,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-152"
-          data-category="Practice" data-essential="true"
+          data-purposes="" data-category="Practice" data-essential="true"
           >
           <button class="play" type="button" data-thai="หลวงพ่อ"
             aria-label="Play Luang Pho in Thai" aria-pressed="false" disabled>▶</button>
@@ -5636,7 +5923,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-153"
-          data-category="Practice" data-essential="false"
+          data-purposes="" data-category="Practice" data-essential="false"
           >
           <button class="play" type="button" data-thai="พ่อ"
             aria-label="Play Pho in Thai" aria-pressed="false" disabled>▶</button>
@@ -5664,7 +5951,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-201"
-          data-category="Practice" data-essential="false"
+          data-purposes="" data-category="Practice" data-essential="false"
           >
           <button class="play" type="button" data-thai="ปู่"
             aria-label="Play Pu in Thai" aria-pressed="false" disabled>▶</button>
@@ -5692,7 +5979,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-154"
-          data-category="Practice" data-essential="true"
+          data-purposes="" data-category="Practice" data-essential="true"
           >
           <button class="play" type="button" data-thai="เกจิอาจารย์"
             aria-label="Play Kechi Achan in Thai" aria-pressed="false" disabled>▶</button>
@@ -5726,7 +6013,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-155"
-          data-category="Practice" data-essential="false"
+          data-purposes="" data-category="Practice" data-essential="false"
           >
           <button class="play" type="button" data-thai="ครูใหญ่"
             aria-label="Play Khru Yai in Thai" aria-pressed="false" disabled>▶</button>
@@ -5754,7 +6041,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-186"
-          data-category="Practice" data-essential="true"
+          data-purposes="" data-category="Practice" data-essential="true"
           >
           <button class="play" type="button" data-thai="อาจารย์"
             aria-label="Play Ajarn in Thai" aria-pressed="false" disabled>▶</button>
@@ -5794,7 +6081,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-148"
-          data-category="Practice" data-essential="true"
+          data-purposes="" data-category="Practice" data-essential="true"
           >
           <button class="play" type="button" data-thai="สำนัก"
             aria-label="Play Samnak in Thai" aria-pressed="false" disabled>▶</button>
@@ -5830,7 +6117,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         </div>
         <div class="subgroup">
           <h3 class="subgroup-title">Honouring teachers and making offerings</h3>
-        <article class="item" id="term-205" data-category="Practice" data-essential="true">
+        <article class="item" id="term-205" data-purposes="" data-category="Practice" data-essential="true">
           <button class="play" type="button" data-thai="ครอบครู" aria-label="Play Khrop Khru in Thai" aria-pressed="false" disabled>▶</button>
           <div class="entry-text">
             <h3 class="thai" lang="th">ครอบครู</h3>
@@ -5849,7 +6136,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-143"
-          data-category="Practice" data-essential="true"
+          data-purposes="" data-category="Practice" data-essential="true"
           >
           <button class="play" type="button" data-thai="ไหว้ครู"
             aria-label="Play Wai Khru in Thai" aria-pressed="false" disabled>▶</button>
@@ -5889,7 +6176,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-141"
-          data-category="Practice" data-essential="true"
+          data-purposes="" data-category="Practice" data-essential="true"
           >
           <button class="play" type="button" data-thai="ขันครู"
             aria-label="Play Khan Khru in Thai" aria-pressed="false" disabled>▶</button>
@@ -5923,7 +6210,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-142"
-          data-category="Practice" data-essential="false"
+          data-purposes="" data-category="Practice" data-essential="false"
           >
           <button class="play" type="button" data-thai="ขันห้า"
             aria-label="Play Khan Ha in Thai" aria-pressed="false" disabled>▶</button>
@@ -5957,7 +6244,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-192"
-          data-category="Practice" data-essential="true"
+          data-purposes="" data-category="Practice" data-essential="true"
           >
           <button class="play" type="button" data-thai="ค่าครู"
             aria-label="Play Kha Khru in Thai" aria-pressed="false" disabled>▶</button>
@@ -5994,7 +6281,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         <div class="subgroup">
           <h3 class="subgroup-title">Consecration, cleansing, and sacred occasions</h3>
         <article class="item" id="term-187"
-          data-category="Practice" data-essential="true"
+          data-purposes="" data-category="Practice" data-essential="true"
           >
           <button class="play" type="button" data-thai="พุทธาภิเษก"
             aria-label="Play Phutthaphisek in Thai" aria-pressed="false" disabled>▶</button>
@@ -6027,7 +6314,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-140"
-          data-category="Practice" data-essential="true"
+          data-purposes="" data-category="Practice" data-essential="true"
           >
           <button class="play" type="button" data-thai="ปลุกเสก"
             aria-label="Play Pluk Sek in Thai" aria-pressed="false" disabled>▶</button>
@@ -6067,7 +6354,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-145"
-          data-category="Practice" data-essential="true"
+          data-purposes="" data-category="Practice" data-essential="true"
           >
           <button class="play" type="button" data-thai="น้ำมนต์"
             aria-label="Play Nam Mon in Thai" aria-pressed="false" disabled>▶</button>
@@ -6095,13 +6382,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="related">Explore also: <a href="#term-209">Sado Khro</a> · <a href="#term-217">Suep Chata</a></p>
             <div class="actions">
               <a href="#term-145" aria-label="Link to Nam Mon">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-146"
-          data-category="Practice" data-essential="false"
+          data-purposes="" data-category="Practice" data-essential="false"
           >
           <button class="play" type="button" data-thai="ส้มป่อย"
             aria-label="Play Som Poi in Thai" aria-pressed="false" disabled>▶</button>
@@ -6128,13 +6416,51 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="related">Explore also: <a href="#term-209">Sado Khro</a> · <a href="#term-217">Suep Chata</a></p>
             <div class="actions">
               <a href="#term-146" aria-label="Link to Som Poi">Link to this term</a>
             </div>
           </div>
         </article>
+        <article class="item" id="term-216"
+          data-purposes="goodwill prosperity" data-category="Practice" data-essential="true">
+          <button class="play" type="button" data-thai="ลงนะหน้าทอง"
+            aria-label="Play Long Na Na Thong in Thai" aria-pressed="false" disabled>▶</button>
+          <div class="entry-text">
+            <h3 class="thai" lang="th">ลงนะหน้าทอง</h3>
+            <p class="roman">Long Na Na Thong</p>
+            <p class="translation">Gold-leaf face blessing</p>
+            <p class="definition">A blessing ritual associated with goodwill and personal attraction, involving sacred marking and gold leaf.</p>
+            <a class="audio-online" href="https://translate.google.com/?sl=th&amp;tl=en&amp;text=%E0%B8%A5%E0%B8%87%E0%B8%99%E0%B8%B0%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%97%E0%B8%AD%E0%B8%87&amp;op=translate" target="_blank" rel="noopener noreferrer"
+              aria-label="Hear Long Na Na Thong in Thai on Google Translate">Hear Thai online ↗</a>
+            <a class="pictures" href="https://www.google.com/search?tbm=isch&amp;q=%E0%B8%A5%E0%B8%87%E0%B8%99%E0%B8%B0%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%97%E0%B8%AD%E0%B8%87%20%E0%B8%9E%E0%B8%B4%E0%B8%98%E0%B8%B5"
+              aria-label="See pictures of Long Na Na Thong in Google Images" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8" cy="8" r="1.5"/><path d="m3 17 5-5 4 4 4-6 5 7"/></svg>
+              See pictures ↗
+            </a>
+            <details class="context">
+              <summary>Context &amp; tradition</summary>
+              <p>Thai fieldwork records practitioners receiving this rite in hopes of favourable relationships, work, or trade. The actions and explanations depend on the practitioner and tradition.</p>
+            </details>
+            <details class="sources">
+              <summary>Sources</summary>
+              <ul>
+                <li>
+                  <a href="https://sure.su.ac.th/xmlui/bitstream/handle/123456789/15234/BA_Natchayakarn_Pakwan.pdf?isAllowed=y&amp;sequence=1" target="_blank" rel="noopener noreferrer">
+                    Silpakorn University: fieldwork on contemporary blessing rituals
+                  </a>
+                </li>
+              </ul>
+            </details>
+            <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a> · <a href="#term-206">Fortune and business</a></p>
+            <p class="related">Explore also: <a href="#term-62">Maha Sane</a> · <a href="#term-207">Kha Khai</a></p>
+            <div class="actions">
+              <a href="#term-216" aria-label="Link to Long Na Na Thong">Link to this term</a>
+            </div>
+          </div>
+        </article>
         <article class="item" id="term-147"
-          data-category="Practice" data-essential="false"
+          data-purposes="" data-category="Practice" data-essential="false"
           >
           <button class="play" type="button" data-thai="เสาร์ห้า"
             aria-label="Play Sao Ha in Thai" aria-pressed="false" disabled>▶</button>
@@ -6172,7 +6498,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           <h3 class="subgroup-title">Sacred writing and formulas</h3>
         
         <article class="item" id="term-133"
-          data-category="Practice" data-essential="true"
+          data-purposes="" data-category="Practice" data-essential="true"
           >
           <button class="play" type="button" data-thai="ยันต์"
             aria-label="Play Yant in Thai" aria-pressed="false" disabled>▶</button>
@@ -6201,6 +6527,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="related">Explore also: <a href="#term-22">Pha Yant</a> · <a href="#term-4">Takrut</a> · <a href="#term-209">Sado Khro</a></p>
             <div class="actions">
               <a href="#term-133" aria-label="Link to Yant">Link to this term</a>
             </div>
@@ -6212,7 +6539,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         
         
         <article class="item" id="term-188"
-          data-category="Practice" data-essential="true"
+          data-purposes="" data-category="Practice" data-essential="true"
           >
           <button class="play" type="button" data-thai="อักขระ"
             aria-label="Play Akkhara in Thai" aria-pressed="false" disabled>▶</button>
@@ -6252,7 +6579,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-189"
-          data-category="Practice" data-essential="true"
+          data-purposes="" data-category="Practice" data-essential="true"
           >
           <button class="play" type="button" data-thai="บาลี"
             aria-label="Play Bali in Thai" aria-pressed="false" disabled>▶</button>
@@ -6293,7 +6620,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         </article>
         
         <article class="item" id="term-132"
-          data-category="Practice" data-essential="true"
+          data-purposes="" data-category="Practice" data-essential="true"
           >
           <button class="play" type="button" data-thai="คาถา"
             aria-label="Play Khatha in Thai" aria-pressed="false" disabled>▶</button>
@@ -6327,13 +6654,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 </li>
               </ul>
             </details>
+            <p class="related">Explore also: <a href="#term-185">Sak Yant</a> · <a href="#term-4">Takrut</a> · <a href="#term-209">Sado Khro</a></p>
             <div class="actions">
               <a href="#term-132" aria-label="Link to Khatha">Link to this term</a>
             </div>
           </div>
         </article>
         <article class="item" id="term-134"
-          data-category="Practice" data-essential="false"
+          data-purposes="" data-category="Practice" data-essential="false"
           >
           <button class="play" type="button" data-thai="หัวใจคาถา"
             aria-label="Play Hua Chai Khatha in Thai" aria-pressed="false" disabled>▶</button>
@@ -6368,7 +6696,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-159"
-          data-category="Practice" data-essential="false"
+          data-purposes="" data-category="Practice" data-essential="false"
           >
           <button class="play" type="button" data-thai="คาถาอาราธนาพระ"
             aria-label="Play Khatha Arathana Phra in Thai" aria-pressed="false" disabled>▶</button>
@@ -6406,7 +6734,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-135"
-          data-category="Practice" data-essential="false"
+          data-purposes="" data-category="Practice" data-essential="false"
           >
           <button class="play" type="button" data-thai="ปถมัง"
             aria-label="Play Phathamang in Thai" aria-pressed="false" disabled>▶</button>
@@ -6448,7 +6776,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         <div class="subgroup">
           <h3 class="subgroup-title">Knowledge and supernatural influence</h3>
         <article class="item" id="term-137"
-          data-category="Practice" data-essential="true"
+          data-purposes="" data-category="Practice" data-essential="true"
           >
           <button class="play" type="button" data-thai="วิชา"
             aria-label="Play Wicha in Thai" aria-pressed="false" disabled>▶</button>
@@ -6483,7 +6811,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-138"
-          data-category="Practice" data-essential="false"
+          data-purposes="" data-category="Practice" data-essential="false"
           >
           <button class="play" type="button" data-thai="ไสยศาสตร์"
             aria-label="Play Saiyasat in Thai" aria-pressed="false" disabled>▶</button>
@@ -6511,8 +6839,40 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </div>
           </div>
         </article>
+        <article class="item" id="term-208"
+          data-purposes="spirits" data-category="Practice" data-essential="true">
+          <button class="play" type="button" data-thai="คุณไสย"
+            aria-label="Play Khun Sai in Thai" aria-pressed="false" disabled>▶</button>
+          <div class="entry-text">
+            <h3 class="thai" lang="th">คุณไสย</h3>
+            <p class="roman">Khun Sai</p>
+            <p class="translation">Sorcery</p>
+            <p class="definition">Magical workings, often understood as harmful supernatural influence directed at someone.</p>
+            <a class="audio-online" href="https://translate.google.com/?sl=th&amp;tl=en&amp;text=%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B9%84%E0%B8%AA%E0%B8%A2&amp;op=translate" target="_blank" rel="noopener noreferrer"
+              aria-label="Hear Khun Sai in Thai on Google Translate">Hear Thai online ↗</a>
+            <details class="context">
+              <summary>Context &amp; tradition</summary>
+              <p>Protective-charms accounts use this word for an influence believed to have been brought about through sorcery. Claims about such an influence belong to the belief being described; the term alone does not establish the cause of a person’s experience.</p>
+            </details>
+            <details class="sources">
+              <summary>Sources</summary>
+              <ul>
+                <li>
+                  <a href="https://db.sac.or.th/thailand-cultural-encyclopedia/detail.php?id=2539" target="_blank" rel="noopener noreferrer">
+                    Thai Cultural Encyclopedia: protection against magical workings
+                  </a>
+                </li>
+              </ul>
+            </details>
+            <p class="purpose-links">Related purposes: <a href="#term-64">Spirit and sorcery protection</a></p>
+            <p class="related">Explore also: <a href="#term-45">Bia Kae</a> · <a href="#term-28">Mit Mo</a> · <a href="#term-209">Sado Khro</a></p>
+            <div class="actions">
+              <a href="#term-208" aria-label="Link to Khun Sai">Link to this term</a>
+            </div>
+          </div>
+        </article>
         <article class="item" id="term-162"
-          data-category="Practice" data-essential="false"
+          data-purposes="" data-category="Practice" data-essential="false"
           >
           <button class="play" type="button" data-thai="อาคม"
             aria-label="Play Akhom in Thai" aria-pressed="false" disabled>▶</button>
@@ -6540,7 +6900,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-139"
-          data-category="Practice" data-essential="false"
+          data-purposes="" data-category="Practice" data-essential="false"
           >
           <button class="play" type="button" data-thai="จอมขมังเวท"
             aria-label="Play Chom Khamang Wet in Thai" aria-pressed="false" disabled>▶</button>
@@ -6573,7 +6933,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-156"
-          data-category="Practice" data-essential="false"
+          data-purposes="" data-category="Practice" data-essential="false"
           >
           <button class="play" type="button" data-thai="อาถรรพ์"
             aria-label="Play Athan in Thai" aria-pressed="false" disabled>▶</button>
@@ -6602,9 +6962,152 @@ footer p { margin: 0 0 8px; max-width: 760px; }
         </article>
         </div>
         <div class="subgroup">
+          <h3 class="subgroup-title">Spirit offerings and wellbeing rites</h3>
+        <article class="item" id="term-212"
+          data-purposes="" data-category="Practice" data-essential="true">
+          <button class="play" type="button" data-thai="เครื่องเซ่น"
+            aria-label="Play Khrueang Sen in Thai" aria-pressed="false" disabled>▶</button>
+          <div class="entry-text">
+            <h3 class="thai" lang="th">เครื่องเซ่น</h3>
+            <p class="roman">Khrueang Sen</p>
+            <p class="translation">Spirit offerings</p>
+            <p class="definition">Food, drink, or other items presented to spirits.</p>
+            <a class="audio-online" href="https://translate.google.com/?sl=th&amp;tl=en&amp;text=%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%8B%E0%B9%88%E0%B8%99&amp;op=translate" target="_blank" rel="noopener noreferrer"
+              aria-label="Hear Khrueang Sen in Thai on Google Translate">Hear Thai online ↗</a>
+            <a class="pictures" href="https://www.google.com/search?tbm=isch&amp;q=%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%8B%E0%B9%88%E0%B8%99%20%E0%B9%84%E0%B8%AB%E0%B8%A7%E0%B9%89%E0%B8%9C%E0%B8%B5"
+              aria-label="See pictures of Khrueang Sen in Google Images" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8" cy="8" r="1.5"/><path d="m3 17 5-5 4 4 4-6 5 7"/></svg>
+              See pictures ↗
+            </a>
+            <details class="context">
+              <summary>Context &amp; tradition</summary>
+              <p>The selection depends on the spirit, community, and occasion. Offerings help express and maintain a relationship with the beings addressed in the rite.</p>
+            </details>
+            <details class="sources">
+              <summary>Sources</summary>
+              <ul>
+                <li>
+                  <a href="https://culturio.sac.or.th/content/1263" target="_blank" rel="noopener noreferrer">
+                    SAC Culturio: offerings and spirit religion
+                  </a>
+                </li>
+              </ul>
+            </details>
+            <p class="related">Explore also: <a href="#term-144">Bucha</a> · <a href="#term-214">San Ta Yai</a> · <a href="#term-184">Chao Thi</a> · <a href="#term-15">Kuman Thong</a></p>
+            <div class="actions">
+              <a href="#term-212" aria-label="Link to Khrueang Sen">Link to this term</a>
+            </div>
+          </div>
+        </article>
+        <article class="item" id="term-213"
+          data-purposes="" data-category="Practice" data-essential="true">
+          <button class="play" type="button" data-thai="ขวัญ"
+            aria-label="Play Khwan in Thai" aria-pressed="false" disabled>▶</button>
+          <div class="entry-text">
+            <h3 class="thai" lang="th">ขวัญ</h3>
+            <p class="roman">Khwan</p>
+            <p class="translation">Vital essence</p>
+            <p class="definition">A vital essence associated with a person’s wellbeing in Thai and related regional beliefs.</p>
+            <a class="audio-online" href="https://translate.google.com/?sl=th&amp;tl=en&amp;text=%E0%B8%82%E0%B8%A7%E0%B8%B1%E0%B8%8D&amp;op=translate" target="_blank" rel="noopener noreferrer"
+              aria-label="Hear Khwan in Thai on Google Translate">Hear Thai online ↗</a>
+            <details class="context">
+              <summary>Context &amp; tradition</summary>
+              <p>Khwan beliefs also concern animals and other things. Calling or welcoming khwan is part of ceremonies for wellbeing and important changes in life.</p>
+            </details>
+            <details class="sources">
+              <summary>Sources</summary>
+              <ul>
+                <li>
+                  <a href="https://culturio.sac.or.th/content/1263" target="_blank" rel="noopener noreferrer">
+                    SAC Culturio: khwan and bai si ceremonies
+                  </a>
+                </li>
+              </ul>
+            </details>
+            <p class="related">Explore also: <a href="#term-209">Sado Khro</a> · <a href="#term-217">Suep Chata</a> · <a href="#term-212">Khrueang Sen</a></p>
+            <div class="actions">
+              <a href="#term-213" aria-label="Link to Khwan">Link to this term</a>
+            </div>
+          </div>
+        </article>
+        <article class="item" id="term-209"
+          data-purposes="misfortune" data-category="Practice" data-essential="true">
+          <button class="play" type="button" data-thai="สะเดาะเคราะห์"
+            aria-label="Play Sado Khro in Thai" aria-pressed="false" disabled>▶</button>
+          <div class="entry-text">
+            <h3 class="thai" lang="th">สะเดาะเคราะห์</h3>
+            <p class="roman">Sado Khro</p>
+            <p class="translation">Averting misfortune</p>
+            <p class="definition">Rites intended to avert or remove misfortune.</p>
+            <a class="audio-online" href="https://translate.google.com/?sl=th&amp;tl=en&amp;text=%E0%B8%AA%E0%B8%B0%E0%B9%80%E0%B8%94%E0%B8%B2%E0%B8%B0%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%B0%E0%B8%AB%E0%B9%8C&amp;op=translate" target="_blank" rel="noopener noreferrer"
+              aria-label="Hear Sado Khro in Thai on Google Translate">Hear Thai online ↗</a>
+            <a class="pictures" href="https://www.google.com/search?tbm=isch&amp;q=%E0%B8%AA%E0%B8%B0%E0%B9%80%E0%B8%94%E0%B8%B2%E0%B8%B0%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%B0%E0%B8%AB%E0%B9%8C%20%E0%B8%9E%E0%B8%B4%E0%B8%98%E0%B8%B5%20%E0%B9%84%E0%B8%97%E0%B8%A2"
+              aria-label="See pictures of Sado Khro in Google Images" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8" cy="8" r="1.5"/><path d="m3 17 5-5 4 4 4-6 5 7"/></svg>
+              See pictures ↗
+            </a>
+            <details class="context">
+              <summary>Context &amp; tradition</summary>
+              <p>The form depends on the community and ritual tradition. Some rites symbolically transfer unwanted influences to an offering or an object that is taken away or set afloat.</p>
+            </details>
+            <details class="sources">
+              <summary>Sources</summary>
+              <ul>
+                <li>
+                  <a href="https://culturio.sac.or.th/content/1263" target="_blank" rel="noopener noreferrer">
+                    SAC Culturio: local belief and ritual practices
+                  </a>
+                </li>
+              </ul>
+            </details>
+            <p class="related">Explore also: <a href="#term-217">Suep Chata</a> · <a href="#term-145">Nam Mon</a> · <a href="#term-208">Khun Sai</a></p>
+            <div class="actions">
+              <a href="#term-209" aria-label="Link to Sado Khro">Link to this term</a>
+            </div>
+          </div>
+        </article>
+        <article class="item" id="term-217"
+          data-purposes="misfortune" data-category="Practice" data-essential="true">
+          <button class="play" type="button" data-thai="สืบชะตา"
+            aria-label="Play Suep Chata in Thai" aria-pressed="false" disabled>▶</button>
+          <div class="entry-text">
+            <h3 class="thai" lang="th">สืบชะตา</h3>
+            <p class="roman">Suep Chata</p>
+            <p class="translation">Sustaining-life ceremony</p>
+            <p class="definition">A northern Thai ceremony intended to sustain life, wellbeing, and auspicious continuity.</p>
+            <a class="audio-online" href="https://translate.google.com/?sl=th&amp;tl=en&amp;text=%E0%B8%AA%E0%B8%B7%E0%B8%9A%E0%B8%8A%E0%B8%B0%E0%B8%95%E0%B8%B2&amp;op=translate" target="_blank" rel="noopener noreferrer"
+              aria-label="Hear Suep Chata in Thai on Google Translate">Hear Thai online ↗</a>
+            <a class="pictures" href="https://www.google.com/search?tbm=isch&amp;q=%E0%B8%9E%E0%B8%B4%E0%B8%98%E0%B8%B5%E0%B8%AA%E0%B8%B7%E0%B8%9A%E0%B8%8A%E0%B8%B0%E0%B8%95%E0%B8%B2%20%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B8%B2"
+              aria-label="See pictures of Suep Chata in Google Images" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8" cy="8" r="1.5"/><path d="m3 17 5-5 4 4 4-6 5 7"/></svg>
+              See pictures ↗
+            </a>
+            <details class="context">
+              <summary>Context &amp; tradition</summary>
+              <p>In Lanna practice, ceremonies may be held for a person or a community. Buddhist recitation and local ritual elements are brought together; the occasion and arrangement vary.</p>
+            </details>
+            <details class="sources">
+              <summary>Sources</summary>
+              <ul>
+                <li>
+                  <a href="https://culture.go.th/culture_th/ewt_news.php?filename=i&amp;nid=5012" target="_blank" rel="noopener noreferrer">
+                    Department of Cultural Promotion: suep chata tradition
+                  </a>
+                </li>
+              </ul>
+            </details>
+            <p class="purpose-links">Related purposes: <a href="#term-209">Averting misfortune</a></p>
+            <p class="related">Explore also: <a href="#term-213">Khwan</a> · <a href="#term-145">Nam Mon</a></p>
+            <div class="actions">
+              <a href="#term-217" aria-label="Link to Suep Chata">Link to this term</a>
+            </div>
+          </div>
+        </article>
+        </div>
+        <div class="subgroup">
           <h3 class="subgroup-title">Wearing and observances</h3>
         <article class="item" id="term-161"
-          data-category="Practice" data-essential="false"
+          data-purposes="" data-category="Practice" data-essential="false"
           >
           <button class="play" type="button" data-thai="การห้อยพระ"
             aria-label="Play Kan Hoi Phra in Thai" aria-pressed="false" disabled>▶</button>
@@ -6643,7 +7146,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-27"
-          data-category="Practice" data-essential="false"
+          data-purposes="" data-category="Practice" data-essential="false"
           >
           <button class="play" type="button" data-thai="คาดเอว"
             aria-label="Play Khat Eo in Thai" aria-pressed="false" disabled>▶</button>
@@ -6681,7 +7184,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-160"
-          data-category="Practice" data-essential="true"
+          data-purposes="" data-category="Practice" data-essential="true"
           >
           <button class="play" type="button" data-thai="ข้อห้าม"
             aria-label="Play Kho Ham in Thai" aria-pressed="false" disabled>▶</button>
@@ -6719,9 +7222,9 @@ footer p { margin: 0 0 8px; max-width: 760px; }
       </section>
       <section class="group" aria-labelledby="section-naming">
         <h2 id="section-naming">Naming and collecting words</h2>
-        <p class="group-intro">Understanding the words used in an amulet description. · 12 terms</p>
+        <p class="group-intro">Understanding the words used in an amulet description. · 13 terms</p>
         <article class="item" id="term-67"
-          data-category="Naming" data-essential="false"
+          data-purposes="" data-category="Naming" data-essential="false"
           >
           <button class="play" type="button" data-thai="เศรษฐี"
             aria-label="Play Setthi in Thai" aria-pressed="false" disabled>▶</button>
@@ -6749,7 +7252,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-164"
-          data-category="Naming" data-essential="true"
+          data-purposes="" data-category="Naming" data-essential="true"
           >
           <button class="play" type="button" data-thai="เนื้อ"
             aria-label="Play Nuea in Thai" aria-pressed="false" disabled>▶</button>
@@ -6784,7 +7287,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-165"
-          data-category="Naming" data-essential="true"
+          data-purposes="" data-category="Naming" data-essential="true"
           >
           <button class="play" type="button" data-thai="รุ่น"
             aria-label="Play Run in Thai" aria-pressed="false" disabled>▶</button>
@@ -6819,7 +7322,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-166"
-          data-category="Naming" data-essential="false"
+          data-purposes="" data-category="Naming" data-essential="false"
           >
           <button class="play" type="button" data-thai="รุ่นแรก"
             aria-label="Play Run Raek in Thai" aria-pressed="false" disabled>▶</button>
@@ -6852,7 +7355,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-167"
-          data-category="Naming" data-essential="true"
+          data-purposes="" data-category="Naming" data-essential="true"
           >
           <button class="play" type="button" data-thai="พิมพ์"
             aria-label="Play Phim in Thai" aria-pressed="false" disabled>▶</button>
@@ -6886,7 +7389,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-168"
-          data-category="Naming" data-essential="false"
+          data-purposes="" data-category="Naming" data-essential="false"
           >
           <button class="play" type="button" data-thai="พิเศษ"
             aria-label="Play Phiset in Thai" aria-pressed="false" disabled>▶</button>
@@ -6914,7 +7417,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-169"
-          data-category="Naming" data-essential="false"
+          data-purposes="" data-category="Naming" data-essential="false"
           >
           <button class="play" type="button" data-thai="โบราณ"
             aria-label="Play Boran in Thai" aria-pressed="false" disabled>▶</button>
@@ -6947,7 +7450,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-170"
-          data-category="Naming" data-essential="false"
+          data-purposes="" data-category="Naming" data-essential="false"
           >
           <button class="play" type="button" data-thai="ชุดใหญ่"
             aria-label="Play Chut Yai in Thai" aria-pressed="false" disabled>▶</button>
@@ -6985,7 +7488,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-171"
-          data-category="Naming" data-essential="false"
+          data-purposes="" data-category="Naming" data-essential="false"
           >
           <button class="play" type="button" data-thai="กรรมการ"
             aria-label="Play Kammakan in Thai" aria-pressed="false" disabled>▶</button>
@@ -7018,7 +7521,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-173"
-          data-category="Naming" data-essential="false"
+          data-purposes="" data-category="Naming" data-essential="false"
           >
           <button class="play" type="button" data-thai="กะไหล่ทอง"
             aria-label="Play Kalai Thong in Thai" aria-pressed="false" disabled>▶</button>
@@ -7051,7 +7554,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-199"
-          data-category="Naming" data-essential="true"
+          data-purposes="" data-category="Naming" data-essential="true"
           >
           <button class="play" type="button" data-thai="เช่าพระ"
             aria-label="Play Chao Phra in Thai" aria-pressed="false" disabled>▶</button>
@@ -7090,7 +7593,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         <article class="item" id="term-200"
-          data-category="Naming" data-essential="false"
+          data-purposes="" data-category="Naming" data-essential="false"
           >
           <button class="play" type="button" data-thai="กรุ"
             aria-label="Play Kru in Thai" aria-pressed="false" disabled>▶</button>
@@ -7128,12 +7631,43 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </div>
           </div>
         </article>
+        <article class="item" id="term-215"
+          data-purposes="" data-category="Naming" data-essential="true">
+          <button class="play" type="button" data-thai="ประสบการณ์"
+            aria-label="Play Prasopkan in Thai" aria-pressed="false" disabled>▶</button>
+          <div class="entry-text">
+            <h3 class="thai" lang="th">ประสบการณ์</h3>
+            <p class="roman">Prasopkan</p>
+            <p class="translation">Reported amulet experiences</p>
+            <p class="definition">Experience; in collecting language, accounts of events associated with an amulet or charm.</p>
+            <a class="audio-online" href="https://translate.google.com/?sl=th&amp;tl=en&amp;text=%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%AA%E0%B8%9A%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B9%8C&amp;op=translate" target="_blank" rel="noopener noreferrer"
+              aria-label="Hear Prasopkan in Thai on Google Translate">Hear Thai online ↗</a>
+            <details class="context">
+              <summary>Context &amp; tradition</summary>
+              <p>A collector may use this word when relating an escape from danger or another favourable event attributed to an object. Such stories can affect an object’s reputation, but are accounts of attributed efficacy rather than proof of it.</p>
+            </details>
+            <details class="sources">
+              <summary>Sources</summary>
+              <ul>
+                <li>
+                  <a href="https://so05.tci-thaijo.org/index.php/balajhss/article/download/75181/60597" target="_blank" rel="noopener noreferrer">
+                    RMUTL: collecting vocabulary and reported experiences
+                  </a>
+                </li>
+              </ul>
+            </details>
+            <p class="related">Explore also: <a href="#term-5">Phra Khrueang</a> · <a href="#term-2">Khrueang Rang</a></p>
+            <div class="actions">
+              <a href="#term-215" aria-label="Link to Prasopkan">Link to this term</a>
+            </div>
+          </div>
+        </article>
       </section>
     </main>
     <footer>
       <p>Cast in Skin · Thai Sacred &amp; Occult Glossary</p>
       <p>References include Thai dictionaries, university research, cultural institutions, and Thai-language writing on belief and amulet traditions.</p>
-      <p>Image links open Google Images searches; results are not curated. The glossary works as a single HTML file. Fonts and linked references require an internet connection.</p>
+      <p>Image links open Google Images searches; results are not curated. Purpose links connect related vocabulary across practices and objects. The glossary works as a single HTML file. Fonts and linked references require an internet connection.</p>
     </footer>
   </div>
   <script>
@@ -7146,6 +7680,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
   const count = document.getElementById("results");
   const voiceStatus = document.getElementById("voice-status");
   const essentials = document.getElementById("essentials");
+  const purposeFilter = document.getElementById("purpose-filter");
   const chips = [...document.querySelectorAll(".chip")];
   const speedButtons = [...document.querySelectorAll(".speed button")];
   const synth = "speechSynthesis" in window ? window.speechSynthesis : null;
@@ -7246,6 +7781,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
     let visible = 0;
     entries.forEach(entry => {
       const matches = (category === "All" || entry.dataset.category === category)
+        && (purposeFilter.value === "All" || (entry.dataset.purposes || "").split(" ").includes(purposeFilter.value))
         && (!essentialOnly || entry.dataset.essential === "true")
         && words.every(word => index.get(entry).includes(word));
       entry.hidden = !matches;
@@ -7258,7 +7794,11 @@ footer p { margin: 0 0 8px; max-width: 760px; }
       section.hidden = !section.querySelector(".item:not([hidden])");
     });
     document.getElementById("empty").hidden = visible !== 0;
-    count.textContent = visible + " of " + entries.length + " terms";
+    const topicName = chips.find(chip => chip.dataset.category === category)?.textContent || "All terms";
+    const purposeName = purposeFilter.options[purposeFilter.selectedIndex].textContent;
+    count.textContent = visible + " of " + entries.length + " terms"
+      + (category !== "All" ? " · " + topicName : "")
+      + (purposeFilter.value !== "All" ? " · " + purposeName : "");
     chips.forEach(chip => chip.setAttribute("aria-pressed", String(chip.dataset.category === category)));
     essentials.setAttribute("aria-pressed", String(essentialOnly));
   }
@@ -7272,10 +7812,12 @@ footer p { margin: 0 0 8px; max-width: 760px; }
     filter();
   });
   search.addEventListener("input", filter);
+  purposeFilter.addEventListener("change", filter);
   document.getElementById("clear").addEventListener("click", () => {
     search.value = "";
     category = "All";
     essentialOnly = false;
+    purposeFilter.value = "All";
     filter();
     search.focus();
   });
@@ -7296,6 +7838,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
       category = "All";
       essentialOnly = false;
       search.value = "";
+      purposeFilter.value = "All";
       filter();
     }
     requestAnimationFrame(() => entry.scrollIntoView({block: "start"}));
