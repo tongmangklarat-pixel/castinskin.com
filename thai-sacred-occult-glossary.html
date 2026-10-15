@@ -162,6 +162,14 @@ footer p { margin: 0 0 8px; max-width: 760px; }
 .shorthand-play { width: 30px; height: 30px; font-size: 12px; vertical-align: middle; margin: 0 4px; }
 
 #reset-audio, #thai-voice { border: 1px solid var(--line); background: var(--deep); color: var(--gold); border-radius: 3px; padding: 7px 10px; font: 12px var(--body); max-width: 100%; }
+
+.copy-link { color: var(--gold); background: none; border: 0; border-bottom: 1px solid var(--line); padding: 5px 0; font: inherit; text-align: left; }
+.copy-link:hover { border-bottom-color: var(--gold); }
+.screen-reader-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+#copy-link-dialog { max-width: min(480px, 85vw); background: var(--deep); color: var(--paper); border: 1px solid var(--gold); padding: 24px; }
+#copy-link-dialog::backdrop { background: rgba(0,0,0,.7); }
+#copy-link-dialog input { box-sizing: border-box; width: 100%; padding: 10px; font-size: 16px; }
+#close-copy-dialog { margin-top: 16px; padding: 8px 16px; }
   </style>
 </head>
 <body>
@@ -266,7 +274,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               <li><a href="https://thesiamsociety.org/wp-content/uploads/1964/03/JSS_052_2d_PhyaAnumanRajadhon_ThaiCharmsAndAmulets.pdf" target="_blank" rel="noopener noreferrer">Historical account of Buddhist amulet forms</a></li></ul>
             </details>
             <div class="actions">
-              <a href="#term-5" aria-label="Link to Phra Khrueang">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-5" aria-label="Copy link to Phra Khrueang">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -301,7 +309,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               <li><a href="https://thesiamsociety.org/wp-content/uploads/1964/03/JSS_052_2d_PhyaAnumanRajadhon_ThaiCharmsAndAmulets.pdf" target="_blank" rel="noopener noreferrer">Thai historical account of charms and amulets</a></li></ul>
             </details>
             <div class="actions">
-              <a href="#term-2" aria-label="Link to Khrueang Rang">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-2" aria-label="Copy link to Khrueang Rang">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -341,7 +349,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               <li><a href="https://dict.longdo.com/search/ของขลัง" target="_blank" rel="noopener noreferrer">Thai dictionary: broad sacred-object vocabulary</a></li></ul>
             </details>
             <div class="actions">
-              <a href="#term-1" aria-label="Link to Khong Khlang">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-1" aria-label="Copy link to Khong Khlang">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -376,7 +384,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               <li><a href="https://dict.longdo.com/search/วัตถุมงคล" target="_blank" rel="noopener noreferrer">Thai dictionary: วัตถุมงคล</a></li></ul>
             </details>
             <div class="actions">
-              <a href="#term-176" aria-label="Link to Watthu Mongkhon">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-176" aria-label="Copy link to Watthu Mongkhon">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -412,7 +420,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="related">Explore also: <a href="#term-22">Pha Yant</a> · <a href="#term-4">Takrut</a> · <a href="#term-209">Sado Khro</a></p>
             <div class="actions">
-              <a href="#term-133" aria-label="Link to Yant">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-133" aria-label="Copy link to Yant">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -453,7 +461,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="related">Explore also: <a href="#term-185">Sak Yant</a> · <a href="#term-4">Takrut</a> · <a href="#term-209">Sado Khro</a></p>
             <div class="actions">
-              <a href="#term-132" aria-label="Link to Khatha">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-132" aria-label="Copy link to Khatha">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -493,7 +501,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-140" aria-label="Link to Pluk Sek">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-140" aria-label="Copy link to Pluk Sek">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -533,7 +541,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-186" aria-label="Link to Ajarn">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-186" aria-label="Copy link to Ajarn">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -573,7 +581,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               <li><a href="https://www.finearts.go.th/main/view/38964-" target="_blank" rel="noopener noreferrer">Fine Arts Department: teacher ceremonies</a></li></ul>
             </details>
             <div class="actions">
-              <a href="#term-143" aria-label="Link to Wai Khru">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-143" aria-label="Copy link to Wai Khru">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -608,7 +616,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               <li><a href="https://mps.royalsociety.go.th/wp-content/uploads/2024/06/00004130.pdf" target="_blank" rel="noopener noreferrer">Royal Society: amulet forms, materials, and collecting</a></li></ul>
             </details>
             <div class="actions">
-              <a href="#term-164" aria-label="Link to Nuea">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-164" aria-label="Copy link to Nuea">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -639,7 +647,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             <p class="purpose-links">Related purposes: <a href="#term-206">Fortune and business</a></p>
             <p class="related">Explore also: <a href="#term-207">Kha Khai</a> · <a href="#term-48">Salika</a> · <a href="#term-216">Long Na Na Thong</a></p>
             <div class="actions">
-              <a href="#term-60" aria-label="Link to Metta Maha Niyom">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-60" aria-label="Copy link to Metta Maha Niyom">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -669,7 +677,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="related">Explore also: <a href="#term-57">Maha Ut</a> · <a href="#term-163">Yant Paet Thit</a> · <a href="#term-193">Yant Kao Yot</a></p>
             <div class="actions">
-              <a href="#term-59" aria-label="Link to Khlaeo Khlat">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-59" aria-label="Copy link to Khlaeo Khlat">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -712,7 +720,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-25" aria-label="Link to Kayasit">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-25" aria-label="Copy link to Kayasit">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -752,7 +760,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-3" aria-label="Link to Phra Phim">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-3" aria-label="Copy link to Phra Phim">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -791,7 +799,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-8" aria-label="Link to Phra Somdet">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-8" aria-label="Copy link to Phra Somdet">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -825,7 +833,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-6" aria-label="Link to Phra Pit Ta">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-6" aria-label="Copy link to Phra Pit Ta">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -860,7 +868,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
-              <a href="#term-7" aria-label="Link to Phra Kring">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-7" aria-label="Copy link to Phra Kring">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -894,7 +902,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
-              <a href="#term-9" aria-label="Link to Phra Upakut">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-9" aria-label="Copy link to Phra Upakut">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -927,7 +935,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-36" aria-label="Link to Benchaphakhi">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-36" aria-label="Copy link to Benchaphakhi">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -967,7 +975,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a></p>
             <div class="actions">
-              <a href="#term-12" aria-label="Link to Phra Khun Phaen">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-12" aria-label="Copy link to Phra Khun Phaen">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1000,7 +1008,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               <li><a href="https://mps.royalsociety.go.th/wp-content/uploads/2024/06/00004130.pdf" target="_blank" rel="noopener noreferrer">Royal Society: amulet forms, materials, and collecting</a></li></ul>
             </details>
             <div class="actions">
-              <a href="#term-11" aria-label="Link to Rian">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-11" aria-label="Copy link to Rian">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1033,7 +1041,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-14" aria-label="Link to Lokket">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-14" aria-label="Copy link to Lokket">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1066,7 +1074,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               <li><a href="https://mps.royalsociety.go.th/wp-content/uploads/2024/06/00004130.pdf" target="_blank" rel="noopener noreferrer">Royal Society: amulet forms, materials, and collecting</a></li></ul>
             </details>
             <div class="actions">
-              <a href="#term-34" aria-label="Link to Rup Lo">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-34" aria-label="Copy link to Rup Lo">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1101,7 +1109,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               <li><a href="https://mps.royalsociety.go.th/wp-content/uploads/2024/06/00004130.pdf" target="_blank" rel="noopener noreferrer">Royal Society: amulet forms, materials, and collecting</a></li></ul>
             </details>
             <div class="actions">
-              <a href="#term-35" aria-label="Link to Phra Bucha">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-35" aria-label="Copy link to Phra Bucha">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1139,7 +1147,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-177" aria-label="Link to Phra That">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-177" aria-label="Copy link to Phra That">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1175,7 +1183,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-37" aria-label="Link to Chatukham Ramathep">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-37" aria-label="Copy link to Chatukham Ramathep">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1210,7 +1218,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a> · <a href="#term-64">Spirit and sorcery protection</a></p>
             <div class="actions">
-              <a href="#term-16" aria-label="Link to Hun Phayon">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-16" aria-label="Copy link to Hun Phayon">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1244,7 +1252,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="related">Explore also: <a href="#term-214">San Ta Yai</a> · <a href="#term-184">Chao Thi</a></p>
             <div class="actions">
-              <a href="#term-178" aria-label="Link to San Phra Phum">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-178" aria-label="Copy link to San Phra Phum">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1280,7 +1288,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="related">Explore also: <a href="#term-178">San Phra Phum</a> · <a href="#term-184">Chao Thi</a> · <a href="#term-212">Khrueang Sen</a></p>
             <div class="actions">
-              <a href="#term-214" aria-label="Link to San Ta Yai">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-214" aria-label="Copy link to San Ta Yai">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1322,7 +1330,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-4" aria-label="Link to Takrut">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-4" aria-label="Copy link to Takrut">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1356,7 +1364,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               <li><a href="https://db.sac.or.th/thailand-cultural-encyclopedia/detail.php?id=3534" target="_blank" rel="noopener noreferrer">Thai Cultural Encyclopedia: yantra terminology</a></li></ul>
             </details>
             <div class="actions">
-              <a href="#term-22" aria-label="Link to Pha Yant">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-22" aria-label="Copy link to Pha Yant">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1394,7 +1402,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-23" aria-label="Link to Suea Yant">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-23" aria-label="Copy link to Suea Yant">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1434,7 +1442,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a> · <a href="#term-64">Spirit and sorcery protection</a></p>
             <div class="actions">
-              <a href="#term-28" aria-label="Link to Mit Mo">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-28" aria-label="Copy link to Mit Mo">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1466,7 +1474,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-29" aria-label="Link to Lek Chan">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-29" aria-label="Copy link to Lek Chan">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1500,7 +1508,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-30" aria-label="Link to Prakham">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-30" aria-label="Copy link to Prakham">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1534,7 +1542,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
-              <a href="#term-38" aria-label="Link to Prachiat">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-38" aria-label="Copy link to Prachiat">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1568,7 +1576,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
-              <a href="#term-39" aria-label="Link to Mongkhon">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-39" aria-label="Copy link to Mongkhon">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1607,7 +1615,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-40" aria-label="Link to Phitsamon">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-40" aria-label="Copy link to Phitsamon">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1640,7 +1648,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-41" aria-label="Link to Chalaeo">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-41" aria-label="Copy link to Chalaeo">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1682,7 +1690,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-31" aria-label="Link to Luk Om">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-31" aria-label="Copy link to Luk Om">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1715,7 +1723,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-32" aria-label="Link to Luk Om Parot">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-32" aria-label="Copy link to Luk Om Parot">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1754,7 +1762,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
-              <a href="#term-33" aria-label="Link to Khem Thong">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-33" aria-label="Copy link to Khem Thong">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1788,7 +1796,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-206">Fortune and business</a></p>
             <div class="actions">
-              <a href="#term-44" aria-label="Link to Sai Dak Sap">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-44" aria-label="Copy link to Sai Dak Sap">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1831,7 +1839,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a></p>
             <div class="actions">
-              <a href="#term-13" aria-label="Link to Si Phueng">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-13" aria-label="Copy link to Si Phueng">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1871,7 +1879,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a></p>
             <div class="actions">
-              <a href="#term-18" aria-label="Link to Ngang">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-18" aria-label="Copy link to Ngang">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1906,7 +1914,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a></p>
             <div class="actions">
-              <a href="#term-19" aria-label="Link to Mae Poe">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-19" aria-label="Copy link to Mae Poe">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1941,7 +1949,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a></p>
             <div class="actions">
-              <a href="#term-20" aria-label="Link to In">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-20" aria-label="Copy link to In">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -1975,7 +1983,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a></p>
             <div class="actions">
-              <a href="#term-21" aria-label="Link to Palad Khik">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-21" aria-label="Copy link to Palad Khik">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2018,7 +2026,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="related">Explore also: <a href="#term-212">Khrueang Sen</a></p>
             <div class="actions">
-              <a href="#term-15" aria-label="Link to Kuman Thong">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-15" aria-label="Copy link to Kuman Thong">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2057,7 +2065,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-17" aria-label="Link to Rak Yom">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-17" aria-label="Copy link to Rak Yom">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2091,7 +2099,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-10" aria-label="Link to Phra Kraduk Phi">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-10" aria-label="Copy link to Phra Kraduk Phi">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2126,7 +2134,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a></p>
             <div class="actions">
-              <a href="#term-24" aria-label="Link to Nam Man Prai">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-24" aria-label="Copy link to Nam Man Prai">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2165,7 +2173,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-26" aria-label="Link to Pan Neng">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-26" aria-label="Copy link to Pan Neng">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2201,7 +2209,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a> · <a href="#term-206">Fortune and business</a></p>
             <div class="actions">
-              <a href="#term-42" aria-label="Link to Phaya Tao Ruean">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-42" aria-label="Copy link to Phaya Tao Ruean">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2235,7 +2243,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-206">Fortune and business</a></p>
             <div class="actions">
-              <a href="#term-43" aria-label="Link to Pla Taphian">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-43" aria-label="Copy link to Pla Taphian">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2269,7 +2277,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-64">Spirit and sorcery protection</a></p>
             <div class="actions">
-              <a href="#term-45" aria-label="Link to Bia Kae">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-45" aria-label="Copy link to Bia Kae">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2303,7 +2311,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-206">Fortune and business</a></p>
             <div class="actions">
-              <a href="#term-46" aria-label="Link to Buang Nakabat">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-46" aria-label="Copy link to Buang Nakabat">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2337,7 +2345,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-206">Fortune and business</a></p>
             <div class="actions">
-              <a href="#term-47" aria-label="Link to Pi Sia">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-47" aria-label="Copy link to Pi Sia">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2376,7 +2384,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a> · <a href="#term-206">Fortune and business</a></p>
             <div class="actions">
-              <a href="#term-48" aria-label="Link to Salika">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-48" aria-label="Copy link to Salika">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2413,7 +2421,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a> · <a href="#term-64">Spirit and sorcery protection</a></p>
             <p class="related">Explore also: <a href="#term-16">Hun Phayon</a> · <a href="#term-54">Suea Saming</a> · <a href="#term-55">Suea Yen</a></p>
             <div class="actions">
-              <a href="#term-210" aria-label="Link to Wua Thanu">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-210" aria-label="Copy link to Wua Thanu">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2473,7 +2481,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-188" aria-label="Link to Akkhara">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-188" aria-label="Copy link to Akkhara">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2512,7 +2520,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a> · <a href="#term-60">Goodwill and attraction</a> · <a href="#term-206">Fortune and business</a> · <a href="#term-70">Authority and influence</a></p>
             <div class="actions">
-              <a href="#term-185" aria-label="Link to Sak Yant">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-185" aria-label="Copy link to Sak Yant">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2535,7 +2543,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 <li><a href="https://archive.lib.cmu.ac.th/full/T/2550/mdad0950pn_ch3.pdf#page=67" target="_blank" rel="noopener noreferrer">Chiang Mai University research: traditional tattooing tools, printed pages 100–101</a></li>
                 <li><a href="https://www.youtube.com/watch?v=UeZ_5Fd6g6w" target="_blank" rel="noopener noreferrer">Ajarn Pu: practitioner demonstration of a traditional split-tip needle</a></li>
             <li><a href="https://www.thaitattoosakyant-uk.co.uk/hand-poke-tattoo-stick-and-poke-kits/" target="_blank" rel="noopener noreferrer">Thai Tattoo Sak Yant UK: photographs of split-mouth tips and needle-group holders</a></li></ul></details>
-            <div class="actions"><a href="#term-202" aria-label="Link to Khem Pha Pak">Link to this term</a></div>
+            <div class="actions"><button class="copy-link" type="button" data-term="term-202" aria-label="Copy link to Khem Pha Pak">Copy link to this term</button></div>
           </div>
         </article>
 <article class="item" id="term-203" data-purposes="" data-category="SakYant" data-essential="true">
@@ -2553,7 +2561,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 <li><a href="https://has.hcu.ac.th/xmlui/handle/123456789/760" target="_blank" rel="noopener noreferrer">Huachiew Chalermprakiet University: forms and beliefs of Thai sacred tattooing</a></li>
             </ul></details>
             <p class="related">Explore also: <a href="#term-211">Muek Sak</a></p>
-            <div class="actions"><a href="#term-203" aria-label="Link to Sak Muek">Link to this term</a></div>
+            <div class="actions"><button class="copy-link" type="button" data-term="term-203" aria-label="Copy link to Sak Muek">Copy link to this term</button></div>
           </div>
         </article>
         <article class="item" id="term-211"
@@ -2588,7 +2596,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="related">Explore also: <a href="#term-203">Sak Muek</a> · <a href="#term-204">Sak Nam Man</a> · <a href="#term-202">Khem Pha Pak</a></p>
             <div class="actions">
-              <a href="#term-211" aria-label="Link to Muek Sak">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-211" aria-label="Copy link to Muek Sak">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2607,7 +2615,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 <li><a href="https://has.hcu.ac.th/xmlui/handle/123456789/760" target="_blank" rel="noopener noreferrer">Huachiew Chalermprakiet University: forms and beliefs of Thai sacred tattooing</a></li>
             </ul></details>
             <p class="related">Explore also: <a href="#term-211">Muek Sak</a></p>
-            <div class="actions"><a href="#term-204" aria-label="Link to Sak Nam Man">Link to this term</a></div>
+            <div class="actions"><button class="copy-link" type="button" data-term="term-204" aria-label="Copy link to Sak Nam Man">Copy link to this term</button></div>
           </div>
         </article>
         </div><div class="subgroup"><h3 class="subgroup-title">Designs, inscriptions, and scripts</h3>
@@ -2642,7 +2650,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
-              <a href="#term-193" aria-label="Link to Yant Kao Yot">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-193" aria-label="Copy link to Yant Kao Yot">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2677,7 +2685,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="related">Explore also: <a href="#term-60">Metta Maha Niyom</a> · <a href="#term-206">Chok Lap</a></p>
             <div class="actions">
-              <a href="#term-194" aria-label="Link to Yant Ha Thaeo">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-194" aria-label="Copy link to Yant Ha Thaeo">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2712,7 +2720,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a> · <a href="#term-64">Spirit and sorcery protection</a></p>
             <div class="actions">
-              <a href="#term-163" aria-label="Link to Yant Paet Thit">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-163" aria-label="Copy link to Yant Paet Thit">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2745,7 +2753,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-191" aria-label="Link to Long Yant">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-191" aria-label="Copy link to Long Yant">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2779,7 +2787,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-136" aria-label="Link to Akson Khom">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-136" aria-label="Copy link to Akson Khom">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2813,7 +2821,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-190" aria-label="Link to Akson Tham Lanna">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-190" aria-label="Copy link to Akson Tham Lanna">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2875,7 +2883,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-206">Fortune and business</a></p>
             <div class="actions">
-              <a href="#term-125" aria-label="Link to Phra Siwali">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-125" aria-label="Copy link to Phra Siwali">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2908,7 +2916,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-126" aria-label="Link to Phra Sangkatchai">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-126" aria-label="Copy link to Phra Sangkatchai">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2945,7 +2953,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-114" aria-label="Link to Phitsanu">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-114" aria-label="Copy link to Phitsanu">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -2979,7 +2987,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-115" aria-label="Link to Phra Narai">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-115" aria-label="Copy link to Phra Narai">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3012,7 +3020,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-116" aria-label="Link to Phra Mae Suratsawadi">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-116" aria-label="Copy link to Phra Mae Suratsawadi">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3045,7 +3053,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-127" aria-label="Link to Phra Phikhanet">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-127" aria-label="Copy link to Phra Phikhanet">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3083,7 +3091,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-117" aria-label="Link to Rahu">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-117" aria-label="Copy link to Rahu">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3118,7 +3126,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a> · <a href="#term-206">Fortune and business</a> · <a href="#term-64">Spirit and sorcery protection</a></p>
             <div class="actions">
-              <a href="#term-128" aria-label="Link to Thao Wetsuwan">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-128" aria-label="Copy link to Thao Wetsuwan">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3153,7 +3161,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
-              <a href="#term-129" aria-label="Link to Thao Chatulokaban">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-129" aria-label="Copy link to Thao Chatulokaban">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3186,7 +3194,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-113" aria-label="Link to Yak">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-113" aria-label="Copy link to Yak">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3220,7 +3228,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-112" aria-label="Link to Kumphan">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-112" aria-label="Copy link to Kumphan">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3255,7 +3263,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
-              <a href="#term-102" aria-label="Link to Nak">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-102" aria-label="Copy link to Nak">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3290,7 +3298,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
-              <a href="#term-118" aria-label="Link to Hanuman">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-118" aria-label="Copy link to Hanuman">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3323,7 +3331,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-121" aria-label="Link to Thep Phanom">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-121" aria-label="Copy link to Thep Phanom">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3365,7 +3373,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               <li><a href="https://www.finearts.go.th/main/view/38964-" target="_blank" rel="noopener noreferrer">Fine Arts Department: teacher ceremonies and sage representations</a></li></ul>
             </details>
             <div class="actions">
-              <a href="#term-122" aria-label="Link to Ruesi">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-122" aria-label="Copy link to Ruesi">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3400,7 +3408,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a> · <a href="#term-206">Fortune and business</a></p>
             <div class="actions">
-              <a href="#term-119" aria-label="Link to Nang Kwak">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-119" aria-label="Copy link to Nang Kwak">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3437,7 +3445,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="related">Explore also: <a href="#term-214">San Ta Yai</a> · <a href="#term-212">Khrueang Sen</a></p>
             <div class="actions">
-              <a href="#term-184" aria-label="Link to Chao Thi">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-184" aria-label="Copy link to Chao Thi">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3470,7 +3478,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-131" aria-label="Link to Mae Sue">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-131" aria-label="Copy link to Mae Sue">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3504,7 +3512,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-109" aria-label="Link to Phi Khru">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-109" aria-label="Copy link to Phi Khru">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3541,7 +3549,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-183" aria-label="Link to Phi">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-183" aria-label="Copy link to Phi">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3575,7 +3583,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-72" aria-label="Link to Prai">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-72" aria-label="Copy link to Prai">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3614,7 +3622,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-110" aria-label="Link to Prai Kuman">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-110" aria-label="Copy link to Prai Kuman">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3648,7 +3656,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-111" aria-label="Link to Luk Krok">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-111" aria-label="Copy link to Luk Krok">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3682,7 +3690,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-130" aria-label="Link to Ai Khai">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-130" aria-label="Copy link to Ai Khai">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3716,7 +3724,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-75" aria-label="Link to Phi Tai Hong">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-75" aria-label="Copy link to Phi Tai Hong">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3750,7 +3758,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-76" aria-label="Link to Phi Tai Thang Klom">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-76" aria-label="Copy link to Phi Tai Thang Klom">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3784,7 +3792,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-123" aria-label="Link to Phi Pong">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-123" aria-label="Copy link to Phi Pong">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3817,7 +3825,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-124" aria-label="Link to Phi Pop">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-124" aria-label="Copy link to Phi Pop">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3851,7 +3859,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-54" aria-label="Link to Suea Saming">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-54" aria-label="Copy link to Suea Saming">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3885,7 +3893,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-55" aria-label="Link to Suea Yen">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-55" aria-label="Copy link to Suea Yen">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3923,7 +3931,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-195" aria-label="Link to Bun">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-195" aria-label="Copy link to Bun">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3958,7 +3966,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-196" aria-label="Link to Sin">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-196" aria-label="Copy link to Sin">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -3988,7 +3996,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-197" aria-label="Link to Barami">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-197" aria-label="Copy link to Barami">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4023,7 +4031,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-198" aria-label="Link to Phutthakhun">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-198" aria-label="Copy link to Phutthakhun">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4057,7 +4065,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-157" aria-label="Link to Namo Tassa">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-157" aria-label="Copy link to Namo Tassa">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4091,7 +4099,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-158" aria-label="Link to Itipiso">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-158" aria-label="Copy link to Itipiso">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4125,7 +4133,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-144" aria-label="Link to Bucha">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-144" aria-label="Copy link to Bucha">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4161,7 +4169,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-149" aria-label="Link to Khru Ba Achan">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-149" aria-label="Copy link to Khru Ba Achan">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4193,7 +4201,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-150" aria-label="Link to Khru Ba">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-150" aria-label="Copy link to Khru Ba">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4226,7 +4234,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-151" aria-label="Link to Luang Pu">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-151" aria-label="Copy link to Luang Pu">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4259,7 +4267,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-152" aria-label="Link to Luang Pho">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-152" aria-label="Copy link to Luang Pho">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4287,7 +4295,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-153" aria-label="Link to Pho">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-153" aria-label="Copy link to Pho">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4315,7 +4323,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-201" aria-label="Link to Pu">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-201" aria-label="Copy link to Pu">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4349,7 +4357,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-154" aria-label="Link to Kechi Achan">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-154" aria-label="Copy link to Kechi Achan">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4377,7 +4385,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-155" aria-label="Link to Khru Yai">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-155" aria-label="Copy link to Khru Yai">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4412,7 +4420,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-148" aria-label="Link to Samnak">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-148" aria-label="Copy link to Samnak">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4434,7 +4442,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
                 <li><a href="https://www.finearts.go.th/main/view/38964-" target="_blank" rel="noopener noreferrer">Fine Arts Department: wai khru and khrop khru</a></li>
                 <li><a href="https://ethnicity.sac.or.th/ethnic_research_detail?RES_ID=1464" target="_blank" rel="noopener noreferrer">Sirindhorn Anthropology Centre: Rahu traditions of the Lao Wiang community</a></li>
             </ul></details>
-            <div class="actions"><a href="#term-205" aria-label="Link to Khrop Khru">Link to this term</a></div>
+            <div class="actions"><button class="copy-link" type="button" data-term="term-205" aria-label="Copy link to Khrop Khru">Copy link to this term</button></div>
           </div>
         </article>
         <span class="entry-home" data-entry="term-143" hidden></span>
@@ -4468,7 +4476,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-141" aria-label="Link to Khan Khru">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-141" aria-label="Copy link to Khan Khru">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4502,7 +4510,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-142" aria-label="Link to Khan Ha">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-142" aria-label="Copy link to Khan Ha">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4536,7 +4544,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-192" aria-label="Link to Kha Khru">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-192" aria-label="Copy link to Kha Khru">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4572,7 +4580,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-187" aria-label="Link to Phutthaphisek">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-187" aria-label="Copy link to Phutthaphisek">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4608,7 +4616,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="related">Explore also: <a href="#term-209">Sado Khro</a> · <a href="#term-217">Suep Chata</a></p>
             <div class="actions">
-              <a href="#term-145" aria-label="Link to Nam Mon">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-145" aria-label="Copy link to Nam Mon">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4642,7 +4650,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="related">Explore also: <a href="#term-209">Sado Khro</a> · <a href="#term-217">Suep Chata</a></p>
             <div class="actions">
-              <a href="#term-146" aria-label="Link to Som Poi">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-146" aria-label="Copy link to Som Poi">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4679,7 +4687,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a> · <a href="#term-206">Fortune and business</a></p>
             <p class="related">Explore also: <a href="#term-62">Maha Sane</a> · <a href="#term-207">Kha Khai</a></p>
             <div class="actions">
-              <a href="#term-216" aria-label="Link to Long Na Na Thong">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-216" aria-label="Copy link to Long Na Na Thong">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4713,7 +4721,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-147" aria-label="Link to Sao Ha">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-147" aria-label="Copy link to Sao Ha">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4764,7 +4772,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-189" aria-label="Link to Bali">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-189" aria-label="Copy link to Bali">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4801,7 +4809,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               <li><a href="https://www.matichon.co.th/weekly/column/article_453352" target="_blank" rel="noopener noreferrer">Lanna yantra writing and abbreviated formulas</a></li></ul>
             </details>
             <div class="actions">
-              <a href="#term-134" aria-label="Link to Hua Chai Khatha">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-134" aria-label="Copy link to Hua Chai Khatha">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4839,7 +4847,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-159" aria-label="Link to Khatha Arathana Phra">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-159" aria-label="Copy link to Khatha Arathana Phra">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4878,7 +4886,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-135" aria-label="Link to Phathamang">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-135" aria-label="Copy link to Phathamang">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4916,7 +4924,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-137" aria-label="Link to Wicha">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-137" aria-label="Copy link to Wicha">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4945,7 +4953,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-138" aria-label="Link to Saiyasat">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-138" aria-label="Copy link to Saiyasat">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -4977,7 +4985,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             <p class="purpose-links">Related purposes: <a href="#term-64">Spirit and sorcery protection</a></p>
             <p class="related">Explore also: <a href="#term-45">Bia Kae</a> · <a href="#term-28">Mit Mo</a> · <a href="#term-209">Sado Khro</a></p>
             <div class="actions">
-              <a href="#term-208" aria-label="Link to Khun Sai">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-208" aria-label="Copy link to Khun Sai">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5005,7 +5013,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-162" aria-label="Link to Akhom">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-162" aria-label="Copy link to Akhom">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5038,7 +5046,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-139" aria-label="Link to Chom Khamang Wet">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-139" aria-label="Copy link to Chom Khamang Wet">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5066,7 +5074,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-156" aria-label="Link to Athan">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-156" aria-label="Copy link to Athan">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5105,7 +5113,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="related">Explore also: <a href="#term-144">Bucha</a> · <a href="#term-214">San Ta Yai</a> · <a href="#term-184">Chao Thi</a> · <a href="#term-15">Kuman Thong</a></p>
             <div class="actions">
-              <a href="#term-212" aria-label="Link to Khrueang Sen">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-212" aria-label="Copy link to Khrueang Sen">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5136,7 +5144,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="related">Explore also: <a href="#term-209">Sado Khro</a> · <a href="#term-217">Suep Chata</a> · <a href="#term-212">Khrueang Sen</a></p>
             <div class="actions">
-              <a href="#term-213" aria-label="Link to Khwan">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-213" aria-label="Copy link to Khwan">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5172,7 +5180,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="related">Explore also: <a href="#term-217">Suep Chata</a> · <a href="#term-145">Nam Mon</a> · <a href="#term-208">Khun Sai</a></p>
             <div class="actions">
-              <a href="#term-209" aria-label="Link to Sado Khro">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-209" aria-label="Copy link to Sado Khro">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5209,7 +5217,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             <p class="purpose-links">Related purposes: <a href="#term-209">Averting misfortune</a></p>
             <p class="related">Explore also: <a href="#term-213">Khwan</a> · <a href="#term-145">Nam Mon</a></p>
             <div class="actions">
-              <a href="#term-217" aria-label="Link to Suep Chata">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-217" aria-label="Copy link to Suep Chata">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5251,7 +5259,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-161" aria-label="Link to Kan Hoi Phra">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-161" aria-label="Copy link to Kan Hoi Phra">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5289,7 +5297,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-27" aria-label="Link to Khat Eo">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-27" aria-label="Copy link to Khat Eo">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5324,7 +5332,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-160" aria-label="Link to Kho Ham">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-160" aria-label="Copy link to Kho Ham">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5366,7 +5374,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               <li><a href="https://mps.royalsociety.go.th/wp-content/uploads/2024/06/00004130.pdf" target="_blank" rel="noopener noreferrer">Royal Society: amulet forms, materials, and collecting</a></li></ul>
             </details>
             <div class="actions">
-              <a href="#term-71" aria-label="Link to Muan San">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-71" aria-label="Copy link to Muan San">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5399,7 +5407,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-179" aria-label="Link to Phong">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-179" aria-label="Copy link to Phong">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5432,7 +5440,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-180" aria-label="Link to Phong Wiset">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-180" aria-label="Copy link to Phong Wiset">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5466,7 +5474,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-84" aria-label="Link to Itthiche">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-84" aria-label="Copy link to Itthiche">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5502,7 +5510,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-90" aria-label="Link to Samrit">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-90" aria-label="Copy link to Samrit">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5536,7 +5544,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-106" aria-label="Link to Nawaloha">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-106" aria-label="Copy link to Nawaloha">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5570,7 +5578,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-175" aria-label="Link to Satthaloha">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-175" aria-label="Copy link to Satthaloha">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5604,7 +5612,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-107" aria-label="Link to Nak">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-107" aria-label="Copy link to Nak">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5637,7 +5645,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-181" aria-label="Link to Ngoen">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-181" aria-label="Copy link to Ngoen">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5675,7 +5683,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-93" aria-label="Link to Ngoen Boran">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-93" aria-label="Copy link to Ngoen Boran">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5707,7 +5715,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-174" aria-label="Link to Thong Daeng">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-174" aria-label="Copy link to Thong Daeng">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5739,7 +5747,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-182" aria-label="Link to Thong Lueang">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-182" aria-label="Copy link to Thong Lueang">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5772,7 +5780,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-92" aria-label="Link to Takua">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-92" aria-label="Copy link to Takua">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5806,7 +5814,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-91" aria-label="Link to Chanuan">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-91" aria-label="Copy link to Chanuan">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5839,7 +5847,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-94" aria-label="Link to Fa Bat">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-94" aria-label="Copy link to Fa Bat">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5881,7 +5889,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-81" aria-label="Link to Wan">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-81" aria-label="Copy link to Wan">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5914,7 +5922,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-83" aria-label="Link to Wan Ya">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-83" aria-label="Copy link to Wan Ya">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5948,7 +5956,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-95" aria-label="Link to Bai Lan">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-95" aria-label="Copy link to Bai Lan">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -5987,7 +5995,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-96" aria-label="Link to Khrang">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-96" aria-label="Copy link to Khrang">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6021,7 +6029,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-108" aria-label="Link to Rak">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-108" aria-label="Copy link to Rak">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6055,7 +6063,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-172" aria-label="Link to Din Phao">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-172" aria-label="Copy link to Din Phao">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6089,7 +6097,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-97" aria-label="Link to Sai Sin">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-97" aria-label="Copy link to Sai Sin">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6130,7 +6138,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-98" aria-label="Link to Phra Kesa">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-98" aria-label="Copy link to Phra Kesa">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6167,7 +6175,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
-              <a href="#term-50" aria-label="Link to Khiao Suea">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-50" aria-label="Copy link to Khiao Suea">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6207,7 +6215,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
-              <a href="#term-51" aria-label="Link to Khiao Mu Tan">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-51" aria-label="Copy link to Khiao Mu Tan">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6250,7 +6258,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-52" aria-label="Link to Kraben Thong Nam">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-52" aria-label="Copy link to Kraben Thong Nam">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6283,7 +6291,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-53" aria-label="Link to Khon Hang Chang">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-53" aria-label="Copy link to Khon Hang Chang">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6316,7 +6324,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-101" aria-label="Link to Chang Tok Man">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-101" aria-label="Copy link to Chang Tok Man">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6355,7 +6363,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-87" aria-label="Link to Parot">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-87" aria-label="Copy link to Parot">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6389,7 +6397,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-88" aria-label="Link to Lek Lai">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-88" aria-label="Copy link to Lek Lai">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6422,7 +6430,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-103" aria-label="Link to Khot">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-103" aria-label="Copy link to Khot">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6455,7 +6463,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-104" aria-label="Link to Kanlapangha Dam">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-104" aria-label="Copy link to Kanlapangha Dam">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6488,7 +6496,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-105" aria-label="Link to Phon Phra Chao Ha Phra Ong">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-105" aria-label="Copy link to Phon Phra Chao Ha Phra Ong">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6521,7 +6529,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-86" aria-label="Link to Din Pong">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-86" aria-label="Copy link to Din Pong">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6554,7 +6562,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-99" aria-label="Link to Nga Kraden">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-99" aria-label="Copy link to Nga Kraden">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6587,7 +6595,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-100" aria-label="Link to Nang Na Phak Suea">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-100" aria-label="Copy link to Nang Na Phak Suea">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6629,7 +6637,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-73" aria-label="Link to Phong Prai">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-73" aria-label="Copy link to Phong Prai">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6663,7 +6671,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-74" aria-label="Link to Kraduk Phi">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-74" aria-label="Copy link to Kraduk Phi">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6701,7 +6709,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-77" aria-label="Link to Pha Ho Sop">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-77" aria-label="Copy link to Pha Ho Sop">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6739,7 +6747,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-78" aria-label="Link to Pha Pit Na Sop">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-78" aria-label="Copy link to Pha Pit Na Sop">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6773,7 +6781,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-79" aria-label="Link to Ngoen Pak Phi">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-79" aria-label="Copy link to Ngoen Pak Phi">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6811,7 +6819,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-80" aria-label="Link to Mai Siap Phi">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-80" aria-label="Copy link to Mai Siap Phi">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6844,7 +6852,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-85" aria-label="Link to Din Chet Pa Cha">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-85" aria-label="Copy link to Din Chet Pa Cha">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6878,7 +6886,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-67" aria-label="Link to Setthi">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-67" aria-label="Copy link to Setthi">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6914,7 +6922,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               <li><a href="https://mps.royalsociety.go.th/wp-content/uploads/2024/06/00004130.pdf" target="_blank" rel="noopener noreferrer">Royal Society: amulet forms, materials, and collecting</a></li></ul>
             </details>
             <div class="actions">
-              <a href="#term-165" aria-label="Link to Run">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-165" aria-label="Copy link to Run">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6947,7 +6955,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-166" aria-label="Link to Run Raek">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-166" aria-label="Copy link to Run Raek">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -6981,7 +6989,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               <li><a href="https://mps.royalsociety.go.th/wp-content/uploads/2024/06/00004130.pdf" target="_blank" rel="noopener noreferrer">Royal Society: amulet forms, materials, and collecting</a></li></ul>
             </details>
             <div class="actions">
-              <a href="#term-167" aria-label="Link to Phim">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-167" aria-label="Copy link to Phim">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -7009,7 +7017,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-168" aria-label="Link to Phiset">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-168" aria-label="Copy link to Phiset">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -7042,7 +7050,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-169" aria-label="Link to Boran">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-169" aria-label="Copy link to Boran">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -7080,7 +7088,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-170" aria-label="Link to Chut Yai">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-170" aria-label="Copy link to Chut Yai">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -7113,7 +7121,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-171" aria-label="Link to Kammakan">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-171" aria-label="Copy link to Kammakan">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -7146,7 +7154,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-173" aria-label="Link to Kalai Thong">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-173" aria-label="Copy link to Kalai Thong">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -7185,7 +7193,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-199" aria-label="Link to Chao Phra">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-199" aria-label="Copy link to Chao Phra">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -7224,7 +7232,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-200" aria-label="Link to Kru">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-200" aria-label="Copy link to Kru">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -7255,7 +7263,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="related">Explore also: <a href="#term-5">Phra Khrueang</a> · <a href="#term-2">Khrueang Rang</a></p>
             <div class="actions">
-              <a href="#term-215" aria-label="Link to Prasopkan">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-215" aria-label="Copy link to Prasopkan">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -7308,7 +7316,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
-              <a href="#term-58" aria-label="Link to Khong Kraphan Chatri">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-58" aria-label="Copy link to Khong Kraphan Chatri">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -7343,7 +7351,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-59">Protection and avoiding danger</a></p>
             <div class="actions">
-              <a href="#term-57" aria-label="Link to Maha Ut">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-57" aria-label="Copy link to Maha Ut">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -7372,7 +7380,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="related">Explore also: <a href="#term-208">Khun Sai</a> · <a href="#term-45">Bia Kae</a> · <a href="#term-210">Wua Thanu</a></p>
             <div class="actions">
-              <a href="#term-64" aria-label="Link to Kan Phi">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-64" aria-label="Copy link to Kan Phi">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -7405,7 +7413,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a></p>
             <div class="actions">
-              <a href="#term-61" aria-label="Link to Maha Niyom">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-61" aria-label="Copy link to Maha Niyom">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -7436,7 +7444,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a></p>
             <p class="related">Explore also: <a href="#term-13">Si Phueng</a> · <a href="#term-216">Long Na Na Thong</a></p>
             <div class="actions">
-              <a href="#term-62" aria-label="Link to Maha Sane">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-62" aria-label="Copy link to Maha Sane">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -7471,7 +7479,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a></p>
             <div class="actions">
-              <a href="#term-63" aria-label="Link to Sane Prai">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-63" aria-label="Copy link to Sane Prai">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -7500,7 +7508,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-60">Goodwill and attraction</a> · <a href="#term-206">Fortune and business</a></p>
             <div class="actions">
-              <a href="#term-68" aria-label="Link to Lin Thong">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-68" aria-label="Copy link to Lin Thong">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -7534,7 +7542,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="related">Explore also: <a href="#term-56">Maha Lap</a> · <a href="#term-207">Kha Khai</a> · <a href="#term-44">Sai Dak Sap</a> · <a href="#term-125">Phra Siwali</a> · <a href="#term-194">Yant Ha Thaeo</a></p>
             <div class="actions">
-              <a href="#term-206" aria-label="Link to Chok Lap">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-206" aria-label="Copy link to Chok Lap">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -7563,7 +7571,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-206">Fortune and business</a></p>
             <div class="actions">
-              <a href="#term-56" aria-label="Link to Maha Lap">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-56" aria-label="Copy link to Maha Lap">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -7595,7 +7603,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             <p class="purpose-links">Related purposes: <a href="#term-206">Fortune and business</a></p>
             <p class="related">Explore also: <a href="#term-60">Metta Maha Niyom</a> · <a href="#term-68">Lin Thong</a> · <a href="#term-48">Salika</a> · <a href="#term-119">Nang Kwak</a> · <a href="#term-216">Long Na Na Thong</a></p>
             <div class="actions">
-              <a href="#term-207" aria-label="Link to Kha Khai">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-207" aria-label="Copy link to Kha Khai">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -7624,7 +7632,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="purpose-links">Related purposes: <a href="#term-206">Fortune and business</a></p>
             <div class="actions">
-              <a href="#term-65" aria-label="Link to Kham Khun">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-65" aria-label="Copy link to Kham Khun">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -7655,7 +7663,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
             </details>
             <p class="related">Explore also: <a href="#term-118">Hanuman</a> · <a href="#term-50">Khiao Suea</a></p>
             <div class="actions">
-              <a href="#term-70" aria-label="Link to Maha Amnat">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-70" aria-label="Copy link to Maha Amnat">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -7691,7 +7699,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
               </ul>
             </details>
             <div class="actions">
-              <a href="#term-69" aria-label="Link to Chindamani">Link to this term</a>
+              <button class="copy-link" type="button" data-term="term-69" aria-label="Copy link to Chindamani">Copy link to this term</button>
             </div>
           </div>
         </article>
@@ -7704,6 +7712,13 @@ footer p { margin: 0 0 8px; max-width: 760px; }
       <p>Image links open Google Images searches; results are not curated. Purpose links connect related vocabulary across practices and objects. The glossary works as a single HTML file. Fonts and linked references require an internet connection.</p>
     </footer>
   </div>
+  <p id="copy-status" class="screen-reader-only" role="status" aria-live="polite"></p>
+  <dialog id="copy-link-dialog" aria-labelledby="copy-dialog-title">
+    <h2 id="copy-dialog-title">Copy this term’s link</h2>
+    <p>Automatic copying is unavailable here. Select and copy the link below, then paste it into your message.</p>
+    <input id="copy-link-value" type="text" readonly aria-label="Direct link to this term">
+    <button id="close-copy-dialog" type="button">Close</button>
+  </dialog>
   <script>
 
 "use strict";
@@ -7915,6 +7930,57 @@ footer p { margin: 0 0 8px; max-width: 760px; }
   document.getElementById("out").addEventListener("click", event => {
     const button = event.target.closest(".play");
     if (button) speak(button);
+  });
+  async function copyTermLink(button) {
+    const url = new URL(location.href);
+    url.search = "";
+    url.hash = button.dataset.term;
+    const originalLabel = "Copy link to this term";
+    const originalAria = button.getAttribute("aria-label");
+    let copied = false;
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(url.href);
+        copied = true;
+      }
+    } catch (_) { /* Try the browser's legacy copy method below. */ }
+    if (!copied) {
+      const field = document.createElement("textarea");
+      field.value = url.href;
+      field.setAttribute("readonly", "");
+      field.style.cssText = "position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;font-size:16px;";
+      document.body.append(field);
+      field.focus({preventScroll: true});
+      field.select();
+      field.setSelectionRange(0, field.value.length);
+      try { copied = document.execCommand("copy"); } catch (_) { copied = false; }
+      field.remove();
+      button.focus({preventScroll: true});
+    }
+    if (copied) {
+      button.textContent = "Link copied ✓";
+      button.setAttribute("aria-label", "Link copied");
+      document.getElementById("copy-status").textContent = "Link to this term copied. Ready to paste.";
+      setTimeout(() => {
+        button.textContent = originalLabel;
+        button.setAttribute("aria-label", originalAria);
+      }, 2500);
+    } else {
+      const dialog = document.getElementById("copy-link-dialog");
+      const field = document.getElementById("copy-link-value");
+      field.value = url.href;
+      dialog.showModal();
+      field.focus();
+      field.select();
+      field.setSelectionRange(0, field.value.length);
+    }
+  }
+  document.getElementById("out").addEventListener("click", event => {
+    const button = event.target.closest(".copy-link");
+    if (button) copyTermLink(button);
+  });
+  document.getElementById("close-copy-dialog").addEventListener("click", () => {
+    document.getElementById("copy-link-dialog").close();
   });
   function revealHash() {
     const id = location.hash.slice(1);
