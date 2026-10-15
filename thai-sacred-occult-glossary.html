@@ -197,7 +197,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
       <div class="controls">
         <div class="search">
           <input id="search" type="search" aria-label="Search the glossary" placeholder="Search Thai, Roman transcription, or meaning">
-          <button class="clear" id="clear" type="button">Reset</button>
+          <button class="clear" id="clear" type="button">Clear filters</button>
         </div>
         <div class="speed" role="group" aria-label="Thai speaking speed">
           <button type="button" data-rate="0.9" aria-pressed="true">Normal</button>
@@ -2178,7 +2178,7 @@ footer p { margin: 0 0 8px; max-width: 760px; }
           </div>
         </article>
         </div>
-      <div class="subgroup"><h3 class="subgroup-title">Animal-shaped charms</h3>
+      <div class="subgroup"><h3 class="subgroup-title">Animal charms</h3>
 <article class="item" id="term-42"
           data-purposes="protection prosperity" data-category="Objects" data-essential="false"
           >
@@ -7897,15 +7897,28 @@ footer p { margin: 0 0 8px; max-width: 760px; }
     document.getElementById("empty").hidden = visible !== 0;
     const topicName = chips.find(chip => chip.dataset.category === category)?.textContent || "All terms";
     const purposeName = purposeFilter.options[purposeFilter.selectedIndex].textContent;
-    count.textContent = visible + " of " + entries.length + " terms"
+    const hasFilters = category !== "All" || purposeFilter.value !== "All" || essentialOnly || words.length > 0;
+    count.textContent = (hasFilters ? "Filtered · " : "") + visible + " of " + entries.length + " terms"
       + (category !== "All" ? " · " + topicName : "")
-      + (purposeFilter.value !== "All" ? " · " + purposeName : "");
-    chips.forEach(chip => chip.setAttribute("aria-pressed", String(chip.dataset.category === category)));
+      + (purposeFilter.value !== "All" ? " · " + purposeName : "")
+      + (essentialOnly ? " · Essentials only" : "")
+      + (words.length ? ' · Search: “' + search.value.trim() + '”' : "");
+    chips.forEach(chip => {
+      if (chip.dataset.category === "All") {
+        chip.textContent = hasFilters ? "Show all terms" : "All terms";
+        chip.setAttribute("aria-pressed", String(!hasFilters));
+      } else chip.setAttribute("aria-pressed", String(chip.dataset.category === category));
+    });
     essentials.setAttribute("aria-pressed", String(essentialOnly));
   }
 
   chips.forEach(chip => chip.addEventListener("click", () => {
     category = chip.dataset.category;
+    if (category === "All") {
+      search.value = "";
+      essentialOnly = false;
+      purposeFilter.value = "All";
+    }
     filter();
   }));
   essentials.addEventListener("click", () => {
