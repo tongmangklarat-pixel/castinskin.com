@@ -160,6 +160,8 @@ footer p { margin: 0 0 8px; max-width: 760px; }
 
 .usage-note { padding: 12px 14px; border-left: 2px solid var(--gold); background: var(--deep); font-size: 14px; }
 .shorthand-play { width: 30px; height: 30px; font-size: 12px; vertical-align: middle; margin: 0 4px; }
+
+#reset-audio, #thai-voice { border: 1px solid var(--line); background: var(--deep); color: var(--gold); border-radius: 3px; padding: 7px 10px; font: 12px var(--body); max-width: 100%; }
   </style>
 </head>
 <body>
@@ -220,6 +222,8 @@ footer p { margin: 0 0 8px; max-width: 760px; }
       <div class="options">
         <button class="essential" id="essentials" type="button" aria-pressed="false">Essentials</button>
         <p id="results" role="status" aria-live="polite"></p>
+        <button id="reset-audio" type="button">Reset audio</button>
+        <select id="thai-voice" aria-label="Thai voice" hidden><option value="">Automatic Thai voice</option></select>
         <p id="voice-status" role="status" aria-live="polite">Loading Thai audio…</p>
       </div>
       <details class="audio-help"><summary>Having trouble hearing Thai?</summary><p>The play buttons use your browser’s available Thai voice. If a button is grey or silent, use <strong>Hear Thai online</strong> under the word. It opens Google Translate: press the speaker beside the Thai text. This alternative needs an internet connection and opens another page.</p></details>
@@ -7706,6 +7710,8 @@ footer p { margin: 0 0 8px; max-width: 760px; }
   let activeUtterance = null;
   let speechToken = 0;
   let startTimer = null;
+  let launchTimer = null;
+  let voiceChoice = "";
   const fold = value => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
   const index = new Map(entries.map(entry => {
     const text = [...entry.querySelectorAll(".thai, .roman, .translation, .definition, .context p, .context-note p")]
@@ -7713,10 +7719,13 @@ footer p { margin: 0 0 8px; max-width: 760px; }
     return [entry, fold(text)];
   }));
 
-  function stopSpeech() {
+  function stopSpeech(force = false) {
+    const wasActive = !!activeUtterance;
     speechToken += 1;
     clearTimeout(startTimer);
-    if (synth) synth.cancel();
+    clearTimeout(launchTimer);
+    // Avoid cancel/speak races on mobile when the engine is already idle.
+    if (synth && (force || wasActive || synth.speaking || synth.pending)) synth.cancel();
     if (activeButton) {
       activeButton.classList.remove("on");
       activeButton.textContent = "▶";
@@ -7726,34 +7735,61 @@ footer p { margin: 0 0 8px; max-width: 760px; }
     activeUtterance = null;
   }
 
-  function pickVoice() {
+  function pickVoice(updateStatus = true) {
     const voices = synth ? synth.getVoices() : [];
-    thaiVoice = voices.find(voice => /^th(?:-|_|$)/i.test(voice.lang)) || null;
-    document.querySelectorAll(".play").forEach(button => button.disabled = !thaiVoice);
-    if (!synth) {
-      voiceStatus.textContent = "Thai audio is not supported in this browser.";
-    } else if (thaiVoice) {
-      voiceStatus.textContent = "Thai audio ready · " + thaiVoice.name;
-    } else {
-      voiceStatus.textContent = "No Thai voice is available here. Use “Hear Thai online” beneath any word, then press the speaker beside the Thai text.";
+    const thaiVoices = voices.filter(voice => /^th(?:-|_|$)/i.test(voice.lang));
+    thaiVoice = thaiVoices.find(voice => voice.voiceURI === voiceChoice)
+      || thaiVoices.find(voice => voice.localService && voice.default)
+      || thaiVoices.find(voice => voice.localService)
+      || thaiVoices.find(voice => voice.default)
+      || thaiVoices[0] || null;
+    const chooser = document.getElementById("thai-voice");
+    const selected = thaiVoice ? thaiVoice.voiceURI : "";
+    const signature = thaiVoices.map(voice => voice.voiceURI + voice.name).join("|");
+    if (chooser.dataset.voices !== signature) {
+      chooser.replaceChildren();
+      const auto = document.createElement("option");
+      auto.value = "";
+      auto.textContent = "Automatic Thai voice";
+      chooser.append(auto);
+      thaiVoices.forEach(voice => {
+        const option = document.createElement("option");
+        option.value = voice.voiceURI;
+        option.textContent = voice.name;
+        chooser.append(option);
+      });
+      chooser.dataset.voices = signature;
     }
+    chooser.value = voiceChoice || "";
+    chooser.hidden = thaiVoices.length < 2;
+    // An empty list can mean voices have not loaded yet. A tap can initialize Thai speech.
+    document.querySelectorAll(".play").forEach(button => button.disabled = !synth || (!thaiVoice && voices.length > 0));
+    if (!updateStatus || activeUtterance) return;
+    if (!synth) voiceStatus.textContent = "Thai audio is not supported in this browser. Use Hear Thai online.";
+    else if (thaiVoice) voiceStatus.textContent = "Thai voice available · " + thaiVoice.name;
+    else if (!voices.length) voiceStatus.textContent = "Tap a play button to start Thai audio.";
+    else voiceStatus.textContent = "No Thai voice is available here. Use Hear Thai online beneath a word.";
   }
 
   function speak(button) {
-    pickVoice();
-    if (!synth || !thaiVoice) return;
-    const isActive = button === activeButton;
+    if (!synth) return;
+    const sameButton = button === activeButton;
+    const mustCancel = !!activeUtterance || synth.speaking || synth.pending;
     stopSpeech();
-    if (isActive) return;
+    if (sameButton) return;
+    pickVoice(false);
+    if (button.disabled) return;
     const utterance = new SpeechSynthesisUtterance(button.dataset.thai);
-    utterance.voice = thaiVoice;
     utterance.lang = "th-TH";
+    if (thaiVoice) utterance.voice = thaiVoice;
     utterance.rate = rate;
+    utterance.volume = 1;
     activeButton = button;
     activeUtterance = utterance;
     button.classList.add("on");
     button.textContent = "■";
     button.setAttribute("aria-pressed", "true");
+    voiceStatus.textContent = "Starting Thai audio…";
     const token = speechToken;
     const finish = () => {
       if (token !== speechToken) return;
@@ -7765,28 +7801,37 @@ footer p { margin: 0 0 8px; max-width: 760px; }
       activeUtterance = null;
     };
     utterance.onstart = () => {
-      if (token === speechToken) clearTimeout(startTimer);
+      if (token !== speechToken) return;
+      clearTimeout(startTimer);
+      voiceStatus.textContent = "Playing Thai · " + button.dataset.thai;
     };
-    utterance.onend = finish;
+    utterance.onend = () => { finish(); if (token === speechToken) pickVoice(); };
     utterance.onerror = event => {
       if (token !== speechToken) return;
       finish();
       if (event.error !== "canceled" && event.error !== "interrupted") {
-        voiceStatus.textContent = "Playback failed. Use “Hear Thai online” beneath this word, then press the speaker beside the Thai text.";
+        voiceStatus.textContent = "Thai audio could not play (" + event.error + "). Tap Reset audio, then try again, or use Hear Thai online.";
       }
     };
-    startTimer = setTimeout(() => {
+    const launch = () => {
       if (token !== speechToken) return;
-      stopSpeech();
-      voiceStatus.textContent = "Playback did not start. Use ‘Hear Thai online’ beneath the word, then press the speaker beside the Thai text.";
-    }, 6000);
-    try {
-      if (synth.paused) synth.resume();
-      synth.speak(utterance);
-    } catch (_) {
-      finish();
-      voiceStatus.textContent = "Playback is unavailable. Use ‘Hear Thai online’ beneath the word.";
-    }
+      startTimer = setTimeout(() => {
+        if (token !== speechToken) return;
+        stopSpeech(true);
+        voiceStatus.textContent = "Thai audio did not start. Tap Reset audio, then try again, or use Hear Thai online.";
+      }, 10000);
+      try {
+        if (synth.paused) synth.resume();
+        synth.speak(utterance);
+      } catch (_) {
+        finish();
+        voiceStatus.textContent = "Thai audio is unavailable. Tap Reset audio, then try again, or use Hear Thai online.";
+      }
+    };
+    // The first idle tap speaks synchronously, preserving mobile user activation.
+    // Switching an active utterance allows a canceled queue to settle first.
+    if (mustCancel) launchTimer = setTimeout(launch, 80);
+    else launch();
   }
 
   function filter() {
@@ -7858,11 +7903,23 @@ footer p { margin: 0 0 8px; max-width: 760px; }
     requestAnimationFrame(() => entry.scrollIntoView({block: "start"}));
   }
   window.addEventListener("hashchange", revealHash);
-  window.addEventListener("pagehide", stopSpeech);
-  if (synth) synth.addEventListener("voiceschanged", pickVoice);
+  window.addEventListener("pagehide", () => stopSpeech());
+  window.addEventListener("pageshow", () => { if (synth && synth.paused) synth.resume(); pickVoice(); });
+  if (synth) synth.addEventListener("voiceschanged", () => pickVoice());
   pickVoice();
   [250, 1000, 3000].forEach(delay => setTimeout(pickVoice, delay));
-  window.addEventListener("focus", pickVoice);
+  window.addEventListener("focus", () => pickVoice());
+  document.getElementById("reset-audio").addEventListener("click", () => {
+    stopSpeech(true);
+    if (synth && synth.paused) synth.resume();
+    pickVoice(false);
+    voiceStatus.textContent = "Audio reset. Tap a play button to try Thai again.";
+  });
+  document.getElementById("thai-voice").addEventListener("change", event => {
+    stopSpeech();
+    voiceChoice = event.target.value;
+    pickVoice();
+  });
   filter();
   revealHash();
   document.getElementById("interactive-controls").hidden = false;
